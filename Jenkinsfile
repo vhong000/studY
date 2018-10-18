@@ -16,8 +16,9 @@ pipeline {
       . .venv/bin/activate
       pip install -r requirements.txt
       """
+      }
     }
-      
+  
     stage("Unit Tests") {
       sh """
       . .venv/bin/activate
