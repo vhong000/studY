@@ -1,10 +1,28 @@
 pipeline {
   agent any
   stages {
-    stage('Test') {
+    stage('Create virtualenv') {
       steps {
-        sh 'echo "test"'
+        if (!fileExists('.venv')){
+          echo 'Creating virtualenv ...'
+          sh 'python3.6 -m venv --no-site-packages .venv'
+        }
       }
+    }
+    
+    stage('Install requirements'){
+      if (fileExists('requirements/preinstall.txt')) {
+      sh """
+      . .venv/bin/activate
+      pip install -r requirements.txt
+      """
+    }
+      
+    stage("Unit Tests") {
+      sh """
+      . .venv/bin/activate
+      ./manage.py test --noinput
+      """
     }
   }
 }
