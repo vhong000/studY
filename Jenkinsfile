@@ -9,17 +9,21 @@ pipeline {
     }
     
     stage('Install requirements'){
-      sh """
-      . .venv/bin/activate
-      pip install -r requirements.txt
-      """
+      steps {
+        sh """
+        . .venv/bin/activate
+        pip install -r requirements.txt
+        """
+      }
     }
   
     stage("Unit Tests") {
-      sh """
-      . .venv/bin/activate
-      ./manage.py test --noinput
-      """
+      steps {
+        sh """
+        . .venv/bin/activate
+        ./manage.py test --noinput
+        """
+      }
     }
   }
 }
