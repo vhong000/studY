@@ -14,3 +14,7 @@ class BasicTestCase(TestCase):
     def test_api_access(self):
         res = self.client.get('/api/auth/user')
         self.assertEquals(res.status_code, 401)
+
+    def test_api_fail(self):
+        res = self.client.get('/api/auth/user')
+        self.assertEquals(res.status_code, 200)
