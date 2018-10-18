@@ -21,7 +21,7 @@ pipeline {
       steps {
         sh """
         . .venv/bin/activate
-        ./backend/manage.py test --noinput
+        ./backend/manage.py test backend --noinput
         """
       }
     }
