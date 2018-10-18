@@ -16,10 +16,11 @@ class School(models.Model):
 
 
 class Student(models.Model):
-    school = models.ForeignKey('School', on_delete=models.CASCADE)
+    # school = models.ForeignKey('School', on_delete=models.CASCADE)
+    school = models.CharField(max_length=100)
     major = models.CharField(max_length=20)
     year = models.PositiveSmallIntegerField()
-    user_profile = models.ForeignKey(User, on_delete=models.CASCADE)
+    user_profile = models.ForeignKey(User, on_delete=models.CASCADE, related_name='student_profile')
 
     class Meta:
         db_table = 'students'
