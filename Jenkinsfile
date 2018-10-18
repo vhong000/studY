@@ -17,11 +17,11 @@ pipeline {
       }
     }
   
-    stage("Unit Tests") {
+    stage("Django Tests") {
       steps {
         sh """
         . .venv/bin/activate
-        ./manage.py test --noinput
+        ./backend/manage.py test --noinput
         """
       }
     }
