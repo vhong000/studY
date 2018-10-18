@@ -4,7 +4,7 @@ pipeline {
     stage('Create virtualenv') {
       steps {
           echo 'Creating virtualenv ...'
-          sh 'rm -rf .venv && python3.6 -m venv --no-site-packages .venv'
+          sh 'rm -rf .venv && python3.6 -m venv .venv'
       }
     }
     
