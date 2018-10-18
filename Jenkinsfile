@@ -5,7 +5,6 @@ pipeline {
       steps {
           echo 'Creating virtualenv ...'
           sh 'rm -rf .venv && python3.6 -m venv --no-site-packages .venv'
-        }
       }
     }
     
@@ -14,7 +13,6 @@ pipeline {
       . .venv/bin/activate
       pip install -r requirements.txt
       """
-      }
     }
   
     stage("Unit Tests") {
