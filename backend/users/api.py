@@ -43,8 +43,8 @@ class UserView(APIView):
     permission_classes = (IsAuthenticated,)
 
     def get(self, request):
-        user = UserSerializer(request.user).data
-        return Response(data=user, status=status.HTTP_200_OK, content_type='application/json')
+        student = StudentSerializer(Student.objects.get(user_profile=request.user)).data
+        return Response(data=student, status=status.HTTP_200_OK, content_type='application/json')
 
     def post(self):
         pass
