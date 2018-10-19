@@ -2,18 +2,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import {
-	Button, AppBar, Typography,
-	Toolbar, withStyles
+	Button, AppBar, Typography, Toolbar,
 } from '@material-ui/core';
 
 class Header extends Component {
 
 	render() {
-		const styles = {
-			root: { flexGrow: 1 },
-			grow: { flexGrow: 1 },
-		}
-
 		return (
 			<AppBar position='static' >
 				<Toolbar>
