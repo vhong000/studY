@@ -11,15 +11,14 @@ from rest_framework.authentication import (BasicAuthentication,
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.authtoken.models import Token as REST_Token
 from rest_framework.permissions import AllowAny, IsAuthenticated, IsAuthenticatedOrReadOnly
-from rest_framework.decorators import (api_view, authentication_classes,
-                                       permission_classes)
+# from rest_framework.decorators import (api_view, authentication_classes,
+                                    #    permission_classes)
 from rest_framework.parsers import JSONParser
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
-from .models import Student, Token
+from .models import Student
 from .serializers import UserSerializer, StudentSerializer
-from .utils import generate_tokens
 
 
 class SignupView(APIView):
@@ -70,40 +69,43 @@ class CustomAuthToken(ObtainAuthToken):
         return Response(data=None, status=status.HTTP_405_METHOD_NOT_ALLOWED)
 
 
-@api_view(['GET'])
-@authentication_classes((SessionAuthentication, BasicAuthentication))
-@permission_classes((IsAuthenticatedOrReadOnly,))
-def verify_token(request):
-    auth = {}
-    status_ = status.HTTP_401_UNAUTHORIZED
-
-    try:
-        token_obj = Token.objects.get(token=request.GET['token'])
-        token_val = token_obj.token
-        auth = {}
-        status_ = status.HTTP_200_OK
-        if token_obj.type == 'reg':
-            auth = {
-                'authenticated': True,
-                'token': str(token_val),
-                'username': None,
-            }
-
-            return Response(data={'auth': auth}, status=status_, content_type='application/json')
-
-    except Exception as err:
-        return Response(data=None, status=500, content_type='application/json')
-
-
 class RegistrationView(APIView):
     authentication_classes = (BasicAuthentication, TokenAuthentication)
     permission_classes = (IsAuthenticatedOrReadOnly,)
 
-    def post(self, request):
+    def get(self, request):
         try:
-            data = json.loads(request.body.decode('utf-8'))
-            tokens = generate_tokens(data, 'reg')
-            return Response(data={'tokens': tokens}, status=200, content_type='application/json')
-        except Exception as err:
-            print(err)
-            return Response(data=None, status=500, content_type='application/json')
+            student = Student.objects.get(reg_key=request.GET['id'])
+            if student.user_profile.is_active:
+                return Response(status=status.HTTP_409_CONFLICT, contet_type='application/json')
+
+            User.objects.filter(student_profile=student).update(is_active=True)
+            return Response(status=status.HTTP_200_OK, content_type='application/json')
+
+        except Exception as e:
+            return Response(data={'error': str(e)}, status=status.HTTP_404_NOT_FOUND, content_type="application/json")
+
+
+# @api_view(['GET'])
+# @authentication_classes((SessionAuthentication, BasicAuthentication))
+# @permission_classes((IsAuthenticatedOrReadOnly,))
+# def verify_token(request):
+#     auth = {}
+#     status_ = status.HTTP_401_UNAUTHORIZED
+
+#     try:
+#         token_obj = Token.objects.get(token=request.GET['token'])
+#         token_val = token_obj.token
+#         auth = {}
+#         status_ = status.HTTP_200_OK
+#         if token_obj.type == 'reg':
+#             auth = {
+#                 'authenticated': True,
+#                 'token': str(token_val),
+#                 'username': None,
+#             }
+
+#             return Response(data={'auth': auth}, status=status_, content_type='application/json')
+
+#     except Exception as err:
+#         return Response(data=None, status=500, content_type='application/json')

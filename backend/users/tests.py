@@ -11,7 +11,7 @@ import json
 class SignupTest(APITestCase):
 
     def test_invalid_method(self):
-        res = self.client.get('/api/auth/signup')
+        res = self.client.get(reverse('signup'))
         self.assertEquals(res.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
 
     def test_singup(self):
