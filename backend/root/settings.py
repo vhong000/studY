@@ -24,7 +24,10 @@ SECRET_KEY = 'ot=6xctd1o9ltmrq)dj0hkxt&umw*xjexfg!2nwob8_n9yd5y)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+INTERNAL_IPS = ['127.0.0.1', 'localhost']
+CSRF_TRUSTED_ORIGINS = ['127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -36,16 +39,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'users',
     'rest_framework',
     'rest_framework.authtoken',
-    'users',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -137,6 +140,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/media/'
 HOST_NAME = '127.0.0.1:8000'
 
+CONFIRM_EMAIL = False
 # EMAIL_USE_TLS = True
 # EMAIL_HOST = 'smtp.gmail.com'
 # EMAIL_HOST_USER = os.getenv('GTEST_EMAIL', default=None)
