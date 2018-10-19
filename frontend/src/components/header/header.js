@@ -1,19 +1,45 @@
 
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Button from '@material-ui/core/Button';
+import {
+	Button, AppBar, Typography,
+	Toolbar, withStyles
+} from '@material-ui/core';
 
-export default class Header extends Component {
+class Header extends Component {
 
 	render() {
-		const { user_token } = this.props;
+		const styles = {
+			root: { flexGrow: 1 },
+			grow: { flexGrow: 1 },
+		}
+
 		return (
-			<div>
-				<Button className='login' href='/login' color='default' children="Login" />
-				<Link to='/register'>
-					<Button className='register' color='default' children="Register" />
-				</Link>
-			</div>
+			<AppBar position='static' >
+				<Toolbar>
+					<Typography  
+						style={{flex: 1}}
+						variant='headline'
+						color='inherit'>
+						StudY
+					</Typography>
+					<Button
+						component={Link}
+						to="/login"
+						className='login-button'
+						children="Login"
+						color='inherit' />
+					<Button 
+						component={Link} 
+						to="/register"
+						className='register-button'
+						color='inherit'
+						children="Register"
+					/>
+				</Toolbar>
+			</AppBar>
 		)
 	}
 }
+
+export default Header;
