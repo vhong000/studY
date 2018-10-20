@@ -16,26 +16,15 @@ class School(models.Model):
 
 
 class Student(models.Model):
-    school = models.ForeignKey('School', on_delete=models.CASCADE)
+    # school = models.ForeignKey('School', on_delete=models.CASCADE)
+    school = models.CharField(max_length=100)
     major = models.CharField(max_length=20)
     year = models.PositiveSmallIntegerField()
-    user_profile = models.ForeignKey(User, on_delete=models.CASCADE)
+    user_profile = models.ForeignKey(User, on_delete=models.CASCADE, related_name='student_profile')
+    reg_key = models.UUIDField(default=uuid.uuid4)
 
     class Meta:
         db_table = 'students'
 
     def __str__(self):
         return self.first_name + ' ' + self.last_name
-
-
-class Token(models.Model):
-    token = models.UUIDField(default=uuid.uuid4, primary_key=True)
-    student = models.ForeignKey(
-        'Student', on_delete=models.CASCADE, null=True,
-        related_name='token')
-
-    status = models.CharField(max_length=10, null=False)
-    type = models.CharField(max_length=10, null=True)
-
-    class Meta:
-        db_table = 'tokens'
