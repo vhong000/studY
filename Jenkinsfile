@@ -24,7 +24,4 @@ pipeline {
       }
     }
   }
-  environment {
-    PATH = '$PATH:/home/ubuntu/.nvm/versions/node/v8.12.0/bin'
-  }
 }
