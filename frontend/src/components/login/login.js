@@ -11,14 +11,13 @@ export default class Login extends Component {
 			user: {
 				email: "",
 				password: "",
-			},
-    }
-		
+			}
+    }		
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
-	// update state on input change
+  // update state on input change
 	handleChange(event, name) {
 		this.setState({
 			user: {
@@ -78,6 +77,5 @@ export default class Login extends Component {
 						</div>
 					</div>
 			</form>
-		)
-	}
+  )
 }
