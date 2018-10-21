@@ -1,4 +1,3 @@
-
 import React from 'react';
 import * as enzyme from 'enzyme';
 import { shallow } from 'enzyme';
