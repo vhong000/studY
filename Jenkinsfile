@@ -8,7 +8,7 @@ pipeline {
       }
     }
     
-    stage('Install requirements'){
+    stage('Install pip packages'){
       steps {
         sh """
         . .venv/bin/activate
@@ -23,6 +23,17 @@ pipeline {
         . .venv/bin/activate
         ./backend/manage.py test backend --noinput
         """
+      }
+    }
+
+    stage("React Test") {
+      steps {
+        withEnv(['PATH+EXTRA=/home/ubuntu/.nvm/versions/node/v8.12.0/bin:']){
+          sh """
+          cd frontend && npm install
+          CI=true npm test
+          """
+        }
       }
     }
   }
