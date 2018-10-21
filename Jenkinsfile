@@ -6,9 +6,9 @@ pipeline {
         echo 'Creating virtualenv ...'
         sh 'rm -rf .venv && python3.6 -m venv .venv'
       }
-    }
-    
+    }    
     stage('Install pip packages'){
+
       steps {
         sh '''
         . .venv/bin/activate
