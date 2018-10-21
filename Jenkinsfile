@@ -26,7 +26,7 @@ pipeline {
       }
     }
 
-    stage("React Test") {
+    stage("UI Tests") {
       steps {
         withEnv(['PATH+EXTRA=/home/ubuntu/.nvm/versions/node/v8.12.0/bin:']){
           sh """
@@ -36,5 +36,6 @@ pipeline {
         }
       }
     }
+
   }
 }
