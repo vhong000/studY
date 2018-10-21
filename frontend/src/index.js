@@ -8,12 +8,16 @@ import Login from './components/login/login';
 import Register from './components/register/register';
 import * as serviceWorker from './serviceWorker';
 
+import { AuthProvider } from './contexts/Auth.context.js';
+
 ReactDOM.render(
 	<Router>
 		<div>
-			<Route exact path="/" component={App} />
-			<Route exact path="/register" component={Register} />
-			<Route exact path="/login" component={Login} />
+			<AuthProvider>
+				<Route exact path="/" component={App} />
+				<Route exact path="/register" component={Register} />
+				<Route exact path="/login" component={Login} />
+			</AuthProvider>
 		</div>
 	</Router>,
 	document.getElementById('root')
