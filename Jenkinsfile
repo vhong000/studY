@@ -57,7 +57,7 @@ pipeline {
     stage("Deploy") {
       steps {
           sh """
-          cp -r backend ${PROJECT_ROOT_DIR} && chdir ${PROJECT_ROOT_DIR}
+          cp -r backend ${PROJECT_ROOT_DIR} && cd ${PROJECT_ROOT_DIR}
           ./deploy.sh
           """
       }
