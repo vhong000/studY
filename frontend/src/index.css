@@ -122,4 +122,8 @@ input[type=text]:focus, input[type=password]:focus {
   margin-right: 5px;
 }
 
+.red{
+  text-decoration-color: #a94442
+}
+
 

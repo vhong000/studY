@@ -68,11 +68,14 @@ export default class Register extends Component {
 		console.log(validations)
 		let emailValid = this.state.emailValid;
 		let passwordValid = this.state.passwordValid;
+		let eduEmail = this.state.eduEmail;
 
 		switch (fieldName) {
 			case 'email':
 				emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
-				validations.email = emailValid ? '' : 'is valid';
+				eduEmail = emailValid && emailValid.includes('cuny.') && emailValid.includes('edu') ? true : false; 
+				console.log("Email[1]: ",emailValid, eduEmail);
+				validations.email = emailValid ? '' : 'is invalid';
 				break;
 
 			case 'password':
@@ -87,13 +90,14 @@ export default class Register extends Component {
 		this.setState({
 			formErrors: validations,
 			emailValid: emailValid,
-			passwordValid: passwordValid
+			passwordValid: passwordValid,
+			eduEmail:eduEmail
 		}, this.validateFrom)
 	}
 
 
 	validateFrom() {
-		this.setState({ formValid: this.state.emailValid && this.state.passwordValid });
+		this.setState({ formValid: this.state.emailValid && this.state.passwordValid && this.state.eduEmail});
 	}
 
 	errorClass(error) {
@@ -129,18 +133,16 @@ export default class Register extends Component {
 			return (
 				<form onSubmit={this.handleSubmit}>
 					<div className={"container  center"}>
-						<div className="panel panel-default">
-							<FormError formErrors={this.state.formErrors} />
-						</div>
+						
 						<label htmlFor={"first_name"} className={"top-pad"}><b>First Name</b></label>
 						<input type={"text"} placeholder={"First name"} name={"first_name"} className={"form-control"} onChange={this.handleChange} value={this.state.first_name} required></input>
 
-						<label htmlFor={"Last_name"}><b>Last Name</b></label>
+						<label htmlFor={"Last_name"}><b>Last Name</b>  </label>
 						<input type={"text"} placeholder={"First name"} name={"last_name"} onChange={this.handleChange} value={this.state.last_name} required></input>
 
 						<div className={`form-group ${this.errorClass(this.state.formErrors.email)}`}>
-							<label htmlFor={"email"}><b>Email</b></label>
-							<input type="text" placeholder="Enter Email" name="email" className="form-control" onChange={this.handleChange} value={this.state.email} required></input>
+							<label htmlFor={"email"}><b>{`Email`}</b>{!this.state.eduEmail? "  *cuny.edu":""}</label>
+							<input type="text" placeholder="jondoe@cuny.edu" name="email" className="form-control" onChange={this.handleChange} value={this.state.email} required></input>
 						</div>
 
 						<div className={`form-group ${this.errorClass(this.state.formErrors.password)}`}>
@@ -173,3 +175,7 @@ export default class Register extends Component {
 	}
 
 }
+
+// <div className="panel panel-default">
+// 							<FormError formErrors={this.state.formErrors} />
+// 						</div>
