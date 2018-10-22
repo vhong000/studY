@@ -3,27 +3,57 @@ pipeline {
   stages {
     stage('Create virtualenv') {
       steps {
-          echo 'Creating virtualenv ...'
-          sh 'rm -rf .venv && python3.6 -m venv .venv'
+        echo 'Creating virtualenv ...'
+        sh 'rm -rf .venv && python3.6 -m venv .venv'
+      }
+    }    
+    stage('Install pip packages'){
+
+      steps {
+        sh '''
+        . .venv/bin/activate
+        pip install -r ./backend/requirements.txt
+        '''
+      }
+    }
+    stage('Django Tests') {
+      steps {
+        sh '''
+        . .venv/bin/activate
+        ./backend/manage.py test backend --noinput
+        '''
+      }
+    }
+
+    stage("UI Tests") {
+      steps {
+        withEnv(['PATH+EXTRA=/home/ubuntu/.nvm/versions/node/v8.12.0/bin:']){
+          sh """
+          cd frontend && npm install
+          CI=true npm test
+          """
+        }
+      }
+    }
+
+  stage("Bundle") {
+      steps {
+        withEnv(['PATH+EXTRA=/home/ubuntu/.nvm/versions/node/v8.12.0/bin:']){
+          sh """
+          cd frontend && npm run build
+          cp -r build/ $(PROJECT_ROOT_DIR)
+          """
+        }
       }
     }
     
-    stage('Install requirements'){
+    stage("Deploy") {
       steps {
-        sh """
-        . .venv/bin/activate
-        pip install -r ./backend/requirements.txt
-        """
-      }
-    }
-  
-    stage("Django Tests") {
-      steps {
-        sh """
-        . .venv/bin/activate
-        ./backend/manage.py test backend --noinput
-        """
-      }
+          sh """
+          cp -r backend $(PROJECT_ROOT_DIR) && chdir $(PROJECT_ROOT_DIR) 
+          ./deploy.sh
+          """
+        }
     }
   }
 }

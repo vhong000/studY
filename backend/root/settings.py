@@ -25,12 +25,12 @@ SECRET_KEY = 'ot=6xctd1o9ltmrq)dj0hkxt&umw*xjexfg!2nwob8_n9yd5y)'
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
-INTERNAL_IPS = ['127.0.0.1', 'localhost']
-CSRF_TRUSTED_ORIGINS = ['127.0.0.1', 'localhost']
+TRUSTED_ORIGINS = ['52.207.169.97', 'localhost', '127.0.0.1']
 
+ALLOWED_HOSTS = TRUSTED_ORIGINS
+INTERNAL_IPS = TRUSTED_ORIGINS
+CSRF_TRUSTED_ORIGINS = TRUSTED_ORIGINS
 
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
