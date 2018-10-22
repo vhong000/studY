@@ -27,33 +27,13 @@ pipeline {
 
     stage("UI Tests") {
       steps {
-        withEnv(['PATH+EXTRA=/home/ubuntu/.nvm/versions/node/v8.12.0/bin:']){
+        withEnv(['PATH+EXTRA=/home/ubuntu/.nvm/versions/node/v8.12.0/bin']){
           sh """
           cd frontend && npm install
           CI=true npm test
           """
         }
       }
-    }
-
-  stage("Bundle") {
-      steps {
-        withEnv(['PATH+EXTRA=/home/ubuntu/.nvm/versions/node/v8.12.0/bin:']){
-          sh """
-          cd frontend && npm run build
-          cp -r build/ $(PROJECT_ROOT_DIR)
-          """
-        }
-      }
-    }
-    
-    stage("Deploy") {
-      steps {
-          sh """
-          cp -r backend $(PROJECT_ROOT_DIR) && chdir $(PROJECT_ROOT_DIR) 
-          ./deploy.sh
-          """
-        }
     }
   }
 }
