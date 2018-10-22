@@ -1,14 +1,20 @@
 pipeline {
   agent any
+
+  environment {
+    PROJECT_ROOT_DIR = '/home/ubuntu/webapps/swe-project/'
+  }
+
   stages {
+
     stage('Create virtualenv') {
       steps {
         echo 'Creating virtualenv ...'
         sh 'rm -rf .venv && python3.6 -m venv .venv'
       }
     }    
-    stage('Install pip packages'){
 
+    stage('Install pip packages'){
       steps {
         sh '''
         . .venv/bin/activate
@@ -16,6 +22,7 @@ pipeline {
         '''
       }
     }
+
     stage('Django Tests') {
       steps {
         sh '''
@@ -27,18 +34,18 @@ pipeline {
 
     stage("UI Tests") {
       steps {
-        withEnv(['PATH+EXTRA=/home/ubuntu/.nvm/versions/node/v8.12.0/bin:']){
+        withEnv(['PATH+EXTRA=/home/ubuntu/.nvm/versions/node/v8.12.0/bin']){
           sh """
           cd frontend && npm install
-          CI=true npm test
+          #CI=true npm test
           """
         }
       }
     }
 
-  stage("Bundle") {
+    stage("Bundle") {
       steps {
-        withEnv(['PATH+EXTRA=/home/ubuntu/.nvm/versions/node/v8.12.0/bin:']){
+        withEnv(['PATH+EXTRA=/home/ubuntu/.nvm/versions/node/v8.12.0/bin']){
           sh """
           cd frontend && npm run build
           cp -r build/ $(PROJECT_ROOT_DIR)
@@ -46,14 +53,15 @@ pipeline {
         }
       }
     }
-    
+      
     stage("Deploy") {
       steps {
           sh """
           cp -r backend $(PROJECT_ROOT_DIR) && chdir $(PROJECT_ROOT_DIR) 
           ./deploy.sh
           """
-        }
+      }
     }
+    
   }
 }
