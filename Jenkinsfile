@@ -48,7 +48,7 @@ pipeline {
         withEnv(['PATH+EXTRA=/home/ubuntu/.nvm/versions/node/v8.12.0/bin']){
           sh """
           cd frontend && npm run build
-          cp -r build/ $(PROJECT_ROOT_DIR)
+          cp -r build/ ${PROJECT_ROOT_DIR}
           """
         }
       }
@@ -57,7 +57,7 @@ pipeline {
     stage("Deploy") {
       steps {
           sh """
-          cp -r backend $(PROJECT_ROOT_DIR) && chdir $(PROJECT_ROOT_DIR) 
+          cp -r backend ${PROJECT_ROOT_DIR} && chdir ${PROJECT_ROOT_DIR}
           ./deploy.sh
           """
       }
