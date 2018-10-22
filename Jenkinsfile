@@ -1,3 +1,5 @@
+#!/usr/bin/env groovy
+
 pipeline {
   agent any
 
@@ -44,6 +46,10 @@ pipeline {
     }
 
     stage("Bundle") {
+      when {
+        branch 'release'  
+      }
+      
       steps {
         withEnv(['PATH+EXTRA=/home/ubuntu/.nvm/versions/node/v8.12.0/bin']){
           sh """
@@ -55,6 +61,10 @@ pipeline {
     }
       
     stage("Deploy") {
+      when {
+        branch 'release'  
+      }
+      
       steps {
           sh """
           cp -r backend ${PROJECT_ROOT_DIR} && cd ${PROJECT_ROOT_DIR}
