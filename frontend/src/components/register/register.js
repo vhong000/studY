@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Button, AppBar, Toolbar, TextField, withStyles, Typography, Input } from '@material-ui/core';
+import { Button, AppBar, Toolbar, 
+	TextField, withStyles, Typography, Input
+} from '@material-ui/core';
 import FormError from './FormError';
 import { Alert } from '../../utils/Lines';
 // more components at https://material-ui.com/getting-started/usage/
@@ -105,77 +107,42 @@ export default class Register extends Component {
 	}
 
 	render() {
-		const RegisterHeader = () => {
-			return (
-				<AppBar position='static' >
-					<Toolbar>
-						<Typography
-							style={{ flex: 1 }}
-							variant='headline'
-							color='inherit'>
-							StudY
-					</Typography>
-						<Button
-							component={Link}
-							to="/login"
-							className='login-button'
-							children="Login"
-							color='inherit' />
-					</Toolbar>
-				</AppBar>
-			)
-		}
-
 		const renderCheckEmail = <Alert.Primary outerClassName={"col-sm-12 col-md-12 top-pad"} label={`Please confirm your email at ${this.state.email} to complete with the registration process`} />;
-
-		const RenderForm = () => {
-
-			return (
-				<form onSubmit={this.handleSubmit}>
-					<div className={"container  center"}>
-						
-						<label htmlFor={"first_name"} className={"top-pad"}><b>First Name</b></label>
-						<input type={"text"} placeholder={"First name"} name={"first_name"} className={"form-control"} onChange={this.handleChange} value={this.state.first_name} required></input>
-
-						<label htmlFor={"Last_name"}><b>Last Name</b>  </label>
-						<input type={"text"} placeholder={"First name"} name={"last_name"} onChange={this.handleChange} value={this.state.last_name} required></input>
-
-						<div className={`form-group ${this.errorClass(this.state.formErrors.email)}`}>
-							<label htmlFor={"email"}><b>{`Email`}</b>{!this.state.eduEmail? "  *cuny.edu":""}</label>
-							<input type="text" placeholder="jondoe@cuny.edu" name="email" className="form-control" onChange={this.handleChange} value={this.state.email} required></input>
-						</div>
-
-						<div className={`form-group ${this.errorClass(this.state.formErrors.password)}`}>
-							<label htmlFor="password"><b>Password</b></label>
-							<input type="password" placeholder="Enter Password" name="password" className="form-control" onChange={this.handleChange} value={this.state.password} required></input>
-						</div>
-
-						<label htmlFor="passwordRepeat"><b>Repeat Password</b></label>
-						<input type="password" placeholder="Repeat Password" name="passwordRepeat" onChange={this.handleChange} value={this.state.passwordRepeat} required></input>
-
-						<label htmlFor="school"><b>School</b></label>
-						<input type="text" placeholder="eg. City College" name="school" onChange={this.handleChange} value={this.state.school}></input>
-
-						<button type="submit" className="btn btn-primary" disabled={!this.state.formValid}>Register</button>
-						{this.state.registered && renderCheckEmail}
-
-					</div>
-
-				</form>
-			)
-
-		}
 		return (
-			<div>
-				{RegisterHeader()}
-				{RenderForm()}
-			</div>
+			<form>
+				<TextField
+					id='first_name' label='First' type='text'
+					variant='filled' onChange={this.handleChange}
+				/>
+
+				<TextField
+					id='last_name' label='Last' type='text'
+					variant='filled' onChange={this.handleChange}
+				/>
+
+				<TextField
+					id='email' label='E-mail' type='email'
+					variant='filled' onChange={this.handleChange}
+				/>
+
+				<TextField
+					id='password' label='Password' type='password'
+					variant='filled' onChange={this.handleChange}
+				/>
+
+				<TextField
+					id='school' label='School' type='text'
+					variant='filled' onChange={this.handleChange}
+					placeholder="eg. City College" 
+				/>
+
+				<Button
+					type='submit'
+					children="Register"
+					onClick={this.handleSubmit}
+				/>
+			</form>
 
 		)
 	}
-
 }
-
-// <div className="panel panel-default">
-// 							<FormError formErrors={this.state.formErrors} />
-// 						</div>
