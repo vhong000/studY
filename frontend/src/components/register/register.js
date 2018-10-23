@@ -13,39 +13,34 @@ export default class Register extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			email: "",
-			first_name: "",
-			last_name: "",
-			password: "",
-			school: "",
-			major: "",
-			formErrors: { email: '', password: '' },
+			applicant: {
+				email: "",
+				first_name: "",
+				last_name: "",
+				password: "",
+				school: "",
+				major: "",
+			},
 			emailValid: false,
-			passwordValid: true,
-			passwordRepeat:'',
-			formValid: false,
-			registered: false,
 			// probably more, not final,
 		}
 		this.handleChange = this.handleChange.bind(this)
+		this.handleEmailChange = this.handleEmailChange.bind(this)
 		this.handleSubmit = this.handleSubmit.bind(this)
 	}
 
-
-
-
 	handleChange(event) { // update state on input change
-		const value = event.target.value
-		const name = event.target.name
-		this.setState(
-			{ [name]: value },
-			() => { this.validateField(name, value) });
-		console.log(event.target.value);
-
+		this.setState({ 
+			applicant: {
+				...this.state.applicant,
+				[event.target.id]: event.target.value,
+			}
+		})
 	}
 
 	handleSubmit(event) { // submit user state as json body
-		//console.log(this.state);
+		event.preventDefault();
+
 		const { email, first_name, last_name, password, school } = this.state;
 		let applicant = {
 			email: email,
@@ -62,9 +57,19 @@ export default class Register extends Component {
 			password:'',
 			passwordRepeat:'', 
 			school:''  });
-		event.preventDefault();
 	}
 
+	handleEmailChange(event) {
+		const currEmail = event.target.value;
+		const isValid = !(currEmail.includes('cuny.edu'));
+		this.setState({
+			applicant: {
+				...this.state.applicant,
+				email: event.target.value,
+			},
+			emailValid: isValid,
+		})
+	}
 
 	validateField(fieldName, value) {
 		let validations = this.state.formErrors;
@@ -103,10 +108,6 @@ export default class Register extends Component {
 		this.setState({ formValid: this.state.emailValid && this.state.passwordValid && this.state.eduEmail});
 	}
 
-	errorClass(error) {
-		return (error.lenght === 0 ? '' : 'has-error')
-	}
-
 	render() {
 		return (
 			<form onSubmit={this.handleSubmit}>
@@ -118,7 +119,7 @@ export default class Register extends Component {
 								<TextField
 									id='first_name' label='First' type='text'
 									variant='filled' onChange={this.handleChange}
-									fullWidth
+									fullWidth required
 								/>
 							</Grid>
 
@@ -126,44 +127,55 @@ export default class Register extends Component {
 								<TextField
 									id='last_name' label='Last' type='text'
 									variant='filled' onChange={this.handleChange}
-									fullWidth
+									fullWidth required
 								/>
 							</Grid>
 						</Grid>
 
+						<Grid item >
+							<TextField
+								id='email' label='E-mail' type='email'
+								variant='filled' onChange={this.handleEmailChange}
+								fullWidth required error={this.state.emailValid}
+							/>
+						</Grid>
+
+						<Grid item >
+							<TextField
+								id='password' label='Password' type='password'
+								variant='filled' onChange={this.handleChange}
+								fullWidth required
+							/>
+						</Grid>
+
 						<Grid container item direction='row' spacing='16'>
-							<Grid item xs='8' >
+							<Grid item xs='8'>
 								<TextField
-									id='email' label='E-mail' type='text'
+									id='school' label='School' type='text'
 									variant='filled' onChange={this.handleChange}
-									fullWidth
+									placeholder="eg. City College" 
+									fullWidth required
 								/>
 							</Grid>
 
-							<Grid item xs='4' >
+							<Grid item xs='4'>
 								<TextField
-									id='password' label='Password' type='password'
+									id='major' label='Major' type='text'
 									variant='filled' onChange={this.handleChange}
+									placeholder="eg. Computer Science" 
 									fullWidth
 								/>
 							</Grid>
 						</Grid>
 
 						<Grid item>
-							<TextField
-								id='school' label='School' type='text'
-								variant='filled' onChange={this.handleChange}
-								placeholder="eg. City College" 
-								fullWidth
-							/>
-						</Grid>
-
-						<Grid container item justify='center'>
 							<Button
 								type='submit'
 								children="Register"
 								onClick={this.handleSubmit}
 								fullWidth
+								color='primary'
+								variant='outlined'
 							/>
 						</Grid>
 
