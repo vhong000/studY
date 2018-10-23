@@ -44,7 +44,7 @@ pipeline {
         }
       }
     }
-
+    
     stage("Bundle") {
       when {
         branch 'release'  
@@ -72,7 +72,6 @@ pipeline {
           """
       }
     }
-    
-    
+
   }
 }

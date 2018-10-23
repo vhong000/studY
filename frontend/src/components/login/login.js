@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import classes from './login.module.css';
@@ -18,11 +19,11 @@ export default class Login extends Component {
 	}
 
   // update state on input change
-	handleChange(event, name) {
+	handleChange(event) {
 		this.setState({
 			user: {
 				...this.state.user,
-				[name]: event.target.value
+				[event.target.id]: event.target.value
 			}
 		});
 	}
@@ -39,14 +40,14 @@ export default class Login extends Component {
 
 		return (
 			<form className={classes.Form} id="myForm"
-				onSubmit={e => this.handleSubmit(e)}>
+				onSubmit={this.handleSubmit}>
 					<div className={classes.Login }>
 						<p>Login To My Account</p>
 					</div>
 					<div className={classes.Outer}>
 						<div>	
 							<TextField
-								id="filled-email-input"
+								id="email"
 								label="Email"
 								className={classes.TextField}
 								type="email"
@@ -54,26 +55,32 @@ export default class Login extends Component {
 								autoComplete="email"
 								margin="normal"
 								variant="filled"
-								onChange={e => this.handleChange(e, 'email')}
+								onChange={this.handleChange}
 							/>
 						</div>
 						<div>
 							<TextField
 								className={classes.TextField}
-								id="filled-password-input"
+								id="password"
 								label="Password"
 								type="password"
 								autoComplete="current-password"
 								margin="normal"
 								variant="filled"
-								onChange={e => this.handleChange(e, 'password')}
+								onChange={this.handleChange}
 								/>
 						</div>
 						<div>
-							<button type="submit"  className={classes.Button}>Login</button>
+							<button type="submit" className={classes.Button}>Login</button>
 						</div>
 						<div>
-							<Button href="./register" className={classes.RegisterButton}>New Register?</Button>
+							<Button 
+								className={classes.RegisterButton}
+								component={Link}
+								to="/register" 
+								children="Sign Up"
+							/>
+							
 						</div>
 					</div>
 			</form>
