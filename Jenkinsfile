@@ -39,7 +39,7 @@ pipeline {
         withEnv(['PATH+EXTRA=/home/ubuntu/.nvm/versions/node/v8.12.0/bin']){
           sh """
           cd frontend && npm install
-          #CI=true npm test
+          CI=true npm test
           """
         }
       }
