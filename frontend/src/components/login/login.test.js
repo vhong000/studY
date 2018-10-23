@@ -1,39 +1,14 @@
 import React from 'react';
 import * as enzyme from 'enzyme';
-import { shallow, mount } from 'enzyme';
-import { BrowserRouter } from 'react-router-dom'
 import Adapter from 'enzyme-adapter-react-16';
-import { shape } from 'prop-types';
+import { shallowWrap, mountWrap } from '../test_utils/contextWrap' 
 
 import Login from './login';
 
 enzyme.configure({ adapter: new Adapter() });
 
-// router context
-const router = {
-	history: new BrowserRouter().history,
-	route: {
-		location: {},
-		match: {},
-	},
-};
-
-const createContext = () => ({
-	context: { router },
-	childContextTypes: { router: shape({}) },
-})
-
-function mountWrap(node) {
-	return mount(node, createContext());
-}
-
-function shallowWrap(node) {
-	return shallow(node, createContext());
-}
-
 describe('Login', () => {
-	const wrapper = shallow(<Login />);
-	console.log(wrapper.find('TextField #password input').debug())
+	const wrapper = mountWrap(<Login />);
 
 	const expectedInitialState = {
 		user: {
@@ -47,13 +22,14 @@ describe('Login', () => {
 	})
 
 	// test('password on change', () => {
+	// 	console.log(wrapper.find('TextField #password FilledInput').debug())
 	// 	//wrapper.find('TextField #password input').simulate('change', {
 	// 	//	target: { value: '12345' }
 	// 	//});
 	// 	wrapper.find('TextField #password input').simulate('change', {
-	// 		target: { value: "12345" }
-	// 	});
-	// 	expect(wrapper.find('TextField #password input').props().value).toEqual('12345');
+	// 		value: "12345",
+	// 	})
+	// 	expect(wrapper.find('TextField #password FilledInput').props().inputRef).toEqual('12345');
 	// 	// expect(wrapper.state().user.password).toEqual('12345');
 	// })
 
