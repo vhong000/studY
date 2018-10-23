@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Button, AppBar, Toolbar, 
-	TextField, withStyles, Typography, Input
+	TextField, withStyles, Typography, Input,
+	Grid
 } from '@material-ui/core';
 import FormError from './FormError';
 import { Alert } from '../../utils/Lines';
@@ -107,40 +108,67 @@ export default class Register extends Component {
 	}
 
 	render() {
-		const renderCheckEmail = <Alert.Primary outerClassName={"col-sm-12 col-md-12 top-pad"} label={`Please confirm your email at ${this.state.email} to complete with the registration process`} />;
 		return (
-			<form>
-				<TextField
-					id='first_name' label='First' type='text'
-					variant='filled' onChange={this.handleChange}
-				/>
+			<form onSubmit={this.handleSubmit}>
+				<Grid container justify='center' >
+					<Grid container direction='column' xs='6' spacing='32' >
 
-				<TextField
-					id='last_name' label='Last' type='text'
-					variant='filled' onChange={this.handleChange}
-				/>
+						<Grid container item direction='row' spacing='16' >
+							<Grid item xs='6'>
+								<TextField
+									id='first_name' label='First' type='text'
+									variant='filled' onChange={this.handleChange}
+									fullWidth
+								/>
+							</Grid>
 
-				<TextField
-					id='email' label='E-mail' type='email'
-					variant='filled' onChange={this.handleChange}
-				/>
+							<Grid item xs='6'>
+								<TextField
+									id='last_name' label='Last' type='text'
+									variant='filled' onChange={this.handleChange}
+									fullWidth
+								/>
+							</Grid>
+						</Grid>
 
-				<TextField
-					id='password' label='Password' type='password'
-					variant='filled' onChange={this.handleChange}
-				/>
+						<Grid container item direction='row' spacing='16'>
+							<Grid item xs='8' >
+								<TextField
+									id='email' label='E-mail' type='text'
+									variant='filled' onChange={this.handleChange}
+									fullWidth
+								/>
+							</Grid>
 
-				<TextField
-					id='school' label='School' type='text'
-					variant='filled' onChange={this.handleChange}
-					placeholder="eg. City College" 
-				/>
+							<Grid item xs='4' >
+								<TextField
+									id='password' label='Password' type='password'
+									variant='filled' onChange={this.handleChange}
+									fullWidth
+								/>
+							</Grid>
+						</Grid>
 
-				<Button
-					type='submit'
-					children="Register"
-					onClick={this.handleSubmit}
-				/>
+						<Grid item>
+							<TextField
+								id='school' label='School' type='text'
+								variant='filled' onChange={this.handleChange}
+								placeholder="eg. City College" 
+								fullWidth
+							/>
+						</Grid>
+
+						<Grid container item justify='center'>
+							<Button
+								type='submit'
+								children="Register"
+								onClick={this.handleSubmit}
+								fullWidth
+							/>
+						</Grid>
+
+					</Grid>
+				</Grid>
 			</form>
 
 		)
