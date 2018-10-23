@@ -24,14 +24,16 @@ export class AuthProvider extends Component {
 	}
 
 	render() {
+		const clear = () => {
+			this.setState({ token: '' });
+			localStorage.removeItem('token');
+		}
+
 		return (
 			<AuthContext.Provider value={{
-					token: this.state.token,
-					clear: () => {
-						this.setState({ token: '' });
-						localStorage.removeItem('token');
-					}
-				}}>
+				token: this.state.token,
+				clear: clear,
+			}}>
 				{this.props.children}
 			</AuthContext.Provider>
 		)
@@ -39,4 +41,16 @@ export class AuthProvider extends Component {
 
 }
 
-export const AuthConsumer = AuthContext.Consumer;
+const AuthConsumer = AuthContext.Consumer;
+
+export function AuthWrapper(WrappedComponent) {
+	return function Wrapper(props) {
+		return(
+			<AuthConsumer >
+				{ value => (
+					<WrappedComponent {...props} {...value} />
+				) }
+			</AuthConsumer>
+		)
+	}
+}
