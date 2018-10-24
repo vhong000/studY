@@ -9,12 +9,15 @@ import Register from './components/register/register';
 import * as serviceWorker from './serviceWorker';
 
 import { AuthProvider } from './contexts/Auth.context.js';
+import { UserInfoProvider } from './contexts/UserInfo.context.js';
 
 ReactDOM.render(
 	<Router>
 		<div>
 			<AuthProvider>
-				<Route exact path="/" component={App} />
+				<UserInfoProvider>
+					<Route exact path="/" component={App} />
+				</UserInfoProvider>
 				<Route exact path="/register" component={Register} />
 				<Route exact path="/login" component={Login} />
 			</AuthProvider>

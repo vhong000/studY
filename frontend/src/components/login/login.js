@@ -5,12 +5,14 @@ import TextField from '@material-ui/core/TextField';
 import classes from './login.module.css';
 // more components at https://material-ui.com/getting-started/usage/
 
+import { loginUser } from '../../fetchData';
+
 export default class Login extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			user: {
-				email: "",
+				username: "",
 				password: "",
 			}
     }		
@@ -32,8 +34,9 @@ export default class Login extends Component {
 	handleSubmit(event) {
 		event.preventDefault();
 		const data = JSON.stringify(this.state.user);
-		document.getElementById("myForm").reset();
 		console.log(data);
+		document.getElementById("myForm").reset();
+		loginUser(data);
 	}
 
 	render() {
@@ -47,10 +50,10 @@ export default class Login extends Component {
 					<div className={classes.Outer}>
 						<div>	
 							<TextField
-								id="email"
+								id="username"
 								label="Email"
 								className={classes.TextField}
-								type="email"
+								type="text"
 								name="email"
 								autoComplete="email"
 								margin="normal"
