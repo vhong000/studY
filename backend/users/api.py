@@ -11,14 +11,13 @@ from rest_framework.authentication import (BasicAuthentication,
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.authtoken.models import Token as REST_Token
 from rest_framework.permissions import AllowAny, IsAuthenticated, IsAuthenticatedOrReadOnly
-# from rest_framework.decorators import (api_view, authentication_classes,
-#    permission_classes)
 from rest_framework.parsers import JSONParser
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
 from .models import Student
-from .serializers import UserSerializer, StudentSerializer
+from .serializers import StudentSerializer
+import uuid
 
 
 class SignupView(APIView):
@@ -26,6 +25,7 @@ class SignupView(APIView):
 
     def post(self, request):
         payload = json.loads(request.body.decode('utf-8'), encoding='utf-8')
+        payload['username'] = payload.get('username', uuid.uuid4().hex)
         data = dict([(k, payload.pop(k, None)) for k in ['school', 'year', 'major']])
         data['user_profile'] = payload
         student_serializer = StudentSerializer(data=data)
@@ -56,6 +56,7 @@ class CustomAuthToken(ObtainAuthToken):
     parser_classes = (JSONParser,)
 
     def post(self, request, *args, **kwargs):
+        request.data['username'] = request.data['email']
         serializer = self.serializer_class(data=request.data,
                                            context={'request': request})
         serializer.is_valid(raise_exception=True)
