@@ -30,7 +30,7 @@ class Student(models.Model):
         return self.first_name + ' ' + self.last_name
 
 class Category(models.Model):
-    category_id = models.AutoField(primary_key=true)
+    category_id = models.AutoField(primary_key=True)
     category = models.CharField(max_length=50)
 
     class Meta:
@@ -40,7 +40,7 @@ class Category(models.Model):
         return self.category
 
 class Subject (models.Model):
-    subject_id= models.AutoField(primary_key=true)
+    subject_id= models.AutoField(primary_key=True)
     subject = models.CharField(max_length=50)
     category = models.ForeignKey(Category,on_delete=models.CASCADE)
 
