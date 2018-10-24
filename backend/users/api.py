@@ -25,7 +25,7 @@ class SignupView(APIView):
 
     def post(self, request):
         payload = json.loads(request.body.decode('utf-8'), encoding='utf-8')
-        payload['username'] = payload.get('username', uuid.uuid4().hex)
+        payload['username'] = payload.get('username', None) or uuid.uuid4().hex
         data = dict([(k, payload.pop(k, None)) for k in ['school', 'year', 'major']])
         data['user_profile'] = payload
         student_serializer = StudentSerializer(data=data)
