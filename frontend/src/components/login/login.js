@@ -12,7 +12,7 @@ export default class Login extends Component {
 		super(props);
 		this.state = {
 			user: {
-				username: "",
+				email: "",
 				password: "",
 			}
     }		
@@ -34,9 +34,8 @@ export default class Login extends Component {
  	// submit user state as json body
 	handleSubmit(event) {
 		event.preventDefault();
-		const data = JSON.stringify(this.state.user);
+		const data = this.state.user;
 		console.log(data);
-		document.getElementById("myForm").reset();
 		loginUser(data);
 	}
 
@@ -51,7 +50,7 @@ export default class Login extends Component {
 					<div className={classes.Outer}>
 						<div>	
 							<TextField
-								id="username"
+								id="email"
 								label="Email"
 								className={classes.TextField}
 								type="text"

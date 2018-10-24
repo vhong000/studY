@@ -15,9 +15,7 @@ ReactDOM.render(
 	<Router>
 		<div>
 			<AuthProvider>
-				<UserInfoProvider>
-					<Route exact path="/" component={App} />
-				</UserInfoProvider>
+				<Route exact path="/" component={App} />
 				<Route exact path="/register" component={Register} />
 				<Route exact path="/login" component={Login} />
 			</AuthProvider>

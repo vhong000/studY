@@ -1,6 +1,6 @@
 
 export function registerUser(newUser) {
-	return fetch("http://localhost:8000/api/auth/signup", {
+	return fetch("/api/auth/signup", {
 		method: "POST",
 		mode: "no-cors",
 		headers: {
@@ -8,7 +8,7 @@ export function registerUser(newUser) {
 		},
 		body: JSON.stringify(newUser),
 	}).then((response) => {
-    if (response.status === 200) {
+    if (response.status === 201) {
       return response.json();
     } else { throw Error("Unable to Sign up"); }
 	}).then((jsonData) => {
@@ -19,17 +19,21 @@ export function registerUser(newUser) {
 }
 
 export function loginUser(user) {
-	return fetch("http://localhost:8000/api/auth/login", {
+	debugger;
+	return fetch("/api/auth/login", {
 		method: "POST",
-		mode: "no-cors",
+		// mode: "no-cors",
 		headers: {
-			'Content-Type': 'application/json'
+			'Content-Type': 'application/json',
+			"Access-Control-Allow-Origin": '*'
 		},
 		body: JSON.stringify(user),
+		credentials: "include"
 	}).then((response) => {
     if (response.status === 200) {
       return response.json();
-    } else { throw Error("Unable to Login"); }
+	// } else { throw Error("Unable to Login");
+ }
 	}).then((jsonData) => {
 		console.log(jsonData);
 	}).catch((error) => {
