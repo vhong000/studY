@@ -76,6 +76,7 @@ pipeline {
 
   post {
         always {
+            junit 'backend/coverage.xml'
             deleteDir()
         }
   }
