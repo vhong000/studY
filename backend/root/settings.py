@@ -32,6 +32,8 @@ INTERNAL_IPS = TRUSTED_ORIGINS
 CSRF_TRUSTED_ORIGINS = TRUSTED_ORIGINS
 
 
+AUTHENTICATION_BACKENDS = ['users.utils.CustomEmailAuth']
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
