@@ -2,3 +2,4 @@ Django==2.1.2
 djangorestframework==3.8.2
 Markdown==3.0.1
 uwsgi==2.0.17
+coverage==4.5.1

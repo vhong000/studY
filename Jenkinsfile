@@ -1,31 +1,38 @@
+#!/usr/bin/env groovy
+
 pipeline {
   agent any
+
+  environment {
+    PROJECT_ROOT_DIR = '/home/ubuntu/webapps/swe-project/'
+  }
+
   stages {
-    stage('Create virtualenv') {
+
+    stage('Build') {
       steps {
         echo 'Creating virtualenv ...'
         sh 'rm -rf .venv && python3.6 -m venv .venv'
-      }
-    }    
-    stage('Install pip packages'){
-
-      steps {
+        echo 'Install pip packages...'
         sh '''
         . .venv/bin/activate
         pip install -r ./backend/requirements.txt
         '''
       }
-    }
-    stage('Django Tests') {
+    }    
+
+    stage('Test: Backend') {
       steps {
         sh '''
         . .venv/bin/activate
-        ./backend/manage.py test backend --noinput
+        cd backend
+        coverage run --source='.' manage.py test --noinput
+        coverage xml
         '''
       }
     }
 
-    stage("UI Tests") {
+    stage("Test: UI") {
       steps {
         withEnv(['PATH+EXTRA=/home/ubuntu/.nvm/versions/node/v8.12.0/bin']){
           sh """
@@ -35,5 +42,44 @@ pipeline {
         }
       }
     }
+    
+    stage ("Release") {
+      when {
+          allOf {
+              branch 'master'
+              not {changeRequest()}
+            }
+          }
+
+      stages {
+        
+        stage("Bundle") {
+          steps {
+            withEnv(['PATH+EXTRA=/home/ubuntu/.nvm/versions/node/v8.12.0/bin']){
+              sh """
+              cd frontend && npm run build
+              cp -r build/ ${PROJECT_ROOT_DIR}
+              """
+            }
+          }
+        }
+          
+        stage("Deploy") {
+          steps {
+              sh """
+              cp -r backend ${PROJECT_ROOT_DIR} && cd ${PROJECT_ROOT_DIR}
+              ./deploy.sh
+              """
+          }
+        }
+      }
+    }
+  }
+
+  post {
+        always {
+            // junit 'backend/coverage.xml'
+            deleteDir()
+        }
   }
 }

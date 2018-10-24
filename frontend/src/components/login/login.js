@@ -28,6 +28,7 @@ export default class Login extends Component {
 				[event.target.id]: event.target.value
 			}
 		});
+		//console.log(event.target.value);
 	}
 
  	// submit user state as json body

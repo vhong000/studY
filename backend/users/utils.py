@@ -7,9 +7,21 @@ import root.settings as ENV
 from django.dispatch import receiver
 from rest_framework.authtoken.models import Token as auth_token
 from django.contrib.auth.models import User
+from django.contrib.auth.backends import ModelBackend
 
 
-# @receiver(signals.post_save, sender=User)
+class CustomEmailAuth(ModelBackend):
+    def authenticate(self, request, username=None, password=None):
+        try:
+            user = User.objects.get(email=username)
+        # pwd_valid = check_password(password, user)
+        except User.DoesNotExist:
+            return None
+
+        if user.check_password(password):
+            return user
+
+
 @receiver(signals.post_save, sender=settings.AUTH_USER_MODEL)
 def create_auth_token(sender, instance=None, created=False, **kwargs):
     if created:
@@ -24,7 +36,7 @@ def send_confirmation_email(sender, instance=None, created=False, **kwargs):
         User.objects.filter(student_profile=instance).update(is_active=True)
         return
 
-    message = f'Hi {str(instance.user.first_name)}, \n'
+    message = f'Hi {str(instance.usUserer.first_name)}, \n'
     f'Click on the following link to complete your registration:'
     f'{ENV.HOST_NAME}/registration?id={str(instance.reg_key)}'
 

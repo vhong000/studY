@@ -3,3 +3,5 @@
 **/.venv
 **/node_modules
 **/*.sqlite3
+**/.coverage
+**/coverage.xml
