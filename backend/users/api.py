@@ -11,7 +11,7 @@ from rest_framework.authentication import (BasicAuthentication,
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.authtoken.models import Token as REST_Token
 from rest_framework.permissions import AllowAny, IsAuthenticated, IsAuthenticatedOrReadOnly
-from rest_framework.parsers import JSONParser
+from rest_framework.parsers import JSONParser, FormParser
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
@@ -53,7 +53,7 @@ class UserView(APIView):
 class CustomAuthToken(ObtainAuthToken):
     authentication_classes = (TokenAuthentication, BasicAuthentication)
     permission_classes = (AllowAny,)
-    parser_classes = (JSONParser,)
+    parser_classes = (JSONParser, FormParser)
 
     def post(self, request, *args, **kwargs):
         request.data['username'] = request.data['email']
