@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 
 class School(models.Model):
-    schoolID = models.AutoField(primary_key=True)
+    school_id= models.AutoField(primary_key=True)
     name = models.CharField(max_length=100)
     symbol = models.CharField(max_length=10)
     website = models.CharField(max_length=255, null=True)
@@ -56,7 +56,7 @@ class Event(models.Model):
     event_description = models.CharField(max_length=1000)
     event_time = models.CharField(max_length=50)
     event_date = models.CharField(max_length=50)
-    school_id = models.ForeignKey(School,on_delete=models.CASCADE)
+    school= models.ForeignKey(School,on_delete=models.CASCADE)
     guess_total = models.IntegerField(null=True)
     subject = models.ForeignKey(Subject,on_delete=models.CASCADE)
     host = models.ForeignKey(Student,on_delete=models.CASCADE)
