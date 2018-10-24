@@ -25,8 +25,9 @@ pipeline {
       steps {
         sh '''
         . .venv/bin/activate
-        coverage run --source='.' backend/manage.py test backend --noinput
-        cd backend && coverage xml
+        cd backend
+        coverage run --source='.' manage.py test --noinput
+        coverage xml
         '''
       }
     }
