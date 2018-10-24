@@ -26,6 +26,7 @@ export default class Login extends Component {
 				[event.target.id]: event.target.value
 			}
 		});
+		//console.log(event.target.value);
 	}
 
  	// submit user state as json body
@@ -33,7 +34,7 @@ export default class Login extends Component {
 		event.preventDefault();
 		const data = JSON.stringify(this.state.user);
 		document.getElementById("myForm").reset();
-		console.log(data);
+		//console.log(data);
 	}
 
 	render() {
