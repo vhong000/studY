@@ -1,36 +1,89 @@
-
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import classes from './login.module.css';
 // more components at https://material-ui.com/getting-started/usage/
 
 export default class Login extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-      user: {
-        email: "",
-        password: "",
-      },
-    }
-		
+			user: {
+				email: "",
+				password: "",
+			}
+    }		
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
-	handleChange(event) { // update state on input change
-
+  // update state on input change
+	handleChange(event) {
+		this.setState({
+			user: {
+				...this.state.user,
+				[event.target.id]: event.target.value
+			}
+		});
 	}
 
-	handleSubmit(event) { // submit user state as json body
-
+ 	// submit user state as json body
+	handleSubmit(event) {
+		event.preventDefault();
+		const data = JSON.stringify(this.state.user);
+		document.getElementById("myForm").reset();
+		console.log(data);
 	}
 
 	render() {
+
 		return (
-			<div>
-				<h3>Login page</h3>
-			</div>
+			<form className={classes.Form} id="myForm"
+				onSubmit={this.handleSubmit}>
+					<div className={classes.Login }>
+						<p>Login To My Account</p>
+					</div>
+					<div className={classes.Outer}>
+						<div>	
+							<TextField
+								id="email"
+								label="Email"
+								className={classes.TextField}
+								type="email"
+								name="email"
+								autoComplete="email"
+								margin="normal"
+								variant="filled"
+								onChange={this.handleChange}
+							/>
+						</div>
+						<div>
+							<TextField
+								className={classes.TextField}
+								id="password"
+								label="Password"
+								type="password"
+								autoComplete="current-password"
+								margin="normal"
+								variant="filled"
+								onChange={this.handleChange}
+								/>
+						</div>
+						<div>
+							<button type="submit" className={classes.Button}>Login</button>
+						</div>
+						<div>
+							<Button 
+								className={classes.RegisterButton}
+								component={Link}
+								to="/register" 
+								children="Sign Up"
+							/>
+							
+						</div>
+					</div>
+			</form>
 		)
 	}
 }

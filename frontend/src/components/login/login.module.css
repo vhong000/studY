@@ -1,0 +1,74 @@
+.Form {
+    background-color: #4b58a7;
+    width: 35%;
+    margin: 130px auto;
+    text-align: center;
+    font-size: normal;
+    box-shadow: 0px 0px 8px 0px rgba(10, 10, 10, 0.75);
+    display: flex;
+    flex-flow: column;
+}
+
+.Login {
+    height: 70px;
+    background-color: #282e78;
+    color: white;
+    font-size: x-large;
+    letter-spacing: 1.5px;
+    vertical-align: middle;
+}
+
+.TextField {
+    background-color: white;
+    width: 85%;
+    height: 50px;
+}
+
+.Button {
+    background-color: #969cce;
+    width: 85%;
+    height: 45px;
+    margin: 20px auto; 
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor:pointer;
+    overflow: hidden;
+}
+
+.RegisterButton {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+		width: 85%;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    font-size: middle;
+}
+
+.Outer {
+    padding: 30px 10px;
+}
+
+
+@media (min-width: 300px) and (min-height: 200px) {
+    .Form {
+        width: 300px;
+    }
+}
+
+@media (min-width: 400px) and (min-height: 301px) {
+    .Form {
+        width: 400px;
+    }
+}
+
+@media (min-width: 1000px) and (min-height: 700px) {
+    .Form {
+        width: 35%;
+    }
+}

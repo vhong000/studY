@@ -1,4 +1,11 @@
+html {
+  min-height: 100%;
+  height: 100%;
+}
+
 body {
+  min-height: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -12,3 +19,117 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.registration{
+  background-color:  whitesmoke;
+  height: auto;
+  /* border-radius: 10% */
+}
+.center {
+  margin: auto;
+  width: 50%;
+  /* border: 3px solid green; */
+  padding: 10px;
+}
+
+.black{
+  background-color: black;
+}
+
+.blue{
+  background-color: blue;
+}
+.m-0-10-0-0{
+  margin-right: 10px;
+}
+
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 20px;
+  margin: 5px 0 22px 0;
+  /* display: inline-block; */
+  border-bottom: 0.1px solid blue;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: transparent;
+}
+
+
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.top-pad{
+  padding-top: 15px;
+}
+
+.pull-right{
+  align-content: center;
+}
+
+.glyphicon.glyphicon-ok{
+  color: #00b22d;
+}
+
+.glyphicon.glyphicon-hourglass{
+  color: gray;
+}
+
+.glyphicon.glyphicon-tasks{
+  color: #3b5998;
+}
+
+/* ================ ALERTS ================= */
+    
+.study-warning{ 
+  border: 1px solid #ffcf78;
+  border-left: 5px solid #ffcf78;
+  padding: 15px;
+  background-color: #fffbf4;
+  color: #dfa841;
+}
+
+.study-success{
+  border: 1px solid #2fb451;
+  border-left: 5px solid #2fb451;
+  padding: 15px;
+  background-color: #cfffdb;
+  color: #009525;
+}
+
+.study-danger{
+  border: 1px solid #a94442;
+  border-left: 5px solid #a94442;
+  padding: 15px;
+  background-color: #ffecec;
+  color: #a94442;
+}
+
+.study-muted{
+  border: 1px solid #eaeaea;
+  border-left: 5px solid #eaeaea;
+  padding: 15px;
+  color: #777777;
+}
+
+.study-primary{
+  border: 1px solid #337ab7;
+  border-left: 5px solid #337ab7;
+  padding: 15px;
+  background-color: #ecf7ff;
+  color: blue;
+}
+
+.study-warning .glyphicon, .study-success .glyphicon, .study-danger .glyphicon{
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.red{
+  text-decoration-color: #a94442
+}
+

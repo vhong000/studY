@@ -55,8 +55,8 @@ class TokenAuthTest(APITestCase):
 
     def test_valid_credentials(self):
 
-        res = self.client.post(self.url, {'username': 'jdoe01',
-                                          'password': 'password123'}, format='json')
+        res = self.client.post(self.url, {'email':  self.user_info['email'],
+                                          'password': self.user_info['password']}, format='json')
         self.assertEquals(res.status_code, status.HTTP_200_OK)
         self.assertJSONEqual(res.content,
                              {'token': REST_Token.objects.get(user=self.user).key})
