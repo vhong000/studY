@@ -5,7 +5,10 @@ import TextField from '@material-ui/core/TextField';
 import classes from './login.module.css';
 // more components at https://material-ui.com/getting-started/usage/
 
-export default class Login extends Component {
+import { connect } from 'react-redux';
+import { loginUser } from '../../actions/authActions';
+
+class Login extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -32,7 +35,8 @@ export default class Login extends Component {
  	// submit user state as json body
 	handleSubmit(event) {
 		event.preventDefault();
-		const data = JSON.stringify(this.state.user);
+		const data = this.state.user;
+		this.props.loginUser(data);
 		document.getElementById("myForm").reset();
 		//console.log(data);
 	}
@@ -88,3 +92,9 @@ export default class Login extends Component {
 		)
 	}
 }
+
+const mapStateToProps = state => ({
+	token: state.Authenticate.token,
+})
+
+export default connect(mapStateToProps, { loginUser })(Login);

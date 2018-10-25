@@ -5,7 +5,7 @@ import {
 	Button, AppBar, Typography, Toolbar,
 } from '@material-ui/core';
 
-import { AuthWrapper } from '../../contexts/Auth.context.js';
+// import { AuthWrapper } from '../../contexts/Auth.context.js';
 
 class Header extends Component {
 
@@ -17,9 +17,8 @@ class Header extends Component {
 						style={{flex: 1}}
 						variant='headline'
 						color='inherit'>
-						studY {this.props.token}
+						studY
 					</Typography>
-				{this.props.token === '' ? (
 					<div>
 						<Button
 							component={Link}
@@ -35,17 +34,14 @@ class Header extends Component {
 						children="Register"
 					/>
 					</div>
-				) : (
 					<Button 
 						color='inherit'
 						children="logout"
-						onClick={this.props.clear}
 					/>
-				)}
 			</Toolbar>
 		</AppBar>
 		)
 	}
 }
 
-export default AuthWrapper(Header);
+export default Header;
