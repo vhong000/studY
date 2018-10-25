@@ -5,6 +5,7 @@ import {
 	Button, AppBar, Typography, Toolbar,
 } from '@material-ui/core';
 
+import { connect } from 'react-redux';
 // import { AuthWrapper } from '../../contexts/Auth.context.js';
 
 class Header extends Component {
@@ -44,4 +45,9 @@ class Header extends Component {
 	}
 }
 
-export default Header;
+const mapStateToProps = state => ({
+	user: state.Authenticate.user,
+	token: state.Authenticate.token,
+})
+
+export default connect(mapStateToProps)(Header);

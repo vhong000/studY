@@ -13,9 +13,10 @@ const initialState = {
 export default function(state = initialState, action) {
   switch(action.type) {
     case AUTH_TOKEN_SUCCESS:
+    localStorage.setItem('token', action.payload.token);
     return {
       ...state,
-      token: action.payload,
+      token: action.payload.token,
     }
     default: return state;
   }
