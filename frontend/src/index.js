@@ -9,6 +9,7 @@ import Register from './components/register/register';
 import * as serviceWorker from './serviceWorker';
 
 import { AuthProvider } from './contexts/Auth.context.js';
+import { UserInfoProvider } from './contexts/UserInfo.context.js';
 
 ReactDOM.render(
 	<Router>

@@ -5,6 +5,8 @@ import { Button, TextField, withStyles,
 } from '@material-ui/core';
 // more components at https://material-ui.com/getting-started/usage/
 
+import { registerUser } from '../../fetchData';
+
 const styles = {
 	main_form: {
 		"margin-top": 20,
@@ -26,6 +28,7 @@ class Register extends Component {
 				password: "",
 				school: "",
 				major: "",
+				year: '6',
 			},
 			emailError: false,
 			openAlert: false,
@@ -54,13 +57,15 @@ class Register extends Component {
 		event.preventDefault();
 		const { applicant, emailError } = this.state;
 		const final = this.state.applicant;
+		console.log(final);
 
-		var required = applicant;
-		delete required.major;
+		const required = applicant;
 
 		const isComplete = !Object.values(required).every(x => (x === ''));
 		if (isComplete && !emailError) {
 			// this.props.register
+			registerUser(final);
+
 		} else {
 			this.setState({ openAlert: true })
 		}

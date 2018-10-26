@@ -25,7 +25,10 @@ pipeline {
       steps {
         sh '''
         . .venv/bin/activate
-        ./backend/manage.py test backend --noinput
+        cd backend
+        ./manage.py makemigrations && ./manage.py migrate
+        coverage run --source='.' manage.py test --noinput
+        coverage xml
         '''
       }
     }
@@ -76,6 +79,7 @@ pipeline {
 
   post {
         always {
+            // junit 'backend/coverage.xml'
             deleteDir()
         }
   }

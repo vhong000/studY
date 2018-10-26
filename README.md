@@ -1,1 +1,1 @@
-# studYYY
+# studY
