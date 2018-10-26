@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Header } from './components';
 import {
 	Paper, Card, CardContent, CardActions,
 	Typography, Grid, withStyles, CardMedia,
@@ -53,6 +54,8 @@ class App extends Component {
 		const { classes } = this.props;
     return (
 			<div className='App'>
+				<Header />
+
 				<Grid className={classes.main_grid} container justify='center' >
 					<Grid 
 						className={classes.topics_grid}

@@ -2,24 +2,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
-import { Login, Register, Header } from './components';
+import Login from './components/login/login';
+import Register from './components/register/register';
 import * as serviceWorker from './serviceWorker';
-import store from './store.js';
+
+import { AuthProvider } from './contexts/Auth.context.js';
+import { UserInfoProvider } from './contexts/UserInfo.context.js';
 
 ReactDOM.render(
-	<Provider store={store}>
-		<Router>
-			<div>
-				<Header />
+	<Router>
+		<div>
+			<AuthProvider>
 				<Route exact path="/" component={App} />
 				<Route exact path="/register" component={Register} />
 				<Route exact path="/login" component={Login} />
-			</div>
-		</Router>
-	</Provider>,
+			</AuthProvider>
+		</div>
+	</Router>,
 	document.getElementById('root')
 );
 

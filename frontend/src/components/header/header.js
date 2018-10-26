@@ -2,22 +2,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import {
-	Button, AppBar, Typography, Toolbar, Grid
+	Button, AppBar, Typography, Toolbar,
 } from '@material-ui/core';
 
-import { connect } from 'react-redux';
-import { logout, getUserData } from '../../actions/authActions';
-// import { AuthWrapper } from '../../contexts/Auth.context.js';
+import { AuthWrapper } from '../../contexts/Auth.context.js';
 
 class Header extends Component {
-	
-	componentDidMount() {
-		const token = localStorage.getItem('token');
-		if (token) { console.log(token); this.props.getUserData(token); }
-	}
 
 	render() {
-		const { user } = this.props;
 		return (
 			<AppBar position='static' >
 				<Toolbar>
@@ -25,47 +17,35 @@ class Header extends Component {
 						style={{flex: 1}}
 						variant='headline'
 						color='inherit'>
-						studY
+						studY {this.props.token}
 					</Typography>
-					{user ? ( 
-						<div>
-							<Typography
-								style={{flex: 1}}
-								color='inherit'>
-								{user.user_profile.first_name}
-							</Typography>
-							<Button 
-								color='inherit'
-								children="logout"
-								onClick={this.props.logout}
-							/>
-						</div>
-					) : (
-						<div>
-							<Button
-								component={Link}
-								to="/login"
-								className='login-button'
-								children="Login"
-								color='inherit' />
-							<Button 
-								component={Link} 
-								to="/register"
-								className='register-button'
-								color='inherit'
-								children="Register"
-							/>
-						</div>
-					)}
+				{this.props.token === '' ? (
+					<div>
+						<Button
+							component={Link}
+							to="/login"
+							className='login-button'
+							children="Login"
+					color='inherit' />
+					<Button 
+						component={Link} 
+						to="/register"
+						className='register-button'
+						color='inherit'
+						children="Register"
+					/>
+					</div>
+				) : (
+					<Button 
+						color='inherit'
+						children="logout"
+						onClick={this.props.clear}
+					/>
+				)}
 			</Toolbar>
 		</AppBar>
 		)
 	}
 }
 
-const mapStateToProps = state => ({
-	user: state.Authenticate.user,
-	token: state.Authenticate.token,
-})
-
-export default connect(mapStateToProps, { logout, getUserData })(Header);
+export default AuthWrapper(Header);
