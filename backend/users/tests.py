@@ -3,9 +3,10 @@ from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
 from django.contrib.auth.models import User
-from users.models import Student
+from users.models import *
 from rest_framework.authtoken.models import Token as REST_Token
 import json
+from django.test import TestCase
 
 
 class SignupTest(APITestCase):
@@ -60,3 +61,68 @@ class TokenAuthTest(APITestCase):
         self.assertEquals(res.status_code, status.HTTP_200_OK)
         self.assertJSONEqual(res.content,
                              {'token': REST_Token.objects.get(user=self.user).key})
+
+# simple test for insert into the db
+class CategoryTest(TestCase):
+    def test_insert(self):
+        Category.objects.create(category='Math')
+        
+    def test_verify(self):
+        math = Category.objects.get(category='Math')
+        self.assertEqual(math.category(),'Math')
+
+class SubjectTest(TestCase):
+    def test_insert(self):
+        Subject.objects.create(subject='Calculus',category='Math')
+    
+    def test_verify(self):
+        math = Subject.objects.get(category='Math')
+        subject = Subject.objects.get(subject='Calculus')
+        self.assertEqual(math.category(),'Math')
+        self.assertEqual(subject.subject(),'Calculus')
+
+class EventTest(TestCase):
+    def test_insert(self):
+        arg = {
+            "name":"Series",
+            "description":"Deriving the geometric seires",
+            "time":"2:00pm",
+            "date":"10/26/18",
+            "school":1,
+            "guess_total":20,
+            "subject":"Calculus",
+            "host":"jdoe01"
+        }
+        Event.objects.create(arg)
+    
+    def test_verify(self):
+        name = Event.objects.get(name='Series')
+        self.assertEqual(name.name(),'Series')
+
+class EventReservationTest(TestCase):
+    def test_insert(self):
+        arg = {
+            "student_id":1,
+            "event_id":1,
+            "guess_count":19
+        }
+        EventReservation.objects.create(arg)
+    
+    def test_verify(self):
+        count = EventReservation.objects.get(event_id=1)
+        self.assertEqual(count.guess_count(),19)
+
+class EventReminderTest(TestCase):
+    def test_insert(self):
+        arg = {
+            "student_id":1,
+            "event_id":1,
+            "hours_before_event":"1:00"
+        }
+        EventReminder.objects.create(arg)
+    
+    def test_verify(self):
+        hour = EventReservation.objects.get(event_id=1)
+        self.assertEqual(hour.hours_before_event(),1)
+
+
