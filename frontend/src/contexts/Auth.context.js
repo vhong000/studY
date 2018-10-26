@@ -8,6 +8,15 @@ export class AuthProvider extends Component {
 		super(props);
 		this.state = {
 			token: '',
+			school: '',
+			major: '',
+			year: '',
+			user_profile: {
+				first_name: '',
+				last_name: '',
+				username: '',
+				email: '',
+			}
 		}
 		this.initialState.bind(this);
 	}

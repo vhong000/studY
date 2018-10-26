@@ -7,7 +7,6 @@ import './index.css';
 import App from './App';
 import { Login, Register, Header } from './components';
 import * as serviceWorker from './serviceWorker';
-
 import store from './store.js';
 
 ReactDOM.render(

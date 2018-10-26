@@ -55,7 +55,7 @@ class Login extends Component {
 								id="email"
 								label="Email"
 								className={classes.TextField}
-								type="email"
+								type="text"
 								name="email"
 								autoComplete="email"
 								margin="normal"
