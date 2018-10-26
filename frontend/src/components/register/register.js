@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, TextField, withStyles, 
+import { Button, TextField,
 	Grid, Snackbar, Typography
 } from '@material-ui/core';
 // more components at https://material-ui.com/getting-started/usage/
@@ -47,15 +47,21 @@ export class Register extends Component {
 	handleSubmit(event) { // submit user state as json body
 		event.preventDefault();
 		const { applicant, emailError } = this.state;
-		const final = this.state.applicant;
+		const final = applicant;
 		console.log(final);
 
-		const required = applicant;
+		const required = {
+			email: applicant.email,
+			first_name: applicant.first_name,
+			last_name: applicant.last_name,
+			password: applicant.password,
+			school: applicant.school,
+		}
+		console.log(required);
 
 		const isComplete = !Object.values(required).every(x => (x === ''));
 		if (isComplete && !emailError) {
-			// this.props.register
-			registerUser(final);
+			this.props.registerUser(final);
 
 		} else {
 			this.setState({ openAlert: true })
@@ -164,4 +170,6 @@ export class Register extends Component {
 	}
 }
 
-export default connect({registerUser})(Register);
+const mapStateToProps = state => {};
+
+export default connect(mapStateToProps, { registerUser })(Register);

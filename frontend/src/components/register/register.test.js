@@ -8,19 +8,18 @@ import { Register } from './register';
 
 enzyme.configure({ adapter: new Adapter() });
 
-describe('Register render', () => {
+describe('Register component', () => {
+	const fn = jest.spyOn(Register.prototype, 'handleSubmit');
 	const wrapper = shallow(<Register />);
+	// console.log(wrapper.find('.main_form').debug())
 
-})
-
-describe('submit function call', () => {
-	const wrapper = shallow(<Register />);
-
-	test('functi on submit', () => {
+	test('function call on submit', () => {
 		// check state on submit
+		wrapper.find('.main_form').simulate('submit', { preventDefault() {}});
+		expect(fn).toHaveBeenCalled();
 	})
 
-	test('state on change', () => {
+	test('Register state on change', () => {
 		// make sure state is changing with value
 		wrapper.find('#first_name').simulate('change', {target : {
 			value: 'test', 
