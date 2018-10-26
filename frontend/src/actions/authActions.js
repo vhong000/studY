@@ -2,9 +2,11 @@
 import { 
   AUTH_TOKEN_SUCCESS, AUTH_TOKEN_FAILURE, AUTH_TOKEN_REQUEST,
   FETCH_USER_FAILURE, FETCH_USER_REQUEST, FETCH_USER_SUCCESS, 
+  USER_REGISTER_FAILURE, USER_REGISTER_REQUEST, USER_REGISTER_SUCCESS,
   USER_LOGOUT,
 } from './ActionTypes';
 
+// LOGIN USER
 export const loginUser = (user) => dispatch => {
   return fetch("/api/auth/login", {
     method: "POST",
@@ -34,6 +36,7 @@ export const loginUser = (user) => dispatch => {
   )
 }
 
+// GET USER DATA
 export const getUserData = (token) => dispatch => {
   return fetch("/api/auth/user", {
     method: "GET",
@@ -59,7 +62,32 @@ export const getUserData = (token) => dispatch => {
   )
 }
 
-export const logout = () => dispatch => {
+// LOGOUT USER
+export const logoutUser = () => dispatch => {
   localStorage.removeItem('token');
   return dispatch({ type: USER_LOGOUT });
+}
+
+// REGISTER USER
+export const registerUser = (newUser) => dispatch => {
+  return fetch("/api/auth/signup", {
+    method: "POST",
+    mode: "no-cors",
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify(newUser),
+	}).then((response) => {
+    dispatch({ type: USER_REGISTER_REQUEST })
+    if (response.status !== 201) {
+      return Promise.reject({ message: "Unable to Register" });
+    } else { return response.json(); }
+  }).then(result =>
+    dispatch({
+      type: USER_REGISTER_SUCCESS,
+      payload: result,
+    })
+  ).catch(error =>
+    dispatch({
+      type: USER_REGISTER_FAILURE,
+      payload: error,
+    }))
 }

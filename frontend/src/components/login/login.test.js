@@ -1,10 +1,9 @@
 import React from 'react';
 import * as enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import { shallow, mount, render } from 'enzyme';
-import { shallowWrap, mountWrap } from '../test_utils/contextWrap' 
+import { shallow } from 'enzyme';
 
-import Login from './login';
+import { Login } from './login';
 
 enzyme.configure({ adapter: new Adapter() });
 

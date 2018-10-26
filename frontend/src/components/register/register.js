@@ -1,23 +1,14 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { Button, TextField, withStyles, 
 	Grid, Snackbar, Typography
 } from '@material-ui/core';
 // more components at https://material-ui.com/getting-started/usage/
 
-import { registerUser } from '../../fetchData';
+import { connect } from 'react-redux';
+import { registerUser } from '../../actions/authActions';
+import classes from './register.module.css';
 
-const styles = {
-	main_form: {
-		"margin-top": 20,
-	},
-	main_div: {
-		"margin-top": 50,
-		"text-align": 'center',
-	}
-}
-
-class Register extends Component {
+export class Register extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -85,7 +76,6 @@ class Register extends Component {
 	}
 
 	render() {
-		const { classes } = this.props;
 		const { emailError, openAlert } = this.state;
 		return (
 			<div className={classes.main_div}>
@@ -94,7 +84,7 @@ class Register extends Component {
 				</Typography>
 				<form className={classes.main_form} onSubmit={this.handleSubmit}>
 					<Grid container justify='center' >
-						<Grid container direction='column' xs='6' spacing='32' >
+						<Grid container item direction='column' xs='6' spacing='32' >
 
 							<Grid container item direction='row' spacing='16' >
 								<Grid item xs='6'>
@@ -174,4 +164,4 @@ class Register extends Component {
 	}
 }
 
-export default withStyles(styles)(Register)
+export default connect({registerUser})(Register);

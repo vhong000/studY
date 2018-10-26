@@ -6,10 +6,8 @@ import {
 } from '@material-ui/core';
 
 import { connect } from 'react-redux';
-import { logout, getUserData } from '../../actions/authActions';
-// import { AuthWrapper } from '../../contexts/Auth.context.js';
-
-class Header extends Component {
+import { logoutUser, getUserData } from '../../actions/authActions';
+export class Header extends Component {
 	
 	componentDidMount() {
 		const token = localStorage.getItem('token');
@@ -68,4 +66,4 @@ const mapStateToProps = state => ({
 	token: state.Authenticate.token,
 })
 
-export default connect(mapStateToProps, { logout, getUserData })(Header);
+export default connect(mapStateToProps, { logoutUser, getUserData })(Header);

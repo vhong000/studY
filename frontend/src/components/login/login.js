@@ -8,7 +8,7 @@ import classes from './login.module.css';
 import { connect } from 'react-redux';
 import { loginUser } from '../../actions/authActions';
 
-class Login extends Component {
+export class Login extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
