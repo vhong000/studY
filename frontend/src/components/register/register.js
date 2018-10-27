@@ -99,7 +99,9 @@ export class Register extends Component {
 							<h1 className={classes.Title}>Join the New York City student community.</h1>
 							<p className={classes.Text1}>By having a StudY account, you can create, find, and join groups on all of your favourite topics.</p>
 							<p className={classes.Text2}>Sign up in just seconds.</p>
-							<form className={classes.Form} onSubmit={this.handleSubmit}>
+							<form className={classes.Form} 
+									id="main_form"
+									onSubmit={this.handleSubmit}>
 								<Grid container justify='flex-start' >
 									<Grid container direction='column' xs='12' spacing='8' >
 										<Grid container item direction='row' spacing='16' >

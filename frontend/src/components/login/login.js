@@ -55,7 +55,7 @@ class Login extends Component {
 								<img alt="icon" src={icon} className={classes.Icon}/>    
 							</div>
                         	<h1 className={classes.Title}>Sign In</h1>
-							<form className={classes.Form} onSubmit={this.handleSubmit}>
+							<form className={classes.Form} id="myForm" onSubmit={this.handleSubmit}>
 								<TextField InputProps={{className: classes.TextField}}
 									id="outlined-email-input"
 									label="Email"
