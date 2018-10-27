@@ -7,6 +7,7 @@ import icon from '../../images/icon.png'
 import { loginUser } from '../../actions/authActions';
 import { connect } from 'react-redux';
 
+
 class Login extends Component {
 
 	constructor(props) {
@@ -93,6 +94,8 @@ class Login extends Component {
 	}
 }
 
-
 const mapStateToProps = state => {};
 export default connect(mapStateToProps, { loginUser })(Login);
+
+
+

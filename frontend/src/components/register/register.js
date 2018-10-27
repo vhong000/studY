@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Button, TextField, Grid, Snackbar, 
-		 Typography, withStyles } from '@material-ui/core';
+import { Button, TextField, withStyles, Grid, Snackbar, Typography
+} from '@material-ui/core';
+
 import classes from './register.module.css';
 import icon from '../../images/icon.png'
 // more components at https://material-ui.com/getting-started/usage/
@@ -82,9 +83,8 @@ export class Register extends Component {
 
 	render() {
 		const { emailError, openAlert } = this.state;
-		//const { classes } = this.props;
+	
 		return (
-
 			<div className={classes.Container}>
                 <div className={classes.PageColumns}>
                     <div className={classes.PageColumn_left}>
