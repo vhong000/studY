@@ -4,8 +4,10 @@ import { Field, reduxForm } from 'redux-form';
 import { 
   TextField, Button, Grid,
   Select, MenuItem, FormControl,
-  InputLabel, withStyles, Typography
+  InputLabel, withStyles, Typography,
+  Paper,
 } from '@material-ui/core';
+// import Select from 'react-select';
 import propTypes from 'prop-types'
 
 const styles = theme => ({
@@ -37,10 +39,10 @@ const eventLocationField = ({
   <FormControl
     fullWidth
     margin='normal'
+    select
   >
     <InputLabel>{label}</InputLabel>
     <Select
-      required
       fullWidth
       {...input}
       children={children} />
@@ -77,7 +79,7 @@ const eventDescriptionField = ({
       id={id}
       label={label}
       multiline
-      rows='4'
+      rows='3'
       children={children}
       type='number'
       />
@@ -149,9 +151,9 @@ const EventForm = props => {
                 name='eventLocation' 
                 component={eventLocationField}
                 label='School' >
-                <MenuItem value='1'> 1 </MenuItem>
-                <MenuItem value='2'> 2 </MenuItem>
-                <MenuItem value='3'> 3 </MenuItem>
+                <MenuItem value='city'> city </MenuItem>
+                <MenuItem value='hunter'> hunter </MenuItem>
+                <MenuItem value='bmcc'> bmcc </MenuItem>
               </Field>
             </Grid>
 
@@ -180,12 +182,10 @@ const EventForm = props => {
             </Grid>
           </Grid>
 
-          <Grid item>
             <Field
               name='eventDescription'
               component={eventDescriptionField}
               label="Event Description" />
-          </Grid>
 
           <Grid>
             <Button

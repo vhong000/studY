@@ -23,9 +23,7 @@ class Subtopic extends Component {
             const { classes, subtopic } = this.props;
         return (
             <>
-                <Header />
-				<p></p>
-                <Grid container justify='center' >
+                <Grid container justify='center' className={classes.main_grid} >
 					<Grid 
 						container
 						md='10'
