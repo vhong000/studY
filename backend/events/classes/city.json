@@ -1,0 +1,408 @@
+[
+{
+    "name": "The City College of New York",
+    "code": "CCNY",
+    "url": "https://www.coursicle.com/ccnycuny/",
+    "courses": {
+        "aes": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "anth": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "arab": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "arch": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "art": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "arte": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "asia": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "astr": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "bio": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "blst": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "bme": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "ce": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "csc": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "che": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "chem": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "chin": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "cl": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "eas": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "eco": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "edce": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "edls": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "edse": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "educ": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "ee": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "engl": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "engle": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "esl": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "fren": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "heb": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "hist": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "ir": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "ital": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "jap": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "jwst": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "lals": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "mathe": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "mca": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "med": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "me": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "mhc": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "mis": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "msci": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "mus": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "pa": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "phil": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "physe": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "port": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "psc": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "psm": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "soc": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "span": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "spch": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "ssc": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "thtr": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "ud": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "urb": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ],
+        "wciv": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ]
+    }
+}
+]

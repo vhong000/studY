@@ -1,0 +1,740 @@
+[
+    {
+        "name": "Borough of Manhattan Community College",
+        "code": "BMCC",
+        "url": "https://www.coursicle.com/bmcccuny/",
+        "courses": {
+            "csc": [
+                [
+                    "Principles in Information Technology and Computation",
+                    "101"
+                ],
+                [
+                    "Computer Programming I",
+                    "110"
+                ],
+                [
+                    "Introduction to Programming",
+                    "111"
+                ],
+                [
+                    "Computer Programming II",
+                    "210"
+                ],
+                [
+                    "Advanced Programming Technique",
+                    "211"
+                ],
+                [
+                    "Fundamentals of Computer Systems",
+                    "215"
+                ],
+                [
+                    "Discrete Structures",
+                    "230"
+                ],
+                [
+                    "Discrete Structures and Applications to Computer Science",
+                    "231"
+                ],
+                [
+                    "Assembler Language and Architecture I",
+                    "310"
+                ],
+                [
+                    "Data Structures I",
+                    "330"
+                ],
+                [
+                    "Data Structures",
+                    "331"
+                ],
+                [
+                    "Software Development",
+                    "350"
+                ],
+                [
+                    "Assembler Language and Architecture II",
+                    "410"
+                ],
+                [
+                    "Data Structures II",
+                    "430"
+                ]
+            ]
+        }
+    },
+    {
+        "name": "College of Staten Island",
+        "code": "CSI",
+        "url": "https://www.coursicle.com/csicuny/",
+        "courses": {
+            "csc": [
+                [
+                    "Introduction to Computer Technology",
+                    "115"
+                ],
+                [
+                    "Computer Technology Lab",
+                    "117"
+                ],
+                [
+                    "Computer Technology Concepts",
+                    "119"
+                ],
+                [
+                    "Introduction to Computer Science",
+                    "126"
+                ],
+                [
+                    "Intermediate Programming",
+                    "211"
+                ],
+                [
+                    "Computers and Programming",
+                    "220"
+                ],
+                [
+                    "Introduction to Web Development and the Internet",
+                    "225"
+                ],
+                [
+                    "Web Database Applications",
+                    "226"
+                ],
+                [
+                    "Introductory Computer Game Programming",
+                    "227"
+                ],
+                [
+                    "Discrete Mathematical Structures for Computer Science",
+                    "228"
+                ],
+                [
+                    "Introduction to Scientific Computing",
+                    "270"
+                ],
+                [
+                    "Operating Systems Programming Laboratory",
+                    "305"
+                ],
+                [
+                    "Introduction to Database Systems",
+                    "315"
+                ],
+                [
+                    "Data Structures",
+                    "326"
+                ],
+                [
+                    "Object-Oriented Software Design",
+                    "330"
+                ],
+                [
+                    "Operating Systems I",
+                    "332"
+                ],
+                [
+                    "Switching and Automata Theory",
+                    "346"
+                ],
+                [
+                    "Computer Circuits Laboratory",
+                    "347"
+                ],
+                [
+                    "Analysis of Algorithms",
+                    "382"
+                ],
+                [
+                    "Advanced Database Systems",
+                    "424"
+                ],
+                [
+                    "Applied Cryptography",
+                    "426"
+                ],
+                [
+                    "Software Engineering",
+                    "430"
+                ],
+                [
+                    "Advanced Data Communications",
+                    "435"
+                ],
+                [
+                    "Computer Architecture",
+                    "446"
+                ],
+                [
+                    "Honors Workshop",
+                    "450"
+                ],
+                [
+                    "Microcontrollers",
+                    "462"
+                ],
+                [
+                    "Introductory Computer Graphics",
+                    "470"
+                ],
+                [
+                    "Seminar in Computer Science",
+                    "490"
+                ],
+                [
+                    "Comp Sci Ind Study",
+                    "591"
+                ],
+                [
+                    "Computr Sci Internsh",
+                    "598"
+                ],
+                [
+                    "Tech Curr Dev&Instr",
+                    "704"
+                ],
+                [
+                    "Advanced Operating Systems",
+                    "716"
+                ],
+                [
+                    "Digital Image Processing",
+                    "741"
+                ],
+                [
+                    "Neural Networks and Deep Learning",
+                    "767"
+                ],
+                [
+                    "Graph-Based Analysis for Big Data in Social Networks",
+                    "769"
+                ],
+                [
+                    "Thesis Research",
+                    "799"
+                ]
+            ]
+        }
+    },
+    {
+        "name": "Hunter College",
+        "code": "Hunter",
+        "url": "https://www.coursicle.com/huntercuny/",
+        "courses": {
+            "csc": [
+                [
+                    "Computers & Money:Quant",
+                    "12100"
+                ],
+                [
+                    "Introduction to Computer Science",
+                    "12700"
+                ],
+                [
+                    "Practical Unix and Programming with Lab",
+                    "13200"
+                ],
+                [
+                    "Programing for Everyone",
+                    "13300"
+                ],
+                [
+                    "Software Analysis and Design 1",
+                    "13500"
+                ],
+                [
+                    "Supervised Programming Lab",
+                    "13600"
+                ],
+                [
+                    "Discrete Structures",
+                    "15000"
+                ],
+                [
+                    "Computer Architecture 1",
+                    "16000"
+                ],
+                [
+                    "Independent Workshop",
+                    "18100"
+                ],
+                [
+                    "Relational Databases and SQL Programming, with Lab",
+                    "23200"
+                ],
+                [
+                    "Program Project Sem Minor",
+                    "23300"
+                ],
+                [
+                    "Software Analysis and Design 2",
+                    "23500"
+                ],
+                [
+                    "Computer Architecture 2",
+                    "26000"
+                ],
+                [
+                    "Computer Theory 1",
+                    "26500"
+                ],
+                [
+                    "Symbolic Logic",
+                    "27500"
+                ],
+                [
+                    "Software Analysis and Design 3",
+                    "33500"
+                ],
+                [
+                    "Operating Systems",
+                    "34000"
+                ],
+                [
+                    "Artificial Intelligence",
+                    "35000"
+                ],
+                [
+                    "Computer Architecture 3",
+                    "36000"
+                ],
+                [
+                    "Computer Theory 2",
+                    "36500"
+                ],
+                [
+                    "Non-Classical Logic",
+                    "37700"
+                ],
+                [
+                    "Independent Study in Computer Science",
+                    "39100"
+                ],
+                [
+                    "Topics: Networking",
+                    "39554"
+                ],
+                [
+                    "Advanced Discrete Structures",
+                    "39562"
+                ],
+                [
+                    "Data Communications and Networks",
+                    "41500"
+                ],
+                [
+                    "Data Base Management",
+                    "43500"
+                ],
+                [
+                    "Advanced Programming Languages",
+                    "46000"
+                ],
+                [
+                    "Language Technology",
+                    "49362"
+                ],
+                [
+                    "Seminar: Big Data",
+                    "49371"
+                ],
+                [
+                    "Supervised Research",
+                    "49600"
+                ],
+                [
+                    "Advnc Apl:Cpstne Maj",
+                    "49900"
+                ],
+                [
+                    "Algorithms",
+                    "70500"
+                ],
+                [
+                    "Cloud Database Security and Integrity",
+                    "71100"
+                ],
+                [
+                    "Computational Theory",
+                    "72400"
+                ],
+                [
+                    "Computational Linguistics",
+                    "76000"
+                ],
+                [
+                    "Programming Languages",
+                    "79521"
+                ]
+            ]
+        }
+    },
+    {
+        "name": "John Jay College of Criminal Justice",
+        "code": "John Jay",
+        "url": "https://www.coursicle.com/jjaycuny/",
+        "courses": {
+            "csc": [
+                [
+                    "Computer Literacy",
+                    "101"
+                ],
+                [
+                    "The Nature of Computers and Computation",
+                    "171"
+                ],
+                [
+                    "Security of Computers and Their Data",
+                    "270"
+                ],
+                [
+                    "Introduction to Computing and Programming",
+                    "271"
+                ],
+                [
+                    "Object-Oriented Programming",
+                    "272"
+                ],
+                [
+                    "Computer Architecture",
+                    "274"
+                ],
+                [
+                    "Linux System Administration and Security",
+                    "275"
+                ],
+                [
+                    "Software Applications for Office Management",
+                    "278"
+                ],
+                [
+                    "Cryptography & Cryptanalysis",
+                    "360"
+                ],
+                [
+                    "Databases and Data Mining",
+                    "362"
+                ],
+                [
+                    "Advanced Data Structures",
+                    "373"
+                ],
+                [
+                    "Programming Languages",
+                    "374"
+                ],
+                [
+                    "Operating Systems",
+                    "375"
+                ],
+                [
+                    "Computer Algorithms",
+                    "377"
+                ],
+                [
+                    "Computer Networking",
+                    "379"
+                ],
+                [
+                    "Selected Topics in Computer Science",
+                    "380"
+                ],
+                [
+                    "Faculty Mentored Research Experience in Computer Science",
+                    "385"
+                ],
+                [
+                    "Capstone Experience in Digital Forensics/Cybersecurity I",
+                    "400"
+                ],
+                [
+                    "Capstone Experience in Digital Forensics/Cybersecurity II",
+                    "401"
+                ],
+                [
+                    "Internship in Management Information Systems",
+                    "404"
+                ],
+                [
+                    "Network Security and Forensics",
+                    "412"
+                ]
+            ]
+        }
+    },
+    {
+        "name": "Queens College",
+        "code": "QC",
+        "url": "https://www.coursicle.com/qccuny/",
+        "courses": {
+            "csc": [
+                [
+                    "Introduction to Computers and Computation",
+                    "12"
+                ],
+                [
+                    "Spreadsheet Programming",
+                    "48"
+                ],
+                [
+                    "Problem Solving with Computers",
+                    "80"
+                ],
+                [
+                    "Introduction to Web Programming",
+                    "81"
+                ],
+                [
+                    "Database Application Programming",
+                    "85"
+                ],
+                [
+                    "Introduction to Scientific Computing",
+                    "87"
+                ],
+                [
+                    "Topics in Computing",
+                    "90"
+                ],
+                [
+                    "Information and Intelligence",
+                    "100"
+                ],
+                [
+                    "Introduction to Algorithmic Problem- Solving",
+                    "111"
+                ],
+                [
+                    "Object-Oriented Programming in C++",
+                    "211"
+                ],
+                [
+                    "Object-Oriented Programming in Java",
+                    "212"
+                ],
+                [
+                    "Discrete Structures",
+                    "220"
+                ],
+                [
+                    "Computer Organization and Assembly Language",
+                    "240"
+                ],
+                [
+                    "Data Structures",
+                    "313"
+                ],
+                [
+                    "Principles of Programming Languages",
+                    "316"
+                ],
+                [
+                    "Theory of Computation",
+                    "320"
+                ],
+                [
+                    "Design and Analysis of Algorithms",
+                    "323"
+                ],
+                [
+                    "Database Systems",
+                    "331"
+                ],
+                [
+                    "Data Mining and Warehousing",
+                    "334"
+                ],
+                [
+                    "Operating Systems Principles",
+                    "340"
+                ],
+                [
+                    "Computer Architecture",
+                    "343"
+                ],
+                [
+                    "Distributed Systems",
+                    "344"
+                ],
+                [
+                    "Internet and Web Technologies",
+                    "355"
+                ],
+                [
+                    "Numerical Methods",
+                    "361"
+                ],
+                [
+                    "Computational Finance",
+                    "365"
+                ],
+                [
+                    "Software Engineering",
+                    "370"
+                ],
+                [
+                    "Special Topics in Computer Science",
+                    "381"
+                ],
+                [
+                    "Advanced Programming in C++",
+                    "611"
+                ],
+                [
+                    "Advanced Programming in Java",
+                    "612"
+                ],
+                [
+                    "Algorithms I",
+                    "700"
+                ],
+                [
+                    "Distributed Computing",
+                    "715"
+                ],
+                [
+                    "Computer Architecture and Networks",
+                    "744"
+                ]
+            ]
+        }
+    },
+    {
+        "name": "The City College of New York",
+        "code": "CCNY",
+        "url": "https://www.coursicle.com/ccnycuny/",
+        "courses": {
+            "csc": [
+                [
+                    "Introduction to Programming and Computer Science",
+                    "10000"
+                ],
+                [
+                    "Introduction to Computing",
+                    "10200"
+                ],
+                [
+                    "Introduction to Computing for Majors",
+                    "10300"
+                ],
+                [
+                    "Discrete Mathematical Structures I",
+                    "10400"
+                ],
+                [
+                    "Programming Lang",
+                    "11300"
+                ],
+                [
+                    "Computers and Assembly Language Programming",
+                    "21000"
+                ],
+                [
+                    "Fundamentals of Computer Systems",
+                    "21100"
+                ],
+                [
+                    "Data Structures",
+                    "21200"
+                ],
+                [
+                    "Probability and Statistics for Computer Science",
+                    "21700"
+                ],
+                [
+                    "Algorithms",
+                    "22000"
+                ],
+                [
+                    "Software Design Laboratory",
+                    "22100"
+                ],
+                [
+                    "Numerical Issues in Scientific Programming",
+                    "30100"
+                ],
+                [
+                    "Introduction to Theoretical Computer Science",
+                    "30400"
+                ],
+                [
+                    "Software Engineering",
+                    "32200"
+                ],
+                [
+                    "Operating Systems",
+                    "33200"
+                ],
+                [
+                    "Programming Language Paradigms",
+                    "33500"
+                ],
+                [
+                    "Introduction to Database Systems",
+                    "33600"
+                ],
+                [
+                    "Computer Organization",
+                    "34200"
+                ],
+                [
+                    "Computer Systems Design Laboratory",
+                    "34300"
+                ],
+                [
+                    "Compiler Construction",
+                    "42000"
+                ],
+                [
+                    "Systems Simulation",
+                    "44200"
+                ],
+                [
+                    "Artificial Intelligence",
+                    "44800"
+                ],
+                [
+                    "Computer Graphics",
+                    "47200"
+                ],
+                [
+                    "Co-op Study Preparation",
+                    "59004"
+                ],
+                [
+                    "Senior Project I",
+                    "59866"
+                ],
+                [
+                    "Senior Project II",
+                    "59867"
+                ],
+                [
+                    "Big Data Management and Analysis",
+                    "59927"
+                ],
+                [
+                    "Introduction to Machine Learning",
+                    "59929"
+                ],
+                [
+                    "Web Security",
+                    "59938"
+                ],
+                [
+                    "Topics in Software Engineering",
+                    "59939"
+                ],
+                [
+                    "Topics in Web Site Design",
+                    "59940"
+                ],
+                [
+                    "Introduction to Data Science",
+                    "59970"
+                ]
+            ]
+        }
+    }
+]

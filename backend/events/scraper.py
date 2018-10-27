@@ -83,7 +83,7 @@ class Scraper:
 
     def dump_data(self, file_path):
         with open(file_path, mode='w') as fd:
-            json.dump(self.schools, fd)
+            json.dump(self.schools, fd,indent=4)
 
     @staticmethod
     def get_browser(headless):
@@ -102,8 +102,8 @@ class Scraper:
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO, format='%(message)s')
 
-    # SUBJECTS = ['csc', 'math', 'hist', 'phys']
-
     SUBJECTS = ['csc']
+    file = SUBJECTS[0]
     scraper = Scraper(headless=True)
-    scraper.run(SUBJECTS, 'data_dump.json')
+    for subj in SUBJECTS:
+        scraper.run(SUBJECTS, file+'.json')

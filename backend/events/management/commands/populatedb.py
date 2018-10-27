@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from events.models import School
+from events.models import School,Course
 import json
 
 
@@ -15,10 +15,11 @@ class Command(BaseCommand):
         with open(options['filepath'], mode='r') as fh:
             schools = json.load(fh)
             for sch in schools:
-                new_school = School.objects.create(name=sch['name'],
+                new_school = School.objects.get_or_create(name=sch['name'],
                                                    code=sch['code'])
                 for dept, courses in sch['courses'].items():
                     for course in courses:
-                        new_school.courses.create(name=course[0],
+                        Course.objects.get_or_create(name=course[0],
                                                   number=course[1],
                                                   dept=dept)
+

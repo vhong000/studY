@@ -1,0 +1,133 @@
+[{
+    "name": "Baruch College",
+    "code": "Baruch",
+    "url": "https://www.coursicle.com/baruchcuny/",
+    "courses": {
+        "aes": []
+    }
+}, {
+    "name": "Borough of Manhattan Community College",
+    "code": "BMCC",
+    "url": "https://www.coursicle.com/bmcccuny/",
+    "courses": {
+        "aes": []
+    }
+}, {
+    "name": "Bronx Community College",
+    "code": "BCC",
+    "url": "https://www.coursicle.com/bcccuny/",
+    "courses": {
+        "aes": []
+    }
+}, {
+    "name": "Brooklyn College",
+    "code": "BC",
+    "url": "https://www.coursicle.com/brooklyncuny/",
+    "courses": {
+        "aes": []
+    }
+}, {
+    "name": "College of Staten Island",
+    "code": "CSI",
+    "url": "https://www.coursicle.com/csicuny/",
+    "courses": {
+        "aes": []
+    }
+}, {
+    "name": "Guttman Community College",
+    "code": "Guttman",
+    "url": "https://www.coursicle.com/guttmancuny/",
+    "courses": {
+        "aes": []
+    }
+}, {
+    "name": "Hostos Community College",
+    "code": "Hostos",
+    "url": "https://www.coursicle.com/hostoscuny/",
+    "courses": {
+        "aes": []
+    }
+}, {
+    "name": "Hunter College",
+    "code": "Hunter",
+    "url": "https://www.coursicle.com/huntercuny/",
+    "courses": {
+        "aes": []
+    }
+}, {
+    "name": "John Jay College of Criminal Justice",
+    "code": "John Jay",
+    "url": "https://www.coursicle.com/jjaycuny/",
+    "courses": {
+        "aes": []
+    }
+}, {
+    "name": "Kingsborough Community College",
+    "code": "KCC",
+    "url": "https://www.coursicle.com/kbcccuny/",
+    "courses": {
+        "aes": []
+    }
+}, {
+    "name": "LaGuardia Community College",
+    "code": "LAGCC",
+    "url": "https://www.coursicle.com/laguardia/",
+    "courses": {
+        "aes": []
+    }
+}, {
+    "name": "Lehman College",
+    "code": "Lehman",
+    "url": "https://www.coursicle.com/lehmancuny/",
+    "courses": {
+        "aes": []
+    }
+}, {
+    "name": "Medgar Evers College",
+    "code": "MEC",
+    "url": "https://www.coursicle.com/meccuny/",
+    "courses": {
+        "aes": []
+    }
+}, {
+    "name": "New York City College of Technology",
+    "code": "City Tech",
+    "url": "https://www.coursicle.com/citytechcuny/",
+    "courses": {
+        "aes": []
+    }
+}, {
+    "name": "Queens College",
+    "code": "QC",
+    "url": "https://www.coursicle.com/qccuny/",
+    "courses": {
+        "aes": []
+    }
+}, {
+    "name": "Queensborough Community College",
+    "code": "QCC",
+    "url": "https://www.coursicle.com/qcccuny/",
+    "courses": {
+        "aes": []
+    }
+}, {
+    "name": "The City College of New York",
+    "code": "CCNY",
+    "url": "https://www.coursicle.com/ccnycuny/",
+    "courses": {
+        "aes": [
+            ["Visual Studies 2", "12300"],
+            ["The Built Environment of New York City", "21200"],
+            ["Portfolio Review", "24001"],
+            ["Survey World Arch 2", "24202"],
+            ["Structures 1 - Introduction to Structures", "24303"]
+        ]
+    }
+}, {
+    "name": "York College",
+    "code": "York",
+    "url": "https://www.coursicle.com/yorkcuny/",
+    "courses": {
+        "aes": []
+    }
+}]

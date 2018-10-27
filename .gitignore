@@ -1,6 +1,7 @@
 **/*.pyc
 **/__pycache__
 **/.venv
+**/.vscode
 **/node_modules
 **/*sqlite3
 **/.coverage
