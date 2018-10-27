@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
-	Button, AppBar, Typography, Toolbar, Grid, withStyles,
+	Button, AppBar, Typography, Toolbar, withStyles,
 } from '@material-ui/core';
 import PropTypes from 'prop-types';
 
@@ -21,7 +21,7 @@ const styles = theme => ({
 	}
 })
 
-function Header({
+export function Header({
 	user, onLogout, classes
 }) {
 	return (

@@ -8,14 +8,27 @@ import { Register } from './register';
 
 enzyme.configure({ adapter: new Adapter() });
 
+const styles = theme => ({
+	main_div: {
+		textAlign: 'center',
+		marginTop: theme.spacing.unit * 5,
+	},
+	main_form: {
+		marginTop: theme.spacing.unit * 5,
+	},
+	title: {
+		marginBotton: theme.spacing.unit * 5,
+	}
+})
+
 describe('Register component', () => {
 	const fn = jest.spyOn(Register.prototype, 'handleSubmit');
-	const wrapper = shallow(<Register />);
+	const wrapper = shallow(<Register classes={styles} />);
 	// console.log(wrapper.find('.main_form').debug())
 
 	test('function call on submit', () => {
 		// check state on submit
-		wrapper.find('.main_form').simulate('submit', { preventDefault() {}});
+		wrapper.find('#main_form').simulate('submit', { preventDefault() {}});
 		expect(fn).toHaveBeenCalled();
 	})
 

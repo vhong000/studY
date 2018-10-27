@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {
-	Paper, Card, CardContent, CardActions,
-	Typography, Grid, withStyles, CardMedia,
+	Card, CardContent, Typography, 
+	Grid, withStyles, CardMedia,
 	CardActionArea,
 } from '@material-ui/core';
 import './App.css';
@@ -56,7 +56,7 @@ class App extends Component {
 				<Grid className={classes.main_grid} container justify='center' >
 					<Grid 
 						className={classes.topics_grid}
-						container
+						container item
 						xs='6'
 						spacing='24'
 					>

@@ -103,7 +103,10 @@ export class Register extends Component {
 					 >
 					Register
 				</Typography>
-				<form className={classes.main_form} onSubmit={this.handleSubmit}>
+				<form 
+				id='main_form'
+				className={classes.main_form} 
+				onSubmit={this.handleSubmit}>
 					<Grid container justify='center' >
 						<Grid container item direction='column' xs='6' spacing='32' >
 
