@@ -25,7 +25,6 @@ class Subtopic extends Component {
 			console.log(" Subtopic ",this.props);
         return (
             <div>
-                <Header />
 				<p></p>
                 <Grid container justify='center' >
 					<Grid 
