@@ -45,11 +45,11 @@ code {
 
 
 input[type=text], input[type=password] {
-  width: 100%;
-  padding: 20px;
-  margin: 5px 0 22px 0;
+  /* width: 100%; */
+  /* padding: 20px; */
+  /* margin: 5px 0 22px 0; */
   /* display: inline-block; */
-  border-bottom: 0.1px solid blue;
+  /* border-bottom: 0.1px solid blue; */
   border-top: none;
   border-left: none;
   border-right: none;
