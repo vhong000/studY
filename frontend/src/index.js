@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import Login from './components/login/login';
-import Register from './components/register/register';
+import { Login, Register } from './components';
+import Header from './containers/header';
 import Subtopic from './components/Subtopic/Subtopic';
 import { EventListPage } from './containers';
 import * as serviceWorker from './serviceWorker';
 
-import { AuthProvider } from './contexts/Auth.context.js';
-import { UserInfoProvider } from './contexts/UserInfo.context.js';
+import { Provider } from 'react-redux';
+import store from './store';
 
 import {
 	math, science, history, art, literature, language,
@@ -54,31 +54,29 @@ const subtopics = {
 }
 
 ReactDOM.render(
-	<Router>
-		<div>
-			<AuthProvider>
+	<Provider store={store}>
+		<Router>
+			<div>
+				<Header />
 				<Route exact path="/" component={App} />
 				<Route exact path="/register" component={Register} />
 				<Route exact path="/login" component={Login} />
 				
 				<Route exact path="/math"
-					render={(props) => <Subtopic subtopic={subtopics.math} category={"math"} />} />
-				<Route exact path="/history"
-					render={(props) => <Subtopic subtopic={subtopics.history} category={"history"} />} />
-				<Route exact path="/language"
-					render={(props) => <Subtopic subtopic={subtopics.language} category={"language"} />} />
+					render={(props) => <Subtopic subtopic={subtopics.math} /> }/>
+				<Route exact path="/history" 
+					render={(props) => <Subtopic subtopic={subtopics.history} /> }/>
+				<Route exact path="/language" 
+					render={(props) => <Subtopic subtopic={subtopics.language} /> }/>
 				<Route exact path="/art"
-					render={(props) => <Subtopic subtopic={subtopics.art} category={"art"} />} />
-				<Route exact path="/literature"
-					render={(props) => <Subtopic subtopic={subtopics.literature} category={"literature"} />} />
-				<Route exact path="/science"
-					render={(props) => <Subtopic subtopic={subtopics.science} category={"science"} />} />
-				
-				
-					<Route path="/:category/:subtopic" component={EventListPage} />
-			</AuthProvider>
-		</div>
-	</Router>,
+					render={(props) => <Subtopic subtopic={subtopics.art} /> }/> 
+				<Route exact path="/literature" 
+					render={(props) => <Subtopic subtopic={subtopics.literature} /> }/>
+				<Route exact path="/science" 
+					render={(props) => <Subtopic subtopic={subtopics.science} /> }/>
+			</div>
+		</Router>
+	</Provider>,
 	document.getElementById('root')
 );
 

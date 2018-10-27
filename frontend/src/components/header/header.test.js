@@ -3,32 +3,30 @@ import React from 'react';
 import * as enzyme from 'enzyme';
 import { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import { shallowWrap, mountWrap } from '../test_utils/contextWrap' 
-import Header from './header';
-import Login from '../login/login';
-import Register from '../register/register';
+import { Header } from './header';
 
 enzyme.configure({ adapter: new Adapter() });
 
+const styles = theme => ({
+	title: {
+		flex: 1,
+	},
+	right_actions: {
+		display: 'flex',
+		flex: -1,
+	},
+	user_name: {
+		marginRight: theme.spacing.unit,
+		marginTop: 'auto',
+		marginBottom: 'auto',
+	}
+})
+
 describe('Header', () => {
-	const wrapper = mountWrap(<Header token='' /> );
-
-	test('rendered buttons', () => {
-		expect(
-			wrapper.find('Button .login-button .MuiButton-label-77').text()
-		).toEqual('Login');
-		expect(
-			wrapper.find('Button .register-button .MuiButton-label-77').text()
-		).toEqual('Register');
-	}) 
-
-	test('test login button', () => {
-		wrapper.find('Button .login-button ButtonBase').simulate('click');
-		expect(<Login />)
+	const wrapper = shallow(<Header classes={styles} /> );
+	it('should render login button', () => {
+		expect(wrapper.find('.login-button').exists()).toBe(true);
+		expect(wrapper.find('.register-button').exists()).toBe(true);
 	})
 
-	test('test register button', () => {
-		wrapper.find('Button .register-button ButtonBase').simulate('click');
-		expect(<Register />);
-	})
 })
