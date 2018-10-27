@@ -4,8 +4,9 @@ import { Field, reduxForm } from 'redux-form';
 import { 
   TextField, Button, Grid,
   Select, MenuItem, FormControl,
-  InputLabel, withStyles
+  InputLabel, withStyles, Typography
 } from '@material-ui/core';
+import propTypes from 'prop-types'
 
 const styles = theme => ({
   main_form: { textAlign: 'center' }
@@ -19,6 +20,7 @@ const eventNameField = ({
     margin='normal'
   >
     <TextField 
+      required
       id={id}
       label={label}
       fullWidth
@@ -38,6 +40,7 @@ const eventLocationField = ({
   >
     <InputLabel>{label}</InputLabel>
     <Select
+      required
       fullWidth
       {...input}
       children={children} />
@@ -118,10 +121,19 @@ const eventTime = ({
 )
 
 const EventForm = props => {
-  const { classes } = props;
+  const { onSubmit, classes, newEvent } = props;
+  function handleSubmit(event) {
+    event.preventDefault();
+    onSubmit(newEvent);
+  }
+
   return ( 
-    <form
+    <form onSubmit={handleSubmit}
       className={classes.main_form}>
+      <Typography 
+        variant='display1'
+        children="Create an Event"
+      />
       <Grid container justify='center' >
         <Grid container item xs='6' direction='column' >
           <Grid item>
@@ -187,6 +199,15 @@ const EventForm = props => {
       </Grid>
     </form>
   )
+}
+
+EventForm.propTypes = {
+  newEvent: propTypes.object,
+  onSubmit: propTypes.func.isRequired,
+}
+
+EventForm.defaultProps = {
+  newEvent: '',
 }
 
 export default reduxForm({

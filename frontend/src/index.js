@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import { Login, Register, EventForm } from './components';
+import { Login, Register } from './components';
 import Header from './containers/header';
+import EventForm from './containers/eventForm';
 import Subtopic from './components/Subtopic/Subtopic';
 import * as serviceWorker from './serviceWorker';
 
