@@ -23,11 +23,12 @@ export const loginUser = (user) => dispatch => {
     } else { return response.json(); }
   }).then(result => { 
     localStorage.setItem('token', result.token);
-    dispatch(getUserData(result.token));
-    dispatch({
-      type: AUTH_TOKEN_SUCCESS,
-      payload: result,
-    })
+    dispatch(getUserData(result.token)).then(
+      dispatch({
+        type: AUTH_TOKEN_SUCCESS,
+        payload: result,
+      })
+    )
   }).catch(error => 
     dispatch({
       type: AUTH_TOKEN_FAILURE,

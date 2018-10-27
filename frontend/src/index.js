@@ -5,7 +5,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
-import { Login, Register, Header } from './components';
+import { Login, Register } from './components';
+import Header from './containers/header';
 import * as serviceWorker from './serviceWorker';
 import store from './store.js';
 

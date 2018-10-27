@@ -3,7 +3,7 @@ import React from 'react';
 import * as enzyme from 'enzyme';
 import { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import { Header } from './header';
+import Header from './header';
 
 enzyme.configure({ adapter: new Adapter() });
 

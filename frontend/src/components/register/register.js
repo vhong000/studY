@@ -1,12 +1,25 @@
 import React, { Component } from 'react';
-import { Button, TextField,
-	Grid, Snackbar, Typography
+import { Button, TextField, withStyles,
+	Grid, Snackbar, Typography,
 } from '@material-ui/core';
 // more components at https://material-ui.com/getting-started/usage/
 
 import { connect } from 'react-redux';
 import { registerUser } from '../../actions/authActions';
-import classes from './register.module.css';
+// import classes from './register.module.css';
+
+const styles = theme => ({
+	main_div: {
+		textAlign: 'center',
+		marginTop: theme.spacing.unit * 5,
+	},
+	main_form: {
+		marginTop: theme.spacing.unit * 5,
+	},
+	title: {
+		marginBotton: theme.spacing.unit * 5,
+	}
+})
 
 export class Register extends Component {
 	constructor(props) {
@@ -48,7 +61,6 @@ export class Register extends Component {
 		event.preventDefault();
 		const { applicant, emailError } = this.state;
 		const final = applicant;
-		console.log(final);
 
 		const required = {
 			email: applicant.email,
@@ -57,7 +69,6 @@ export class Register extends Component {
 			password: applicant.password,
 			school: applicant.school,
 		}
-		console.log(required);
 
 		const isComplete = !Object.values(required).every(x => (x === ''));
 		if (isComplete && !emailError) {
@@ -83,9 +94,13 @@ export class Register extends Component {
 
 	render() {
 		const { emailError, openAlert } = this.state;
+		const { classes } = this.props;
 		return (
 			<div className={classes.main_div}>
-				<Typography variant='h3' >
+				<Typography 
+					variant='h3'
+					className={classes.title}
+					 >
 					Register
 				</Typography>
 				<form className={classes.main_form} onSubmit={this.handleSubmit}>
@@ -172,4 +187,7 @@ export class Register extends Component {
 
 const mapStateToProps = state => {};
 
-export default connect(mapStateToProps, { registerUser })(Register);
+export default connect(
+	mapStateToProps,
+	{ registerUser }
+	)(withStyles(styles)(Register));

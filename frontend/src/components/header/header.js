@@ -1,69 +1,84 @@
 
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import {
-	Button, AppBar, Typography, Toolbar, Grid
+	Button, AppBar, Typography, Toolbar, Grid, withStyles,
 } from '@material-ui/core';
+import PropTypes from 'prop-types';
 
-import { connect } from 'react-redux';
-import { logoutUser, getUserData } from '../../actions/authActions';
-export class Header extends Component {
-	
-	componentDidMount() {
-		const token = localStorage.getItem('token');
-		if (token) { console.log(token); this.props.getUserData(token); }
+const styles = theme => ({
+	title: {
+		flex: 1,
+	},
+	right_actions: {
+		display: 'flex',
+		flex: -1,
+	},
+	user_name: {
+		marginRight: theme.spacing.unit,
+		marginTop: 'auto',
+		marginBottom: 'auto',
 	}
-
-	render() {
-		const { user } = this.props;
-		return (
-			<AppBar position='static' >
-				<Toolbar>
-					<Typography	
-						style={{flex: 1}}
-						variant='headline'
-						color='inherit'>
-						studY
-					</Typography>
-					{user ? ( 
-						<div>
-							<Typography
-								style={{flex: 1}}
-								color='inherit'>
-								{user.user_profile.first_name}
-							</Typography>
-							<Button 
-								color='inherit'
-								children="logout"
-								onClick={this.props.logout}
-							/>
-						</div>
-					) : (
-						<div>
-							<Button
-								component={Link}
-								to="/login"
-								className='login-button'
-								children="Login"
-								color='inherit' />
-							<Button 
-								component={Link} 
-								to="/register"
-								className='register-button'
-								color='inherit'
-								children="Register"
-							/>
-						</div>
-					)}
-			</Toolbar>
-		</AppBar>
-		)
-	}
-}
-
-const mapStateToProps = state => ({
-	user: state.Authenticate.user,
-	token: state.Authenticate.token,
 })
 
-export default connect(mapStateToProps, { logoutUser, getUserData })(Header);
+function Header({
+	user, onLogout, classes
+}) {
+	return (
+		<AppBar position='static' >
+			<Toolbar>
+				<Typography	
+					className={classes.title}
+					variant='headline'
+					color='inherit'>
+					studY
+				</Typography>
+				{user ? ( 
+					<div className={classes.right_actions}>
+						<Typography
+							margin='10px'
+							className={classes.user_name}
+							variant='subtitle1'
+							color='inherit'>
+							{user.user_profile.first_name}
+						</Typography>
+						<Button 
+							className={classes.logout_button}
+							color='inherit'
+							children="logout"
+							onClick={onLogout}
+						/>
+					</div>
+				) : (
+					<div>
+						<Button
+							component={Link}
+							to="/login"
+							className='login-button'
+							children="Login"
+							color='inherit' />
+						<Button 
+							component={Link} 
+							to="/register"
+							className='register-button'
+							color='inherit'
+							children="Register"
+						/>
+					</div>
+				)}
+		</Toolbar>
+	</AppBar>
+	)
+}
+	
+Header.propTypes = { 
+	user: PropTypes.object,
+	onLogout: PropTypes.func,
+}
+
+Header.defaultProps = {
+	user: null,
+	onLogout: undefined,
+}
+
+export default withStyles(styles)(Header);
