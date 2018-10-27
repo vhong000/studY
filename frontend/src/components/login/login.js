@@ -8,7 +8,7 @@ import { loginUser } from '../../actions/authActions';
 import { connect } from 'react-redux';
 
 
-class Login extends Component {
+export class Login extends Component {
 
 	constructor(props) {
 		super(props);
@@ -55,9 +55,9 @@ class Login extends Component {
 								<img alt="icon" src={icon} className={classes.Icon}/>    
 							</div>
                         	<h1 className={classes.Title}>Sign In</h1>
-							<form className={classes.Form} id="myForm" onSubmit={this.handleSubmit}>
+							<form id="myForm" className={classes.Form} onSubmit={this.handleSubmit}>
 								<TextField InputProps={{className: classes.TextField}}
-									id="outlined-email-input"
+									id="email"
 									label="Email"
 									type="email"
 									name="email"
@@ -68,7 +68,7 @@ class Login extends Component {
 									fullWidth={true}
 									/>
 								<TextField InputProps={{className: classes.TextField}}
-									id="outlined-password-input"
+									id="password"
 									label="Password"
 									type="password"
 									autoComplete="current-password"
@@ -95,7 +95,10 @@ class Login extends Component {
 }
 
 const mapStateToProps = state => {};
+
 export default connect(mapStateToProps, { loginUser })(Login);
+
+
 
 
 
