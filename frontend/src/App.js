@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Header } from './components';
 import { Link } from 'react-router-dom';
 import {
 	Card, CardContent, Typography, 
@@ -55,7 +54,6 @@ class App extends Component {
 		const { classes } = this.props;
     return (
 			<div className='App'>
-				<Header />
 
 				<Grid className={classes.main_grid} container justify='center' >
 					<Grid 
