@@ -1,23 +1,27 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { Button, TextField, withStyles, 
-	Grid, Snackbar, Typography
+import { Button, TextField, withStyles,
+	Grid, Snackbar, Typography,
 } from '@material-ui/core';
 // more components at https://material-ui.com/getting-started/usage/
 
-import { registerUser } from '../../fetchData';
+import { connect } from 'react-redux';
+import { registerUser } from '../../actions/authActions';
+// import classes from './register.module.css';
 
-const styles = {
-	main_form: {
-		"margin-top": 20,
-	},
+const styles = theme => ({
 	main_div: {
-		"margin-top": 50,
-		"text-align": 'center',
+		textAlign: 'center',
+		marginTop: theme.spacing.unit * 5,
+	},
+	main_form: {
+		marginTop: theme.spacing.unit * 5,
+	},
+	title: {
+		marginBotton: theme.spacing.unit * 5,
 	}
-}
+})
 
-class Register extends Component {
+export class Register extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -56,15 +60,19 @@ class Register extends Component {
 	handleSubmit(event) { // submit user state as json body
 		event.preventDefault();
 		const { applicant, emailError } = this.state;
-		const final = this.state.applicant;
-		console.log(final);
+		const final = applicant;
 
-		const required = applicant;
+		const required = {
+			email: applicant.email,
+			first_name: applicant.first_name,
+			last_name: applicant.last_name,
+			password: applicant.password,
+			school: applicant.school,
+		}
 
 		const isComplete = !Object.values(required).every(x => (x === ''));
 		if (isComplete && !emailError) {
-			// this.props.register
-			registerUser(final);
+			this.props.registerUser(final);
 
 		} else {
 			this.setState({ openAlert: true })
@@ -85,16 +93,22 @@ class Register extends Component {
 	}
 
 	render() {
-		const { classes } = this.props;
 		const { emailError, openAlert } = this.state;
+		const { classes } = this.props;
 		return (
 			<div className={classes.main_div}>
-				<Typography variant='h3' >
+				<Typography 
+					variant='h3'
+					className={classes.title}
+					 >
 					Register
 				</Typography>
-				<form className={classes.main_form} onSubmit={this.handleSubmit}>
+				<form 
+				id='main_form'
+				className={classes.main_form} 
+				onSubmit={this.handleSubmit}>
 					<Grid container justify='center' >
-						<Grid container direction='column' xs='6' spacing='32' >
+						<Grid container item direction='column' xs='6' spacing='32' >
 
 							<Grid container item direction='row' spacing='16' >
 								<Grid item xs='6'>
@@ -174,4 +188,9 @@ class Register extends Component {
 	}
 }
 
-export default withStyles(styles)(Register)
+const mapStateToProps = state => {};
+
+export default connect(
+	mapStateToProps,
+	{ registerUser }
+	)(withStyles(styles)(Register));

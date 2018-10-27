@@ -1,51 +1,84 @@
 
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import {
-	Button, AppBar, Typography, Toolbar,
+	Button, AppBar, Typography, Toolbar, withStyles,
 } from '@material-ui/core';
+import PropTypes from 'prop-types';
 
-import { AuthWrapper } from '../../contexts/Auth.context.js';
+const styles = theme => ({
+	title: {
+		flex: 1,
+	},
+	right_actions: {
+		display: 'flex',
+		flex: -1,
+	},
+	user_name: {
+		marginRight: theme.spacing.unit,
+		marginTop: 'auto',
+		marginBottom: 'auto',
+	}
+})
 
-class Header extends Component {
-
-	render() {
-		return (
-			<AppBar position='static' >
-				<Toolbar>
-					<Typography	
-						style={{flex: 1}}
-						variant='headline'
-						color='inherit'>
-						studY {this.props.token}
-					</Typography>
-				{this.props.token === '' ? (
+export function Header({
+	user, onLogout, classes
+}) {
+	return (
+		<AppBar position='static' >
+			<Toolbar>
+				<Typography	
+					className={classes.title}
+					variant='headline'
+					color='inherit'>
+					studY
+				</Typography>
+				{user ? ( 
+					<div className={classes.right_actions}>
+						<Typography
+							margin='10px'
+							className={classes.user_name}
+							variant='subtitle1'
+							color='inherit'>
+							{user.user_profile.first_name}
+						</Typography>
+						<Button 
+							className={classes.logout_button}
+							color='inherit'
+							children="logout"
+							onClick={onLogout}
+						/>
+					</div>
+				) : (
 					<div>
 						<Button
 							component={Link}
 							to="/login"
 							className='login-button'
 							children="Login"
-					color='inherit' />
-					<Button 
-						component={Link} 
-						to="/register"
-						className='register-button'
-						color='inherit'
-						children="Register"
-					/>
+							color='inherit' />
+						<Button 
+							component={Link} 
+							to="/register"
+							className='register-button'
+							color='inherit'
+							children="Register"
+						/>
 					</div>
-				) : (
-					<Button 
-						color='inherit'
-						children="logout"
-						onClick={this.props.clear}
-					/>
 				)}
-			</Toolbar>
-		</AppBar>
-		)
-	}
+		</Toolbar>
+	</AppBar>
+	)
+}
+	
+Header.propTypes = { 
+	user: PropTypes.object,
+	onLogout: PropTypes.func,
 }
 
-export default AuthWrapper(Header);
+Header.defaultProps = {
+	user: null,
+	onLogout: undefined,
+}
+
+export default withStyles(styles)(Header);

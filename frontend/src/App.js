@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { Header } from './components';
 import { Link } from 'react-router-dom';
 import {
-	Paper, Card, CardContent, CardActions,
-	Typography, Grid, withStyles, CardMedia,
+	Card, CardContent, Typography, 
+	Grid, withStyles, CardMedia,
 	CardActionArea,
 } from '@material-ui/core';
 import './App.css';
@@ -55,12 +54,11 @@ class App extends Component {
 		const { classes } = this.props;
     return (
 			<div className='App'>
-				<Header />
 
 				<Grid className={classes.main_grid} container justify='center' >
 					<Grid 
 						className={classes.topics_grid}
-						container
+						container item
 						xs='6'
 						spacing='24'
 					>
