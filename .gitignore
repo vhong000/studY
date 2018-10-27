@@ -2,6 +2,6 @@
 **/__pycache__
 **/.venv
 **/node_modules
-**/*.sqlite3
+**/*sqlite3
 **/.coverage
 **/coverage.xml

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Header } from './components';
+import { Link } from 'react-router-dom';
 import {
 	Card, CardContent, Typography, 
 	Grid, withStyles, CardMedia,
@@ -53,6 +55,8 @@ class App extends Component {
 		const { classes } = this.props;
     return (
 			<div className='App'>
+				<Header />
+
 				<Grid className={classes.main_grid} container justify='center' >
 					<Grid 
 						className={classes.topics_grid}
@@ -64,11 +68,12 @@ class App extends Component {
 							return (
 								<Grid item xs='6' >
 									<Card className={classes.card}>
-										<CardActionArea>
+										<CardActionArea
+											component={Link}
+											to={"/" + topic.name.toLowerCase()}>
 											<CardMedia 
 												className={classes.media}
-												image={topic.image}
-											/>
+												image={topic.image} />
 											<CardContent>
 												<Typography variant="h6">
 													{topic.name}
