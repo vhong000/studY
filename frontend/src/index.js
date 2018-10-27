@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import { Login, Register } from './components';
+import { Login, Register, EventForm } from './components';
 import Header from './containers/header';
 import Subtopic from './components/Subtopic/Subtopic';
 import * as serviceWorker from './serviceWorker';
@@ -60,6 +60,7 @@ ReactDOM.render(
 				<Route exact path="/" component={App} />
 				<Route exact path="/register" component={Register} />
 				<Route exact path="/login" component={Login} />
+				<Route exact path="/eventform" component={EventForm} />
 				<Route exact path="/math"
 					render={(props) => <Subtopic subtopic={subtopics.math} /> }/>
 				<Route exact path="/history" 
