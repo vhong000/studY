@@ -28,6 +28,7 @@ body {
 .Art {
     background-image: url('../../images/sideImg.png');
     height: 100vh;
+
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -38,7 +39,7 @@ body {
 
 .ColumnContainer {
     padding: 0 24px 24px 24px;
-    min-width: 320px;
+    min-width: 440px;
     max-width: 440px;
 }
 
@@ -60,7 +61,7 @@ body {
 }
 
 .TextField input {
-    height: 14px;
+    height: 10px;
 }
 
 .Submit {
@@ -72,7 +73,7 @@ body {
     font-size: 16px;
 }
 
-.Signup {
+.Signin {
     font-weight: bold;
     color:  rgba(63, 81, 181, 0.8);
     font-size: 14px; 
@@ -88,13 +89,14 @@ span {
     font-size: 16px;
 } 
 
+.Text1 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+}
 
-
-
-
-
-
-
-
-
-
+.Text2 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 0;
+}

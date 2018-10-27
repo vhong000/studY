@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { Button, TextField, withStyles, 
 	Grid, Snackbar, Typography
 } from '@material-ui/core';
+import classes from './register.module.css';
+import icon from '../../images/icon.png'
 // more components at https://material-ui.com/getting-started/usage/
 
 import { registerUser } from '../../fetchData';
@@ -85,91 +86,93 @@ class Register extends Component {
 	}
 
 	render() {
-		const { classes } = this.props;
+		// const { classes } = this.props;
 		const { emailError, openAlert } = this.state;
 		return (
-			<div className={classes.main_div}>
-				<Typography variant='h3' >
-					Register
-				</Typography>
-				<form className={classes.main_form} onSubmit={this.handleSubmit}>
-					<Grid container justify='center' >
-						<Grid container direction='column' xs='6' spacing='32' >
-
-							<Grid container item direction='row' spacing='16' >
-								<Grid item xs='6'>
-									<TextField
-										id='first_name' label='First' type='text'
-										variant='filled' onChange={this.handleChange}
-										fullWidth required
-									/>
+			<div className={classes.Container}>
+                <div className={classes.PageColumns}>
+                    <div className={classes.PageColumn_left}>
+                        <div className={classes.Art}>
+                        </div>
+                    </div>
+                    <div className={classes.PageColumn_right}>
+                        <div className={classes.ColumnContainer}>
+							<div>
+								<img alt="icon" src={icon} className={classes.Icon}/>    
+							</div>
+							<h1 className={classes.Title}>Join the New York City student community.</h1>
+							<p className={classes.Text1}>By having a StudY account, you can create, find, and join groups on all of your favourite topics.</p>
+							<p className={classes.Text2}>Sign up in just seconds.</p>
+							<form className={classes.Form} onSubmit={this.handleSubmit}>
+								<Grid container justify='flex-start' >
+									<Grid container direction='column' xs='12' spacing='8' >
+										<Grid container item direction='row' spacing='16' >
+											<Grid item xs='6'>
+												<TextField InputProps={{className: classes.TextField}}
+													id='first_name' label='First' type='text'
+													variant='outlined' onChange={this.handleChange}
+													fullWidth required
+												/>
+											</Grid>
+											<Grid item xs='6'>
+												<TextField InputProps={{className: classes.TextField}}
+													id='last_name' label='Last' type='text'
+													variant='outlined' onChange={this.handleChange}
+													fullWidth required
+												/>
+											</Grid>
+										</Grid>
+										<Grid item >
+											<TextField InputProps={{className: classes.TextField}}
+												id='email' label='E-mail' type='email'
+												variant='outlined' onChange={this.handleEmailChange}
+												fullWidth required error={emailError}
+											/>
+										</Grid>
+										<Grid item >
+											<TextField InputProps={{className: classes.TextField}}
+												id='password' label='Password' type='password'
+												variant='outlined' onChange={this.handleChange}
+												fullWidth required
+											/>
+										</Grid>
+										<Grid container item direction='row' spacing='16'>
+											<Grid item xs='8'>
+												<TextField InputProps={{className: classes.TextField}}
+													id='school' label='School' type='text'
+													variant='outlined' onChange={this.handleChange}
+													placeholder="eg. City College" 
+													fullWidth required
+												/>
+											</Grid>
+										<Grid item xs='4'>
+											<TextField InputProps={{className: classes.TextField}}
+												id='major' label='Major' type='text'
+												variant='outlined' onChange={this.handleChange}
+												placeholder="eg. Computer Science" 
+												fullWidth
+											/>
+										</Grid>
+									</Grid>
+									<Grid item>
+									<button type="submit" className={classes.Submit} onClick={this.handleSubmit}>SIGN UP</button>
+									</Grid>
 								</Grid>
-
-								<Grid item xs='6'>
-									<TextField
-										id='last_name' label='Last' type='text'
-										variant='filled' onChange={this.handleChange}
-										fullWidth required
-									/>
-								</Grid>
 							</Grid>
-
-							<Grid item >
-								<TextField
-									id='email' label='E-mail' type='email'
-									variant='filled' onChange={this.handleEmailChange}
-									fullWidth required error={emailError}
-								/>
-							</Grid>
-
-							<Grid item >
-								<TextField
-									id='password' label='Password' type='password'
-									variant='filled' onChange={this.handleChange}
-									fullWidth required
-								/>
-							</Grid>
-
-							<Grid container item direction='row' spacing='16'>
-								<Grid item xs='8'>
-									<TextField
-										id='school' label='School' type='text'
-										variant='filled' onChange={this.handleChange}
-										placeholder="eg. City College" 
-										fullWidth required
-									/>
-								</Grid>
-
-							<Grid item xs='4'>
-								<TextField
-									id='major' label='Major' type='text'
-									variant='filled' onChange={this.handleChange}
-									placeholder="eg. Computer Science" 
-									fullWidth
-								/>
-							</Grid>
-						</Grid>
-
-						<Grid item>
-							<Button
-								type='submit'
-								children="Register"
-								onClick={this.handleSubmit}
-								fullWidth
-								color='primary'
-								variant='outlined'
+							<Snackbar
+								open={openAlert}
+								onClose={this.handleAlertClose}
+								message={<span>Incomplete Form</span>}
 							/>
-						</Grid>
-
-					</Grid>
-				</Grid>
-				<Snackbar
-					open={openAlert}
-					onClose={this.handleAlertClose}
-					message={<span>Incomplete Form</span>}
-				/>
-				</form>
+						</form>
+						<div>
+							<span>Already have a StudY Account?</span>&ensp;
+							<a href="/login" className={classes.Signin}>SIGN IN</a>
+						</div>
+                    </div>
+				</div>
 			</div>
+		</div>
 		)
 	}
 }

@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
+import { Button, TextField, Grid, withStyles } from '@material-ui/core';
 import classes from './login.module.css';
+import icon from '../../images/icon.png'
 // more components at https://material-ui.com/getting-started/usage/
 
 import { loginUser } from '../../fetchData';
 
-export default class Login extends Component {
+const styles = theme => ({
+    root: {
+      flexGrow: 1,
+    }
+})
+
+class Login extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -28,10 +33,10 @@ export default class Login extends Component {
 				[event.target.id]: event.target.value
 			}
 		});
-		//console.log(event.target.value);
+	//console.log(event.target.value);
 	}
 
- 	// submit user state as json body
+ 	//submit user state as json body
 	handleSubmit(event) {
 		event.preventDefault();
 		const data = this.state.user;
@@ -40,53 +45,58 @@ export default class Login extends Component {
 	}
 
 	render() {
-
-		return (
-			<form className={classes.Form} id="myForm"
-				onSubmit={this.handleSubmit}>
-					<div className={classes.Login }>
-						<p>Login To My Account</p>
-					</div>
-					<div className={classes.Outer}>
-						<div>	
-							<TextField
-								id="email"
-								label="Email"
-								className={classes.TextField}
-								type="text"
-								name="email"
-								autoComplete="email"
-								margin="normal"
-								variant="filled"
-								onChange={this.handleChange}
-							/>
-						</div>
-						<div>
-							<TextField
-								className={classes.TextField}
-								id="password"
-								label="Password"
-								type="password"
-								autoComplete="current-password"
-								margin="normal"
-								variant="filled"
-								onChange={this.handleChange}
-								/>
-						</div>
-						<div>
-							<button type="submit" className={classes.Button}>Login</button>
-						</div>
-						<div>
-							<Button 
-								className={classes.RegisterButton}
-								component={Link}
-								to="/register" 
-								children="Sign Up"
-							/>
-							
-						</div>
-					</div>
-			</form>
+        return (
+            <div className={classes.Container}>
+                <div className={classes.PageColumns}>
+                    <div className={classes.PageColumn_left}>
+                        <div className={classes.Art}>
+                        </div>
+                    </div>
+                    <div className={classes.PageColumn_right}>
+                        <div className={classes.ColumnContainer}>
+							<div>
+								<img alt="icon" src={icon} className={classes.Icon}/>    
+							</div>
+                        	<h1 className={classes.Title}>Sign In</h1>
+							<form className={classes.Form}>
+								<TextField InputProps={{className: classes.TextField}}
+									id="outlined-email-input"
+									label="Email"
+									type="email"
+									name="email"
+									autoComplete="email"
+									margin="dense"
+									variant="outlined"
+									onChange={this.handleChange}
+									fullWidth={true}
+									/>
+								<TextField InputProps={{className: classes.TextField}}
+									id="outlined-password-input"
+									label="Password"
+									type="password"
+									autoComplete="current-password"
+									margin="dense"
+									variant="outlined"
+									onChange={this.handleChange}
+									fullWidth={true}
+									/>
+								<div>
+									<button type="submit" className={classes.Submit}>SIGN IN</button>
+								</div>
+							</form>
+							<div>
+								<span>Don't have a StudY Account?</span>&ensp;
+								<a href="/register" className={classes.Signup}>SIGN UP</a>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+     
 		)
 	}
 }
+
+export default withStyles(styles)(Login);
+
+
