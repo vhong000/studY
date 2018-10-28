@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import {
 
-    Typography, Grid, withStyles, Divider, Toolbar
+    Typography, Grid, withStyles, Divider, Toolbar,Button
 
 } from '@material-ui/core';
 
@@ -31,6 +31,12 @@ const styles = theme => ({
     helper: {
         borderLeft: `2px solid ${theme.palette.divider}`,
         padding: `${theme.spacing.unit}px ${theme.spacing.unit * 2}px`,
+    },
+    root: {
+        flexGrow: 1,
+    },
+    grow: {
+        flexGrow: 1,
     },
 });
 
@@ -71,9 +77,15 @@ class EventList extends Component {
         const { classes } = this.props;
         return (
             <div>
+                <Toolbar variant="dense">
+                    <Typography className={classes.grow} color="inherit">
+                        Here you can either join or create a study group event
+                    </Typography>
+                    <Button color="inherit">create event</Button>
+                </Toolbar>
+                <Divider />
                 <Grid className={classes.main_grid} container sm={12}>
                     <Grid item sm={2}>
-
                     </Grid>
                     <Grid item sm={6}>
                         {renderEventCardGrid()}

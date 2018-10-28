@@ -6,20 +6,11 @@ import {
     Button, Toolbar, Divider
 } from '@material-ui/core';
 
-const styles = {
-    root: {
-        flexGrow: 1,
-    },
-    grow: {
-        flexGrow: 1,
-    },
-};
+
 class EventListPage extends Component {
 
 
     render() {
-        const { classes } = this.props;
-        console.log("Props[0]",this.props)
         const listEvents = [
             {
                 "date": "November 10",
@@ -81,14 +72,6 @@ class EventListPage extends Component {
 
         return (
             <div>
-
-                <Toolbar variant="dense">
-                    <Typography className={classes.grow} color="inherit">
-                        Here you can either join or create a study group event
-                    </Typography>
-                    <Button color="inherit">create event</Button>
-                </Toolbar>
-                <Divider />
                 <EventList listofevents={listEvents} params={this.props.match.params}/>
             </div>
         )
@@ -96,6 +79,6 @@ class EventListPage extends Component {
 
 }
 
-export default withStyles(styles)(EventListPage);
+export default EventListPage;
 
 
