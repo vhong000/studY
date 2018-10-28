@@ -11,14 +11,13 @@ from django.contrib.auth.models import User
 from .serializers import AccountSerializer
 from .models import Account
 import uuid
-import json
 
 
 class SignupView(APIView):
     http_method_names = ['post']
 
     def post(self, request):
-        payload = json.loads(request.body.decode('utf-8'), encoding='utf-8')
+        payload = request.data
         payload['username'] = payload.get('username', None) or uuid.uuid4().hex
         data = dict([(k, payload.pop(k, None)) for k in ['school', 'year', 'major']])
         data['owner'] = payload
