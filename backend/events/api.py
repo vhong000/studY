@@ -8,10 +8,10 @@ from rest_framework.decorators import action
 from rest_framework.exceptions import NotFound
 from django.db.models import Q
 from django.conf import settings
-# import json
+from django.contrib.auth.models import AnonymousUser
 
-from events.serializers import SchoolSerializer, TopicSerializer, EventSerializer, CourseSerializer
-from events.models import Event, Course, Topic, School
+from events.serializers import SchoolSerializer, TopicSerializer, EventSerializer, CourseSerializer, CategorySerializer
+from events.models import Event, Course, Topic, School, Category
 from accounts.models import Account
 from accounts.serializers import AccountSerializer
 
@@ -39,9 +39,26 @@ class EventViewSet(viewsets.ModelViewSet):
         event = self.get_object()
         if event.attendees.count() < event.capacity:
             event.attendees.add(self.request.user.account)
-            return Response(data="success", status=status.HTTP_200_OK, content_type="application/json")
+            event = AccountSerializer(event.attendees, many=True).data
+            return Response(data=event, status=status.HTTP_200_OK, content_type="application/json")
 
-        return Response(data=None, status=status.HTTP_400_BAD_REQUEST)
+        return Response(data="sold out!", status=status.HTTP_400_BAD_REQUEST)
+
+
+class ProfileView(generics.RetrieveAPIView):
+    queryset = Account.objects.all()
+    serializer_class = AccountSerializer
+
+    def get_object(self):
+        qs = self.get_queryset()
+        if self.request.GET.get('id', None):
+            return qs.get(id=self.request.GET['id'])
+
+        if not self.request.user.is_anonymous:
+            print(self.request.user)
+            return qs.get(owner=self.request.user)
+
+        raise NotFound()
 
 
 class SchoolViewSet(viewsets.ReadOnlyModelViewSet):
@@ -53,6 +70,18 @@ class CourseViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Course.objects.all()
     serializer_class = CourseSerializer
     filterset_fields = ('dept',)
+
+
+class TopicView(viewsets.ModelViewSet):
+    queryset = Topic.objects.all()
+    http_method_names = ['get']
+    serializer_class = TopicSerializer
+
+
+class CategoryView(viewsets.ModelViewSet):
+    queryset = Category.objects.all()
+    http_method_names = ['get']
+    serializer_class = CategorySerializer
 
 
 class EventList(generics.ListAPIView):
