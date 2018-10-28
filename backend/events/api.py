@@ -8,7 +8,6 @@ from rest_framework.decorators import action
 from rest_framework.exceptions import NotFound
 from django.db.models import Q
 from django.conf import settings
-from django.contrib.auth.models import AnonymousUser
 
 from events.serializers import SchoolSerializer, TopicSerializer, EventSerializer, CourseSerializer, CategorySerializer
 from events.models import Event, Course, Topic, School, Category
@@ -60,7 +59,7 @@ class ProfileView(generics.RetrieveAPIView):
 
         raise NotFound()
 
-
+        
 class SchoolViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = School.objects.all()
     serializer_class = SchoolSerializer
@@ -83,7 +82,7 @@ class CategoryView(viewsets.ModelViewSet):
     http_method_names = ['get']
     serializer_class = CategorySerializer
 
-
+    
 class EventList(generics.ListAPIView):
     serializer_class = EventSerializer
 
