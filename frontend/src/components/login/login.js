@@ -37,24 +37,27 @@ export class Login extends Component {
 	handleSubmit(event) {
 		event.preventDefault();
 		const data = this.state.user;
+		const { history } = this.props;
 		console.log(data);
-		this.props.loginUser(data);
+
+		this.props.loginUser(data, history);
 	}
 
 	render() {
-        return (
-            <div className={classes.Container}>
-                <div className={classes.PageColumns}>
-                    <div className={classes.PageColumn_left}>
-                        <div className={classes.Art}>
-                        </div>
-                    </div>
-                    <div className={classes.PageColumn_right}>
-                        <div className={classes.ColumnContainer}>
+		const { user } = this.props;
+		return (
+			<div className={classes.Container}>
+				<div className={classes.PageColumns}>
+					<div className={classes.PageColumn_left}>
+						<div className={classes.Art}>
+						</div>
+					</div>
+					<div className={classes.PageColumn_right}>
+						<div className={classes.ColumnContainer}>
 							<div>
 								<img alt="icon" src={icon} className={classes.Icon}/>    
 							</div>
-                        	<h1 className={classes.Title}>Sign In</h1>
+							<h1 className={classes.Title}>Sign In</h1>
 							<form id="myForm" className={classes.Form} onSubmit={this.handleSubmit}>
 								<TextField InputProps={{className: classes.TextField}}
 									id="email"
@@ -85,16 +88,17 @@ export class Login extends Component {
 								<span>Don't have a StudY Account?</span>&ensp;
 								<a href="/register" className={classes.Signup}>SIGN UP</a>
 							</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-     
+						</div>
+					</div>
+				</div>
+			</div>
 		)
 	}
 }
 
-const mapStateToProps = state => {};
+const mapStateToProps = state => ({
+	user: state.Authenticate.user,
+});
 
 export default connect(mapStateToProps, { loginUser })(Login);
 

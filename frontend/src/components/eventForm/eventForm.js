@@ -122,7 +122,7 @@ const eventTime = ({
   </FormControl>
 )
 
-const EventForm = props => {
+export const EventForm = props => {
   const { onSubmit, classes, newEvent } = props;
   function handleSubmit(event) {
     event.preventDefault();
@@ -131,7 +131,8 @@ const EventForm = props => {
 
   return ( 
     <form onSubmit={handleSubmit}
-      className={classes.main_form}>
+      className={classes.main_form}
+      id='main_form' >
       <Typography 
         variant='display1'
         children="Create An Event"
@@ -142,7 +143,8 @@ const EventForm = props => {
             <Field 
               name='eventName'
               component={eventNameField}
-              label='Event Name' />
+              label='Event Name'
+              id='eventName' />
           </Grid>
 
           <Grid container item spacing='16'>
@@ -150,7 +152,8 @@ const EventForm = props => {
               <Field
                 name='eventLocation' 
                 component={eventLocationField}
-                label='School' >
+                label='School'
+                id='eventLocation' >
                 <MenuItem value='city'> city </MenuItem>
                 <MenuItem value='hunter'> hunter </MenuItem>
                 <MenuItem value='bmcc'> bmcc </MenuItem>
@@ -161,7 +164,8 @@ const EventForm = props => {
               <Field
                 name='eventLimit'
                 component={eventLimitField}
-                label='Limit' />
+                label='Limit'
+                id='eventLimit' />
             </Grid>
           </Grid>
 
@@ -171,6 +175,7 @@ const EventForm = props => {
                 name='eventDate'
                 component={eventDate}
                 label='Date'
+                id='eventDate'
               />
             </Grid>
             <Grid item xs='6'>
@@ -178,6 +183,7 @@ const EventForm = props => {
                 name='eventTime'
                 component={eventTime}
                 label='Time'
+                id='eventTime'
               />
             </Grid>
           </Grid>
@@ -185,7 +191,8 @@ const EventForm = props => {
             <Field
               name='eventDescription'
               component={eventDescriptionField}
-              label="Event Description" />
+              label="Event Description"
+              id='eventDescription' />
 
           <Grid>
             <Button
@@ -193,6 +200,7 @@ const EventForm = props => {
               fullWidth
               children='Create Event'
               color='primary'
+              id='submit-button'
             />
           </Grid>   
         </Grid>
@@ -207,7 +215,7 @@ EventForm.propTypes = {
 }
 
 EventForm.defaultProps = {
-  newEvent: '',
+  newEvent: {}
 }
 
 export default reduxForm({

@@ -21,7 +21,7 @@ const styles = theme => ({
 		marginBottom: 'auto',
 	}
 })
-
+	
 describe('Header', () => {
 	const wrapper = shallow(<Header classes={styles} /> );
 	it('should render login button', () => {
