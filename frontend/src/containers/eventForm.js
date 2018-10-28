@@ -16,15 +16,15 @@ function mapStateToProps(state) {
       'eventTime', 'eventLocation',
       'eventLimit', 'eventDescription'
     );
-  const eventOrganizer = (
-    state.Authenticate.user ? (
-      state.Authenticate.user.user_profile.first_name
-    ) : (
-      'default'
-   ))
+  // const eventOrganizer = (
+  //   state.Authenticate.user ? (
+  //     state.Authenticate.user.user_profile.first_name
+  //   ) : (
+  //     'default'
+  //  ))
 
   
-  const eventCategory = 'math';
+  // const eventCategory = 'math';
   const eventTopic = 'calc';
 
   return {
@@ -35,8 +35,8 @@ function mapStateToProps(state) {
       location: eventLocation,
       limit: eventLimit,
       description: eventDescription,
-      organizer: eventOrganizer,
-      category: eventCategory,
+      // organizer: eventOrganizer,
+      // category: eventCategory,
       topic: eventTopic,
     }
   }

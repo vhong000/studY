@@ -134,7 +134,7 @@ const EventForm = props => {
       className={classes.main_form}>
       <Typography 
         variant='display1'
-        children="Create an Event"
+        children="Create An Event"
       />
       <Grid container justify='center' >
         <Grid container item xs='6' direction='column' >
