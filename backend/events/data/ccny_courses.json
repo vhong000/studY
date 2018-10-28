@@ -1,0 +1,4513 @@
+{
+    "name": "The City College of New York",
+    "code": "CCNY",
+    "url": "https://www.coursicle.com/ccnycuny/",
+    "courses": {
+        "AES": [
+            [
+                "Visual Studies 2",
+                "12300"
+            ],
+            [
+                "The Built Environment of New York City",
+                "21200"
+            ],
+            [
+                "Portfolio Review",
+                "24001"
+            ],
+            [
+                "Survey World Arch 2",
+                "24202"
+            ],
+            [
+                "Structures 1 - Introduction to Structures",
+                "24303"
+            ]
+        ],
+        "ANTH": [
+            [
+                "Introduction to Anthropology",
+                "10100"
+            ],
+            [
+                "Cross-Cultural Perspectives",
+                "20100"
+            ],
+            [
+                "Human Origins",
+                "20300"
+            ],
+            [
+                "Anthropology of Urban Areas",
+                "22800"
+            ],
+            [
+                "Anth Of Urban Areas",
+                "22804"
+            ],
+            [
+                "Peoples of Africa",
+                "24000"
+            ],
+            [
+                "Field Work Methods in Cultural Anthropology",
+                "24800"
+            ],
+            [
+                "Language and Power",
+                "26500"
+            ],
+            [
+                "Anthr Of Asian America",
+                "31113"
+            ],
+            [
+                "Anthropology of Childhood",
+                "31121"
+            ],
+            [
+                "Pirates of the Caribbean: Scalawags, Sailors, and Slaves",
+                "31133"
+            ],
+            [
+                "Black Panther: The World of Wakanda",
+                "31189"
+            ],
+            [
+                "Wmn-Vlatn Hum Rghts",
+                "31403"
+            ],
+            [
+                "Health Issues and Alternatives",
+                "32100"
+            ],
+            [
+                "Global Islamic Women",
+                "38500"
+            ]
+        ],
+        "ARAB": [
+            [
+                "Introductory Arabic II",
+                "12400"
+            ],
+            [
+                "Advanced Intermediate Arabic",
+                "30000"
+            ],
+            [
+                "Selected Topics in Arabic Literatures and Cultures",
+                "30100"
+            ]
+        ],
+        "ARCH": [
+            [
+                "Core Studio 2",
+                "12000"
+            ],
+            [
+                "Core Studio 4",
+                "24000"
+            ],
+            [
+                "Construction Technology I",
+                "24501"
+            ],
+            [
+                "Core Studio 6",
+                "36101"
+            ],
+            [
+                "Structures 3 \u00e2\u0080\u0093 Behavior of Structural Systems",
+                "36402"
+            ],
+            [
+                "Construction Tech 3",
+                "36501"
+            ],
+            [
+                "Faculty Directed Research",
+                "41366"
+            ],
+            [
+                "Survey of World Architecture 4",
+                "47202"
+            ],
+            [
+                "Advanced Studio",
+                "51000"
+            ],
+            [
+                "Efficiency & Tall Buildings",
+                "51007"
+            ],
+            [
+                "World Cities: Re-Orienting towards the East",
+                "51008"
+            ],
+            [
+                "European Research Seminar II",
+                "51009"
+            ],
+            [
+                "Retrofitting Suburbia",
+                "51023"
+            ],
+            [
+                "Geospatial Analysis",
+                "51024"
+            ],
+            [
+                "Visualizing Central Park",
+                "51025"
+            ],
+            [
+                "BIOREMEDIATION: Leveraging Biology in Addressing Toxic Legacies",
+                "51026"
+            ],
+            [
+                "Le Corbusier: Architecture, Urbanism, Politics",
+                "51027"
+            ],
+            [
+                "History & Theory of Landscape Architecture",
+                "51028"
+            ],
+            [
+                "Building Modeling",
+                "51312"
+            ],
+            [
+                "Of Matter",
+                "51342"
+            ],
+            [
+                "Computer Rendering and Animation",
+                "51348"
+            ],
+            [
+                "Europ Research Sem 1",
+                "51358"
+            ],
+            [
+                "Co-op Internship 2",
+                "51363"
+            ],
+            [
+                "Discvr Form In Natr",
+                "51387"
+            ],
+            [
+                "Sustainable Soil and Water",
+                "51422"
+            ],
+            [
+                "Topics in Design Methods",
+                "51550"
+            ],
+            [
+                "Responsive Architectures",
+                "52301"
+            ],
+            [
+                "Case St Sustainabili",
+                "57403"
+            ],
+            [
+                "Teaching Assistant in Architecture",
+                "59902"
+            ],
+            [
+                "Co-Op Ed",
+                "59902"
+            ],
+            [
+                "Materials & Construction L",
+                "61301"
+            ],
+            [
+                "Case Studies in Sustainability",
+                "61388"
+            ],
+            [
+                "Visual Studies",
+                "62001"
+            ],
+            [
+                "Architectural Studio 1.2",
+                "62100"
+            ],
+            [
+                "Computer Rendering",
+                "63114"
+            ],
+            [
+                "Architectural Studio 1.4",
+                "74100"
+            ],
+            [
+                "Environmental Systems",
+                "74501"
+            ],
+            [
+                "Design Seminar",
+                "85200"
+            ],
+            [
+                "Survey World Arch 4",
+                "85201"
+            ],
+            [
+                "Professional Practice",
+                "85600"
+            ],
+            [
+                "Design Seminar 2",
+                "92202"
+            ]
+        ],
+        "ART": [
+            [
+                "Introduction to the Visual Arts of the World",
+                "10000"
+            ],
+            [
+                "Two-Dimensional Design.",
+                "10100"
+            ],
+            [
+                "Introduction to Drawing",
+                "10200"
+            ],
+            [
+                "Intro To Woodcut",
+                "10300"
+            ],
+            [
+                "Introduction to Photography",
+                "10400"
+            ],
+            [
+                "Photography and Visual Perception",
+                "10410"
+            ],
+            [
+                "Introduction to Painting",
+                "10500"
+            ],
+            [
+                "Introduction to Sculpture",
+                "10600"
+            ],
+            [
+                "Introduction to Ceramic Design",
+                "10700"
+            ],
+            [
+                "3-D Design",
+                "10900"
+            ],
+            [
+                "Introduction to Art Education",
+                "15500"
+            ],
+            [
+                "Writing About Art",
+                "21000"
+            ],
+            [
+                "Greek and Roman Art",
+                "21014"
+            ],
+            [
+                "Romanesque and Gothic Art",
+                "21022"
+            ],
+            [
+                "Italian Renaissance Art and Architecture",
+                "21024"
+            ],
+            [
+                "Northern Renaissance Art",
+                "21025"
+            ],
+            [
+                "American Art 1776-1900",
+                "21032"
+            ],
+            [
+                "Postwar Art in the U.S. and Europe",
+                "21038"
+            ],
+            [
+                "Art of China, Japan, and Korea",
+                "21054"
+            ],
+            [
+                "History of Design",
+                "21067"
+            ],
+            [
+                "History of Graphic Design",
+                "21068"
+            ],
+            [
+                "Intermediate Drawing",
+                "22000"
+            ],
+            [
+                "Projects in Printmaking",
+                "23000"
+            ],
+            [
+                "Photography II",
+                "24000"
+            ],
+            [
+                "Color Photography",
+                "24010"
+            ],
+            [
+                "Photojournalism",
+                "24020"
+            ],
+            [
+                "Projects in Painting",
+                "25000"
+            ],
+            [
+                "Identity and Culture in Art Education",
+                "25500"
+            ],
+            [
+                "Projects in Ceramic Design",
+                "27000"
+            ],
+            [
+                "Projects in Wood Design",
+                "28000"
+            ],
+            [
+                "Typography I",
+                "29500"
+            ],
+            [
+                "Graphic Design Concepts",
+                "29510"
+            ],
+            [
+                "Illustration",
+                "29520"
+            ],
+            [
+                "2D Imaging and Illustration",
+                "29526"
+            ],
+            [
+                "Digital Photography 1",
+                "29530"
+            ],
+            [
+                "Problems in African Art History",
+                "31023"
+            ],
+            [
+                "Figurative Ceramics",
+                "31024"
+            ],
+            [
+                "Sculptural Objects Functional Art",
+                "31120"
+            ],
+            [
+                "Contemporary U.S. Latin@Art",
+                "31124"
+            ],
+            [
+                "Art since 1980",
+                "31538"
+            ],
+            [
+                "Caribbean Art: From PreColumbian to Contemporary",
+                "31541"
+            ],
+            [
+                "Welding Workshop",
+                "31542"
+            ],
+            [
+                "Mold Making Workshop",
+                "31543"
+            ],
+            [
+                "Intro to Bookbinding",
+                "31569"
+            ],
+            [
+                "Figure Drawing",
+                "32000"
+            ],
+            [
+                "Photo Portfolio and Projects",
+                "34000"
+            ],
+            [
+                "Alternative Processes in Photography",
+                "34040"
+            ],
+            [
+                "Studio Photo and Lighting",
+                "34060"
+            ],
+            [
+                "Watercolor",
+                "35000"
+            ],
+            [
+                "Furniture Design",
+                "36600"
+            ],
+            [
+                "Clay and Glazes",
+                "37000"
+            ],
+            [
+                "Typography II",
+                "39500"
+            ],
+            [
+                "Electronic Design I",
+                "39510"
+            ],
+            [
+                "Print Production",
+                "39512"
+            ],
+            [
+                "Vector Illustration",
+                "39522"
+            ],
+            [
+                "2D Animation Principles",
+                "39528"
+            ],
+            [
+                "Digital Photography II",
+                "39530"
+            ],
+            [
+                "Web Design 1",
+                "39540"
+            ],
+            [
+                "UX/UI Design",
+                "39544"
+            ],
+            [
+                "Programming for Artists",
+                "39552"
+            ],
+            [
+                "Digital Video 1",
+                "39560"
+            ],
+            [
+                "3-Dimensional Computer Imaging and Animation I: Foundation",
+                "39570"
+            ],
+            [
+                "Game Workshop",
+                "39580"
+            ],
+            [
+                "Crit Iss:Des-Tec-Med",
+                "39590"
+            ],
+            [
+                "Electronic Design 2",
+                "49510"
+            ],
+            [
+                "Topics in Animation",
+                "49528"
+            ],
+            [
+                "Web Design 2",
+                "49540"
+            ],
+            [
+                "Digital Video 2",
+                "49560"
+            ],
+            [
+                "3-D Cmp Imag-Anim 2",
+                "49570"
+            ],
+            [
+                "Digital Design Portfolio",
+                "49590"
+            ],
+            [
+                "Senior Thesis",
+                "49598"
+            ]
+        ],
+        "ARTE": [
+            [
+                "Community-Based Art Education",
+                "3100C"
+            ]
+        ],
+        "ASIA": [
+            [
+                "Asian Cultures and Peoples",
+                "10100"
+            ],
+            [
+                "Contemporary Asia",
+                "20200"
+            ],
+            [
+                "Cultural Identity in East Asia",
+                "31127"
+            ],
+            [
+                "Contemporary Japan",
+                "31611"
+            ],
+            [
+                "Modern Chinese Literature (in English)",
+                "33200"
+            ],
+            [
+                "China's Cultural Revolution",
+                "33450"
+            ]
+        ],
+        "ASTR": [
+            [
+                "Methods in Astronomy",
+                "30500"
+            ]
+        ],
+        "BIO": [
+            [
+                "Human Biology",
+                "10004"
+            ],
+            [
+                "Biological Foundations I",
+                "10100"
+            ],
+            [
+                "Biological Foundations II",
+                "10200"
+            ],
+            [
+                "Introduction to Genetics",
+                "20600"
+            ],
+            [
+                "Organismic Biology",
+                "20700"
+            ],
+            [
+                "Ecology and Evolution",
+                "22800"
+            ],
+            [
+                "Cell and Molecular Biology",
+                "22900"
+            ],
+            [
+                "Hum Anat/Physiol 2",
+                "24800"
+            ],
+            [
+                "Microbiology for Healthcare Professionals",
+                "31020"
+            ],
+            [
+                "Genetic and genome-wide analysis of development and disease",
+                "31122"
+            ],
+            [
+                "Biology of Learning and Memory",
+                "31140"
+            ],
+            [
+                "Botany",
+                "34500"
+            ],
+            [
+                "Introduction to Neurobiology",
+                "35400"
+            ],
+            [
+                "Cancer Biology",
+                "42500"
+            ],
+            [
+                "Biology of Birds",
+                "44900"
+            ],
+            [
+                "Movement and Muscle: The Neuroscience of Motor Control",
+                "45100"
+            ],
+            [
+                "Conservation Biology",
+                "45300"
+            ],
+            [
+                "Advanced Ecology",
+                "45500"
+            ],
+            [
+                "Animal Behavior",
+                "46000"
+            ],
+            [
+                "Introduction to Epigenetics",
+                "48100"
+            ],
+            [
+                "Laboratory in Biotechnology",
+                "48300"
+            ],
+            [
+                "Tropical Ecology and Conservation",
+                "48800"
+            ]
+        ],
+        "BLST": [
+            [
+                "African Heritage and the Afro-American Experience",
+                "10100"
+            ],
+            [
+                "African Heritage and the Caribbean-Brazilian Experience",
+                "10200"
+            ],
+            [
+                "African Politics",
+                "12300"
+            ],
+            [
+                "Racism and the American Legal System",
+                "15700"
+            ],
+            [
+                "Roots: Seminar on the Black World Experience",
+                "17100"
+            ],
+            [
+                "Caribbean Studies",
+                "21200"
+            ],
+            [
+                "African American Political Thought",
+                "31101"
+            ],
+            [
+                "Africa Since Independence",
+                "31115"
+            ],
+            [
+                "African Cinema: Gender & Culture",
+                "31152"
+            ],
+            [
+                "Race, Class and Power",
+                "31155"
+            ],
+            [
+                "Ethnic Minority Groups",
+                "31159"
+            ],
+            [
+                "History Of South Africa",
+                "31170"
+            ],
+            [
+                "Philosophy of Race",
+                "31171"
+            ],
+            [
+                "African American History Pre-Emancipation",
+                "31173"
+            ],
+            [
+                "Africa & Mod Worl",
+                "31201"
+            ],
+            [
+                "Peoples Of Africa",
+                "31502"
+            ],
+            [
+                "Af-Latinos-Hist-Cul",
+                "31608"
+            ],
+            [
+                "African Literature",
+                "37005"
+            ]
+        ],
+        "BME": [
+            [
+                "Introduction to Biomedical Engineering",
+                "10100"
+            ],
+            [
+                "Bioelectrical Circuits With Lab",
+                "20500"
+            ],
+            [
+                "Experimental Methods in Biomedical Engineering I",
+                "31000"
+            ],
+            [
+                "Biomedical Engineering Senior Design II",
+                "46000"
+            ],
+            [
+                "Cell and Tissue Mechanics",
+                "50100"
+            ],
+            [
+                "Cell and Tissue Biomaterial Interactions",
+                "50300"
+            ],
+            [
+                "Imaging and Signal Processing in Biomedicine",
+                "50500"
+            ]
+        ],
+        "CE": [
+            [
+                "Structural and Site Plans",
+                "20900"
+            ],
+            [
+                "Statics",
+                "23100"
+            ],
+            [
+                "Civil Engineering Data Analysis",
+                "26400"
+            ],
+            [
+                "Transportation Systems Engineering",
+                "32700"
+            ],
+            [
+                "Mechanics of Deformable Bodies",
+                "33200"
+            ],
+            [
+                "Computational Methods in Civil Engineering",
+                "33500"
+            ],
+            [
+                "Structural Analysis",
+                "34000"
+            ],
+            [
+                "Soil Mechanics",
+                "34500"
+            ],
+            [
+                "Fluid Mechanics",
+                "35000"
+            ],
+            [
+                "Hydraulic Engineering",
+                "36500"
+            ],
+            [
+                "Environmental Impact Assessment",
+                "37200"
+            ],
+            [
+                "Review of Civil Engineering Fundamentals",
+                "40100"
+            ],
+            [
+                "Civil Engineering Management",
+                "40500"
+            ],
+            [
+                "Finite Element Analysis of Structures",
+                "44000"
+            ],
+            [
+                "Reinforced Concrete",
+                "44100"
+            ],
+            [
+                "Environmental Engineering",
+                "47400"
+            ],
+            [
+                "Senior Design Project",
+                "50900"
+            ],
+            [
+                "Highway Engineering",
+                "54000"
+            ],
+            [
+                "Urban Freight and City Logistics",
+                "54700"
+            ],
+            [
+                "Engineering Hydrology",
+                "56600"
+            ],
+            [
+                "Water Quality Analysis",
+                "57100"
+            ],
+            [
+                "Foundation Engineering",
+                "59000"
+            ],
+            [
+                "Policy And Design",
+                "59901"
+            ]
+        ],
+        "CHE": [
+            [
+                "Chemical Engineering Thermodynamics I",
+                "22900"
+            ],
+            [
+                "Introduction to Materials Science",
+                "31000"
+            ],
+            [
+                "Analysis of Chemical Engineering Processes",
+                "31101"
+            ],
+            [
+                "Transport Phenomena II",
+                "34200"
+            ],
+            [
+                "Unit Operations I",
+                "34500"
+            ],
+            [
+                "Unit Operations II",
+                "34600"
+            ],
+            [
+                "Polymer Science and Engineering",
+                "46700"
+            ],
+            [
+                "Chemical Engineering Design Project",
+                "49600"
+            ],
+            [
+                "Nanomaterials",
+                "49808"
+            ],
+            [
+                "Bioprocess Engineering",
+                "58000"
+            ]
+        ],
+        "CHEM": [
+            [
+                "General Chemistry I",
+                "10301"
+            ],
+            [
+                "General Chemistry II",
+                "10401"
+            ],
+            [
+                "Exploring Chemistry",
+                "11000"
+            ],
+            [
+                "Quantitative Analysis",
+                "24300"
+            ],
+            [
+                "Organic Chemistry I",
+                "26100"
+            ],
+            [
+                "Organic Chem 1 Wksp",
+                "26101"
+            ],
+            [
+                "Organic Chemistry Laboratory I",
+                "26200"
+            ],
+            [
+                "Organic Chemistry II",
+                "26300"
+            ],
+            [
+                "Grp Ldrsp Wksp Chem",
+                "31700"
+            ],
+            [
+                "Biochemistry 1",
+                "32002"
+            ],
+            [
+                "Biochemistry I Lab",
+                "32004"
+            ],
+            [
+                "Physical Chemistry I",
+                "33000"
+            ],
+            [
+                "Physical Chemistry I Workshop",
+                "33001"
+            ],
+            [
+                "Physical Chemistry Laboratory I",
+                "33100"
+            ],
+            [
+                "Physical Chemistry II",
+                "33200"
+            ],
+            [
+                "Organic Chemistry Laboratory II",
+                "37400"
+            ],
+            [
+                "Inorganic Chemistry",
+                "42500"
+            ],
+            [
+                "Physical Biochemistry",
+                "43500"
+            ],
+            [
+                "Biochemistry II",
+                "48005"
+            ]
+        ],
+        "CHIN": [
+            [
+                "Introductory Chinese (Mandarin) II",
+                "12400"
+            ],
+            [
+                "Conversational Chin",
+                "31106"
+            ]
+        ],
+        "CL": [
+            [
+                "Literature of the Maghreb & Mashrek in Translation",
+                "31102"
+            ]
+        ],
+        "CLSS": [
+            [
+                "Greek and Latin Roots in the English Language",
+                "12100"
+            ]
+        ],
+        "CSC": [
+            [
+                "Introduction to Programming and Computer Science",
+                "10000"
+            ],
+            [
+                "Introduction to Computing",
+                "10200"
+            ],
+            [
+                "Introduction to Computing for Majors",
+                "10300"
+            ],
+            [
+                "Discrete Mathematical Structures I",
+                "10400"
+            ],
+            [
+                "Programming Lang",
+                "11300"
+            ],
+            [
+                "Computers and Assembly Language Programming",
+                "21000"
+            ],
+            [
+                "Fundamentals of Computer Systems",
+                "21100"
+            ],
+            [
+                "Data Structures",
+                "21200"
+            ],
+            [
+                "Probability and Statistics for Computer Science",
+                "21700"
+            ],
+            [
+                "Algorithms",
+                "22000"
+            ],
+            [
+                "Software Design Laboratory",
+                "22100"
+            ],
+            [
+                "Numerical Issues in Scientific Programming",
+                "30100"
+            ],
+            [
+                "Introduction to Theoretical Computer Science",
+                "30400"
+            ],
+            [
+                "Software Engineering",
+                "32200"
+            ],
+            [
+                "Operating Systems",
+                "33200"
+            ],
+            [
+                "Programming Language Paradigms",
+                "33500"
+            ],
+            [
+                "Introduction to Database Systems",
+                "33600"
+            ],
+            [
+                "Computer Organization",
+                "34200"
+            ],
+            [
+                "Computer Systems Design Laboratory",
+                "34300"
+            ],
+            [
+                "Compiler Construction",
+                "42000"
+            ],
+            [
+                "Systems Simulation",
+                "44200"
+            ],
+            [
+                "Artificial Intelligence",
+                "44800"
+            ],
+            [
+                "Computer Graphics",
+                "47200"
+            ],
+            [
+                "Co-op Study Preparation",
+                "59004"
+            ],
+            [
+                "Senior Project I",
+                "59866"
+            ],
+            [
+                "Senior Project II",
+                "59867"
+            ],
+            [
+                "Big Data Management and Analysis",
+                "59927"
+            ],
+            [
+                "Introduction to Machine Learning",
+                "59929"
+            ],
+            [
+                "Web Security",
+                "59938"
+            ],
+            [
+                "Topics in Software Engineering",
+                "59939"
+            ],
+            [
+                "Topics in Web Site Design",
+                "59940"
+            ],
+            [
+                "Introduction to Data Science",
+                "59970"
+            ]
+        ],
+        "EAS": [
+            [
+                "The Dynamic Earth",
+                "10000"
+            ],
+            [
+                "Persp Global Warming",
+                "10400"
+            ],
+            [
+                "Earth Systems Science",
+                "10600"
+            ],
+            [
+                "ESS: Systems Analysis of the Earth",
+                "21700"
+            ],
+            [
+                "Structural Geology",
+                "22700"
+            ],
+            [
+                "Earth and Environmental Science Seminar",
+                "30000"
+            ],
+            [
+                "Global Environmental Hazards",
+                "32800"
+            ],
+            [
+                "Phase II Environmental Site Assessments",
+                "33400"
+            ],
+            [
+                "Hydrology",
+                "34500"
+            ],
+            [
+                "Environmental Geochemistry",
+                "41300"
+            ],
+            [
+                "Satellite Meteorology",
+                "41700"
+            ],
+            [
+                "Environmental Remote Sensing and Image Analysis",
+                "42600"
+            ],
+            [
+                "Remote Sensing of Ocean Processes",
+                "42700"
+            ],
+            [
+                "Environmental Proj",
+                "47204"
+            ],
+            [
+                "Climate and Climate Change",
+                "48800"
+            ],
+            [
+                "Geophysics",
+                "56100"
+            ]
+        ],
+        "ECO": [
+            [
+                "Principles of Management",
+                "10150"
+            ],
+            [
+                "Prin Microeconomics",
+                "10250"
+            ],
+            [
+                "Principles of Macroeconomics",
+                "10350"
+            ],
+            [
+                "Introduction to Quantitative Economics",
+                "10400"
+            ],
+            [
+                "Principles of Statistics",
+                "20150"
+            ],
+            [
+                "Intermediate Microeconomics",
+                "20250"
+            ],
+            [
+                "Intermediate Macroeconomics",
+                "20350"
+            ],
+            [
+                "Principles of Accounting 1",
+                "20450"
+            ],
+            [
+                "Principles of Marketing",
+                "21250"
+            ],
+            [
+                "Intrntl Bus Envirmnt",
+                "21350"
+            ],
+            [
+                "Corporate Finance",
+                "22250"
+            ],
+            [
+                "Investment",
+                "22350"
+            ],
+            [
+                "Law & Economics",
+                "23450"
+            ],
+            [
+                "Internet Marketing: Strategic SEO and SEM",
+                "31006"
+            ],
+            [
+                "Developing Management Skills",
+                "31150"
+            ],
+            [
+                "Human Resources Management",
+                "31250"
+            ],
+            [
+                "Operations and Production",
+                "31350"
+            ],
+            [
+                "Applied Investing",
+                "31551"
+            ],
+            [
+                "Organizatnl Behavior",
+                "31650"
+            ],
+            [
+                "Leadership",
+                "31950"
+            ],
+            [
+                "Internationl Finance",
+                "32150"
+            ],
+            [
+                "Money And Banking",
+                "32250"
+            ],
+            [
+                "Introduction to Econometrics",
+                "33150"
+            ],
+            [
+                "Strategic Management",
+                "41150"
+            ],
+            [
+                "Entreprenuership",
+                "41250"
+            ],
+            [
+                "Information and Technology Management",
+                "41450"
+            ],
+            [
+                "Internship",
+                "42000"
+            ],
+            [
+                "Advanced Financial Economics",
+                "42150"
+            ],
+            [
+                "Options And Futures",
+                "42250"
+            ],
+            [
+                "Economic Development",
+                "43250"
+            ],
+            [
+                "Econometrics 2",
+                "43550"
+            ]
+        ],
+        "EDCE": [
+            [
+                "Grp Lit Inq Prc: B-6",
+                "1600E"
+            ],
+            [
+                "Grp Lit Inq Prc:5-12",
+                "1601E"
+            ],
+            [
+                "Parent-Child-School",
+                "1800K"
+            ],
+            [
+                "Lng & Lit Dv Yng Chl",
+                "1900C"
+            ],
+            [
+                "Social Stud Chld Ed",
+                "2100C"
+            ],
+            [
+                "Devl Iss Early Ch Ed",
+                "2100K"
+            ],
+            [
+                "Cont Res Sem Ece",
+                "2202I"
+            ],
+            [
+                "Research Seminar in Teaching Multilingual Learners",
+                "2205I"
+            ],
+            [
+                "Research into Teaching: Bilingual Education",
+                "2207I"
+            ],
+            [
+                "Research into Teaching: TESOL",
+                "2208I"
+            ],
+            [
+                "Linguistics for Teachers",
+                "2600C"
+            ],
+            [
+                "Lit Strug Rdrs-Wrtrs",
+                "2700C"
+            ],
+            [
+                "Sem In Ed Research",
+                "2900I"
+            ],
+            [
+                "Research Seminar 2 in Teaching Culturally and Linguistically Diverse Students",
+                "2905I"
+            ],
+            [
+                "EdTPA Workshop - Bilingual Education",
+                "3008N"
+            ],
+            [
+                "EdTPA Workshop - TESOL",
+                "3009N"
+            ],
+            [
+                "Elementary Science & Engineering Teaching Methods",
+                "3100C"
+            ],
+            [
+                "How Young Children Learn Science: Implications For Teaching",
+                "3300C"
+            ],
+            [
+                "Creating an Ethnodrama 2",
+                "3405N"
+            ],
+            [
+                "Ed Infnt-Preschler",
+                "3500C"
+            ],
+            [
+                "Fund Tchng Theatre",
+                "3700C"
+            ],
+            [
+                "Arts Ed/Urban Settng",
+                "3905N"
+            ],
+            [
+                "Human Development and The Arts",
+                "3908N"
+            ],
+            [
+                "Art Early Chld Educ",
+                "4300C"
+            ],
+            [
+                "Arts Integration: Theatre and Related Arts in the Curriculum",
+                "4400C"
+            ],
+            [
+                "Inclusive Practices For The Arts",
+                "4500K"
+            ],
+            [
+                "Early Intervention for Infants and Toddlers with Special Needs",
+                "4700K"
+            ],
+            [
+                "Tchg Ela To Ells P-6",
+                "5201C"
+            ],
+            [
+                "Tch Lng-Arts-Rdg Bil",
+                "5202C"
+            ],
+            [
+                "Teaching Language Arts & Reading To Bilingual-Bicultural Students(Chinese)",
+                "5204C"
+            ],
+            [
+                "Theories, Policies, and Programs for Emergent Bilingual Students",
+                "5300C"
+            ],
+            [
+                "Tch Engl To Oth(K-6)",
+                "5400C"
+            ],
+            [
+                "Methods Teachng Esl",
+                "5401C"
+            ],
+            [
+                "Multi-Cultural Educ",
+                "5700C"
+            ],
+            [
+                "Practicum Teaching Bilingual Special Education",
+                "5701G"
+            ],
+            [
+                "Theory Sec Lng Acq",
+                "5800C"
+            ],
+            [
+                "Math Know Birth-Gr 6",
+                "5950C"
+            ],
+            [
+                "Conflict Resolution through Drama",
+                "6000F"
+            ],
+            [
+                "Introduction To The Education Of Emergent Bilingual Students With Disabilities",
+                "6000K"
+            ],
+            [
+                "How Children Learn Mathematics: Grades 1-6",
+                "6100C"
+            ],
+            [
+                "Teaching Content(Math, Science, Social Studies) Using Both English And Native Language",
+                "6400C"
+            ],
+            [
+                "Tchg Ela To Ell 7-Ad",
+                "6500C"
+            ],
+            [
+                "Practicum I in TESOL",
+                "6601C"
+            ],
+            [
+                "Practicum II in TESOL",
+                "6602C"
+            ],
+            [
+                "Pr Tch Sec Lng Mx Lv",
+                "6603C"
+            ],
+            [
+                "Practicum in Adult TESOL",
+                "6604C"
+            ],
+            [
+                "Contrastv Phonology",
+                "6700C"
+            ],
+            [
+                "Gram & Its Pedagogy",
+                "6800C"
+            ],
+            [
+                "Methods Of Teaching English To Speakers Of Other Languages (7-12)",
+                "6900C"
+            ],
+            [
+                "Field-Bsd Inq Tesol",
+                "7200C"
+            ],
+            [
+                "Stud/Super Teach K-6",
+                "7201G"
+            ],
+            [
+                "Student/Supervised Teaching in the Arts 7-12",
+                "7202G"
+            ],
+            [
+                "Cpstne Fld Exp Educ Thtre",
+                "7203G"
+            ],
+            [
+                "Seminar in Teaching in the Arts P-6",
+                "7204G"
+            ],
+            [
+                "Seminar in Teaching in the Arts 7-12",
+                "7205G"
+            ],
+            [
+                "Curriclm Dvlpmnt Ece",
+                "7250C"
+            ],
+            [
+                "Problems Ece",
+                "7300F"
+            ],
+            [
+                "Stud Tch-Sem Ece 1",
+                "7301G"
+            ],
+            [
+                "Stud Tch-Sem Ece 2",
+                "7302G"
+            ],
+            [
+                "Sprvsd Tch/Sem Ece",
+                "7303G"
+            ],
+            [
+                "Supervised Practicum and Seminar in Early Childhood Special Education",
+                "7306G"
+            ],
+            [
+                "Teaching Literacy Through Drama",
+                "7400C"
+            ],
+            [
+                "Student Teaching in Childhood Education",
+                "7401G"
+            ],
+            [
+                "Seminar in Childhood Education",
+                "7402G"
+            ],
+            [
+                "Spv Tch In Child Ed 1 Smnr",
+                "7403G"
+            ],
+            [
+                "Teaching Fellows in Bilingual Childhood Education",
+                "7405G"
+            ],
+            [
+                "Emerg To Fluent",
+                "7500C"
+            ],
+            [
+                "Special Topics in Educational Theatre",
+                "7500F"
+            ],
+            [
+                "Sem Bilng Child Educ",
+                "7501G"
+            ],
+            [
+                "Stdt Tch Bilng Ed",
+                "7502G"
+            ],
+            [
+                "Student Teaching in TESOL (Pre-K-12)",
+                "7503G"
+            ],
+            [
+                "Seminar in TESOL",
+                "7504G"
+            ],
+            [
+                "Artistic Lab 2",
+                "7601A"
+            ],
+            [
+                "Practicum-Childh Ed",
+                "7603N"
+            ],
+            [
+                "Internship in Bilingual Special Education",
+                "7703G"
+            ],
+            [
+                "Expl The His Of Thtr",
+                "7800A"
+            ],
+            [
+                "Literacy Res Sem 2",
+                "7802C"
+            ],
+            [
+                "Inquiry In Educatn",
+                "20000"
+            ],
+            [
+                "Observing Children and Their Development",
+                "20600"
+            ],
+            [
+                "Early Childhood: Development, Assessment, and Pedagogy in Inclusive Settings",
+                "20614"
+            ],
+            [
+                "Schl Amer Soc Blng",
+                "22200"
+            ],
+            [
+                "Lang-Mind-Society",
+                "25600"
+            ],
+            [
+                "Science In Early Childhood Settings",
+                "31904"
+            ],
+            [
+                "Edtpa Prepnl Wkshp",
+                "32001"
+            ],
+            [
+                "How Chldrn Lrn Math",
+                "32200"
+            ],
+            [
+                "Emergent To Flunt Lt",
+                "32300"
+            ],
+            [
+                "Inclusive Practices For The General Education Classroom (Grades 1-6)",
+                "32310"
+            ],
+            [
+                "Lng & Rd Spn Bln Ed",
+                "35301"
+            ],
+            [
+                "Tch Rdng In Chinese",
+                "35303"
+            ],
+            [
+                "Lang Devlp & Lit 2",
+                "40200"
+            ],
+            [
+                "Social Stud In Ece",
+                "40300"
+            ],
+            [
+                "Ece Student Tchg 1",
+                "40800"
+            ],
+            [
+                "Seminar in Bilingual Childhood Education",
+                "41600"
+            ],
+            [
+                "Integ Curr-Soc Stud",
+                "42100"
+            ],
+            [
+                "Lit:Fluent-Expriencd",
+                "42300"
+            ],
+            [
+                "Classroom-based Inquiry in Biliteracy",
+                "45500"
+            ],
+            [
+                "Teaching Content with Language Arts in English and an Additional Language",
+                "45600"
+            ],
+            [
+                "Student Teaching in Bilingual Childhood Education",
+                "45800"
+            ]
+        ],
+        "EDLS": [
+            [
+                "Research and Assessment Seminar in Educational Leadership",
+                "2501I"
+            ],
+            [
+                "School Management",
+                "6701G"
+            ],
+            [
+                "Foundations of Educational Policy-Making",
+                "7001G"
+            ],
+            [
+                "Dynamics of Educational Organizations",
+                "7101G"
+            ],
+            [
+                "Moral Dimensions of Leadership",
+                "7201G"
+            ],
+            [
+                "Instructional Leadership",
+                "7401G"
+            ],
+            [
+                "Internship & Seminar",
+                "7904G"
+            ],
+            [
+                "Field Problem Seminar in Educational Leadership",
+                "8501I"
+            ],
+            [
+                "School-Community Building",
+                "8801G"
+            ]
+        ],
+        "EDSE": [
+            [
+                "Rdng-Wrt Across Curr",
+                "1200E"
+            ],
+            [
+                "Middle Schl Literacy",
+                "1201E"
+            ],
+            [
+                "Teaching Reading in the Secondary School English Classroom",
+                "1202E"
+            ],
+            [
+                "Read & Writ Span Sec",
+                "1204E"
+            ],
+            [
+                "Teach Span To H Lear",
+                "1304E"
+            ],
+            [
+                "Cur-Instr-In-Soc St",
+                "2300E"
+            ],
+            [
+                "Student Teaching - Secondary Education",
+                "3705N"
+            ],
+            [
+                "Curriculum And Instruction In Science Education",
+                "3900I"
+            ],
+            [
+                "Curriculum and Assessment in Art Education",
+                "4100E"
+            ],
+            [
+                "Materials and Methods in Art Education",
+                "4300F"
+            ],
+            [
+                "Teaching Mathematics In Middle And Secondary Schools",
+                "6100E"
+            ],
+            [
+                "Spanish Grammar & Its Pedagogy",
+                "6804E"
+            ],
+            [
+                "Master'S Project",
+                "7200I"
+            ],
+            [
+                "Action Research In Mathematics Education",
+                "7201I"
+            ],
+            [
+                "Masters Proj Sci Edu",
+                "7202I"
+            ],
+            [
+                "Sec Schl Curric",
+                "7300E"
+            ],
+            [
+                "Seminar On Student Teaching In Secondary Schools",
+                "7603G"
+            ],
+            [
+                "Student Teaching in Arts Education (P-12)",
+                "7800G"
+            ],
+            [
+                "Rdg/Wrt Sec Scl Sub",
+                "41200"
+            ],
+            [
+                "Teaching Reading and Writing in the ELA Classroom",
+                "41400"
+            ],
+            [
+                "Methods of Teaching Art",
+                "44400"
+            ],
+            [
+                "Meth Tch Sec Math",
+                "44600"
+            ],
+            [
+                "Curriculum",
+                "45101"
+            ],
+            [
+                "Phil-Urb Iss-Cur Ss",
+                "45102"
+            ],
+            [
+                "Curriculum and Instruction in Science Education",
+                "45103"
+            ],
+            [
+                "Student Teaching in Middle and Secondary Education",
+                "46300"
+            ],
+            [
+                "Seminar on Student Teaching in Secondary Schools",
+                "46301"
+            ]
+        ],
+        "EDUC": [
+            [
+                "Workshops on Child Abuse Identification, School Violence Prevention, Dignity for All St",
+                "1900G"
+            ],
+            [
+                "Supervised Teaching Alternative Certification",
+                "2603N"
+            ],
+            [
+                "Introduction to Educational Research",
+                "7000I"
+            ],
+            [
+                "Urban Schools in a Diverse Society",
+                "7100A"
+            ],
+            [
+                "Psychology of Learning and Teaching",
+                "7200A"
+            ],
+            [
+                "Child Development",
+                "7300A"
+            ],
+            [
+                "Adolescent Lrn & Dev",
+                "7500A"
+            ],
+            [
+                "Adolescent Learning and Development",
+                "20500"
+            ],
+            [
+                "Urban Schools in a Diverse American Society",
+                "22100"
+            ]
+        ],
+        "EE": [
+            [
+                "Linear Systems Analysis I",
+                "20500"
+            ],
+            [
+                "Switching Systems",
+                "21000"
+            ],
+            [
+                "Electrical Engineering Laboratory I",
+                "22100"
+            ],
+            [
+                "Electronics I",
+                "24100"
+            ],
+            [
+                "Programming for Electrical Engineering: Part I. UNIX and C: UNIX preliminaries, C program",
+                "25900"
+            ],
+            [
+                "Linear Systems Analysis II",
+                "30600"
+            ],
+            [
+                "Probability and Random Processes",
+                "31100"
+            ],
+            [
+                "Communication Theory",
+                "31200"
+            ],
+            [
+                "Electrical Engineering Laboratory II",
+                "32200"
+            ],
+            [
+                "Electrical Engineering Laboratory III",
+                "32300"
+            ],
+            [
+                "Electromagnetics",
+                "33000"
+            ],
+            [
+                "Introduction to Antennas, Microwaves and Fiber Optics",
+                "33300"
+            ],
+            [
+                "Semiconductor Materials and Devices",
+                "33900"
+            ],
+            [
+                "Electronics II",
+                "34200"
+            ],
+            [
+                "Digitial Computer Systems",
+                "34400"
+            ],
+            [
+                "Electric Power Engineering",
+                "35700"
+            ],
+            [
+                "Linear Feedback Systems",
+                "37100"
+            ],
+            [
+                "Local Area Network Laboratory",
+                "42100"
+            ],
+            [
+                "Analog Communication Laboratory",
+                "42200"
+            ],
+            [
+                "Computer Engineering Laboratory",
+                "42500"
+            ],
+            [
+                "Control Laboratory",
+                "42600"
+            ],
+            [
+                "Photonics Engineering Laboratory",
+                "42800"
+            ],
+            [
+                "Electronic Devices and Semiconductor Materials",
+                "44100"
+            ],
+            [
+                "Digital Signal Processing",
+                "45300"
+            ],
+            [
+                "Elements of Power Systems",
+                "45500"
+            ],
+            [
+                "Digital Integrated Circuits",
+                "45700"
+            ],
+            [
+                "Microprocessors",
+                "45900"
+            ],
+            [
+                "Computer Communication Systems",
+                "46000"
+            ],
+            [
+                "Wireless Communications",
+                "46300"
+            ],
+            [
+                "Senior Design 1",
+                "59866"
+            ],
+            [
+                "Senior Design 2",
+                "59867"
+            ],
+            [
+                "Senior Design 1 For Computer Engineering",
+                "59868"
+            ],
+            [
+                "Senior Design 2 For Computer Engineering",
+                "59869"
+            ]
+        ],
+        "ENGL": [
+            [
+                "Freshman Composition",
+                "11000"
+            ],
+            [
+                "Writing for the Humanities and Arts",
+                "21001"
+            ],
+            [
+                "Writing for the Social Sciences",
+                "21002"
+            ],
+            [
+                "Writing for the Sciences",
+                "21003"
+            ],
+            [
+                "Writing for Engineering",
+                "21007"
+            ],
+            [
+                "Introductory Workshops in Creative Writing",
+                "22000"
+            ],
+            [
+                "Intermediate Creative Writing: Reading As Writers",
+                "22100"
+            ],
+            [
+                "Writing Workshop in Prose",
+                "23000"
+            ],
+            [
+                "Intro Literary Study",
+                "25000"
+            ],
+            [
+                "Historical Survey of British Literature",
+                "25100"
+            ],
+            [
+                "Studies in Genre: Tragedy",
+                "26105"
+            ],
+            [
+                "A Historical Survey of African American Lit. from 1912-1965:Pre-Renaissance to the Civi",
+                "27006"
+            ],
+            [
+                "Introduction to Comparative Literature",
+                "28000"
+            ],
+            [
+                "Digtal & Ebook Publs",
+                "31131"
+            ],
+            [
+                "Contemporary African American Female Playwrights",
+                "31158"
+            ],
+            [
+                "The Jews of Eastern Europe",
+                "31172"
+            ],
+            [
+                "Culture of Resistance in New York",
+                "31173"
+            ],
+            [
+                "Literature and Theory of Migrations",
+                "31317"
+            ],
+            [
+                "Protest and Dissent in Israel",
+                "31712"
+            ],
+            [
+                "Film Adaptation",
+                "31717"
+            ],
+            [
+                "Immigrant Lit",
+                "31809"
+            ],
+            [
+                "Detective Fiction",
+                "31890"
+            ],
+            [
+                "Workshop in Fiction",
+                "32000"
+            ],
+            [
+                "Craft of the Novel",
+                "32004"
+            ],
+            [
+                "Workshop in Poetry",
+                "32100"
+            ],
+            [
+                "Workshop in Film and Television",
+                "32300"
+            ],
+            [
+                "Reading and Writing Children's Literature",
+                "32400"
+            ],
+            [
+                "Introduction to Publishing I",
+                "32501"
+            ],
+            [
+                "Publishing Practicum",
+                "32502"
+            ],
+            [
+                "Non-Fiction Publishing II",
+                "32504"
+            ],
+            [
+                "Books for Young Readers",
+                "32600"
+            ],
+            [
+                "The Editorial Process",
+                "32700"
+            ],
+            [
+                "Advanced Grammar",
+                "34200"
+            ],
+            [
+                "Shakespeare II",
+                "35302"
+            ],
+            [
+                "Selected Topics in Medieval and Early Modern Literature",
+                "35400"
+            ],
+            [
+                "Representative Writers of the United States:The Nineteenth Century",
+                "36100"
+            ],
+            [
+                "Selected Topics in American Literature",
+                "36400"
+            ],
+            [
+                "Selected Topics in Twentieth-century and Contemporary Literature",
+                "36500"
+            ],
+            [
+                "James Joyce",
+                "36501"
+            ],
+            [
+                "Selected Topics in Anglophone Literature",
+                "36600"
+            ],
+            [
+                "Selected Topics in Language, Writing, and Rhetoric",
+                "36900"
+            ],
+            [
+                "Selected Topics in African-American Literature",
+                "37100"
+            ],
+            [
+                "Modern Drama II",
+                "38105"
+            ],
+            [
+                "The Vampire",
+                "39102"
+            ],
+            [
+                "New Urban Fiction",
+                "39104"
+            ],
+            [
+                "Melodrama",
+                "49013"
+            ],
+            [
+                "Shakespeare as Dramatist",
+                "49014"
+            ],
+            [
+                "The Gothic and Otherness",
+                "49015"
+            ],
+            [
+                "Global Modernisms",
+                "49016"
+            ]
+        ],
+        "ENGLE": [
+            [
+                "Reading Nonfiction Texts",
+                "4200C"
+            ]
+        ],
+        "ENGR": [
+            [
+                "Engineering Design I",
+                "10100"
+            ],
+            [
+                "Computer-Aided Analysis Tools for Engineers",
+                "10300"
+            ],
+            [
+                "Earth Sys Sci & Engr",
+                "10610"
+            ],
+            [
+                "Electrical Circuits",
+                "20400"
+            ],
+            [
+                "Computation Methods for ESE",
+                "20800"
+            ],
+            [
+                "Thermodynamics",
+                "23000"
+            ],
+            [
+                "Engineering Economics",
+                "27600"
+            ],
+            [
+                "Introduction to Satellite Remote Sensing and Imaging",
+                "30100"
+            ],
+            [
+                "Energy and the Environment",
+                "31230"
+            ],
+            [
+                "Nuclear Reactor Design, Operation And Safety",
+                "55600"
+            ],
+            [
+                "Envr Engr Design 2",
+                "59870"
+            ],
+            [
+                "Introduction to Geographic Information Systems",
+                "59910"
+            ],
+            [
+                "Bldg Mod & Simulatn",
+                "59920"
+            ]
+        ],
+        "ESL": [
+            [
+                "Intermediate American English for Non-Native Speakers",
+                "12000"
+            ],
+            [
+                "Advanced Composition for Non-Native Speakers",
+                "13000"
+            ],
+            [
+                "History, Society, and Culture",
+                "19901"
+            ]
+        ],
+        "FREN": [
+            [
+                "Introductory French I",
+                "12300"
+            ],
+            [
+                "Introductory French II",
+                "12400"
+            ],
+            [
+                "Intermediate French",
+                "22600"
+            ],
+            [
+                "The Literature of Contemporary France",
+                "28300"
+            ],
+            [
+                "Focus on French Grammar",
+                "30000"
+            ],
+            [
+                "Focus on Oral Expression",
+                "30500"
+            ],
+            [
+                "France in the World: Empire, Colonies, Postcolonialism",
+                "40400"
+            ],
+            [
+                "French and Francophone Cinema",
+                "40500"
+            ]
+        ],
+        "HEB": [
+            [
+                "Introductory Hebrew II",
+                "12400"
+            ]
+        ],
+        "HIST": [
+            [
+                "Modern Europe",
+                "20600"
+            ],
+            [
+                "The Historians Craft",
+                "21300"
+            ],
+            [
+                "The United States: From Its Origins to 1877",
+                "24000"
+            ],
+            [
+                "The United States: Since 1865",
+                "24100"
+            ],
+            [
+                "Modern Japan",
+                "25500"
+            ],
+            [
+                "Research Colloquium (HONORS)",
+                "30300"
+            ],
+            [
+                "The Long Partition",
+                "31132"
+            ],
+            [
+                "Affluence & Its Discontents",
+                "31146"
+            ],
+            [
+                "The European Union",
+                "31163"
+            ],
+            [
+                "Enviromental History Latin America",
+                "31170"
+            ],
+            [
+                "War In Modern East Asia",
+                "31176"
+            ],
+            [
+                "Research Colloquium",
+                "31330"
+            ],
+            [
+                "Us Civil Rights Mvmt",
+                "31346"
+            ],
+            [
+                "Us/Mex Rel Rev-Globl",
+                "31617"
+            ],
+            [
+                "Early America",
+                "32100"
+            ],
+            [
+                "The Era of American Revolution",
+                "32200"
+            ],
+            [
+                "Civil War and Reconstruction",
+                "32400"
+            ],
+            [
+                "The Gilded Age & Progressive Era",
+                "32501"
+            ],
+            [
+                "Twentieth-Century Europe",
+                "32900"
+            ],
+            [
+                "China's Cultural Revolution",
+                "33450"
+            ],
+            [
+                "African-American History from Emancipation to the Present",
+                "36500"
+            ],
+            [
+                "History of Socialism",
+                "42700"
+            ],
+            [
+                "Lbr,Tech,Chngng Wkpl",
+                "44004"
+            ],
+            [
+                "The Vietnam War and U.S. Society",
+                "47700"
+            ]
+        ],
+        "IAS": [
+            [
+                "Lit-Art & Hum Exp 1",
+                "10000"
+            ],
+            [
+                "Nature & Humans 2",
+                "10500"
+            ],
+            [
+                "Doing Soc Research",
+                "10800"
+            ],
+            [
+                "Art On& Off Wall II",
+                "20200"
+            ],
+            [
+                "Race, Class and Gender in the Media",
+                "20300"
+            ],
+            [
+                "The Essay",
+                "23304"
+            ],
+            [
+                "Introduction to Interdisciplinary Studies",
+                "24200"
+            ],
+            [
+                "Honors Research",
+                "30100"
+            ],
+            [
+                "Latin Amer Pop Cultr",
+                "31104"
+            ],
+            [
+                "Race and Beauty",
+                "31127"
+            ],
+            [
+                "Making Race in the 21st Century",
+                "31142"
+            ],
+            [
+                "Online Media Publishing",
+                "31147"
+            ],
+            [
+                "The Global City on Film",
+                "31148"
+            ],
+            [
+                "Womenrighthumanright",
+                "31154"
+            ],
+            [
+                "Fam Law Div Ame Cult",
+                "31171"
+            ],
+            [
+                "Autsm Spec Disor Chl",
+                "31214"
+            ],
+            [
+                "Cont Iss Family Hlth",
+                "31223"
+            ],
+            [
+                "Flash Fiction",
+                "31225"
+            ],
+            [
+                "Intro Dvlpmntl Disab",
+                "31235"
+            ],
+            [
+                "Iss:Adul Dv Disabil",
+                "31240"
+            ],
+            [
+                "Listenin To The City",
+                "31243"
+            ],
+            [
+                "The Human Body",
+                "31255"
+            ],
+            [
+                "Disability Life Cycl",
+                "31293"
+            ],
+            [
+                "Urban Sustainability",
+                "31317"
+            ],
+            [
+                "Between Heaven and Hell: The History of Utopian and Dystopian Thought",
+                "31408"
+            ],
+            [
+                "Gentrification Globalized",
+                "31409"
+            ],
+            [
+                "African American History:Reconstruction to Civil Rights to Black Lives Matter",
+                "31501"
+            ]
+        ],
+        "INTL": [
+            [
+                "International Studies: A Global Perspective",
+                "20100"
+            ],
+            [
+                "Social Foundations of International Studies",
+                "30500"
+            ],
+            [
+                "Rsch Mthds Intl Stds",
+                "31107"
+            ],
+            [
+                "Transnational Femini",
+                "31108"
+            ],
+            [
+                "Peoples Of Africa",
+                "31130"
+            ],
+            [
+                "Hlth-Iss-Alternatvs",
+                "31131"
+            ],
+            [
+                "Global Islamic Women",
+                "31132"
+            ],
+            [
+                "The European Union",
+                "31163"
+            ],
+            [
+                "Modl United Nations",
+                "31406"
+            ],
+            [
+                "Wmn:Vlatn Hm Rts",
+                "31414"
+            ],
+            [
+                "Senior Seminar in International Studies",
+                "32100"
+            ]
+        ],
+        "ITAL": [
+            [
+                "Introductory Italian I",
+                "12300"
+            ],
+            [
+                "Introductory Italian II",
+                "12400"
+            ],
+            [
+                "Intermediate Italian",
+                "22600"
+            ],
+            [
+                "Learning Italian through Song: Language, Content, and Context",
+                "31005"
+            ],
+            [
+                "Problems Ital Grammr",
+                "32100"
+            ]
+        ],
+        "JAP": [
+            [
+                "Introductory Japanese II",
+                "12400"
+            ],
+            [
+                "Conversational Japanese",
+                "30500"
+            ]
+        ],
+        "JWST": [
+            [
+                "Introduction to Jewish Life and Religion",
+                "10000"
+            ],
+            [
+                "Psychology of Religion",
+                "10411"
+            ],
+            [
+                "Introduction To Jewish American Literature",
+                "11400"
+            ],
+            [
+                "The Bible As Lit",
+                "11700"
+            ],
+            [
+                "Sacred Objects: Gateways to Holiness",
+                "13200"
+            ],
+            [
+                "The Holocaust",
+                "28100"
+            ],
+            [
+                "Mod Israeli Culture",
+                "31101"
+            ],
+            [
+                "Arab-Jews in Literature and Cinema: before and after Israel",
+                "31132"
+            ],
+            [
+                "Jews Of Eastern Europe",
+                "31172"
+            ],
+            [
+                "Jews In Film/Fiction",
+                "31502"
+            ],
+            [
+                "Protest and Dissent in Israel",
+                "31712"
+            ],
+            [
+                "Culture of Resistance in New York",
+                "31713"
+            ],
+            [
+                "Jesus The Jew",
+                "31803"
+            ],
+            [
+                "Jews Of Morocco",
+                "44500"
+            ]
+        ],
+        "LAAR": [
+            [
+                "Visualizing Central Park",
+                "61001"
+            ],
+            [
+                "Bioremediation: Leveraging Biology in Addressing Toxic Legacies",
+                "61002"
+            ],
+            [
+                "Spatial Analysis and the Science of Where",
+                "61600"
+            ],
+            [
+                "Sust Soil And Water",
+                "61721"
+            ],
+            [
+                "Landscape Arch Studio 2",
+                "62100"
+            ],
+            [
+                "Introduction to Landscape Architecture History",
+                "62200"
+            ],
+            [
+                "Landscape Technology 2",
+                "62300"
+            ],
+            [
+                "Field Ecology",
+                "62700"
+            ],
+            [
+                "Landscape Architecture Studio IV",
+                "64100"
+            ],
+            [
+                "Planting Design",
+                "64400"
+            ],
+            [
+                "Comprehensive Studio",
+                "66100"
+            ],
+            [
+                "Thesis",
+                "72100"
+            ]
+        ],
+        "LALS": [
+            [
+                "The Heritage of the Spanish Antilles",
+                "10100"
+            ],
+            [
+                "The Hispanic Child in the Urban Environment",
+                "13100"
+            ],
+            [
+                "Culture and Health: Hispanics and Other Minorities",
+                "29100"
+            ],
+            [
+                "Social Justice and Latinx Communities",
+                "31140"
+            ],
+            [
+                "Gender, Race, & Latinidad",
+                "31210"
+            ],
+            [
+                "Latinas Reprod Rghts",
+                "31300"
+            ]
+        ],
+        "LAT": [
+            [
+                "Elementary Latin",
+                "12200"
+            ],
+            [
+                "Virgil",
+                "35300"
+            ]
+        ],
+        "MATH": [
+            [
+                "Mathematics for the Contemporary World",
+                "15000"
+            ],
+            [
+                "Introduction to Probability and Statistics",
+                "17300"
+            ],
+            [
+                "Quantitative Reasoning",
+                "18000"
+            ],
+            [
+                "Basic Ideas in Mathematics",
+                "18500"
+            ],
+            [
+                "Basic Ideas in Mathematics (4 credits)",
+                "18504"
+            ],
+            [
+                "College Algebra and Trigonometry",
+                "19000"
+            ],
+            [
+                "Precalculus",
+                "19500"
+            ],
+            [
+                "Calculus I",
+                "20100"
+            ],
+            [
+                "Calculus III",
+                "20300"
+            ],
+            [
+                "Elements of Calculus",
+                "20500"
+            ],
+            [
+                "Elements of Calculus and Statistics",
+                "20900"
+            ],
+            [
+                "Calculus II",
+                "21200"
+            ],
+            [
+                "Bridge to Advanced Mathematics",
+                "30800"
+            ],
+            [
+                "Advanced Calculus I",
+                "32300"
+            ],
+            [
+                "Advanced Calculus II",
+                "32404"
+            ],
+            [
+                "Methods of Numerical Analysis",
+                "32800"
+            ],
+            [
+                "Elements of Linear Algebra",
+                "34600"
+            ],
+            [
+                "Elements of Modern Algebra",
+                "34700"
+            ],
+            [
+                "Introduction to Modern Geometry",
+                "36000"
+            ],
+            [
+                "Elements of Combinatorics",
+                "36500"
+            ],
+            [
+                "Introduction to Applied Mathematical Computation",
+                "36600"
+            ],
+            [
+                "Elements of Probability Theory",
+                "37500"
+            ],
+            [
+                "Mathematical Statistics",
+                "37600"
+            ],
+            [
+                "Applied Statistics and Probability",
+                "37700"
+            ],
+            [
+                "Continuous Time Models in Financial Mathematics",
+                "38200"
+            ],
+            [
+                "Methods of Differential Equations",
+                "39100"
+            ],
+            [
+                "Linear Algebra and Vector Analysis for Engineers",
+                "39200"
+            ],
+            [
+                "Basic Arithmetic & Algebra",
+                "71000"
+            ],
+            [
+                "Fundamental Algebra & Geometry",
+                "80000"
+            ]
+        ],
+        "MATHE": [
+            [
+                "Introduction To Mathematical Think",
+                "4600C"
+            ],
+            [
+                "Mathematical Foundations In Algebra & Geometry",
+                "4800C"
+            ],
+            [
+                "Fundamental Ideas of Calculus",
+                "4900C"
+            ]
+        ],
+        "MCA": [
+            [
+                "Introduction to Media Studies",
+                "10100"
+            ],
+            [
+                "Introduction to Media Production",
+                "10500"
+            ],
+            [
+                "Introduction to Film Studies",
+                "12100"
+            ],
+            [
+                "Introduction to Public Relations",
+                "20900"
+            ],
+            [
+                "Introduction to Advertising",
+                "21000"
+            ],
+            [
+                "Advertising and Public Relations Production",
+                "21100"
+            ],
+            [
+                "Sound Prod & Design",
+                "21500"
+            ],
+            [
+                "History and Theory of Film II",
+                "22200"
+            ],
+            [
+                "Documentary Workshop I",
+                "23200"
+            ],
+            [
+                "Introduction to Journalism",
+                "23300"
+            ],
+            [
+                "Race and Media",
+                "31006"
+            ],
+            [
+                "Internet Marketing: Strategic SEO and SEM",
+                "31122"
+            ],
+            [
+                "African Cinema: Gender and Culture",
+                "31133"
+            ],
+            [
+                "Film Adaptation",
+                "31300"
+            ],
+            [
+                "Motion Picture Production Workshop I",
+                "32100"
+            ],
+            [
+                "Reporting and Writing",
+                "33300"
+            ],
+            [
+                "Radio Journalism",
+                "34100"
+            ],
+            [
+                "Television Journalism",
+                "34300"
+            ],
+            [
+                "Corporate Communications",
+                "35000"
+            ],
+            [
+                "Marketing Research",
+                "36000"
+            ],
+            [
+                "Public Relations Writing",
+                "36200"
+            ],
+            [
+                "Advertising Copywriting",
+                "36300"
+            ],
+            [
+                "Soc Media Strategies",
+                "36500"
+            ],
+            [
+                "Advertising Management",
+                "37500"
+            ],
+            [
+                "Advertising Planning",
+                "37600"
+            ],
+            [
+                "Ethics and Values in Communication",
+                "40100"
+            ],
+            [
+                "Critical Approaches to Film Directors",
+                "40200"
+            ],
+            [
+                "Motion Picture Production Workshop II",
+                "42200"
+            ],
+            [
+                "Digital Post Production",
+                "42600"
+            ],
+            [
+                "Advertising and Public Relations Workshop I",
+                "46800"
+            ]
+        ],
+        "ME": [
+            [
+                "Computer-Aided Drafting",
+                "14500"
+            ],
+            [
+                "Engineering Mechanics I (Statics and Particle Kinematics)",
+                "24600"
+            ],
+            [
+                "Engineering Mechanics II (Kinematics and Dynamics of Rigid Bodies)",
+                "24700"
+            ],
+            [
+                "Fundamental of Mechatronics",
+                "31100"
+            ],
+            [
+                "Computer Methods in Engineering",
+                "32200"
+            ],
+            [
+                "Mechanics of Materials",
+                "33000"
+            ],
+            [
+                "Fluid Mechanics",
+                "35600"
+            ],
+            [
+                "Computer-Aided Design",
+                "37100"
+            ],
+            [
+                "Review of Engineering Fundamentals",
+                "40100"
+            ],
+            [
+                "Systems Modeling, Analysis and Control",
+                "41100"
+            ],
+            [
+                "Thermal Systems Analysis and Design",
+                "43000"
+            ],
+            [
+                "Heat Transfer",
+                "43300"
+            ],
+            [
+                "Aero-Thermal-Fluids Laboratory",
+                "43600"
+            ],
+            [
+                "Engineering Materials",
+                "46100"
+            ],
+            [
+                "Manufacturing Processes and Materials",
+                "46200"
+            ],
+            [
+                "Mechanical Systems Design",
+                "47200"
+            ],
+            [
+                "Senior Design Project",
+                "47300"
+            ],
+            [
+                "Automotive Safety Design And Injury Biomechanics",
+                "53800"
+            ],
+            [
+                "Aerostructures",
+                "54800"
+            ],
+            [
+                "Advanced Fluid Mechanics",
+                "55600"
+            ],
+            [
+                "Mechanism Design",
+                "57100"
+            ],
+            [
+                "Wind Energy Fundamentals and Applications",
+                "59104"
+            ],
+            [
+                "Advanced Mechatronics",
+                "59904"
+            ],
+            [
+                "Project Management",
+                "59908"
+            ],
+            [
+                "Fundamentals and Applications of Microfluidics",
+                "59910"
+            ]
+        ],
+        "MED": [
+            [
+                "Introduction to the neurobiological actions of drugs of abuse",
+                "10000"
+            ],
+            [
+                "Professional Foundations",
+                "10100"
+            ],
+            [
+                "Prin Gen Chemistry",
+                "10200"
+            ],
+            [
+                "Introduction to Population Health and Community-Oriented Primary Care",
+                "11209"
+            ],
+            [
+                "Introduction to Human Genetics",
+                "20000"
+            ],
+            [
+                "Molecules To Cells 1",
+                "20400"
+            ],
+            [
+                "Population Health and Community Health Assessment",
+                "22409"
+            ],
+            [
+                "Evaluation in Healthcare Settings",
+                "24409"
+            ],
+            [
+                "Practice of Medicine 1",
+                "29409"
+            ],
+            [
+                "Clinical Anatomy",
+                "33609"
+            ],
+            [
+                "Fundamentals of Organ Systems",
+                "37609"
+            ],
+            [
+                "Practice of Medicine 2",
+                "39609"
+            ]
+        ],
+        "MHC": [
+            [
+                "The Peopling Of Nyc",
+                "10201"
+            ],
+            [
+                "Shaping Future Nyc",
+                "20401"
+            ]
+        ],
+        "MSCI": [
+            [
+                "Introduction To Leadership 2",
+                "10200"
+            ],
+            [
+                "Foundations Of Leadership 2",
+                "20200"
+            ],
+            [
+                "Adaptive Team Leadership 2",
+                "30200"
+            ],
+            [
+                "Adaptive Leadership 2",
+                "40200"
+            ]
+        ],
+        "MUS": [
+            [
+                "Introduction to Music",
+                "10100"
+            ],
+            [
+                "Introduction to World Music",
+                "10200"
+            ],
+            [
+                "Music Theory Fundamentals",
+                "13100"
+            ],
+            [
+                "Tonal Harmony and Voice-Leading I - Introduction to Diatonic Practices",
+                "13200"
+            ],
+            [
+                "Introduction to Jazz",
+                "14500"
+            ],
+            [
+                "Keyboard Fundamentals",
+                "15400"
+            ],
+            [
+                "Chorus",
+                "16002"
+            ],
+            [
+                "Large Jazz Ensemble",
+                "16004"
+            ],
+            [
+                "Aural Fundamentals",
+                "16100"
+            ],
+            [
+                "Aural Skills I",
+                "16200"
+            ],
+            [
+                "Jazz Harmony Fundamentals",
+                "16300"
+            ],
+            [
+                "Keyboard Skills 1",
+                "16400"
+            ],
+            [
+                "Voice Class 1",
+                "16500"
+            ],
+            [
+                "Writing About Music",
+                "21000"
+            ],
+            [
+                "The Recording Studio Environment",
+                "21800"
+            ],
+            [
+                "Fundamental MIDI & Audio Production",
+                "21900"
+            ],
+            [
+                "Tonal Harmony and Voice-Leading II - Diatonic Practices",
+                "23100"
+            ],
+            [
+                "Tonal Harmony and Voice-Leading III - Chromatic Practices",
+                "23200"
+            ],
+            [
+                "Music and Film",
+                "23700"
+            ],
+            [
+                "History II Baroque-Early Classical",
+                "24200"
+            ],
+            [
+                "Vocal Ensemble",
+                "26002"
+            ],
+            [
+                "Small Jazz Ensemble",
+                "26004"
+            ],
+            [
+                "Latin Band",
+                "26005"
+            ],
+            [
+                "Brazilian Jazz Ensemble",
+                "26011"
+            ],
+            [
+                "Jazz Vocal Ensemble",
+                "26015"
+            ],
+            [
+                "Aural Skills II",
+                "26100"
+            ],
+            [
+                "Aural Skills III",
+                "26200"
+            ],
+            [
+                "Keyboard Skills II",
+                "26400"
+            ],
+            [
+                "Jazz Piano II",
+                "27600"
+            ],
+            [
+                "Independent Study",
+                "31002"
+            ],
+            [
+                "Studio Tech Wkshp",
+                "31117"
+            ],
+            [
+                "Production Audio",
+                "31165"
+            ],
+            [
+                "Synthesis II",
+                "32200"
+            ],
+            [
+                "Jazz Repertory and Performance Practice I-II",
+                "32400"
+            ],
+            [
+                "Jazz Repertory and Combo Performance II",
+                "32401"
+            ],
+            [
+                "Jazz Vocal Repertory and Performance Practices II",
+                "32411"
+            ],
+            [
+                "Audio Production Techniques II",
+                "32600"
+            ],
+            [
+                "Acoustic Recording Techniques II",
+                "32800"
+            ],
+            [
+                "Music and Post Production Mixing",
+                "32801"
+            ],
+            [
+                "Tonal Harmony and Voice-Leading IV - Form and Analysis",
+                "33100"
+            ],
+            [
+                "History IV Late Romanticism-Present",
+                "34200"
+            ],
+            [
+                "Jazz History I: From Its Origins to 1950",
+                "34400"
+            ],
+            [
+                "Studio Ensemble Singing",
+                "35000"
+            ],
+            [
+                "Jazz Arranging I",
+                "35200"
+            ],
+            [
+                "Jazz Harm Improv 2",
+                "35800"
+            ],
+            [
+                "Jazz Harmony 2",
+                "35801"
+            ],
+            [
+                "Musicianship Voc 2",
+                "35803"
+            ],
+            [
+                "Aural Skills IV",
+                "36100"
+            ],
+            [
+                "Pink Floyd",
+                "40011"
+            ],
+            [
+                "Jazz Repertory and Performance Practice IV",
+                "42400"
+            ],
+            [
+                "Jazz Repertory and Combo Performance IV",
+                "42401"
+            ],
+            [
+                "Jazz Repertory and Performance Practices IV",
+                "42411"
+            ],
+            [
+                "Composition",
+                "43000"
+            ],
+            [
+                "Audio and Music Industry Internships",
+                "43400"
+            ],
+            [
+                "Audio for Moving Images",
+                "43500"
+            ],
+            [
+                "Jazz Harmony and Improvisation IV",
+                "45800"
+            ],
+            [
+                "Musicianship Voc 4",
+                "45803"
+            ],
+            [
+                "Jazz Instrumental Instruction",
+                "49001"
+            ],
+            [
+                "Jazz Vocal Instruction",
+                "49002"
+            ],
+            [
+                "Classical Instrumental Instruction",
+                "49003"
+            ],
+            [
+                "Classical Vocal Inst",
+                "49004"
+            ]
+        ],
+        "NSS": [
+            [
+                "New Freshman Seminar",
+                "10108"
+            ]
+        ],
+        "PHIL": [
+            [
+                "Introduction to Philosophy",
+                "10200"
+            ],
+            [
+                "Logical Reasoning",
+                "20100"
+            ],
+            [
+                "Introduction to Logic",
+                "20200"
+            ],
+            [
+                "History of Philosophy II: Modern",
+                "30600"
+            ],
+            [
+                "Ethics",
+                "30800"
+            ],
+            [
+                "Philosophy and the Emotions",
+                "31110"
+            ],
+            [
+                "Kant's Critique of Pure Reason\"",
+                "31178"
+            ],
+            [
+                "Philosophy of Science",
+                "32200"
+            ],
+            [
+                "Philosophy of Language",
+                "32400"
+            ],
+            [
+                "Aesthetics: The Philosophy of Art",
+                "32500"
+            ],
+            [
+                "Practical Ancient Philosophy",
+                "33100"
+            ],
+            [
+                "Chinese Philosophy",
+                "34402"
+            ],
+            [
+                "Biomedical Ethics",
+                "34905"
+            ]
+        ],
+        "PHYS": [
+            [
+                "General Physics I",
+                "20300"
+            ],
+            [
+                "General Physics II",
+                "20400"
+            ],
+            [
+                "University Physics I",
+                "20700"
+            ],
+            [
+                "University Physics II",
+                "20800"
+            ],
+            [
+                "University Physics III",
+                "20900"
+            ],
+            [
+                "Physics for Architecture Students",
+                "21900"
+            ],
+            [
+                "Medical Physics",
+                "31500"
+            ],
+            [
+                "Modern Physics for Engineers",
+                "32100"
+            ],
+            [
+                "Quantum Mechanics for Applied Physicists",
+                "32300"
+            ],
+            [
+                "Development of knowledge in physics 1",
+                "33300"
+            ],
+            [
+                "Mechanics",
+                "35100"
+            ],
+            [
+                "Mathematical Methods in Physics",
+                "36100"
+            ],
+            [
+                "Biophysics",
+                "42200"
+            ],
+            [
+                "Thermodynamics and Statistical Physics",
+                "45100"
+            ],
+            [
+                "Advanced Physics Laboratory II",
+                "47100"
+            ],
+            [
+                "Quantum Mechanics 1",
+                "55100"
+            ],
+            [
+                "Current Topics in Physics",
+                "55600"
+            ]
+        ],
+        "PHYSE": [
+            [
+                "Development Of Knowledge In Physics",
+                "1401E"
+            ]
+        ],
+        "PORT": [
+            [
+                "Introductory Portuguese II",
+                "12400"
+            ],
+            [
+                "Readings & Convers",
+                "31100"
+            ],
+            [
+                "Reading and Speaking in Portuguese II",
+                "32200"
+            ]
+        ],
+        "PSC": [
+            [
+                "United States Politics and Government",
+                "10100"
+            ],
+            [
+                "American Government and Politics",
+                "10101"
+            ],
+            [
+                "Introduction to World Politics",
+                "10400"
+            ],
+            [
+                "Political Ideas and Issues",
+                "12400"
+            ],
+            [
+                "Introduction to Public Policy",
+                "12500"
+            ],
+            [
+                "Introduction to the Legal Process",
+                "12600"
+            ],
+            [
+                "Urban Politics",
+                "21000"
+            ],
+            [
+                "Politics and Leadership",
+                "21002"
+            ],
+            [
+                "Constitutional Law",
+                "21200"
+            ],
+            [
+                "The Presidency",
+                "22200"
+            ],
+            [
+                "United States Foreign Policy",
+                "22300"
+            ],
+            [
+                "U.S. Political Economy",
+                "22400"
+            ],
+            [
+                "Women and Politics",
+                "22900"
+            ],
+            [
+                "Contemporary Comparative Politics",
+                "23000"
+            ],
+            [
+                "Political Systems of Europe",
+                "23100"
+            ],
+            [
+                "Political Systems of Latin America",
+                "23600"
+            ],
+            [
+                "Political Systems of Africa",
+                "23800"
+            ],
+            [
+                "Model United Nations",
+                "25500"
+            ],
+            [
+                "Contemp Intl Cnflct",
+                "25604"
+            ],
+            [
+                "Contemp Pol Thought",
+                "27504"
+            ],
+            [
+                "Political Economy of Development",
+                "30500"
+            ],
+            [
+                "Community Based Research",
+                "31051"
+            ],
+            [
+                "Human Rights",
+                "31122"
+            ],
+            [
+                "Professional Development Seminar",
+                "31131"
+            ],
+            [
+                "Community Change Lab",
+                "31156"
+            ],
+            [
+                "Politics in Film",
+                "31160"
+            ],
+            [
+                "Use of Force in International Law",
+                "31163"
+            ],
+            [
+                "Statistics",
+                "31170"
+            ],
+            [
+                "Pwr Inequal-Soc Pol",
+                "31508"
+            ],
+            [
+                "Thesis Part Two",
+                "31549"
+            ],
+            [
+                "Pltcs China & India",
+                "31640"
+            ],
+            [
+                "Adv Legal Analysis",
+                "31715"
+            ],
+            [
+                "Legislative Internships",
+                "32300"
+            ],
+            [
+                "African-American Political Thought",
+                "32800"
+            ],
+            [
+                "American National Politics and the Ways of Washington, D.C.",
+                "33000"
+            ],
+            [
+                "Social Contract Theories",
+                "37100"
+            ],
+            [
+                "Sem:Intrnshp Pub Aff",
+                "37201"
+            ],
+            [
+                "Fem Politcal Thought",
+                "38000"
+            ]
+        ],
+        "PSY": [
+            [
+                "Psychology for Freshman Honors Students",
+                "10101"
+            ],
+            [
+                "Applications of Psychology in the Modern World",
+                "10200"
+            ],
+            [
+                "Applied Statistics",
+                "21500"
+            ],
+            [
+                "Introduction to Life-Span Development",
+                "22600"
+            ],
+            [
+                "Laboratory and Field Work",
+                "23300"
+            ],
+            [
+                "Introduction to Human Development: Infancy and Childhood",
+                "24600"
+            ],
+            [
+                "Social Psychology",
+                "24700"
+            ],
+            [
+                "Psy Of Personality",
+                "24900"
+            ],
+            [
+                "Cognitive Psychology: Thinking, Knowing and Remembering",
+                "25300"
+            ],
+            [
+                "Mind, Brain, and Experience",
+                "25400"
+            ],
+            [
+                "Adolescence & Youth",
+                "25604"
+            ],
+            [
+                "Honors I",
+                "30100"
+            ],
+            [
+                "Neurochem Of Learnng",
+                "31114"
+            ],
+            [
+                "Psychology of Sexuality & Gender",
+                "31121"
+            ],
+            [
+                "Social Work Theory and Practice",
+                "31128"
+            ],
+            [
+                "Theories of Leadership",
+                "31129"
+            ],
+            [
+                "Internship Seminar: Public Affairs",
+                "31138"
+            ],
+            [
+                "Multicultural Issues in Counseling",
+                "31139"
+            ],
+            [
+                "Human Resources Management",
+                "31141"
+            ],
+            [
+                "Psychology of Music",
+                "31149"
+            ],
+            [
+                "Psychologies of People in Place: From Climate Change to Gentrification",
+                "31150"
+            ],
+            [
+                "Interviewing Techniques for the Social Sciences",
+                "31151"
+            ],
+            [
+                "Career Building in Psychology",
+                "31153"
+            ],
+            [
+                "The Psychology of Social Media",
+                "31154"
+            ],
+            [
+                "Psychology of Empowerment",
+                "31155"
+            ],
+            [
+                "Community Service",
+                "31500"
+            ],
+            [
+                "Child Psychopathology",
+                "31900"
+            ],
+            [
+                "Experimental Psychology",
+                "32100"
+            ],
+            [
+                "Parent-Infant Reltn",
+                "33700"
+            ],
+            [
+                "Drg-Al Abs:Caus/Trt",
+                "34000"
+            ],
+            [
+                "Soc Psy Racsm Prejud",
+                "34700"
+            ],
+            [
+                "Abnormal Personality",
+                "34800"
+            ],
+            [
+                "Trtmn Substnce Abuse",
+                "35000"
+            ],
+            [
+                "Psy Of Hmn Sexl Behv",
+                "35100"
+            ],
+            [
+                "Treatment of Substance Abuse II",
+                "36000"
+            ],
+            [
+                "Health Psychology",
+                "36100"
+            ],
+            [
+                "Psy Of Prevntion Sci",
+                "36300"
+            ],
+            [
+                "Psy & Black Expernce",
+                "36400"
+            ],
+            [
+                "Family Psychology",
+                "36500"
+            ],
+            [
+                "Family Psych",
+                "36504"
+            ],
+            [
+                "Adulthood & Aging",
+                "36600"
+            ],
+            [
+                "Small Group Processes",
+                "36700"
+            ],
+            [
+                "Behavior In Organizations",
+                "36900"
+            ],
+            [
+                "Counseling Issues in Addiction Treatment",
+                "37000"
+            ],
+            [
+                "Introduction to Cognitive Neuroscience",
+                "37100"
+            ],
+            [
+                "Neuropsychology",
+                "37300"
+            ],
+            [
+                "Theories of Personality",
+                "37700"
+            ],
+            [
+                "Introduction to Clinical and Counseling Psychology",
+                "38000"
+            ],
+            [
+                "Theories of Psychotherapy",
+                "38800"
+            ],
+            [
+                "Psychotherapy",
+                "38804"
+            ]
+        ],
+        "SCI": [
+            [
+                "Principles of Env Sci",
+                "12600"
+            ],
+            [
+                "Service Learning in Health and Wellness",
+                "36000"
+            ]
+        ],
+        "SCIE": [
+            [
+                "Physical Sciences For Middle School Teachers 2",
+                "1404E"
+            ],
+            [
+                "Science Practice Across Contexts",
+                "7406N"
+            ]
+        ],
+        "SOC": [
+            [
+                "Individual, Group and Society: An Introduction to Sociology",
+                "10500"
+            ],
+            [
+                "Introductory Sociology For Freshman Honors Students",
+                "10501"
+            ],
+            [
+                "Methods and Techniques of Sociological Research",
+                "23200"
+            ],
+            [
+                "Research & Fld Wrk",
+                "23301"
+            ],
+            [
+                "Foundations of Sociological Theory",
+                "23700"
+            ],
+            [
+                "Sociology of Social Welfare Institutions",
+                "24500"
+            ],
+            [
+                "Social Welfare 2",
+                "24604"
+            ],
+            [
+                "Ethnic Minority Groups",
+                "25300"
+            ],
+            [
+                "Family Relationships",
+                "26600"
+            ],
+            [
+                "Sociology of Health and Illness",
+                "27000"
+            ],
+            [
+                "Urban Politics and Policy",
+                "27400"
+            ],
+            [
+                "Race, Class And Power",
+                "31112"
+            ],
+            [
+                "The Hispanic Urban Child",
+                "31114"
+            ],
+            [
+                "Sem:Intrnshp Pub Aff",
+                "31126"
+            ],
+            [
+                "Housing and Community Development",
+                "31136"
+            ],
+            [
+                "Gender & Work",
+                "31138"
+            ],
+            [
+                "Immigration and the Second Generation",
+                "31152"
+            ],
+            [
+                "Undocumented: Living in the Shadows",
+                "31154"
+            ],
+            [
+                "Latinas-Reproductive Rights",
+                "31160"
+            ],
+            [
+                "Principles Of Statistics",
+                "31170"
+            ],
+            [
+                "Culture and Health",
+                "31178"
+            ],
+            [
+                "Social Change and Social Movements",
+                "31181"
+            ],
+            [
+                "Social Justice and Latinx Communities",
+                "31190"
+            ],
+            [
+                "Gender, Race, & Latinidad",
+                "31220"
+            ],
+            [
+                "Urban Ethnography",
+                "31402"
+            ],
+            [
+                "Juvenile Justice",
+                "31714"
+            ],
+            [
+                "Race, Health, and the Politics of the Body",
+                "31992"
+            ],
+            [
+                "Justice, Law, and Society",
+                "38107"
+            ],
+            [
+                "School and American Societies",
+                "38144"
+            ],
+            [
+                "Drugs and Society",
+                "38211"
+            ]
+        ],
+        "SPAN": [
+            [
+                "Introductory Spanish I",
+                "12300"
+            ],
+            [
+                "Introductory Spanish II",
+                "12400"
+            ],
+            [
+                "Heritage Spk & List1",
+                "19300"
+            ],
+            [
+                "Heritage Spk & List 2",
+                "19400"
+            ],
+            [
+                "Intermediate Spanish",
+                "22504"
+            ],
+            [
+                "Masterworks of Latin American Literature",
+                "28300"
+            ],
+            [
+                "Spanish for the Health Professions",
+                "29000"
+            ],
+            [
+                "Wrtng Fict In N Y C",
+                "31102"
+            ],
+            [
+                "Problems of Spanish Grammar",
+                "32100"
+            ],
+            [
+                "Practice in Writing Spanish",
+                "32200"
+            ],
+            [
+                "Introduction to Spanish Linguistics",
+                "32700"
+            ],
+            [
+                "Studies in Spanish Literature I",
+                "35100"
+            ],
+            [
+                "Advanced Spanish Composition & Conversation",
+                "37300"
+            ],
+            [
+                "Lit For Young Adults",
+                "37400"
+            ],
+            [
+                "Topics in Spanish American Civilization I",
+                "45201"
+            ],
+            [
+                "Topics in Spanish American Civilization II",
+                "45202"
+            ]
+        ],
+        "SPCH": [
+            [
+                "Foundations of Speech Communication",
+                "11100"
+            ],
+            [
+                "Speech (Honors)",
+                "11101"
+            ],
+            [
+                "Voice and Diction",
+                "23300"
+            ]
+        ],
+        "SPED": [
+            [
+                "Seminar in Educational Research",
+                "2900I"
+            ],
+            [
+                "Reading and Writing Instruction for Students with Disabilities in Childhood Education I",
+                "3700K"
+            ],
+            [
+                "Reading and Writing Instruction for Students with Disabilities in Adolescent Education",
+                "3701K"
+            ],
+            [
+                "Assessment for Students with Disabilities in Adolescent Education I",
+                "3801K"
+            ],
+            [
+                "Instructional Methods for Students with Disabilities in Adolescent Education II",
+                "3901K"
+            ],
+            [
+                "Introduction to Inclusive Education",
+                "5000K"
+            ],
+            [
+                "Positive Approaches to Challenging Behaviors",
+                "5300K"
+            ],
+            [
+                "Practicum in Teaching Special Education",
+                "5700G"
+            ],
+            [
+                "Working with the Families of Children with Disabilities",
+                "6100I"
+            ],
+            [
+                "Internship in Special Education",
+                "7701G"
+            ]
+        ],
+        "SSC": [
+            [
+                "Ethics in the Workplace",
+                "31121"
+            ],
+            [
+                "Vocation, Career and Self-development",
+                "31122"
+            ],
+            [
+                "Partners for Change Fellowship Seminar II",
+                "31720"
+            ],
+            [
+                "Colin Powell Fellowship Seminar II",
+                "31820"
+            ],
+            [
+                "Colin Powell Fellowship Seminar IV",
+                "31840"
+            ]
+        ],
+        "SUS": [
+            [
+                "Energy Systems Engineering for Global Sustainability (CHE I4000)",
+                "7200B"
+            ],
+            [
+                "Climate And Climate Change",
+                "7300B"
+            ],
+            [
+                "Sust Bus Practices",
+                "7300S"
+            ],
+            [
+                "Economics of Sustainability",
+                "7400C"
+            ],
+            [
+                "Case Studies In Sustainability",
+                "7400A"
+            ],
+            [
+                "Capstone Interdisciplinary Team Project - I",
+                "7501C"
+            ],
+            [
+                "Capstone Interdisciplinary Team Project - II",
+                "7502C"
+            ],
+            [
+                "Design of Mechanical Systems for Sustainable Buildings",
+                "7600B"
+            ],
+            [
+                "Solid Waste Reuse and Recycling",
+                "7700B"
+            ],
+            [
+                "Bldg Mod & Simulatn",
+                "7900A"
+            ],
+            [
+                "BIOREMEDIATION: Leveraging Biology in Addressing Toxic Legacies",
+                "8400A"
+            ]
+        ],
+        "THTR": [
+            [
+                "Speech for the Stage",
+                "12700"
+            ],
+            [
+                "Introduction to Theatre Arts",
+                "13100"
+            ],
+            [
+                "Body Movement I",
+                "13200"
+            ],
+            [
+                "Basic Production and Design",
+                "13400"
+            ],
+            [
+                "Acting 1",
+                "13600"
+            ],
+            [
+                "Theatre History I",
+                "21100"
+            ],
+            [
+                "Theatre History II",
+                "21200"
+            ],
+            [
+                "Theatre History III",
+                "21300"
+            ],
+            [
+                "American Jewish Theatre",
+                "21800"
+            ],
+            [
+                "Acting 2",
+                "23600"
+            ],
+            [
+                "Acting 4",
+                "23602"
+            ],
+            [
+                "Techncl Theatre Prac",
+                "23701"
+            ],
+            [
+                "Musical Theatre Workshop",
+                "23800"
+            ],
+            [
+                "Acting for the Camera",
+                "23900"
+            ],
+            [
+                "Stage Combat",
+                "24000"
+            ],
+            [
+                "Ballet",
+                "25000"
+            ],
+            [
+                "Jazz Dance",
+                "25100"
+            ],
+            [
+                "Modern Dance",
+                "25200"
+            ],
+            [
+                "Tai Chi",
+                "25300"
+            ],
+            [
+                "Costume Design",
+                "26100"
+            ],
+            [
+                "Contemporary African American Female Playwrights",
+                "31113"
+            ],
+            [
+                "Hip-Hop Dance",
+                "31130"
+            ],
+            [
+                "Musical Theatre History",
+                "31450"
+            ],
+            [
+                "Playwriting",
+                "33100"
+            ],
+            [
+                "Directing II",
+                "33300"
+            ],
+            [
+                "Theatre Workshop",
+                "43000"
+            ]
+        ],
+        "UD": [
+            [
+                "Retrofitting Suburbia",
+                "60007"
+            ],
+            [
+                "BIOREMEDIATION: Leveraging Biology in Addressing Toxic Legacies",
+                "60008"
+            ],
+            [
+                "Urban Theory and Urban Design",
+                "61017"
+            ],
+            [
+                "Urban Design Studio II",
+                "62001"
+            ],
+            [
+                "Case Studies in Sustainability",
+                "62006"
+            ]
+        ],
+        "USSO": [
+            [
+                "Development of the U.S. and its People",
+                "10100"
+            ]
+        ],
+        "WCIV": [
+            [
+                "Prehistory to 1500 A.D.",
+                "10100"
+            ],
+            [
+                "1500 A.D. to the Present.",
+                "10200"
+            ],
+            [
+                "World Civilizations II: 1500AD to present",
+                "10201"
+            ]
+        ],
+        "WHUM": [
+            [
+                "World Humanities 1",
+                "10100"
+            ],
+            [
+                "World Humanities",
+                "10200"
+            ],
+            [
+                "Modern World Lit",
+                "10312"
+            ]
+        ],
+        "WS": [
+            [
+                "Women's/Gender Roles in Contemporary Society",
+                "10000"
+            ],
+            [
+                "Daughters of Immigrants: Inequality",
+                "31112"
+            ],
+            [
+                "Performing Queerness",
+                "31117"
+            ],
+            [
+                "Global Islamic Women",
+                "31128"
+            ],
+            [
+                "Wmn:Vlatn Hm Rts",
+                "31403"
+            ],
+            [
+                "Hlth-Iss-Alternatvs",
+                "31404"
+            ],
+            [
+                "Peoples Of Africa",
+                "31707"
+            ]
+        ]
+    }
+}

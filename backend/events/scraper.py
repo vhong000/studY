@@ -37,8 +37,6 @@ class Scraper:
 
     def scrape_courses(self):
         for idx, sch in enumerate(self.schools):
-            # if sch['code'] != 'CCNY':
-            #     continue
             logging.info(f'fetching course list for {sch["name"]}')
 
             sch['courses'] = defaultdict(list)

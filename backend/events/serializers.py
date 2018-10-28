@@ -27,4 +27,6 @@ class EventSerializer(serializers.ModelSerializer):
 
 
 class CourseSerializer(serializers.ModelSerializer):
-    pass
+    class Meta:
+        model = Course
+        fields = ('__all__')
