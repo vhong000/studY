@@ -24,11 +24,9 @@ class Subtopic extends Component {
 			const { classes, subtopic, category } = this.props;
 			console.log(" Subtopic ",this.props);
         return (
-            <div>
-				<p></p>
-                <Grid container justify='center' >
+          <Grid container justify='center' className={classes.main_grid} >
 					<Grid 
-						container
+						container item
 						md='10'
 						spacing='24'
 					>
@@ -54,7 +52,6 @@ class Subtopic extends Component {
 							}
 					</Grid>
 				</Grid>
-            </div>
         )
     }
    
