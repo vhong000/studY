@@ -3,15 +3,13 @@ import { Link } from 'react-router-dom';
 import {
 	Card, CardContent, Typography, 
 	Grid, withStyles, CardMedia,
-	CardActionArea, Button
+	CardActionArea,
 } from '@material-ui/core';
-import SwipeableViews from 'react-swipeable-views';
-import { autoPlay } from 'react-swipeable-views-utils';
 import './App.css';
+import Banner from './components/banner/banner'
 
 import { 
-	math, science, history, art, literature, language, study_banner,
-	study_banner1, study_banner2
+	math, science, history, art, literature, language,
 } from './images'
 
 const topics = [
@@ -47,53 +45,18 @@ const styles = theme => ({
 	},
 	card: {
 	},
-	banner_button: {
-		position: 'absolute',
-		width: '25%',
-		top: '40%',
-		left: '50%',
-		backgroundColor: theme.palette.primary.dark,
-		'&:hover': {
-			backgroundColor: theme.palette.primary.dark,
-		},
-		transform: 'translate(-50%, 50%)',
-		color: 'white'
-	},
 	media: {
 		height: 200,
 	},
-	banner: {
-		height: 500,
-		width: '100%',
-		"object-fit": 'cover'
-	}
 })
-
-const banners = [ study_banner, study_banner1, study_banner2 ];
-const Banner = autoPlay(SwipeableViews);
 
 class App extends Component {
   render() {
-		const { classes, theme } = this.props;
+		const { classes } = this.props;
     return (
 			<div className='App'>
 				<div className='banner-container'>
-					<Banner
-					axis='x'
-					autoplay interval={10000} >
-						{banners.map((step, index) => (
-							<div key={index}>
-								<img className={classes.banner}
-								src={step}
-								alt='banner' />
-							</div>
-						))}
-					</Banner>
-					<Button 
-						className={classes.banner_button}
-						children="Sign Up"
-						variant='text'
-					/>
+					<Banner />
 				</div>
 				<Grid className={classes.main_grid} container justify='center' >
 					<Grid 
