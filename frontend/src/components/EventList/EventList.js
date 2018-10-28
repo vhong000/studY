@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import {
 
-    Typography, Grid, withStyles, Divider,
+    Typography, Grid, withStyles, Divider, Toolbar
 
 } from '@material-ui/core';
 
@@ -73,11 +73,15 @@ class EventList extends Component {
             <div>
                 <Grid className={classes.main_grid} container sm={12}>
                     <Grid item sm={2}>
+
                     </Grid>
                     <Grid item sm={6}>
                         {renderEventCardGrid()}
                     </Grid>
-                    <Grid item sm={3}>
+                    <Grid item justify="center" sm={3}>
+                        <Typography align="center" variant="subheading">
+                            Map?
+                        </Typography>
                     </Grid>
                 </Grid>
             </div>
