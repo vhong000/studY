@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -8,7 +9,7 @@ import logging
 import json
 import requests
 from lxml import html
-# from selenium.webdriver.common.keys import Keys
+import pathlib
 
 Course = namedtuple('Course', ['title', 'num'])
 
@@ -34,19 +35,21 @@ class Scraper:
             except Exception as e:
                 print(e, item.text_content())
 
-    def scrape_courses(self, depts):
-        for sch in self.schools:
+    def scrape_courses(self):
+        for idx, sch in enumerate(self.schools):
+            # if sch['code'] != 'CCNY':
+            #     continue
             logging.info(f'fetching course list for {sch["name"]}')
 
             sch['courses'] = defaultdict(list)
-            for subject in depts:
-                logging.info(f'\tdept => {subject}')
-
-                url = sch['url'] + f'#subj={subject}'
+            for ch in range(ord('a'), ord('z')+1):
+                logging.info(f'enumerating {chr(ch)}...')
+                url = sch['url'] + f'#subj={chr(ch)}'
                 self.browser.get(url)
+                self.browser.refresh()
                 while True:
                     try:
-                        more_button = WebDriverWait(self.browser, 5)\
+                        more_button = WebDriverWait(self.browser, 4)\
                             .until(EC.presence_of_element_located((By.ID, "moreButton")))
                         more_button.click()
 
@@ -59,31 +62,34 @@ class Scraper:
                         self.browser.execute_script(
                             "window.scrollTo(0, document.body.scrollHeight);")
 
-                divs = [el for el in self.browser.find_elements_by_xpath(
-                    '//div[@class="courseName"]/..')]
+                try:
+                    divs = [el for el in self.browser.find_elements_by_xpath(
+                        '//div[@class="courseName"]/..')]
+                    self.extract_courses(divs, sch['courses'])
 
-                sch['courses'][subject] = self.extract_courses(divs)
-                logging.info(f'\tprocessed {len(sch["courses"][subject])} courses\n')
+                except Exception as e:
+                    logging.exception(f'{e.__class__.__name__}: {str(e)}')
+                    continue
+
+            filename = DATA_DIR.joinpath(f'{sch["code"].lower()}_courses.json')
+            self.dump_data(filename, sch)
 
     @staticmethod
-    def extract_courses(divs):
+    def extract_courses(divs, courses):
         dupes = set()
-        course_list = []
         for div in divs:
             try:
                 cnumber, cname = div.text.splitlines()
-                cnumber = cnumber.split('-')[0].split()[::-1][0]
+                cnumber, dept = cnumber.split('-')[0].split()[::-1]
                 if cname not in dupes:
                     dupes.add(cname)
-                    course_list.append(Course(cname, cnumber))
+                    courses[dept].append(Course(cname, cnumber))
             except Exception as e:
                 continue
 
-        return course_list
-
-    def dump_data(self, file_path):
+    def dump_data(self, file_path, obj):
         with open(file_path, mode='w') as fd:
-            json.dump(self.schools, fd)
+            json.dump(obj, fd)
 
     @staticmethod
     def get_browser(headless):
@@ -92,18 +98,18 @@ class Scraper:
             options.add_argument('headless')
         return webdriver.Chrome(chrome_options=options)
 
-    def run(self, subjects, out_file):
+    def run(self):
         self.get_cuny_schools()
-        self.scrape_courses(subjects)
-        self.dump_data(out_file)
+        self.scrape_courses()
         self.browser.quit()
 
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO, format='%(message)s')
 
-    # SUBJECTS = ['csc', 'math', 'hist', 'phys']
+    DATA_DIR = pathlib.Path(__file__).parent.joinpath('data')
+    if not DATA_DIR.is_dir():
+        DATA_DIR.mkdir()
 
-    SUBJECTS = ['csc']
     scraper = Scraper(headless=True)
-    scraper.run(SUBJECTS, 'data_dump.json')
+    scraper.run()

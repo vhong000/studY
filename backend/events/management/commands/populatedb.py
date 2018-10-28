@@ -15,10 +15,17 @@ class Command(BaseCommand):
         with open(options['filepath'], mode='r') as fh:
             schools = json.load(fh)
             for sch in schools:
-                new_school = School.objects.create(name=sch['name'],
-                                                   code=sch['code'])
+                new_school, created = School.objects.get_or_create(name=sch['name'],
+                                                                   code=sch['code'])
+                if 'courses' not in sch:
+                    continue
                 for dept, courses in sch['courses'].items():
                     for course in courses:
-                        new_school.courses.create(name=course[0],
-                                                  number=course[1],
-                                                  dept=dept)
+                        try:
+                            new_school.courses.get_or_create(name=course[0],
+                                                             number=''.join(
+                                                                 filter(lambda c: c.isdigit(), courses[1])),
+                                                             dept=dept)
+                        except Exception as e:
+                            # print(e)
+                            pass
