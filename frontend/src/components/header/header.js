@@ -28,6 +28,9 @@ export function Header({
 		<AppBar position='static' >
 			<Toolbar>
 				<Typography	
+                    style={{ textDecoration: 'none' }}
+                    component={Link}
+                    to ="/"
 					className={classes.title}
 					variant='headline'
 					color='inherit'>
