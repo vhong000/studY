@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Header from '../header/header';
+import { Link } from 'react-router-dom';
 import {
 	Card, CardContent, 
 	Typography, Grid, withStyles, CardMedia,
@@ -20,10 +21,10 @@ const styles = {
 
 class Subtopic extends Component {
     render() {
-            const { classes, subtopic } = this.props;
+			const { classes, subtopic, category } = this.props;
+			console.log(" Subtopic ",this.props);
         return (
-            <>
-                <Header />
+            <div>
 				<p></p>
                 <Grid container justify='center' >
 					<Grid 
@@ -35,7 +36,9 @@ class Subtopic extends Component {
 							return (
 								<Grid item md='3' >
 									<Card className={classes.card}>
-										<CardActionArea>
+										<CardActionArea
+											component={Link}
+											to={`/${category}/${topic.replace(/\s+/g, '')}`}>
 											<CardMedia 
 												className={classes.media}
 												image={subtopic.image} />
@@ -51,7 +54,7 @@ class Subtopic extends Component {
 							}
 					</Grid>
 				</Grid>
-            </>
+            </div>
         )
     }
    
