@@ -1,1 +1,371 @@
-{"name": "Hostos Community College", "code": "Hostos", "url": "https://www.coursicle.com/hostoscuny/", "courses": {"ACC": [["Introduction to Accounting", "100"], ["Accounting I", "101"], ["Accounting II", "102"], ["College Accounting I", "110"], ["College Accounting II", "111"], ["Computerized Accounting", "150"], ["Accounting Internship Seminar", "199"], ["Intermediate Accounting I", "201"], ["Cost Accounting I", "210"], ["Personal Income Tax", "250"]], "ANTH": [["Introduction to Anthropology", "101"]], "BIO": [["Principles of Biology", "110"], ["Principles in Biology (Laboratory)", "111"], ["Organismic Biology", "120"], ["Organismic Biology (Laboratory)", "121"], ["Plants and Society", "130"], ["Plants and Society (Laboratory)", "131"], ["Human Biology I Lecture", "140"], ["Human Biology I Laboratory", "141"], ["General Biology I", "210"], ["General Biology II", "220"], ["Anatomy and Physiology I", "230"], ["Anatomy and Physiology II", "240"], ["Introduction to Genetics", "260"], ["Microbiology", "310"]], "BLS": [["Introduction to Black Studies", "101"], ["The African-American Experience I", "114"], ["The Harlem Renaissance", "125"], ["Ethnicity, Health, and Illness", "150"], ["Hip-Hop Worldview", "161"]], "BUS": [["Introduction to Business", "100"], ["Personal Financial Planning", "105"], ["Business Ethics", "110"], ["Principles of Management", "201"], ["Business Communications", "203"], ["Business Law I", "210"], ["Business Law II", "212"], ["Business Applications Using Excel", "215"], ["Principles of Marketing", "220"], ["Principles of Finance", "222"], ["Entrepreneurship", "240"]], "CAP": [["Bronx Beautiful", "200"]], "CHE": [["Introduction to General Chemistry", "105"], ["Introduction to Chemistry", "110"], ["Principles of Organic Chemistry", "120"], ["General Chemistry I", "210"], ["General Chemistry II", "220"], ["Organic Chemistry II", "320"], ["Organic Chemistry II Laboratory", "322"]], "CJ": [["Introduction to Criminal Justice Administration", "101"], ["The Role of the Police in the Community", "150"], ["Issues in Law Enforcements", "201"], ["Corrections and Sentencing", "202"], ["Criminal Justice Policy and Management", "250"]], "COOP": [["Introduction to Career Practices", "101"], ["Work Experience I", "102"]], "CSC": [["Modern Programming", "215"]], "DD": [["Introduction to the Digital Toolbox", "101"], ["Media Design in the Digital Age", "102"], ["Color Theory & Design", "104"], ["2D Design", "105"], ["Concepts in Animation", "107"], ["Visual Narrative", "108"], ["Web Design I", "112"], ["Motion Graphics and Animation Production", "113"], ["Digital Illustration I", "114"], ["Communication Design", "201"], ["Video Production", "202"], ["Typography I", "204"], ["3D Computer Animation I", "207"], ["2D Computer Animation", "305"]], "DEN": [["Clinical Dental Hygiene Practice II", "120"], ["Dental Radiology I: Basic Concepts", "121"], ["Oral Microbiology", "122"], ["Oral Embryology & Histology", "123"], ["Clinic I", "129"], ["Community Dental Health", "220"], ["Pharmacology", "221"], ["Dental Specialties", "222"], ["Ethics/Jurisprudence/ Practice Management", "223"], ["Senior Seminar", "224"], ["Clinic III", "229"]], "DM": [["History of Electronic Music", "103"], ["Introduction To Recording Techniques", "106"], ["Synthesizers, Sampling, & MIDI Production", "201"], ["Sound Design", "205"], ["Production 1", "206"], ["Sound As Story", "310"], ["Production 2", "316"]], "ECO": [["Microeconomics", "101"], ["Macroeconomics", "102"]], "EDU": [["Foundations of Education", "101"], ["Language Arts for Young Children", "104"], ["Social Studies for Young Children", "105"], ["Creative Art Activities for Young Children", "107"], ["Music and Movement", "109"], ["Science and Mathematics for Young Children", "111"], ["Field Experience in Early Childhood Education I", "113"], ["Development of the Young Child", "116"], ["Teaching in the Multicultural/Multi-lingual Classroom", "130"], ["Language Arts in a Bilingual Classroom", "131"], ["Introduction to Special Education", "150"], ["Independent Study", "299"]], "ENG": [["Core Reading and Writing", "93"], ["Integrated Reading and Composition", "100"], ["Expository Writing", "110"], ["Literature and Composition", "111"], ["Technical Writing", "202"], ["Studies in Fiction", "210"], ["Latin American Literature in Translation", "222"], ["Literature of the Black American", "225"], ["The Graphic Novel (HONORS)", "240H"]], "ENGR": [["Electrical Circuits", "204"]], "ENV": [["Environmental Science I", "110"], ["Environmental Science I Laboratory", "111"], ["Environmental Science II", "120"], ["Environmental Science II Laboratory", "122"]], "ESL": [["In Content Areas", "15"], ["Literature and Contemporary Issues for ESL Students I", "16"], ["ESL in Content Areas II", "25"], ["Contemporary Issues for ESL Students II", "26"], ["ESL in Content Areas III", "35"], ["Contemporary Issues III", "36"], ["Intensive ESL Writing and Language Workshop", "86"], ["Intensive ESL Reading and Conversation II", "88"], ["Basic Composition", "91"], ["Foundations of Critical Reading", "92"], ["Basic Composition II", "93"], ["Readings in the Social Sciences", "96"]], "FRE": [["Elementary French I", "101"]], "FS": [["Food Studies", "101"], ["Food Studies II: Food, Environment and Justice", "120"], ["Food, Policy and Advocacy", "200"], ["Food Studies Capstone", "230"]], "FYS": [["A New York State of Mind: What Makes a City Great", "101"]], "GD": [["Introduction to Games", "101"], ["Beyond Games", "102"], ["Game Programming I", "105"], ["Digital Games", "201"], ["Game Programming II", "205"], ["Game Studio", "210"]], "GERO": [["Introduction to Gerontology", "101"], ["Therapeutic Recreation in Long Term Care", "102"], ["Health and Aging", "103"], ["Fieldwork with an Older Population", "199"]], "HIS": [["Modern World History", "202"], ["United States History: Through the Civil War", "210"], ["United States History: Reconstruction to the Present", "211"], ["U.S. History: Reconstruction to the Present (HONORS)", "211H"]], "HLT": [["Interpersonal Relations and Teamwork", "103"], ["Introduction to Community Health Education", "110"], ["Health and the Young Child", "111"], ["Medical Terminology", "124"], ["Bilingual Issues", "212"], ["Substance Use and Abuse", "214"], ["Nutrition", "215"], ["Contemporary Health Issues", "220"], ["Field Experience", "299"]], "HUM": [["Introduction to Global Humanities", "100"]], "ITA": [["Elementary Italian I", "101"], ["Elementary Italian II", "102"]], "LAC": [["The Latino Experience in the United States", "101"], ["History of the Caribbean", "108"], ["Caribbean Society and Culture", "118"], ["Hispanics Migrations to the United States", "132"], ["Latin American Film and Literature", "202"], ["Latina/Latino Literature in the United States", "246"]], "LAW": [["Law and Social Change", "101"], ["Immigration Law", "125"], ["Criminal Law", "150"], ["Law and Evidence", "202"]], "LEG": [["Law Office Organization", "102"], ["Legal Writing", "131"], ["Hearing and Trial Advocacy", "250"]], "LIN": [["Introduction to Linguistics", "100"], ["Introduction to Comparative Analysis: English and Spanish", "101"], ["Bilingualism", "102"], ["Language Acquisition", "103"]], "MAT": [["Basic Mathematics Skills", "10"], ["Intensive Integrated Arithmetic/Algebra", "15"], ["Algebra Supplement for Quantitative Reasoning", "16"], ["Algebra Supplement for Introduction to Probability and Statistics for Non-STEM Majors", "19"], ["Elementary Algebra", "20"], ["Elementary Algebra for STEM", "25"], ["Introduction to College Mathematics", "100"], ["Mathematics for Allied Health Sciences", "105"], ["Quantitative Reasoning", "115SI"], ["Introduction to Probability and Statistics", "119"], ["Computer Literacy", "130"], ["College Algebra with Trigonometric Functions", "150"], ["Precalculus", "160"], ["Calculus I", "210"], ["Linear Algebra", "217"], ["Calculus II", "220"], ["Calculus III", "310"], ["Linear Algebra with Vector Analysis", "320"], ["Ordinary Differential Equations", "360"]], "MUS": [["Fundamentals of Music Theory at the Keyboard", "101"], ["Music Theory & Ear Training I", "102"]], "NUR": [["Clinical Nursing II", "120"], ["Fundamentals of Nursing Practice", "216"], ["Pharmacology", "220"], ["Nursing Care of the Childbearing Family I", "227"], ["Nursing Care of the Childrearing Family II", "228"], ["Nursing Care of the Client with Mental Illness", "316"], ["Nursing Care of the Adult I", "317"], ["Nursing Trends and Issues", "320"], ["Nursing Care of the Adult II", "326"]], "OT": [["Computer Keyboarding and Document Formatting I", "101"], ["Computer Keyboarding and Document Formatting II", "102"], ["Introduction to Computer Software Packages", "103"], ["Office Systems and Procedures", "104"], ["Electronic Health Records", "105"], ["Medical Billing and Insurance", "206"], ["Medical Office Procedures", "209"], ["Medical Coding/Billing and Insurance II", "210"]], "PED": [["Personal Physical Fitness", "100"], ["Beginning Yoga", "139"], ["Independent Study", "144"], ["Principles and Foundations of Physical Education, Exercise Science, & Sport", "201"]], "PHI": [["Thinking and Reasoning", "101"]], "PHY": [["General Physics I", "210"], ["General Physics II", "220"]], "POL": [["American Government", "101"]], "PPA": [["Fundamentals of Public Administration and Management", "101"], ["Federal Administration", "111"], ["Unions and Labor", "120"]], "PSY": [["General Psychology", "101"], ["Life-Span Development of Behavior", "110"], ["Educational Psychology", "115"], ["Developmental Psychology I (Childhood)", "120"], ["Psychology of Women", "140"], ["Abnormal Psychology", "142"], ["Personality", "144"]], "SOC": [["Introduction to Sociology", "101"], ["Sociology of Social Problems", "105"], ["Sociology of Race and Ethnic Relations", "140"], ["Criminology", "150"]], "SPA": [["Elementary Spanish I", "101"], ["Elementary Spanish II", "102"], ["Spanish for English Dominant Hispanics I", "117"], ["Spanish Composition I", "121"], ["Basic Spanish Composition II", "222"]], "SW": [["Introduction to Social Work", "101"], ["Social Work Practice", "150"]], "VPA": [["Painting and Drawing I", "121"], ["Painting and Drawing II", "122"], ["Digital Photography I", "133"], ["Digital Photography 2", "134"], ["Music Appreciation", "141"], ["Introduction to Theatre", "171"], ["Introduction to Film & TV", "174"], ["Acting I", "181"], ["Acting I (HONORS)", "181H"], ["Speaking and Listening", "191"], ["Fundamentals of Public Speaking", "192"], ["Acting II", "281"]], "WGS": [["Women's and Gender Studies", "100"]], "XRA": [["Radiography II & Lab", "120"], ["Radiologic Science II & Lab", "121"], ["Radiation Protection", "122"], ["Radiographic Anatomy II", "123"], ["Contrast Media", "124"], ["Clinical Radiography I", "129"], ["Pathology", "220"], ["Advanced Procedures II", "221"], ["Applied Quality Assurance", "222"], ["Clincial Radiography IV", "229"]]}}
+{
+    "name": "Hostos Community College",
+    "code": "Hostos",
+    "url": "https://www.coursicle.com/hostoscuny/",
+    "courses": {
+        "ACC": [
+            ["Introduction to Accounting", "100"],
+            ["Accounting I", "101"],
+            ["Accounting II", "102"],
+            ["College Accounting I", "110"],
+            ["College Accounting II", "111"],
+            ["Computerized Accounting", "150"],
+            ["Accounting Internship Seminar", "199"],
+            ["Intermediate Accounting I", "201"],
+            ["Cost Accounting I", "210"],
+            ["Personal Income Tax", "250"]
+        ],
+        "ANTH": [
+            ["Introduction to Anthropology", "101"]
+        ],
+        "BIO": [
+            ["Principles of Biology", "110"],
+            ["Principles in Biology (Laboratory)", "111"],
+            ["Organismic Biology", "120"],
+            ["Organismic Biology (Laboratory)", "121"],
+            ["Plants and Society", "130"],
+            ["Plants and Society (Laboratory)", "131"],
+            ["Human Biology I Lecture", "140"],
+            ["Human Biology I Laboratory", "141"],
+            ["General Biology I", "210"],
+            ["General Biology II", "220"],
+            ["Anatomy and Physiology I", "230"],
+            ["Anatomy and Physiology II", "240"],
+            ["Introduction to Genetics", "260"],
+            ["Microbiology", "310"]
+        ],
+        "BLS": [
+            ["Introduction to Black Studies", "101"],
+            ["The African-American Experience I", "114"],
+            ["The Harlem Renaissance", "125"],
+            ["Ethnicity, Health, and Illness", "150"],
+            ["Hip-Hop Worldview", "161"]
+        ],
+        "BUS": [
+            ["Introduction to Business", "100"],
+            ["Personal Financial Planning", "105"],
+            ["Business Ethics", "110"],
+            ["Principles of Management", "201"],
+            ["Business Communications", "203"],
+            ["Business Law I", "210"],
+            ["Business Law II", "212"],
+            ["Business Applications Using Excel", "215"],
+            ["Principles of Marketing", "220"],
+            ["Principles of Finance", "222"],
+            ["Entrepreneurship", "240"]
+        ],
+        "CAP": [
+            ["Bronx Beautiful", "200"]
+        ],
+        "CHE": [
+            ["Introduction to General Chemistry", "105"],
+            ["Introduction to Chemistry", "110"],
+            ["Principles of Organic Chemistry", "120"],
+            ["General Chemistry I", "210"],
+            ["General Chemistry II", "220"],
+            ["Organic Chemistry II", "320"],
+            ["Organic Chemistry II Laboratory", "322"]
+        ],
+        "CJ": [
+            ["Introduction to Criminal Justice Administration", "101"],
+            ["The Role of the Police in the Community", "150"],
+            ["Issues in Law Enforcements", "201"],
+            ["Corrections and Sentencing", "202"],
+            ["Criminal Justice Policy and Management", "250"]
+        ],
+        "COOP": [
+            ["Introduction to Career Practices", "101"],
+            ["Work Experience I", "102"]
+        ],
+        "CSC": [
+            ["Modern Programming", "215"]
+        ],
+        "DD": [
+            ["Introduction to the Digital Toolbox", "101"],
+            ["Media Design in the Digital Age", "102"],
+            ["Color Theory & Design", "104"],
+            ["2D Design", "105"],
+            ["Concepts in Animation", "107"],
+            ["Visual Narrative", "108"],
+            ["Web Design I", "112"],
+            ["Motion Graphics and Animation Production", "113"],
+            ["Digital Illustration I", "114"],
+            ["Communication Design", "201"],
+            ["Video Production", "202"],
+            ["Typography I", "204"],
+            ["3D Computer Animation I", "207"],
+            ["2D Computer Animation", "305"]
+        ],
+        "DEN": [
+            ["Clinical Dental Hygiene Practice II", "120"],
+            ["Dental Radiology I: Basic Concepts", "121"],
+            ["Oral Microbiology", "122"],
+            ["Oral Embryology & Histology", "123"],
+            ["Clinic I", "129"],
+            ["Community Dental Health", "220"],
+            ["Pharmacology", "221"],
+            ["Dental Specialties", "222"],
+            ["Ethics/Jurisprudence/ Practice Management", "223"],
+            ["Senior Seminar", "224"],
+            ["Clinic III", "229"]
+        ],
+        "DM": [
+            ["History of Electronic Music", "103"],
+            ["Introduction To Recording Techniques", "106"],
+            ["Synthesizers, Sampling, & MIDI Production", "201"],
+            ["Sound Design", "205"],
+            ["Production 1", "206"],
+            ["Sound As Story", "310"],
+            ["Production 2", "316"]
+        ],
+        "ECO": [
+            ["Microeconomics", "101"],
+            ["Macroeconomics", "102"]
+        ],
+        "EDU": [
+            ["Foundations of Education", "101"],
+            ["Language Arts for Young Children", "104"],
+            ["Social Studies for Young Children", "105"],
+            ["Creative Art Activities for Young Children", "107"],
+            ["Music and Movement", "109"],
+            ["Science and Mathematics for Young Children", "111"],
+            ["Field Experience in Early Childhood Education I", "113"],
+            ["Development of the Young Child", "116"],
+            ["Teaching in the Multicultural/Multi-lingual Classroom", "130"],
+            ["Language Arts in a Bilingual Classroom", "131"],
+            ["Introduction to Special Education", "150"],
+            ["Independent Study", "299"]
+        ],
+        "ENG": [
+            ["Core Reading and Writing", "93"],
+            ["Integrated Reading and Composition", "100"],
+            ["Expository Writing", "110"],
+            ["Literature and Composition", "111"],
+            ["Technical Writing", "202"],
+            ["Studies in Fiction", "210"],
+            ["Latin American Literature in Translation", "222"],
+            ["Literature of the Black American", "225"],
+            ["The Graphic Novel (HONORS)", "240H"]
+        ],
+        "ENGR": [
+            ["Electrical Circuits", "204"]
+        ],
+        "ENV": [
+            ["Environmental Science I", "110"],
+            ["Environmental Science I Laboratory", "111"],
+            ["Environmental Science II", "120"],
+            ["Environmental Science II Laboratory", "122"]
+        ],
+        "ESL": [
+            ["In Content Areas", "15"],
+            ["Literature and Contemporary Issues for ESL Students I", "16"],
+            ["ESL in Content Areas II", "25"],
+            ["Contemporary Issues for ESL Students II", "26"],
+            ["ESL in Content Areas III", "35"],
+            ["Contemporary Issues III", "36"],
+            ["Intensive ESL Writing and Language Workshop", "86"],
+            ["Intensive ESL Reading and Conversation II", "88"],
+            ["Basic Composition", "91"],
+            ["Foundations of Critical Reading", "92"],
+            ["Basic Composition II", "93"],
+            ["Readings in the Social Sciences", "96"]
+        ],
+        "FRE": [
+            ["Elementary French I", "101"]
+        ],
+        "FS": [
+            ["Food Studies", "101"],
+            ["Food Studies II: Food, Environment and Justice", "120"],
+            ["Food, Policy and Advocacy", "200"],
+            ["Food Studies Capstone", "230"]
+        ],
+        "FYS": [
+            ["A New York State of Mind: What Makes a City Great", "101"]
+        ],
+        "GD": [
+            ["Introduction to Games", "101"],
+            ["Beyond Games", "102"],
+            ["Game Programming I", "105"],
+            ["Digital Games", "201"],
+            ["Game Programming II", "205"],
+            ["Game Studio", "210"]
+        ],
+        "GERO": [
+            ["Introduction to Gerontology", "101"],
+            ["Therapeutic Recreation in Long Term Care", "102"],
+            ["Health and Aging", "103"],
+            ["Fieldwork with an Older Population", "199"]
+        ],
+        "HIS": [
+            ["Modern World History", "202"],
+            ["United States History: Through the Civil War", "210"],
+            ["United States History: Reconstruction to the Present", "211"],
+            ["U.S. History: Reconstruction to the Present (HONORS)", "211H"]
+        ],
+        "HLT": [
+            ["Interpersonal Relations and Teamwork", "103"],
+            ["Introduction to Community Health Education", "110"],
+            ["Health and the Young Child", "111"],
+            ["Medical Terminology", "124"],
+            ["Bilingual Issues", "212"],
+            ["Substance Use and Abuse", "214"],
+            ["Nutrition", "215"],
+            ["Contemporary Health Issues", "220"],
+            ["Field Experience", "299"]
+        ],
+        "HUM": [
+            ["Introduction to Global Humanities", "100"]
+        ],
+        "ITA": [
+            ["Elementary Italian I", "101"],
+            ["Elementary Italian II", "102"]
+        ],
+        "LAC": [
+            ["The Latino Experience in the United States", "101"],
+            ["History of the Caribbean", "108"],
+            ["Caribbean Society and Culture", "118"],
+            ["Hispanics Migrations to the United States", "132"],
+            ["Latin American Film and Literature", "202"],
+            ["Latina/Latino Literature in the United States", "246"]
+        ],
+        "LAW": [
+            ["Law and Social Change", "101"],
+            ["Immigration Law", "125"],
+            ["Criminal Law", "150"],
+            ["Law and Evidence", "202"]
+        ],
+        "LEG": [
+            ["Law Office Organization", "102"],
+            ["Legal Writing", "131"],
+            ["Hearing and Trial Advocacy", "250"]
+        ],
+        "LIN": [
+            ["Introduction to Linguistics", "100"],
+            ["Introduction to Comparative Analysis: English and Spanish", "101"],
+            ["Bilingualism", "102"],
+            ["Language Acquisition", "103"]
+        ],
+        "MAT": [
+            ["Basic Mathematics Skills", "10"],
+            ["Intensive Integrated Arithmetic/Algebra", "15"],
+            ["Algebra Supplement for Quantitative Reasoning", "16"],
+            ["Algebra Supplement for Introduction to Probability and Statistics for Non-STEM Majors", "19"],
+            ["Elementary Algebra", "20"],
+            ["Elementary Algebra for STEM", "25"],
+            ["Introduction to College Mathematics", "100"],
+            ["Mathematics for Allied Health Sciences", "105"],
+            ["Quantitative Reasoning", "115SI"],
+            ["Introduction to Probability and Statistics", "119"],
+            ["Computer Literacy", "130"],
+            ["College Algebra with Trigonometric Functions", "150"],
+            ["Precalculus", "160"],
+            ["Calculus I", "210"],
+            ["Linear Algebra", "217"],
+            ["Calculus II", "220"],
+            ["Calculus III", "310"],
+            ["Linear Algebra with Vector Analysis", "320"],
+            ["Ordinary Differential Equations", "360"]
+        ],
+        "MUS": [
+            ["Fundamentals of Music Theory at the Keyboard", "101"],
+            ["Music Theory & Ear Training I", "102"]
+        ],
+        "NUR": [
+            ["Clinical Nursing II", "120"],
+            ["Fundamentals of Nursing Practice", "216"],
+            ["Pharmacology", "220"],
+            ["Nursing Care of the Childbearing Family I", "227"],
+            ["Nursing Care of the Childrearing Family II", "228"],
+            ["Nursing Care of the Client with Mental Illness", "316"],
+            ["Nursing Care of the Adult I", "317"],
+            ["Nursing Trends and Issues", "320"],
+            ["Nursing Care of the Adult II", "326"]
+        ],
+        "OT": [
+            ["Computer Keyboarding and Document Formatting I", "101"],
+            ["Computer Keyboarding and Document Formatting II", "102"],
+            ["Introduction to Computer Software Packages", "103"],
+            ["Office Systems and Procedures", "104"],
+            ["Electronic Health Records", "105"],
+            ["Medical Billing and Insurance", "206"],
+            ["Medical Office Procedures", "209"],
+            ["Medical Coding/Billing and Insurance II", "210"]
+        ],
+        "PED": [
+            ["Personal Physical Fitness", "100"],
+            ["Beginning Yoga", "139"],
+            ["Independent Study", "144"],
+            ["Principles and Foundations of Physical Education, Exercise Science, & Sport", "201"]
+        ],
+        "PHI": [
+            ["Thinking and Reasoning", "101"]
+        ],
+        "PHY": [
+            ["General Physics I", "210"],
+            ["General Physics II", "220"]
+        ],
+        "POL": [
+            ["American Government", "101"]
+        ],
+        "PPA": [
+            ["Fundamentals of Public Administration and Management", "101"],
+            ["Federal Administration", "111"],
+            ["Unions and Labor", "120"]
+        ],
+        "PSY": [
+            ["General Psychology", "101"],
+            ["Life-Span Development of Behavior", "110"],
+            ["Educational Psychology", "115"],
+            ["Developmental Psychology I (Childhood)", "120"],
+            ["Psychology of Women", "140"],
+            ["Abnormal Psychology", "142"],
+            ["Personality", "144"]
+        ],
+        "SOC": [
+            ["Introduction to Sociology", "101"],
+            ["Sociology of Social Problems", "105"],
+            ["Sociology of Race and Ethnic Relations", "140"],
+            ["Criminology", "150"]
+        ],
+        "SPA": [
+            ["Elementary Spanish I", "101"],
+            ["Elementary Spanish II", "102"],
+            ["Spanish for English Dominant Hispanics I", "117"],
+            ["Spanish Composition I", "121"],
+            ["Basic Spanish Composition II", "222"]
+        ],
+        "SW": [
+            ["Introduction to Social Work", "101"],
+            ["Social Work Practice", "150"]
+        ],
+        "VPA": [
+            ["Painting and Drawing I", "121"],
+            ["Painting and Drawing II", "122"],
+            ["Digital Photography I", "133"],
+            ["Digital Photography 2", "134"],
+            ["Music Appreciation", "141"],
+            ["Introduction to Theatre", "171"],
+            ["Introduction to Film & TV", "174"],
+            ["Acting I", "181"],
+            ["Acting I (HONORS)", "181H"],
+            ["Speaking and Listening", "191"],
+            ["Fundamentals of Public Speaking", "192"],
+            ["Acting II", "281"]
+        ],
+        "WGS": [
+            ["Women's and Gender Studies", "100"]
+        ],
+        "XRA": [
+            ["Radiography II & Lab", "120"],
+            ["Radiologic Science II & Lab", "121"],
+            ["Radiation Protection", "122"],
+            ["Radiographic Anatomy II", "123"],
+            ["Contrast Media", "124"],
+            ["Clinical Radiography I", "129"],
+            ["Pathology", "220"],
+            ["Advanced Procedures II", "221"],
+            ["Applied Quality Assurance", "222"],
+            ["Clincial Radiography IV", "229"]
+        ]
+    }
+}
