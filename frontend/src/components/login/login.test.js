@@ -2,7 +2,6 @@ import React from 'react';
 import * as enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { shallow } from 'enzyme';
-
 import { Login } from './login';
 
 enzyme.configure({ adapter: new Adapter() });
@@ -14,6 +13,7 @@ describe('Login Component', () => {
 })
 
 it('renders a email input', () => {
+	const wrapper = shallow(<Login />);
 	expect(shallow(<Login />).find('#email').length).toEqual(1)
 })
 

@@ -1,74 +1,100 @@
-.Form {
-    background-color: #4b58a7;
-    width: 35%;
-    margin: 130px auto;
-    text-align: center;
-    font-size: normal;
-    box-shadow: 0px 0px 8px 0px rgba(10, 10, 10, 0.75);
+body {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #1a1a1b;
+    font-family: Raleway;
+}
+
+.Container {
+    box-sizing: border-box;
+}
+
+.PageColumns {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    overflow-x: hidden;
+    min-height: 100vh;
 }
 
-.Login {
-    height: 70px;
-    background-color: #282e78;
-    color: white;
-    font-size: x-large;
-    letter-spacing: 1.5px;
-    vertical-align: middle;
+.PageColumn_left {
+    width: 156px;
 }
 
-.TextField {
-    background-color: white;
-    width: 85%;
-    height: 50px;
+.Art {
+    background-image: url('../../images/sideImg.png');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.Button {
-    background-color: #969cce;
-    width: 85%;
-    height: 45px;
-    margin: 20px auto; 
-    border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+.PageColumn_right {
+    width: 156px;
+}
+
+.ColumnContainer {
+    padding: 0 24px 24px 24px;
+    min-width: 320px;
+    max-width: 440px;
+}
+
+.Icon {
+    width: 60px;
+    height: 60px;
+}
+
+.Title {
     font-size: 20px;
-    cursor:pointer;
-    overflow: hidden;
+    font-weight: 500;
+    line-height: 22px;
+    margin: 20px 0;
+    font-weight: 700;
 }
 
-.RegisterButton {
-    background-color: Transparent;
-    background-repeat:no-repeat;
-		width: 85%;
-    border: none;
-    cursor:pointer;
-    overflow: hidden;
-    outline:none;
-    font-size: middle;
+.Form {
+    box-sizing: border-box;
 }
 
-.Outer {
-    padding: 30px 10px;
+.TextField input {
+    height: 14px;
 }
 
-
-@media (min-width: 300px) and (min-height: 200px) {
-    .Form {
-        width: 300px;
-    }
+.Submit {
+    width: 50%;
+    height: 30px;
+    background-color: rgba(63, 81, 181, 0.8);
+    color: white;
+    margin: 12px 0 25px 0;
+    font-size: 16px;
 }
 
-@media (min-width: 400px) and (min-height: 301px) {
-    .Form {
-        width: 400px;
-    }
+.Signup {
+    font-weight: bold;
+    color:  rgba(63, 81, 181, 0.8);
+    font-size: 14px; 
+    text-decoration: none
 }
 
-@media (min-width: 1000px) and (min-height: 700px) {
-    .Form {
-        width: 35%;
-    }
+a:hover {
+    color: rgba(92, 107, 192, 0.8)
 }
+
+span {
+    font-weight: 600;
+    font-size: 16px;
+} 
+
+
+
+
+
+
+
+
+
+
+
