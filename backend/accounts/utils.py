@@ -1,5 +1,5 @@
 from django.core.mail import send_mail
-from .models import Student
+from .models import Account
 from django.db.models import signals
 from os import getenv
 from django.conf import settings
@@ -27,12 +27,12 @@ def create_auth_token(sender, instance=None, created=False, **kwargs):
         auth_token.objects.create(user=instance)
 
 
-@receiver(signals.post_save, sender=Student)
+@receiver(signals.post_save, sender=Account)
 def send_confirmation_email(sender, instance=None, created=False, **kwargs):
     if not created:
         return
     if not (ENV.CONFIRM_EMAIL):
-        User.objects.filter(student_profile=instance).update(is_active=True)
+        User.objects.filter(account=instance).update(is_active=True)
         return
 
     message = f'Hi {str(instance.user.first_name)}, \n'
