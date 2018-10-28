@@ -28,6 +28,8 @@ export function Header({
 		<AppBar position='static' >
 			<Toolbar>
 				<Typography	
+                    component={Link}
+                    to ="/"
 					className={classes.title}
 					variant='headline'
 					color='inherit'>
