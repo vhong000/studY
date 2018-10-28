@@ -3,9 +3,9 @@ from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
 from django.contrib.auth.models import User
-from users.models import Student
+from accounts.models import Account
 from rest_framework.authtoken.models import Token as REST_Token
-import json
+# import json
 
 
 class SignupTest(APITestCase):
@@ -22,7 +22,7 @@ class SignupTest(APITestCase):
             "last_name": "Doe",
             "email": "jdoe000@cuny.edu",
             "password": "password123",
-            "school": "CCNY",
+            # "school": "CCNY",
             "major": "cs",
             "year": "6"
         }
@@ -31,7 +31,7 @@ class SignupTest(APITestCase):
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(User.objects.count(), 1)
         self.assertEqual(User.objects.get().username, 'jdoe01')
-        self.assertEqual(Student.objects.get().user_profile, User.objects.get())
+        self.assertEqual(Account.objects.get().owner, User.objects.get())
 
 
 class TokenAuthTest(APITestCase):
