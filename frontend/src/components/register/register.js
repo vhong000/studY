@@ -7,7 +7,7 @@ import icon from '../../images/icon.png'
 // more components at https://material-ui.com/getting-started/usage/
 
 import { connect } from 'react-redux';
-import { registerUser } from '../../actions/authActions';
+import { registerUser } from '../../actions/authActions/authActions';
 // import classes from './register.module.css';
 
 export class Register extends Component {
