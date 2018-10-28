@@ -5,7 +5,6 @@ import {
   USER_REGISTER_FAILURE, USER_REGISTER_REQUEST, USER_REGISTER_SUCCESS,
   USER_LOGOUT,
 } from './ActionTypes';
-import { BrowserRouter } from 'react-router-dom';
 
 // LOGIN USER
 export const loginUser = (user, history) => dispatch => {
@@ -21,9 +20,7 @@ export const loginUser = (user, history) => dispatch => {
     dispatch({ type: AUTH_TOKEN_REQUEST })
     if (response.status !== 200) {
       return Promise.reject({ message: "Unable to Login" });
-    } else { 
-      return response.json(); 
-    }
+    } else { return response.json(); }
   }).then(result => { 
     history.push('/');
     localStorage.setItem('token', result.token);
@@ -31,7 +28,7 @@ export const loginUser = (user, history) => dispatch => {
       dispatch({
         type: AUTH_TOKEN_SUCCESS,
         payload: result,
-      }),
+      })
     )
   }).catch(error => 
     dispatch({
