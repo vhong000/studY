@@ -1,4 +1,3 @@
-
 .main_div {
   margin-top: 50px;
   text-align: center;
@@ -6,4 +5,107 @@
 
 .main_form {
   margin-top: 20px,
+}
+
+body {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    color: #1a1a1b;
+    font-family: Raleway;
+}
+
+.Container {
+    box-sizing: border-box;
+}
+
+.PageColumns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+.PageColumn_left {
+    width: 156px;
+}
+
+.Art {
+    background-image: url('../../images/sideImg.png');
+    height: 100vh;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.PageColumn_right {
+    width: 156px;
+}
+
+.ColumnContainer {
+    padding: 0 24px 24px 24px;
+    min-width: 440px;
+    max-width: 440px;
+}
+
+.Icon {
+    width: 60px;
+    height: 60px;
+}
+
+.Title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 22px;
+    margin: 20px 0;
+    font-weight: 700;
+}
+
+.Form {
+    box-sizing: border-box;
+}
+
+.TextField input {
+    height: 10px;
+}
+
+.Submit {
+    width: 50%;
+    height: 30px;
+    background-color: rgba(63, 81, 181, 0.8);
+    color: white;
+    margin: 12px 0 25px 0;
+    font-size: 16px;
+}
+
+.Signin {
+    font-weight: bold;
+    color:  rgba(63, 81, 181, 0.8);
+    font-size: 14px; 
+    text-decoration: none
+}
+
+a:hover {
+    color: rgba(92, 107, 192, 0.8)
+}
+
+span {
+    font-weight: 600;
+    font-size: 16px;
+} 
+
+.Text1 {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.Text2 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 0;
 }
