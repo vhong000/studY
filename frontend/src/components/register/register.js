@@ -49,6 +49,7 @@ export class Register extends Component {
 	handleSubmit(event) { // submit user state as json body
 		event.preventDefault();
 		const { applicant, emailError } = this.state;
+		const { history } = this.props;
 		const final = applicant;
 
 		const required = {
@@ -61,7 +62,7 @@ export class Register extends Component {
 
 		const isComplete = !Object.values(required).every(x => (x === ''));
 		if (isComplete && !emailError) {
-			this.props.registerUser(final);
+			this.props.registerUser(final, history);
 
 		} else {
 			this.setState({ openAlert: true })
