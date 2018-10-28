@@ -35,10 +35,12 @@ class EventListCard extends Component {
     }
 
     render() {
-        const { classes, event } = this.props;
+        const { classes, event, params } = this.props;
         const bull = <span className={classes.bullet}>•</span>;
         return (
             <Card className={classes.card}>
+            <CardActionArea component={Link}
+                to={`/${params.category}/${params.subtopic}/${event.id}`}>
                 <Grid className={classes.main_grid} container sm={12}>
                     <Grid item sm={3}>
                         <CardContent>
@@ -62,7 +64,6 @@ class EventListCard extends Component {
                         </CardContent>
                     </Grid>
                 </Grid>
-                <CardActionArea>
                 </CardActionArea>
             </Card>
         )

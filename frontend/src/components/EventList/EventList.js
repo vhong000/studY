@@ -38,7 +38,7 @@ class EventList extends Component {
 
     render() {
         const { listofevents } = this.props;
-        console.log("Eventlist[0]", listofevents);
+        console.log("Eventlist[0]", this.props);
 
         const renderEventCardGrid = () => {
 
@@ -59,7 +59,7 @@ class EventList extends Component {
             const events = eventArray.map((event) =>
                 <div className={classNames(classes.column, classes.helper)}>
                     <Grid className={classes.item_grid} item >
-                        <EventListCard event={event} />
+                        <EventListCard event={event} params={this.props.params} />
                     </Grid>
                 </div>
             );
