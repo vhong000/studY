@@ -6,6 +6,7 @@ import {
 	CardActionArea,
 } from '@material-ui/core';
 import './App.css';
+import Banner from './components/banner/banner'
 
 import { 
 	math, science, history, art, literature, language,
@@ -38,7 +39,7 @@ const topics = [
 	},
 ]
 
-const styles = {
+const styles = theme => ({
 	main_grid: {
 		"margin-top": 20,
 	},
@@ -46,25 +47,27 @@ const styles = {
 	},
 	media: {
 		height: 200,
-	}
-}
+	},
+})
 
 class App extends Component {
   render() {
 		const { classes } = this.props;
     return (
 			<div className='App'>
-
+				<div className='banner-container'>
+					<Banner />
+				</div>
 				<Grid className={classes.main_grid} container justify='center' >
 					<Grid 
 						className={classes.topics_grid}
 						container item
-						xs='6'
+						xs='8'
 						spacing='24'
 					>
 						{topics.map((topic) => {
 							return (
-								<Grid item xs='6' >
+								<Grid item xs='12' md='6' lg='4' >
 									<Card className={classes.card}>
 										<CardActionArea
 											component={Link}
