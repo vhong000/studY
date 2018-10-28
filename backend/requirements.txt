@@ -4,3 +4,4 @@ Markdown==3.0.1
 uwsgi==2.0.17
 coverage==4.5.1
 django-filter==2.0.0
+drf-extensions==0.4.0
