@@ -8,6 +8,7 @@ import icon from '../../images/icon.png'
 
 import { connect } from 'react-redux';
 import { registerUser } from '../../actions/authActions/authActions';
+import { fetchSchools } from '../../actions/eventActions/eventActions';
 // import classes from './register.module.css';
 
 export class Register extends Component {
@@ -31,6 +32,10 @@ export class Register extends Component {
 		this.handleEmailChange = this.handleEmailChange.bind(this)
 		this.handleSubmit = this.handleSubmit.bind(this)
 		this.handleAlertClose = this.handleAlertClose.bind(this)
+	}
+
+	componentDidMount() {
+		this.props.fetchSchools();
 	}
 
 	handleChange(event) { // update state on input change
@@ -178,4 +183,4 @@ export class Register extends Component {
 
 const mapStateToProps = state => {};
 
-export default connect(mapStateToProps,{ registerUser })(Register);
+export default connect(mapStateToProps,{ registerUser, fetchSchools })(Register);
