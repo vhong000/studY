@@ -4,3 +4,4 @@ export { default as Register } from './register/register';
 export { default as EventForm } from './eventForm/eventForm';
 export { default as EventList } from './EventList/EventList';
 export { default as EventListCard } from './EventList/EventListCard';
+export { default as EventHomePage } from './EventHomePage/EventHomePage';

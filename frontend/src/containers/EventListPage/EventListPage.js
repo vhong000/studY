@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
 import { Header, EventList } from '../../components';
-import {
-
-    Typography, withStyles,
-    Button, Toolbar, Divider
-} from '@material-ui/core';
 
 
 class EventListPage extends Component {

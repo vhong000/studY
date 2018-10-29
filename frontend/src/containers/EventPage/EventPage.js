@@ -1,15 +1,23 @@
 import React, { Component } from 'react';
-import { EventList } from '../../components';
+import { EventList, EventHomePage } from '../../components';
 
 class EventPage extends Component {
+    constructor(props){
+        super(props);
+        this.state ={
+            dataLoaded:false
+        }
+    }
 
 
+
+    componentWillMount(){
+        //here check if information is available
+    }
     render() {
-        const { classes } = this.props;
-
         return (
             <div>
-                EventPage container
+                <EventHomePage/>
             </div>
         )
     }
