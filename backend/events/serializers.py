@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Event, School, Topic, Course
+from .models import Event, School, Topic, Course, Category
 from accounts.serializers import AccountSerializer
 from accounts.models import Account
 
@@ -13,7 +13,15 @@ class SchoolSerializer(serializers.ModelSerializer):
 class TopicSerializer(serializers.ModelSerializer):
     class Meta:
         model = Topic
-        fields = ('id', 'category', 'name')
+        fields = ('__all__')
+
+
+class CategorySerializer(serializers.ModelSerializer):
+    topics = TopicSerializer(read_only=True, many=True)
+
+    class Meta:
+        model = Category
+        fields = ('__all__')
 
 
 class EventSerializer(serializers.ModelSerializer):
