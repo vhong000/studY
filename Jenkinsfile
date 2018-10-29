@@ -26,6 +26,7 @@ pipeline {
         sh '''
         . .venv/bin/activate
         cd backend
+        rm */migrations/0*.py
         ./manage.py makemigrations && ./manage.py migrate
         coverage run --source='.' manage.py test --noinput
         coverage xml
