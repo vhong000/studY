@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, TextField, withStyles, Grid, Snackbar, Typography,
-	Select, OutlinedInput, MenuItem, Menu,
+	Select, OutlinedInput, MenuItem, InputLabel, FormControl
 } from '@material-ui/core';
 import { Field, reduxForm } from 'redux-form';
 import propTypes from 'prop-types';
@@ -40,54 +40,50 @@ import { registerUser } from '../../actions/authActions/authActions';
 	// 	}
 
 	// }
-
-	// handleEmailChange(event) {
-	// 	const currEmail = event.target.value;
-	// 	const isValid = !(currEmail.includes('.cuny.edu'));
-	// 	this.setState({
-	// 		applicant: {
-	// 			...this.state.applicant,
-	// 			email: event.target.value,
-	// 		},
-	// 		emailError: isValid,
-	// 	})
-	// }
+// }
 
 const validate = values => {
 	const errors = {};
 
-	if (!values.email) {
-		errors.email = 'Required'
+	if (values.email && !values.email.includes('.cuny.edu')) {
+		errors.email = 'CUNY email required';
 	}
+	return errors;
 }
 
 const inputField = ({ 
 	input, children, id, 
 	label, type, variant,
-	placeholder,
+	placeholder, meta: { error },
+	required
 }) => (
 	<TextField InputProps={{className: classes.TextField}}
 		id={id} label={label} type={type}
 		variant={variant} {...input}
 		placeholder={placeholder}
-		children={children}
-		fullWidth required
+		children={children} required={required}
+		fullWidth error={error}
+		helperText={<span>{error}</span>}
 	/>
 )
 
 const selectField = ({
 	input, children, id,
-	label,
+	label, variant
 }) => (
+<FormControl fullWidth >
+	<InputLabel required variant={variant} >{label}</InputLabel>
 	<Select 
 	children={children}
+	id={id}
 	{...input}
-	input={<OutlinedInput margin='dense' {...input} name={label} />}
-	fullWidth />
+	input={<OutlinedInput margin='dense' />}
+	/>
+</FormControl>
 )
 
 export const Register = props => {
-	const { schools } = props;
+	const { schools, submitting, pristine } = props;
 	return (
 		<div className={classes.Container}>
 			<div className={classes.PageColumns}>
@@ -115,6 +111,7 @@ export const Register = props => {
 											id='first_name'
 											type='text'
 											variant='outlined'
+											required
 											component={inputField} />
 										</Grid>
 										<Grid item xs='6'>
@@ -124,6 +121,7 @@ export const Register = props => {
 											label='Last' 
 											type='text'
 											variant='outlined' 
+											required
 											component={inputField} />
 										</Grid>
 									</Grid>
@@ -134,6 +132,7 @@ export const Register = props => {
 											label='E-mail'
 											type='email'
 											variant='outlined'
+											required
 											component={inputField} />
 									</Grid>
 									<Grid item >
@@ -143,6 +142,7 @@ export const Register = props => {
 											label='Password'
 											type='password'
 											variant='outlined'
+											required
 											component={inputField} />
 									</Grid>
 									<Grid container item direction='row' spacing='16'>
@@ -153,6 +153,7 @@ export const Register = props => {
 											label='School' 
 											type='text'
 											variant='outlined'
+											required
 											component={selectField}>
 												{schools ? (
 													schools.map((school) => (
@@ -173,7 +174,10 @@ export const Register = props => {
 									</Grid>
 								</Grid>
 								<Grid item>
-								<button type="submit" className={classes.Submit} >SIGN UP</button>
+								<button 
+								type="submit"
+								disabled={submitting || pristine}
+								className={classes.Submit} >SIGN UP</button>
 								</Grid>
 							</Grid>
 						</Grid>
