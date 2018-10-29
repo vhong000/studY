@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { Button, TextField, withStyles, Grid, Snackbar, Typography
+import { Button, TextField, withStyles, Grid, Snackbar, Typography,
+	Select, OutlinedInput, MenuItem, Menu,
 } from '@material-ui/core';
 import { Field, reduxForm } from 'redux-form';
+import propTypes from 'prop-types';
 
 import classes from './register.module.css';
 import icon from '../../images/icon.png'
@@ -59,7 +61,6 @@ const validate = values => {
 	}
 }
 
-
 const inputField = ({ 
 	input, children, id, 
 	label, type, variant,
@@ -74,7 +75,19 @@ const inputField = ({
 	/>
 )
 
+const selectField = ({
+	input, children, id,
+	label,
+}) => (
+	<Select 
+	children={children}
+	{...input}
+	input={<OutlinedInput margin='dense' {...input} name={label} />}
+	fullWidth />
+)
+
 export const Register = props => {
+	const { schools } = props;
 	return (
 		<div className={classes.Container}>
 			<div className={classes.PageColumns}>
@@ -140,8 +153,14 @@ export const Register = props => {
 											label='School' 
 											type='text'
 											variant='outlined'
-											placeholder="eg. City College"
-											component={inputField} />
+											component={selectField}>
+												{schools ? (
+													schools.map((school) => (
+													<MenuItem value={school.id}>{school.code}</MenuItem>
+												))) : (
+													<p>loading</p>
+												)}
+											</Field>
 										</Grid>
 									<Grid item xs='4'>
 											<Field 
@@ -150,7 +169,6 @@ export const Register = props => {
 											label='Major' 
 											type='text'
 											variant='outlined'
-											placeholder="eg. Computer Science" 
 											component={inputField} />
 									</Grid>
 								</Grid>
@@ -174,6 +192,10 @@ export const Register = props => {
 		</div>
 	</div>
 	)
+}
+
+Register.propTypes = {
+	schools: propTypes.array.isRequired,
 }
 
 export default reduxForm({
