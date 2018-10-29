@@ -21,15 +21,31 @@ class Wrapper extends Component  {
 }
 
 function mapStateToProps(state) {
+  const selector = formValueSelector('registerForm');
+  const {
+    firstName, lastName, email,
+    password, school, major,
+  } = selector(state,
+    'firstName', 'lastName', 'email',
+    'password', 'school', 'major'
+  );
   return {
     schools: state.Event.allSchools.results,
+    applicant: {
+      first_name: firstName, 
+      last_name: lastName, 
+      email: email,
+      password: password, 
+      school: school, 
+      major: major,
+    }
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
     dispatch,
-    onSubmit(newUser) { dispatch(registerUser(newUser)); }
+    onSubmit(newUser, history) { dispatch(registerUser(newUser, history)); }
   }
 }
 

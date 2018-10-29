@@ -63,7 +63,6 @@ const inputField = ({
 		placeholder={placeholder}
 		children={children} required={required}
 		fullWidth error={error}
-		helperText={<span>{error}</span>}
 	/>
 )
 
@@ -83,7 +82,14 @@ const selectField = ({
 )
 
 export const Register = props => {
-	const { schools, submitting, pristine } = props;
+	const { onSubmit, schools, applicant,
+		 submitting, pristine, history
+	} = props;
+	function handleSubmit(event) {
+		event.preventDefault();
+		onSubmit(applicant, history)
+	}
+
 	return (
 		<div className={classes.Container}>
 			<div className={classes.PageColumns}>
@@ -100,6 +106,7 @@ export const Register = props => {
 						<p className={classes.Text2}>Sign up in just seconds.</p>
 						<form className={classes.Form} 
 								id="main_form"
+								onSubmit={handleSubmit}
 								>
 							<Grid container justify='flex-start' >
 								<Grid container direction='column' xs='12' spacing='8' >
@@ -200,6 +207,11 @@ export const Register = props => {
 
 Register.propTypes = {
 	schools: propTypes.array.isRequired,
+	applicant: propTypes.object,
+}
+
+Register.defaultProps = {
+	applicant: {}
 }
 
 export default reduxForm({
