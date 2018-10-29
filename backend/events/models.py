@@ -27,9 +27,17 @@ class Course(models.Model):
         db_table = 'courses'
 
 
+class Category(models.Model):
+    name = models.CharField(max_length=50)
+
+    class Meta:
+        db_table = 'categories'
+
+
 class Topic(models.Model):
     name = models.CharField(max_length=50)
-    category = models.CharField(max_length=50)
+    category = models.ForeignKey(
+        Category, on_delete=models.SET_NULL, related_name='topics', null=True)
 
     class Meta:
         db_table = 'topics'
