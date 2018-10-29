@@ -1,15 +1,16 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { reduxForm, formValueSelector } from 'redux-form';
 
-import { Register } from '../components';
+import { Register } from '../../components';
 import { registerUser } from '../../actions/authActions/authActions';
 import { fetchSchools } from '../../actions/eventActions/eventActions';
 
 class Wrapper extends Component  {
 
   componentDidMount() {
-    this.props.dispatch(fetchSchools); 
+    this.props.dispatch(fetchSchools()); 
   }
 
   render() {
@@ -35,4 +36,6 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Wrapper);
+)(reduxForm({
+  form: 'registerForm',
+})(Wrapper));
