@@ -206,12 +206,13 @@ export const Register = props => {
 }
 
 Register.propTypes = {
-	schools: propTypes.array.isRequired,
+	schools: propTypes.array,
 	applicant: propTypes.object,
 }
 
 Register.defaultProps = {
-	applicant: {}
+	applicant: {},
+	schools: [],
 }
 
 export default reduxForm({
