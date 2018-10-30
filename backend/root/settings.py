@@ -16,7 +16,7 @@ ALLOWED_HOSTS = TRUSTED_ORIGINS
 INTERNAL_IPS = TRUSTED_ORIGINS
 CSRF_TRUSTED_ORIGINS = TRUSTED_ORIGINS
 
-AUTHENTICATION_BACKENDS = ['users.utils.CustomEmailAuth']
+AUTHENTICATION_BACKENDS = ['accounts.utils.CustomEmailAuth']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -25,10 +25,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'users',
+    'accounts',
     'events',
     'rest_framework',
     'rest_framework.authtoken',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -47,8 +48,12 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework.authentication.TokenAuthentication',
         'rest_framework.authentication.BasicAuthentication',
-    )
+    ),
+    'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',),
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 50
 }
+
 
 ROOT_URLCONF = 'root.urls'
 

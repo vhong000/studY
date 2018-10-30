@@ -7,7 +7,7 @@ import {
 } from './ActionTypes';
 
 // LOGIN USER
-export const loginUser = (user) => dispatch => {
+export const loginUser = (user, history) => dispatch => {
   return fetch("/api/auth/login", {
     method: "POST",
 		headers: {
@@ -22,6 +22,7 @@ export const loginUser = (user) => dispatch => {
       return Promise.reject({ message: "Unable to Login" });
     } else { return response.json(); }
   }).then(result => { 
+    history.push('/');
     localStorage.setItem('token', result.token);
     dispatch(getUserData(result.token)).then(
       dispatch({
@@ -70,22 +71,26 @@ export const logoutUser = () => dispatch => {
 }
 
 // REGISTER USER
-export const registerUser = (newUser) => dispatch => {
+export const registerUser = (newUser, history) => dispatch => {
   return fetch("/api/auth/signup", {
     method: "POST",
-    mode: "no-cors",
-		headers: { 'Content-Type': 'application/json' },
+		headers: {
+      'Content-Type': 'application/json', 
+      "Access-Control-Allow-Origin": '*'
+    },
 		body: JSON.stringify(newUser),
 	}).then((response) => {
     dispatch({ type: USER_REGISTER_REQUEST })
     if (response.status !== 201) {
       return Promise.reject({ message: "Unable to Register" });
     } else { return response.json(); }
-  }).then(result =>
+  }).then(result => { 
+    history.push('/');
     dispatch({
       type: USER_REGISTER_SUCCESS,
       payload: result,
     })
+  }
   ).catch(error =>
     dispatch({
       type: USER_REGISTER_FAILURE,

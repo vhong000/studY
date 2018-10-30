@@ -1,11 +1,10 @@
 from django.db import models
-from users.models import Student
+from accounts.models import Account
 
 
 class School(models.Model):
     name = models.CharField(max_length=100)
     code = models.CharField(max_length=10)
-    # students = models.ManyToManyField(Student, related_name='school')
 
     def __str__(self):
         return f'{self.name.title()} - {self.code}'
@@ -18,7 +17,8 @@ class Course(models.Model):
     name = models.CharField(max_length=100)
     number = models.PositiveSmallIntegerField()
     dept = models.CharField(max_length=5)
-    school = models.ForeignKey(School, on_delete=models.CASCADE, related_name='courses', null=True)
+    school = models.ForeignKey(School, on_delete=models.CASCADE,
+                               related_name='courses', null=True)
 
     def __str___(self):
         return f'{self.name.title()} - {self.dept.upper()} {self.number}'
@@ -27,9 +27,17 @@ class Course(models.Model):
         db_table = 'courses'
 
 
+class Category(models.Model):
+    name = models.CharField(max_length=50)
+
+    class Meta:
+        db_table = 'categories'
+
+
 class Topic(models.Model):
     name = models.CharField(max_length=50)
-    category = models.CharField(max_length=50)
+    category = models.ForeignKey(
+        Category, on_delete=models.SET_NULL, related_name='topics', null=True)
 
     class Meta:
         db_table = 'topics'
@@ -39,12 +47,17 @@ class Topic(models.Model):
 
 
 class Event(models.Model):
-    title = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
     description = models.CharField(max_length=1000)
     time = models.DateTimeField()
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
-    organizer = models.ForeignKey(Student, on_delete=models.SET_NULL, null=True)
-    guests = models.ManyToManyField(Student, related_name='events')
+    organizer = models.ForeignKey(Account, on_delete=models.SET_NULL, null=True)
+    attendees = models.ManyToManyField(Account, related_name='events')
+    created = models.DateTimeField(auto_now=False, auto_now_add=True)
+    campus = models.ForeignKey(School, on_delete=models.CASCADE,
+                               related_name='events', null=True)
+    location = models.CharField(max_length=100, default='')
+    capacity = models.PositiveSmallIntegerField()
 
     class Meta:
         db_table = 'events'

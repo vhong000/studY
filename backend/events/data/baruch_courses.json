@@ -1,0 +1,3443 @@
+{
+    "name": "Baruch College",
+    "code": "Baruch",
+    "url": "https://www.coursicle.com/baruchcuny/",
+    "courses": {
+        "AAS": [
+            [
+                "Classical Buddhism",
+                "2165"
+            ],
+            [
+                "The Tradition of Islam",
+                "3540"
+            ],
+            [
+                "Capstone Course: Critical Issues in Asian and Asian American Studies",
+                "4900"
+            ],
+            [
+                "Critical Approaches to Japanese Popular Culture",
+                "4906"
+            ]
+        ],
+        "ACC": [
+            [
+                "Principles of Accounting",
+                "2101"
+            ],
+            [
+                "Principles of Managerial Accounting for Non-accounting Majors",
+                "2203"
+            ],
+            [
+                "Financial Accounting I",
+                "3000"
+            ],
+            [
+                "Financial Accounting II",
+                "3100"
+            ],
+            [
+                "Cost Accounting",
+                "3200"
+            ],
+            [
+                "Accounting Information Systems",
+                "3202"
+            ],
+            [
+                "Financial Accounting III",
+                "4100"
+            ],
+            [
+                "Accounting Internship",
+                "5100"
+            ],
+            [
+                "Principles of Auditing",
+                "5400"
+            ],
+            [
+                "Financial Reporting",
+                "9110"
+            ],
+            [
+                "Intermediate Financial Accounting",
+                "9804"
+            ],
+            [
+                "Advanced Financial Accounting",
+                "9805"
+            ],
+            [
+                "Financial Statement Analysis and Reporting",
+                "9806"
+            ],
+            [
+                "Auditing and Accounting Information Systems",
+                "9818"
+            ],
+            [
+                "Auditing",
+                "9821"
+            ],
+            [
+                "Special Topics in Accountancy",
+                "9993"
+            ]
+        ],
+        "ANT": [
+            [
+                "Introduction to Cultural Anthropology",
+                "1001"
+            ],
+            [
+                "Honors - Introduction to Anthropology",
+                "1001H"
+            ],
+            [
+                "Cuban Culture and Society",
+                "3015"
+            ],
+            [
+                "Anthropology of Business",
+                "3020"
+            ],
+            [
+                "The U.S. and Mexican Border",
+                "3021"
+            ],
+            [
+                "World Regional Geography",
+                "3036"
+            ],
+            [
+                "Selected Topics in Anthropolgy and Sociology",
+                "3085"
+            ],
+            [
+                "Race and Ethnic Relation",
+                "3125"
+            ],
+            [
+                "Sociological Theory",
+                "4100"
+            ],
+            [
+                "Research Methods in Sociology and Anthropology",
+                "4110"
+            ],
+            [
+                "New York: The Global City",
+                "4400"
+            ]
+        ],
+        "ARB": [
+            [
+                "Elementary Arabic",
+                "1002"
+            ]
+        ],
+        "ART": [
+            [
+                "Introduction to Design and Visual Communication",
+                "1000"
+            ],
+            [
+                "Art History Survey I",
+                "1011"
+            ],
+            [
+                "Art History Survey II",
+                "1012"
+            ],
+            [
+                "Basic Graphic Communication: Design and Advertising Layout",
+                "2050"
+            ],
+            [
+                "Basic Photography",
+                "2060"
+            ],
+            [
+                "Special Topics in Art (Studio)",
+                "3041"
+            ],
+            [
+                "Intermediate Graphic Communication: Layout and Publication Design",
+                "3050"
+            ],
+            [
+                "Graphic Communication: Corporate Design",
+                "3055"
+            ],
+            [
+                "Typography: History and Application",
+                "3056"
+            ],
+            [
+                "Principles of Internet design",
+                "3057"
+            ],
+            [
+                "Graphic Communication: Print Production",
+                "3058"
+            ],
+            [
+                "Animation and Motion Graphics",
+                "3059"
+            ],
+            [
+                "Intermediate Photography",
+                "3060"
+            ],
+            [
+                "Digital Photography",
+                "3061"
+            ],
+            [
+                "Photojournalism",
+                "3064"
+            ],
+            [
+                "History of Modern Architecture",
+                "3256"
+            ],
+            [
+                "Design And Photography In Theaory And Practice",
+                "4900"
+            ],
+            [
+                "Graphic Communication Internship",
+                "5010"
+            ]
+        ],
+        "BIO": [
+            [
+                "Fundamentals of Biology: Human Biology Lecture",
+                "1011L"
+            ],
+            [
+                "Fundamentals of Biology: Human Biology Laboratory",
+                "1012"
+            ],
+            [
+                "Fundamentals of Biology - Genetics, Evolution, and Ecology",
+                "1015L"
+            ],
+            [
+                "Fundamentals of Biology, Laboratory Research in Genetics, Evolution, and Ecology",
+                "1016"
+            ],
+            [
+                "Principles of Biology I",
+                "2010"
+            ],
+            [
+                "Principles of Biology II",
+                "3001"
+            ],
+            [
+                "Molecular and Cellular Biology",
+                "3005"
+            ],
+            [
+                "Principles of Genetics",
+                "3015"
+            ],
+            [
+                "Human Physiology",
+                "4010"
+            ],
+            [
+                "Development Biology",
+                "4015"
+            ]
+        ],
+        "BLS": [
+            [
+                "The Evolution and Expressions of Racism",
+                "1003"
+            ],
+            [
+                "Mass Media and the Black American",
+                "3013"
+            ],
+            [
+                "Black Economic Development: 1860 to the Present",
+                "3015"
+            ],
+            [
+                "Survey of Caribbean Literature in English (Cross-listed with ENG LTT)",
+                "3038"
+            ],
+            [
+                "The Sixties in America",
+                "3055"
+            ],
+            [
+                "African American History",
+                "3060"
+            ],
+            [
+                "Special Topics in Black Studies",
+                "3085"
+            ],
+            [
+                "Race and Ethnic Relation",
+                "3125"
+            ],
+            [
+                "Seminar in Black & Latino Studies",
+                "4900"
+            ],
+            [
+                "Latin America and the Caribbean II: From the 19th Century to the Present",
+                "4901"
+            ],
+            [
+                "Latin America and the Caribbean: Cultures and Societies",
+                "4902"
+            ]
+        ],
+        "BPL": [
+            [
+                "Business Policy",
+                "5100"
+            ],
+            [
+                "Honors - Business Policy",
+                "5100H"
+            ]
+        ],
+        "BUS": [
+            [
+                "Digital Marketing Bootcamp",
+                "1010"
+            ],
+            [
+                "Business Fundamentals: The Contemporary Business Landscape",
+                "1011"
+            ],
+            [
+                "Business Internship",
+                "3001"
+            ],
+            [
+                "Business Internship IV",
+                "3004"
+            ],
+            [
+                "Business Internship V",
+                "3005"
+            ],
+            [
+                "Business Internship VI",
+                "3006"
+            ],
+            [
+                "Honors Special Topics in Business",
+                "4093H"
+            ],
+            [
+                "Financial Reporting and Analysis",
+                "4111H"
+            ],
+            [
+                "Honors Case Studies in Business",
+                "4444H"
+            ],
+            [
+                "Honors Thesis in Business II",
+                "6902H"
+            ],
+            [
+                "Business Communication I",
+                "9551"
+            ],
+            [
+                "Business Communication II: Communicating Quantitative and Technical Information",
+                "9552"
+            ],
+            [
+                "Managerial Skills for Accountancy Professionals",
+                "9557"
+            ],
+            [
+                "Strategic Business Communication",
+                "9558"
+            ],
+            [
+                "Business Consulting",
+                "9601"
+            ],
+            [
+                "Graduate Internship Module I",
+                "9801"
+            ],
+            [
+                "Graduate Internship Module II",
+                "9802"
+            ],
+            [
+                "Graduate Internship Module III",
+                "9803"
+            ],
+            [
+                "Graduate Internships Module IV",
+                "9804"
+            ],
+            [
+                "Graduate Internship I",
+                "9811"
+            ],
+            [
+                "Graduate Internship II",
+                "9812"
+            ],
+            [
+                "Graduate Internship III",
+                "9813"
+            ]
+        ],
+        "CHI": [
+            [
+                "Elementary Chinese I",
+                "1001"
+            ],
+            [
+                "Elementary Chinese II",
+                "1002"
+            ],
+            [
+                "Upper Elementary Chinese I",
+                "2001"
+            ],
+            [
+                "Upper Elementary Chinese II",
+                "2002"
+            ],
+            [
+                "Lower Intermediate Chinese",
+                "3001"
+            ],
+            [
+                "Upper Intermediate Chinese",
+                "3002"
+            ],
+            [
+                "Classical Chinese Literature I",
+                "4181"
+            ],
+            [
+                "Classical Chinese Literature II",
+                "4182"
+            ],
+            [
+                "Chinese Cinema",
+                "4183"
+            ],
+            [
+                "The Contemporary Chinese Short Story",
+                "4224"
+            ],
+            [
+                "Special Studies in Chinese",
+                "4999"
+            ]
+        ],
+        "CHM": [
+            [
+                "Fundamentals of Chemistry",
+                "1003L"
+            ],
+            [
+                "Fundamentals of Chemical Laboratory Techniques",
+                "1004"
+            ],
+            [
+                "Select Topics in Chemistry",
+                "1005"
+            ],
+            [
+                "General Chemistry I",
+                "2003"
+            ],
+            [
+                "General Chemistry II",
+                "3001"
+            ],
+            [
+                "Principles of Organic Chemistry I",
+                "3003"
+            ],
+            [
+                "Principles of Organic Chemistry II",
+                "3006"
+            ],
+            [
+                "Medicinal Chemistry",
+                "4010"
+            ],
+            [
+                "Biochemistry",
+                "4900"
+            ]
+        ],
+        "CIS": [
+            [
+                "Introduction to Information Systems and Technologies",
+                "2200"
+            ],
+            [
+                "Honors - Information Systems Honors",
+                "2200H"
+            ],
+            [
+                "Object-Oriented Programming I",
+                "3100"
+            ],
+            [
+                "Programming for Analytics",
+                "3120"
+            ],
+            [
+                "Computer Ethics",
+                "3270"
+            ],
+            [
+                "Spreadsheet Applications in Business",
+                "3367"
+            ],
+            [
+                "Database Management Systems I",
+                "3400"
+            ],
+            [
+                "e-Business Technologies",
+                "3444"
+            ],
+            [
+                "Networks and Telecommunications I",
+                "3500"
+            ],
+            [
+                "Cybersecurity",
+                "3550"
+            ],
+            [
+                "Principles of Web Design",
+                "3630"
+            ],
+            [
+                "Usability, Privacy and Security",
+                "3770"
+            ],
+            [
+                "Principles of New Media",
+                "3810"
+            ],
+            [
+                "Data Mining for Business Analytics",
+                "3920"
+            ],
+            [
+                "Special Topics in Computer Information Systems",
+                "4093"
+            ],
+            [
+                "Web applications Development",
+                "4160"
+            ],
+            [
+                "Data Visualization",
+                "4170"
+            ],
+            [
+                "Information Technology Audit",
+                "4350"
+            ],
+            [
+                "Data Warehousing for Analytics",
+                "4400"
+            ],
+            [
+                "Systems Analysis and Design",
+                "4800"
+            ],
+            [
+                "Information Technology and Social Responsibility",
+                "4910"
+            ],
+            [
+                "Information Technology Development and Project Management",
+                "5800"
+            ],
+            [
+                "Computer Information Systems Internship",
+                "5900"
+            ],
+            [
+                "Information Technology Strategy",
+                "9000"
+            ],
+            [
+                "Principles of Database Management Systems",
+                "9340"
+            ],
+            [
+                "Networks and Telecommunications",
+                "9350"
+            ],
+            [
+                "Data Warehousing and Analytics",
+                "9440"
+            ],
+            [
+                "E-Business Principles and Technologies",
+                "9444"
+            ],
+            [
+                "Business Modeling with Spreadsheets",
+                "9467"
+            ],
+            [
+                "Information Technology Project Management",
+                "9480"
+            ],
+            [
+                "Risk Management Systems",
+                "9556"
+            ],
+            [
+                "Business Analytics",
+                "9557"
+            ],
+            [
+                "Information Systems Development Project",
+                "9590"
+            ],
+            [
+                "Special Topics in Information Systems Strategy",
+                "9797"
+            ]
+        ],
+        "CMP": [
+            [
+                "Great Works of Literature I",
+                "2800"
+            ],
+            [
+                "Great Works of Literature II",
+                "2850"
+            ],
+            [
+                "Survey of Caribbean Literature in English",
+                "3038"
+            ],
+            [
+                "Critical Approaches to Japanese Popular Culture",
+                "4906"
+            ]
+        ],
+        "COM": [
+            [
+                "Speech Communication",
+                "1010"
+            ],
+            [
+                "Honors Speech Communications",
+                "1010H"
+            ],
+            [
+                "Introduction to Communication Studies",
+                "2000"
+            ],
+            [
+                "Information and Society",
+                "3040"
+            ],
+            [
+                "Communication Law and Free Speech",
+                "3045"
+            ],
+            [
+                "Introduction to Digital Communication and Culture",
+                "3057"
+            ],
+            [
+                "Video Communication and Production",
+                "3059"
+            ],
+            [
+                "Media Analysis and Criticism",
+                "3060"
+            ],
+            [
+                "Studies in Electronic Media",
+                "3062"
+            ],
+            [
+                "Classical Rhetoric",
+                "3064"
+            ],
+            [
+                "Managerial Communication Within Organizations",
+                "3068"
+            ],
+            [
+                "Intercultural Communication",
+                "3069"
+            ],
+            [
+                "Persuasion",
+                "3070"
+            ],
+            [
+                "Argumentation and Debate",
+                "3071"
+            ],
+            [
+                "Elements of Legal Argumentation",
+                "3074"
+            ],
+            [
+                "International Communication",
+                "3076"
+            ],
+            [
+                "Interpersonal Communication",
+                "3077"
+            ],
+            [
+                "Group Communication",
+                "3078"
+            ],
+            [
+                "Gender, Ethnicity, and Race in Communication",
+                "3079"
+            ],
+            [
+                "Virtual Teamwork",
+                "3080"
+            ],
+            [
+                "Organizations in International Development",
+                "3081"
+            ],
+            [
+                "Gender Communication",
+                "3082"
+            ],
+            [
+                "Nonverbal Communication",
+                "3090"
+            ],
+            [
+                "Communication for Executives",
+                "3102"
+            ],
+            [
+                "Contemporary Issues in Digital Media",
+                "3110"
+            ],
+            [
+                "Markets, Media, and Meaning",
+                "3111"
+            ],
+            [
+                "Business Communication",
+                "3150"
+            ],
+            [
+                "Honors - Business Communication",
+                "3150H"
+            ],
+            [
+                "The Structure and History of English",
+                "3750"
+            ],
+            [
+                "Principles of Public Relations",
+                "3800"
+            ],
+            [
+                "Corporate Communication",
+                "4000"
+            ],
+            [
+                "Public Relations Writing",
+                "4005"
+            ],
+            [
+                "Public Relations Campaigns",
+                "4010"
+            ],
+            [
+                "Advanced Video Communication and Production",
+                "4059"
+            ],
+            [
+                "Selected Topics",
+                "4101"
+            ],
+            [
+                "Topics in Communication Studies",
+                "4900"
+            ],
+            [
+                "Conflict Resolution",
+                "4901"
+            ],
+            [
+                "Language and Social Interaction",
+                "4905"
+            ],
+            [
+                "Internship in Business and Public Communication",
+                "5010"
+            ],
+            [
+                "Legal and Ethical Issues in Corporate Communication",
+                "9510"
+            ],
+            [
+                "Qualitative Research Methods",
+                "9640"
+            ],
+            [
+                "Theories of Persuasion",
+                "9651"
+            ],
+            [
+                "Crisis Communication",
+                "9652"
+            ],
+            [
+                "Investor Relations",
+                "9653"
+            ],
+            [
+                "Reputation Mngment",
+                "9658"
+            ],
+            [
+                "Internship in Corporate Communication",
+                "9800"
+            ],
+            [
+                "Masters Thesis In Cc",
+                "9991"
+            ]
+        ],
+        "ECO": [
+            [
+                "Micro-Economics",
+                "1001"
+            ],
+            [
+                "Honors - Micro Economics",
+                "1001H"
+            ],
+            [
+                "Macro-Economics",
+                "1002"
+            ],
+            [
+                "Honors - Macro Economics",
+                "1002H"
+            ],
+            [
+                "Current Economic Problems",
+                "1110"
+            ],
+            [
+                "Intermediate Micro-Economics",
+                "3100"
+            ],
+            [
+                "Game Theory",
+                "3140"
+            ],
+            [
+                "Intermediate Macro-Economics",
+                "3200"
+            ],
+            [
+                "Money, Banking, and Monetary Policy",
+                "3220"
+            ],
+            [
+                "International Economics and Finance",
+                "3250"
+            ],
+            [
+                "Statistical Analysis for Economics and Finance",
+                "4000"
+            ],
+            [
+                "Financial Econometrics",
+                "4051"
+            ],
+            [
+                "Advanced Micro-Economics",
+                "4100"
+            ],
+            [
+                "Advanced Macro-Economics",
+                "4200"
+            ],
+            [
+                "Monetary Economics",
+                "4201"
+            ],
+            [
+                "Internship in Economics I",
+                "5010"
+            ],
+            [
+                "Econometrics - Theory and Applications I",
+                "9723"
+            ],
+            [
+                "Firms in the Global Economy",
+                "9730"
+            ]
+        ],
+        "ENG": [
+            [
+                "Writing I",
+                "2100"
+            ],
+            [
+                "Writing II",
+                "2150"
+            ],
+            [
+                "Honors - Writing II",
+                "2150H"
+            ],
+            [
+                "Great Works of Literature I",
+                "2800"
+            ],
+            [
+                "Great Works of Literature II",
+                "2850"
+            ],
+            [
+                "Naked English",
+                "3001"
+            ],
+            [
+                "Survey of English Literature I",
+                "3010"
+            ],
+            [
+                "Survey of English Literature II",
+                "3015"
+            ],
+            [
+                "Survey of American Literature I",
+                "3020"
+            ],
+            [
+                "Survey of American Literature II",
+                "3025"
+            ],
+            [
+                "Survey of Caribbean Literature in English (Cross-listed with BLS & LTT)",
+                "3038"
+            ],
+            [
+                "Topics in Politics and Literature",
+                "3201"
+            ],
+            [
+                "Workshop: Fiction Writing",
+                "3610"
+            ],
+            [
+                "Honors - Workshop Fiction Writing",
+                "3610H"
+            ],
+            [
+                "The Craft of Poetry: Form and Revision",
+                "3645"
+            ],
+            [
+                "Lyrics as Literature",
+                "3685"
+            ],
+            [
+                "Honors - Literature and Psychology",
+                "3730H"
+            ],
+            [
+                "The Structure and History of English",
+                "3750"
+            ],
+            [
+                "Contemporary Drama: The New Theatre",
+                "3780"
+            ],
+            [
+                "Black Women Writers",
+                "3835"
+            ],
+            [
+                "Topics in Literature",
+                "3950"
+            ],
+            [
+                "Topics in Language",
+                "3960"
+            ],
+            [
+                "Chaucer",
+                "4120"
+            ],
+            [
+                "Shakespeare",
+                "4140"
+            ],
+            [
+                "A Century of Renaissance Drama",
+                "4150"
+            ],
+            [
+                "Milton",
+                "4170"
+            ],
+            [
+                "Victorian Literature",
+                "4310"
+            ],
+            [
+                "The Main Currents of Literary Expression in Contemporary America",
+                "4500"
+            ],
+            [
+                "The American Novel",
+                "4510"
+            ],
+            [
+                "The Global Business of Lit",
+                "4615"
+            ],
+            [
+                "Insult, Abuse, and Ridicule: Satire Through the Ages",
+                "4700"
+            ],
+            [
+                "Gothic Mysteries",
+                "4740"
+            ],
+            [
+                "Narrative Writing",
+                "4920"
+            ]
+        ],
+        "ENV": [
+            [
+                "Fundamentals of Ecology",
+                "1003L"
+            ],
+            [
+                "Fundamentals of Ecological Research",
+                "1004"
+            ],
+            [
+                "Introduction to Environmental Science",
+                "3001"
+            ],
+            [
+                "Conservation Biology and Sustainable Development",
+                "3009"
+            ],
+            [
+                "Microbial Ecology",
+                "4020"
+            ],
+            [
+                "Topics in Environmental Science",
+                "4900"
+            ]
+        ],
+        "FIN": [
+            [
+                "Personal Finance",
+                "1601"
+            ],
+            [
+                "Principles of Finance",
+                "3000"
+            ],
+            [
+                "Honors - Principles of Finance",
+                "3000H"
+            ],
+            [
+                "Corporate Finance",
+                "3610"
+            ],
+            [
+                "Investment Analysis",
+                "3710"
+            ],
+            [
+                "Advanced Corporate Finance",
+                "4610"
+            ],
+            [
+                "Advanced Investment Analysis",
+                "4710"
+            ],
+            [
+                "Futures Markets",
+                "4720"
+            ],
+            [
+                "Options",
+                "4750"
+            ],
+            [
+                "Technical Analysis",
+                "4775"
+            ],
+            [
+                "Introduction to Microfinance",
+                "4780"
+            ],
+            [
+                "Risk Management in Financial Institutions I",
+                "4808"
+            ],
+            [
+                "International Financial Markets",
+                "4910"
+            ],
+            [
+                "International Corporate Finance",
+                "4920"
+            ],
+            [
+                "Mergers and Acquisitions",
+                "4930"
+            ],
+            [
+                "Internship in Finance I",
+                "5610"
+            ],
+            [
+                "Internship in Finance II",
+                "5611"
+            ],
+            [
+                "Introduction to Quantitative Tools for Finance",
+                "9762"
+            ],
+            [
+                "Intermediate Corporate Finance",
+                "9781"
+            ],
+            [
+                "Equity Markets: Trading and Structure",
+                "9789"
+            ],
+            [
+                "Seminar in Finance",
+                "9790"
+            ],
+            [
+                "Debt Instruments and Markets",
+                "9795"
+            ],
+            [
+                "The Measurement and Management of Market Risk I",
+                "9852"
+            ],
+            [
+                "The Measurement and Management of Market Risk II",
+                "9853"
+            ],
+            [
+                "Special Topics in Investments",
+                "9891"
+            ]
+        ],
+        "FLM": [
+            [
+                "History of Film I",
+                "3001"
+            ],
+            [
+                "History of Film II",
+                "3002"
+            ],
+            [
+                "Critical Approaches to Film",
+                "4900"
+            ]
+        ],
+        "FPA": [
+            [
+                "Introduction to Arts Administration",
+                "2000"
+            ],
+            [
+                "The Arts in New York City (1900- Present) (Formerly 3000)",
+                "4900"
+            ],
+            [
+                "Arts Administration Internship",
+                "5070"
+            ],
+            [
+                "Arts, Culture, and the Civic Environment",
+                "9100"
+            ],
+            [
+                "Development and Management of Arts Education Programs",
+                "9120"
+            ],
+            [
+                "Managing in Arts Environments",
+                "9130"
+            ],
+            [
+                "Marketing the Arts",
+                "9140"
+            ],
+            [
+                "Touring and Presentation of Arts Organizations",
+                "9155"
+            ],
+            [
+                "Selected Topics in Arts Administration",
+                "9198"
+            ],
+            [
+                "Special Topics in Theatre Management: Current Issues in Performing Arts Leadership",
+                "9199"
+            ]
+        ],
+        "FRE": [
+            [
+                "Elementary French I",
+                "1001"
+            ],
+            [
+                "Elementary French II",
+                "1002"
+            ],
+            [
+                "Intensive Intermediate French I",
+                "3001"
+            ],
+            [
+                "Intensive Intermediate French II",
+                "3002"
+            ],
+            [
+                "Advanced Grammar and Syntax",
+                "4011"
+            ],
+            [
+                "The Eighteenth Century",
+                "4118"
+            ]
+        ],
+        "FYS": [
+            [
+                "Freshman Seminar",
+                "1000"
+            ],
+            [
+                "SEEK Fresh Semin II",
+                "2000S"
+            ]
+        ],
+        "GEOG": [
+            [
+                "World Regional Geography",
+                "3036"
+            ]
+        ],
+        "GLS": [
+            [
+                "Global Studies Capstone",
+                "4900"
+            ]
+        ],
+        "HEB": [
+            [
+                "Elementary Hebrew",
+                "1002"
+            ],
+            [
+                "Advanced Hebrew Conversation I",
+                "4000"
+            ]
+        ],
+        "HED": [
+            [
+                "Critical Health Issues",
+                "1911"
+            ]
+        ],
+        "HIS": [
+            [
+                "Themes in American History",
+                "1000"
+            ],
+            [
+                "Themes in Global History to 1500 C.E.",
+                "1001"
+            ],
+            [
+                "Themes in Global History Since 1500 C.E.",
+                "1003"
+            ],
+            [
+                "Modern American History",
+                "1005"
+            ],
+            [
+                "Honors - Modern American History",
+                "1005H"
+            ],
+            [
+                "Classical Buddhism",
+                "2165"
+            ],
+            [
+                "Social Welfare Policy",
+                "3005"
+            ],
+            [
+                "Race, Class, and Gender in Brazil",
+                "3025"
+            ],
+            [
+                "The Sixties in America",
+                "3055"
+            ],
+            [
+                "African American History",
+                "3060"
+            ],
+            [
+                "Topics in European History",
+                "3360"
+            ],
+            [
+                "Naval Battles and Society: A Global History",
+                "3390"
+            ],
+            [
+                "City and Suburb in 20th Century America",
+                "3400"
+            ],
+            [
+                "Health Care in America: 1800-Present",
+                "3450"
+            ],
+            [
+                "Topics in American History",
+                "3460"
+            ],
+            [
+                "The Holocaust in History and Memory",
+                "3538"
+            ],
+            [
+                "Special Topics in Global History",
+                "3950"
+            ],
+            [
+                "Capstone Course: In Search of History",
+                "4900"
+            ]
+        ],
+        "IBS": [
+            [
+                "Technology, Innovation, and the Global Enterprise",
+                "3000"
+            ],
+            [
+                "International Markets, Cultures and Institutions",
+                "4200"
+            ],
+            [
+                "International Competitiveness Capstone",
+                "5750"
+            ],
+            [
+                "Introduction to International Business",
+                "9600"
+            ],
+            [
+                "International Business Strategy",
+                "9769"
+            ],
+            [
+                "Special Topics in International Business",
+                "9791"
+            ]
+        ],
+        "IDC": [
+            [
+                "Chase Interdisciplinary Seminar II",
+                "2002H"
+            ],
+            [
+                "Honors - People of New York",
+                "3001H"
+            ],
+            [
+                "Honors - New York in the Twenty-First Century",
+                "4001H"
+            ],
+            [
+                "Honors - Feit Interdisciplinary Humanities Seminar",
+                "4050H"
+            ]
+        ],
+        "INS": [
+            [
+                "Life and Health Insurance",
+                "3200"
+            ]
+        ],
+        "ITL": [
+            [
+                "Elementary Italian I",
+                "1001"
+            ],
+            [
+                "Elementary Italian II",
+                "1002"
+            ],
+            [
+                "Intensive Intermediate Italian I",
+                "3001"
+            ],
+            [
+                "Intensive Intermediate Italian II",
+                "3002"
+            ]
+        ],
+        "JPN": [
+            [
+                "Elementary Japanese I",
+                "1001"
+            ],
+            [
+                "Elementary Japanese II",
+                "1002"
+            ],
+            [
+                "Intensive Intermediate Japanese I",
+                "3001"
+            ],
+            [
+                "Intensive Intermediate Japanese II",
+                "3002"
+            ],
+            [
+                "Contemporary Japanese Literature, Film, and Culture",
+                "4003"
+            ]
+        ],
+        "JRN": [
+            [
+                "The Individual and the News in the Information Age",
+                "2500"
+            ],
+            [
+                "Honors Journalistic Writing",
+                "3050H"
+            ],
+            [
+                "Journalistic Writing",
+                "3050"
+            ],
+            [
+                "Feature Article Writing",
+                "3060H"
+            ],
+            [
+                "Photojournalism",
+                "3064"
+            ],
+            [
+                "Editing in the Digital World",
+                "3110"
+            ],
+            [
+                "Business Communication",
+                "3150"
+            ],
+            [
+                "Business and Financial Writing",
+                "3200"
+            ],
+            [
+                "Media Ethics",
+                "3220"
+            ],
+            [
+                "Multimedia Reporting",
+                "3510"
+            ],
+            [
+                "Honors - Multimedia Reporting",
+                "3510H"
+            ],
+            [
+                "Advanced Multimedia Reporting",
+                "3520"
+            ],
+            [
+                "Honors - Fiction Writing",
+                "3610H"
+            ],
+            [
+                "Workshop: Fiction Writing",
+                "3610"
+            ],
+            [
+                "Environmental Reporting",
+                "3800"
+            ],
+            [
+                "Covering the Financial Markets",
+                "4001"
+            ],
+            [
+                "Journalism and the Literary Imagination",
+                "4730"
+            ],
+            [
+                "Investigative Reporting",
+                "4750"
+            ],
+            [
+                "Honors - Investigative Reporting",
+                "4750H"
+            ],
+            [
+                "Narrative Writing",
+                "4920"
+            ],
+            [
+                "Honors Narrative Writing",
+                "4920H"
+            ],
+            [
+                "Media Internship II",
+                "5051"
+            ]
+        ],
+        "JWS": [
+            [
+                "The Holocaust in History and Memory",
+                "3538"
+            ]
+        ],
+        "LACS": [
+            [
+                "Latin America and the Caribbean: From the 19th Century to the Present",
+                "4901"
+            ],
+            [
+                "Latin America and the Caribbean: Cultures and Societies",
+                "4902"
+            ]
+        ],
+        "LAW": [
+            [
+                "Fundamentals of Business Law",
+                "1101"
+            ],
+            [
+                "Honors - Fundamental Business Law",
+                "1101H"
+            ],
+            [
+                "Special Topics in Law",
+                "3093"
+            ],
+            [
+                "The Law of Business Organizations",
+                "3102"
+            ],
+            [
+                "Law and the Internet",
+                "3108"
+            ],
+            [
+                "Law and International Business",
+                "3111"
+            ],
+            [
+                "LAw of Commercial Negotiation and Dispute Resolution",
+                "3113"
+            ],
+            [
+                "Law and the Entertainment Business",
+                "3220"
+            ],
+            [
+                "Financial Regulation of Emerging Technologies",
+                "3250"
+            ],
+            [
+                "Real Estate Law",
+                "3301"
+            ],
+            [
+                "Law, Business and Sustainability",
+                "3400"
+            ],
+            [
+                "Law, Public Policy and Legal Theory: Law Capstone Seminar",
+                "4900"
+            ],
+            [
+                "U.S. Immigration Law and Policy Law Capstone Seminar",
+                "4905"
+            ],
+            [
+                "Women, Law, and Policy",
+                "4906"
+            ],
+            [
+                "Overview of Business Law and Ethics",
+                "9201"
+            ],
+            [
+                "Intensive Survey of Business Contracts and Law of Corporations",
+                "9800"
+            ]
+        ],
+        "LIB": [
+            [
+                "Information and Society",
+                "3040"
+            ],
+            [
+                "Electronic Resources and Research Methods for Writers",
+                "3065"
+            ],
+            [
+                "Social informatics: Studies in the Production, Distribution and Consumption of informatio",
+                "4900"
+            ]
+        ],
+        "LTS": [
+            [
+                "Latin America: An Institutional and Cultural Survey",
+                "1003"
+            ],
+            [
+                "Dominican Heritage: From Pre-Columbian Times to Present",
+                "3009"
+            ],
+            [
+                "Cuban Culture and Society",
+                "3015"
+            ],
+            [
+                "The U.S. and Mexican Border",
+                "3021"
+            ],
+            [
+                "Race, Class, and Gender in Brazil",
+                "3025"
+            ],
+            [
+                "Sixties In America",
+                "3055"
+            ],
+            [
+                "Special Topics in Hispanic\\Latino Studies",
+                "3085"
+            ],
+            [
+                "Race and Ethnic Relations",
+                "3125"
+            ],
+            [
+                "Seminar in Black and Latino Studies",
+                "4900"
+            ],
+            [
+                "Latin America and the Caribbean II: From the 19th Century to the Present",
+                "4901"
+            ]
+        ],
+        "MGT": [
+            [
+                "Fundamentals of Management",
+                "3120"
+            ],
+            [
+                "Honors - Fundamentals of Managment",
+                "3120H"
+            ],
+            [
+                "Service Operations Management",
+                "3121"
+            ],
+            [
+                "Honors - Service Operations Management",
+                "3121H"
+            ],
+            [
+                "Management: A Behavioral Approach",
+                "3300"
+            ],
+            [
+                "Business Decision Models",
+                "3500"
+            ],
+            [
+                "Production Planning Systems",
+                "3710"
+            ],
+            [
+                "Business Process Analysis",
+                "3730"
+            ],
+            [
+                "Management and Society",
+                "3800"
+            ],
+            [
+                "Entrepreneurship Management",
+                "3960"
+            ],
+            [
+                "Organizational Behavior: A Micro Perspective",
+                "4330"
+            ],
+            [
+                "Organizational Change",
+                "4340"
+            ],
+            [
+                "Human Resource Management",
+                "4400"
+            ],
+            [
+                "The Management of Compensation",
+                "4420"
+            ],
+            [
+                "Employee Development and Training",
+                "4430"
+            ],
+            [
+                "Labor Relations and Collective Bargaining",
+                "4460"
+            ],
+            [
+                "Human Resource Metrics",
+                "4475"
+            ],
+            [
+                "Conflict Management Procedures",
+                "4480"
+            ],
+            [
+                "Cases in Operations Management",
+                "4500"
+            ],
+            [
+                "Management of Multinational Corporations",
+                "4880"
+            ],
+            [
+                "Entrepreneurial Experiences",
+                "4961"
+            ],
+            [
+                "Family Business Management",
+                "4962"
+            ],
+            [
+                "Entrepreneurial Startups",
+                "4963"
+            ],
+            [
+                "Technology, Innovation, and Design in Entrepreneurship",
+                "4967"
+            ],
+            [
+                "Critical Conversations for Entrepreneurs: Selling and Negotiating",
+                "4968"
+            ],
+            [
+                "Management Internship",
+                "5110"
+            ],
+            [
+                "Honors - Management II",
+                "6002H"
+            ],
+            [
+                "Business and Society Relationships",
+                "9200"
+            ],
+            [
+                "Managing People and Organizations",
+                "9301"
+            ],
+            [
+                "Special Topics in Organizational Behavior and Human Resource Management",
+                "9394"
+            ],
+            [
+                "Management of Compensation",
+                "9420"
+            ],
+            [
+                "Coordinating Seminar in Labor Relations: The State of the Unions",
+                "9494"
+            ],
+            [
+                "Capstone Research Seminar",
+                "9495"
+            ],
+            [
+                "Management Science",
+                "9500"
+            ],
+            [
+                "Strategy and Competitive Advantage",
+                "9600"
+            ],
+            [
+                "Negotiation",
+                "9660"
+            ],
+            [
+                "Managing Business Operations",
+                "9700"
+            ],
+            [
+                "Entre Strat And Case",
+                "9960"
+            ],
+            [
+                "Mngng The Family Bus",
+                "9962"
+            ],
+            [
+                "Entrepreneurial Entr",
+                "9964"
+            ],
+            [
+                "Tech Innov & Design",
+                "9967"
+            ],
+            [
+                "Entrepreneurial Comm",
+                "9968"
+            ],
+            [
+                "Managing Creativity, Innovation and Ideation in Startups and Corporations",
+                "9973"
+            ]
+        ],
+        "MKT": [
+            [
+                "Marketing Foundations",
+                "3000"
+            ],
+            [
+                "Honors - Marketing Foundations",
+                "3000H"
+            ],
+            [
+                "International Business Principles",
+                "3400"
+            ],
+            [
+                "Advertising and Marketing Communications",
+                "3520"
+            ],
+            [
+                "Marketing Research",
+                "3600"
+            ],
+            [
+                "Consumer Behavior",
+                "3605"
+            ],
+            [
+                "Selected Topics in Marketing",
+                "4093"
+            ],
+            [
+                "Marketing Web Analytics and Intelligence",
+                "4123"
+            ],
+            [
+                "Advertising Creative Strategy and Tactics",
+                "4131"
+            ],
+            [
+                "Direct Marketing I: Strategies and Tactics",
+                "4151"
+            ],
+            [
+                "Public Relations",
+                "4171"
+            ],
+            [
+                "Search Marketing",
+                "4200"
+            ],
+            [
+                "International Trade Operations",
+                "4410"
+            ],
+            [
+                "International Marketing",
+                "4420"
+            ],
+            [
+                "Special Topics in Advertising and Marketing Communications",
+                "4493"
+            ],
+            [
+                "Branding",
+                "4540"
+            ],
+            [
+                "Internet Marketing",
+                "4555"
+            ],
+            [
+                "Digital Advertising",
+                "4557"
+            ],
+            [
+                "Entertainment Marketing",
+                "4560"
+            ],
+            [
+                "Marketing Analytics",
+                "4561"
+            ],
+            [
+                "Text Analytics for Marketing",
+                "4620"
+            ],
+            [
+                "Marketing Analytics with Big Data",
+                "4630"
+            ],
+            [
+                "Managing Customer Experiences",
+                "4876"
+            ],
+            [
+                "Selling and Sales Management",
+                "4910"
+            ],
+            [
+                "Retailing I: Retail Marketing",
+                "4912"
+            ],
+            [
+                "Social Media Marketing and New Ventures",
+                "4966"
+            ],
+            [
+                "Marketing Internship",
+                "5100"
+            ],
+            [
+                "Advertising Competition II",
+                "5151"
+            ],
+            [
+                "Marketing Strategy",
+                "5750"
+            ],
+            [
+                "Marketing Management",
+                "9703"
+            ],
+            [
+                "Media Planning in the Digital Age",
+                "9728"
+            ],
+            [
+                "Web Analytics and Intelligence",
+                "9738"
+            ],
+            [
+                "Project-Based Marketing Consulting",
+                "9759"
+            ],
+            [
+                "Internet Marketing and Global Business",
+                "9764"
+            ],
+            [
+                "International Logistics",
+                "9774"
+            ],
+            [
+                "Digital Marketing",
+                "9780"
+            ],
+            [
+                "Search Engine Marketing",
+                "9782"
+            ],
+            [
+                "Social Media Marketing",
+                "9783"
+            ],
+            [
+                "Digital Marketing Strategy",
+                "9785"
+            ],
+            [
+                "Special Topics in Marketing Analytics",
+                "9997"
+            ]
+        ],
+        "MSC": [
+            [
+                "Music in Civilization",
+                "1003"
+            ],
+            [
+                "Principles of Music",
+                "1005"
+            ],
+            [
+                "Chorus",
+                "2061"
+            ],
+            [
+                "Chorus II",
+                "2062"
+            ],
+            [
+                "Chorus III",
+                "2063"
+            ],
+            [
+                "Chorus IV",
+                "2064"
+            ],
+            [
+                "Music of the Twentieth Century",
+                "3016"
+            ],
+            [
+                "The American Musical Theatre",
+                "3019"
+            ],
+            [
+                "Harmony I",
+                "3026"
+            ],
+            [
+                "Harmony II",
+                "3027"
+            ],
+            [
+                "Music of Latin America and the Caribbean",
+                "3031"
+            ],
+            [
+                "Commercial Music and the Media",
+                "3036"
+            ],
+            [
+                "The History of Music from Classicism (c. 1750) to Modern Times",
+                "3044"
+            ],
+            [
+                "Music and Society",
+                "4900"
+            ],
+            [
+                "Internship in Music Management",
+                "5050"
+            ]
+        ],
+        "MTH": [
+            [
+                "Intermediate and College Algebra",
+                "1023"
+            ],
+            [
+                "College Algebra",
+                "1030"
+            ],
+            [
+                "Pre-calculus and Elements of Calculus",
+                "2003"
+            ],
+            [
+                "Precalculus",
+                "2009"
+            ],
+            [
+                "Mathematics Appreciation",
+                "2120"
+            ],
+            [
+                "Mathematics and Quantitative Reasoning",
+                "2140"
+            ],
+            [
+                "Ideas in Mathematics and Their Applications",
+                "2160"
+            ],
+            [
+                "Applied Calculus",
+                "2205"
+            ],
+            [
+                "Applied Calculus and Matrix Applications",
+                "2207"
+            ],
+            [
+                "Calculus I",
+                "2610"
+            ],
+            [
+                "Integral Calculus",
+                "3006"
+            ],
+            [
+                "Elementary Calculus II",
+                "3010"
+            ],
+            [
+                "Intermediate Calculus",
+                "3020"
+            ],
+            [
+                "Analytic Geometry and Calculus II",
+                "3030"
+            ],
+            [
+                "Vector Calculus",
+                "3035"
+            ],
+            [
+                "Actuarial Science Theory and Problem Seminar",
+                "3040"
+            ],
+            [
+                "Multi-variable and Vector Calculus",
+                "3050"
+            ],
+            [
+                "Elementary Probability",
+                "3120"
+            ],
+            [
+                "Algorithms, Computers, and Programming I",
+                "3300"
+            ],
+            [
+                "Actuarial Science Internship",
+                "3901"
+            ],
+            [
+                "Mathematics Internship",
+                "3905"
+            ],
+            [
+                "Financial Mathematics Internship I",
+                "3909"
+            ],
+            [
+                "Financial Mathematics Internship II",
+                "3910"
+            ],
+            [
+                "Financial Mathematics Internship III",
+                "3911"
+            ],
+            [
+                "Financial Mathematics Internship IV",
+                "3912"
+            ],
+            [
+                "Bridge to Higher Mathematics",
+                "4000"
+            ],
+            [
+                "Proof Writing for Mathematical Analysis",
+                "4009"
+            ],
+            [
+                "Mathematical Analysis I",
+                "4010"
+            ],
+            [
+                "Topology",
+                "4030"
+            ],
+            [
+                "Linear Algebra and Matrix Methods",
+                "4100"
+            ],
+            [
+                "Ordinary Differential Equations",
+                "4110"
+            ],
+            [
+                "Numerical Methods for Differential Equations in Finance",
+                "4115"
+            ],
+            [
+                "Multivariate Probability Distributions",
+                "4119"
+            ],
+            [
+                "Introduction to Probability",
+                "4120"
+            ],
+            [
+                "Introduction to Stochastic Processes",
+                "4125"
+            ],
+            [
+                "Mathematics of Statistics",
+                "4130"
+            ],
+            [
+                "Computational Methods in Probability",
+                "4135"
+            ],
+            [
+                "Graph Theory",
+                "4140"
+            ],
+            [
+                "Algorithms, Computers and Programming II",
+                "4300"
+            ],
+            [
+                "Fundamental Algorithms",
+                "4320"
+            ],
+            [
+                "Theory of Interest",
+                "4410"
+            ],
+            [
+                "Actuarial Mathematics II",
+                "4421"
+            ],
+            [
+                "Mathematics of Inferential Statistics",
+                "4430"
+            ],
+            [
+                "Short-Term Insurance Mathematics",
+                "4451"
+            ],
+            [
+                "Introductory Financial Mathematics",
+                "4500"
+            ],
+            [
+                "Data Analysis and Simulation for Financial Engineers",
+                "4600"
+            ],
+            [
+                "Stochastic Calculus for Finance",
+                "5500"
+            ],
+            [
+                "Market and Credit Risk Management",
+                "9845"
+            ],
+            [
+                "Asset Allocation and Portfolio Management",
+                "9855"
+            ],
+            [
+                "Interest Rate Models",
+                "9878"
+            ],
+            [
+                "Market Microstructure Models",
+                "9879"
+            ],
+            [
+                "Data Science in Finance I: Big Data in Finance",
+                "9898"
+            ],
+            [
+                "Data Science in Finance II: Machine Learning",
+                "9899"
+            ],
+            [
+                "Capstone Project and Presentation",
+                "9903"
+            ]
+        ],
+        "NMA": [
+            [
+                "Introduction to New Media Arts",
+                "2050"
+            ],
+            [
+                "Video I",
+                "3010"
+            ],
+            [
+                "Digital Interactivity",
+                "3012"
+            ],
+            [
+                "Performing with New Media",
+                "3021"
+            ],
+            [
+                "Special Topics in Media and Arts",
+                "3041"
+            ],
+            [
+                "Animation and Motion Graphics",
+                "3059"
+            ],
+            [
+                "Digital Photography",
+                "3061"
+            ],
+            [
+                "New Media Arts in Theory and Practice",
+                "4900"
+            ]
+        ],
+        "OPR": [
+            [
+                "Quantitative Methods for Accounting",
+                "3300"
+            ],
+            [
+                "Quantitative Decision Making for Business I",
+                "3450"
+            ],
+            [
+                "Quantitative Decision Making for Business II",
+                "3451"
+            ],
+            [
+                "Simulation Modeling and Analysis",
+                "9730"
+            ],
+            [
+                "Basic Software Tools for Data Analysis",
+                "9750"
+            ],
+            [
+                "Stochastic Processes for Business Applications (formerly OPR 9723)",
+                "9783"
+            ]
+        ],
+        "PAF": [
+            [
+                "Citizenship and Public Affairs",
+                "1250"
+            ],
+            [
+                "Public Service in New York City",
+                "3005"
+            ],
+            [
+                "Policy and Politics",
+                "3010"
+            ],
+            [
+                "Qualitative Studies of Communities",
+                "3015"
+            ],
+            [
+                "Ethics and Civic Engagement",
+                "3020"
+            ],
+            [
+                "Information and Society",
+                "3040"
+            ],
+            [
+                "Nonprofit Administration",
+                "3100"
+            ],
+            [
+                "Economic Analysis of Public Policy",
+                "3102"
+            ],
+            [
+                "Public Opinion",
+                "3106"
+            ],
+            [
+                "Public Campaigns And Advocacy",
+                "3108"
+            ],
+            [
+                "Models of Service Delivery",
+                "3301"
+            ],
+            [
+                "Quantitative Methods for Policy and Practice",
+                "3401"
+            ],
+            [
+                "Policy Analysis",
+                "3402"
+            ],
+            [
+                "Cities and Sustainability",
+                "3442"
+            ],
+            [
+                "Reforming Education",
+                "3710"
+            ],
+            [
+                "Selected Topics in Public Affairs",
+                "4199"
+            ],
+            [
+                "Capstone",
+                "4401"
+            ],
+            [
+                "Survey Research Practicum",
+                "4402"
+            ],
+            [
+                "Independent Study in Public Affairs I",
+                "5000"
+            ],
+            [
+                "New York State Legislature Internship",
+                "5001"
+            ],
+            [
+                "Public Affairs Internship",
+                "5452"
+            ],
+            [
+                "Introduction to Public Affairs",
+                "9100"
+            ],
+            [
+                "Communication in Public Settings",
+                "9103"
+            ],
+            [
+                "Media, Politics, and Public Culture",
+                "9104"
+            ],
+            [
+                "Ethics and Public Decision Making",
+                "9110"
+            ],
+            [
+                "Public Personnel and Human Resource Management",
+                "9117"
+            ],
+            [
+                "Public and Nonprofit Management I",
+                "9120"
+            ],
+            [
+                "Economic Analysis and Public Policy",
+                "9130"
+            ],
+            [
+                "Economics of the Public Sector and Public Finance",
+                "9133"
+            ],
+            [
+                "Communication Strategy",
+                "9139"
+            ],
+            [
+                "Budgeting and Financial Analysis I",
+                "9140"
+            ],
+            [
+                "Community Development: History, Present, and Future",
+                "9141"
+            ],
+            [
+                "Greening and Growing Cities: Sustainability and Public Policy Choices",
+                "9143"
+            ],
+            [
+                "Social Welfare Policy",
+                "9145"
+            ],
+            [
+                "Administration of the Nonprofit Sector and Voluntary Agencies",
+                "9151"
+            ],
+            [
+                "Fund Raising and Grants Administration in Notprofit and Voluntary Organizations",
+                "9152"
+            ],
+            [
+                "Budgeting and Finance for Nonprofits",
+                "9153"
+            ],
+            [
+                "Introduction to Philanthropy",
+                "9157"
+            ],
+            [
+                "Public and Nonprofit Management II",
+                "9160"
+            ],
+            [
+                "Business and Public Policy",
+                "9161"
+            ],
+            [
+                "Leadership and Strategy in Public Affairs",
+                "9163"
+            ],
+            [
+                "Research and Analysis I",
+                "9170"
+            ],
+            [
+                "Research and Analysis II",
+                "9172"
+            ],
+            [
+                "Program Evaluation",
+                "9174"
+            ],
+            [
+                "Selected Topics in Advanced Analytical Methods",
+                "9177"
+            ],
+            [
+                "Comparative Public Policy and Administration",
+                "9181"
+            ],
+            [
+                "International Institutions and Global Governance",
+                "9184"
+            ],
+            [
+                "Map Making For Public",
+                "9186"
+            ],
+            [
+                "Public Affairs Capstone Seminar",
+                "9190"
+            ],
+            [
+                "Public Affairs Workshop",
+                "9198"
+            ],
+            [
+                "Administrative Services in Colleges and Universities",
+                "9308"
+            ],
+            [
+                "Research for the Educational Administrator",
+                "9317"
+            ],
+            [
+                "Internship in Higher Education Administration",
+                "9322"
+            ],
+            [
+                "Introduction to Higher Education Administration",
+                "9330"
+            ],
+            [
+                "Student Affairs in Higher Education",
+                "9336"
+            ],
+            [
+                "Higher Education, Politics, and Public Policy",
+                "9338"
+            ],
+            [
+                "The Financing of Higher Education",
+                "9339"
+            ],
+            [
+                "Capstone Seminar in Higher Education Administration",
+                "9390"
+            ],
+            [
+                "Selected Topics in Educational Administration",
+                "9399"
+            ],
+            [
+                "International Economics",
+                "9415"
+            ],
+            [
+                "Global Communication",
+                "9420"
+            ],
+            [
+                "Diaspora, Migration, and Transnational Life in the Western Hemisphere and Beyond",
+                "9430"
+            ],
+            [
+                "Trade Policy",
+                "9440"
+            ],
+            [
+                "International Development",
+                "9450"
+            ],
+            [
+                "Health And Health Care",
+                "9710"
+            ],
+            [
+                "Health Program, Policy and Performance Evaluation",
+                "9725"
+            ],
+            [
+                "Health Politics and Policymaking",
+                "9735"
+            ]
+        ],
+        "PED": [
+            [
+                "Tennis",
+                "1311"
+            ],
+            [
+                "Swimming for Beginners",
+                "1316"
+            ],
+            [
+                "Fitness and Weight Training",
+                "1323"
+            ]
+        ],
+        "PERM": [
+            [
+                "Undergraduate Student on ePermit",
+                "1"
+            ],
+            [
+                "Graduate Student on ePermit",
+                "1"
+            ],
+            [
+                "Undergraduate Student on ePerm",
+                "4.5"
+            ]
+        ],
+        "PHI": [
+            [
+                "Ethics and Critical Thinking",
+                "1100"
+            ],
+            [
+                "Major Issues in Philosophy",
+                "1500"
+            ],
+            [
+                "Logic and Moral Reasoning",
+                "1600"
+            ],
+            [
+                "Global Ethics",
+                "1700"
+            ],
+            [
+                "Honors - Global Ethics",
+                "1700H"
+            ],
+            [
+                "Classical Buddhism",
+                "2165"
+            ],
+            [
+                "Philosophy and Psychology (Cross-listed with PSY)",
+                "3035"
+            ],
+            [
+                "Mind and Computers",
+                "3040"
+            ],
+            [
+                "Moral Problems of Life and Death",
+                "3051"
+            ],
+            [
+                "Philosophy and Literature",
+                "3062"
+            ],
+            [
+                "Christian, Islamic, and Jewish Philosophy in the Middle Ages",
+                "3130"
+            ],
+            [
+                "Environmental Ethics, Law, and Public Policy",
+                "3200"
+            ],
+            [
+                "Philosophy of Religion and Religious Ethics",
+                "3210"
+            ],
+            [
+                "Crime and Punishment",
+                "3260"
+            ],
+            [
+                "Computer Ethics",
+                "3270"
+            ],
+            [
+                "Special Studies in Philosophy",
+                "3990"
+            ],
+            [
+                "Special Topics in Philosophy",
+                "4900"
+            ],
+            [
+                "Special Topics in Metaphysics and Epistemology",
+                "4905"
+            ]
+        ],
+        "PHY": [
+            [
+                "Fundamentals of Experimental Physics",
+                "2001"
+            ],
+            [
+                "Fundamentals of Physics: Theory and Practice",
+                "2002L"
+            ],
+            [
+                "General Physics I",
+                "2003"
+            ],
+            [
+                "General Physics II",
+                "3001"
+            ],
+            [
+                "Quantitative Physics II",
+                "3020"
+            ]
+        ],
+        "POL": [
+            [
+                "American Government: Practices and Values",
+                "1101"
+            ],
+            [
+                "Honors - American Government Practices",
+                "1101H"
+            ],
+            [
+                "The United States in an Age of Globalization",
+                "2001"
+            ],
+            [
+                "State and Local Government",
+                "2220"
+            ],
+            [
+                "Introduction to International Relations",
+                "2240"
+            ],
+            [
+                "Introduction to Comparative Government",
+                "2260"
+            ],
+            [
+                "American Political Thought",
+                "2332"
+            ],
+            [
+                "Public Policy",
+                "2353"
+            ],
+            [
+                "Religion And Politics In The United States",
+                "3008"
+            ],
+            [
+                "Political Psychology",
+                "3101"
+            ],
+            [
+                "Political Economy",
+                "3103"
+            ],
+            [
+                "The Politics of the Third World",
+                "3104"
+            ],
+            [
+                "Topics in Politics and Literature",
+                "3201"
+            ],
+            [
+                "Congress and the Legislative Process",
+                "3312"
+            ],
+            [
+                "Constitutional Law",
+                "3313"
+            ],
+            [
+                "Civil Liberties",
+                "3314"
+            ],
+            [
+                "Government and the American Economy",
+                "3315"
+            ],
+            [
+                "The Presidency",
+                "3316"
+            ],
+            [
+                "Politics and Government of New York City",
+                "3323"
+            ],
+            [
+                "Early Political Theory",
+                "3335"
+            ],
+            [
+                "Modern Political Theory",
+                "3336"
+            ],
+            [
+                "American Foreign Policy",
+                "3342"
+            ],
+            [
+                "The United Nations in World Politics",
+                "3344"
+            ],
+            [
+                "Contemporary International Conflict",
+                "3345"
+            ],
+            [
+                "Seminar on Political Globalization",
+                "3347"
+            ],
+            [
+                "Political Science Capstone Seminar",
+                "4900"
+            ],
+            [
+                "Field Work in Government and Politics",
+                "5452"
+            ]
+        ],
+        "POR": [
+            [
+                "Elementary Conversation",
+                "1001"
+            ]
+        ],
+        "PSY": [
+            [
+                "General Psychology",
+                "1001"
+            ],
+            [
+                "Statistics for Social Science",
+                "2100"
+            ],
+            [
+                "Research Methods in Psychology",
+                "3001"
+            ],
+            [
+                "Philosophy and Psychology (Cross-listed with PHI)",
+                "3035"
+            ],
+            [
+                "Psychology and Culture",
+                "3036"
+            ],
+            [
+                "Abnormal Psychology",
+                "3055"
+            ],
+            [
+                "Social Psychology",
+                "3056"
+            ],
+            [
+                "Honors- Social Psychology",
+                "3056H"
+            ],
+            [
+                "Small Group Processes",
+                "3058"
+            ],
+            [
+                "Developmental Psychology: Personality in Childhood and Adolescence",
+                "3059"
+            ],
+            [
+                "Developmental Psychology: Adult Development",
+                "3060"
+            ],
+            [
+                "Psychology of Stress Management",
+                "3062"
+            ],
+            [
+                "Health Psychology",
+                "3063"
+            ],
+            [
+                "Personality and Individual Differences",
+                "3064"
+            ],
+            [
+                "The Psychology of Motivation and Learning",
+                "3067"
+            ],
+            [
+                "Psychology And Law",
+                "3069"
+            ],
+            [
+                "Psychology of Gender",
+                "3071"
+            ],
+            [
+                "Positive Psychology",
+                "3077"
+            ],
+            [
+                "Cognitive Psychology",
+                "3081"
+            ],
+            [
+                "Mind, Brain, and Behavior",
+                "3082"
+            ],
+            [
+                "Psychology of Learning",
+                "3083"
+            ],
+            [
+                "Industrial and Organizational Psychology",
+                "3181"
+            ],
+            [
+                "Environmental Psychology",
+                "3185"
+            ],
+            [
+                "Honors - Literature and Psychology",
+                "3730H"
+            ],
+            [
+                "Diversity in the Workplace",
+                "4010"
+            ],
+            [
+                "Evolution of Modern Psychology",
+                "4012"
+            ],
+            [
+                "Advanced Personnel Psychology",
+                "4013"
+            ],
+            [
+                "Practicum in Community Psychological Services I",
+                "4035"
+            ],
+            [
+                "Psychopathology of Childhood",
+                "4039"
+            ],
+            [
+                "Sensation and Perception",
+                "4080"
+            ],
+            [
+                "Drugs, Brain, and Society",
+                "4084"
+            ],
+            [
+                "Advanced Organizational Psychology",
+                "4181"
+            ],
+            [
+                "Occupational Health Psychology",
+                "4182"
+            ],
+            [
+                "Psychology of Career Development and Planning",
+                "4183"
+            ],
+            [
+                "Leadership and Managerial Development",
+                "4184"
+            ],
+            [
+                "Psychology of Training and Development",
+                "4185"
+            ],
+            [
+                "Honors - Psychological Approaches to Contemporary Problems",
+                "4900H"
+            ],
+            [
+                "Design of Psychological Research",
+                "9703"
+            ],
+            [
+                "Applied Statistical Analysis",
+                "9705"
+            ],
+            [
+                "Seminar in Contemporary Psychological Topics",
+                "9786"
+            ],
+            [
+                "Problems in Industrial Psychology I - Personnel Psychology",
+                "9796"
+            ],
+            [
+                "Problems in Industrial Psychology II - Organizational Psychology",
+                "9797"
+            ],
+            [
+                "Internship in Industrial/Organizational Psychology",
+                "9800"
+            ],
+            [
+                "Internship Project Experience in Industrial/Organizational Psychology",
+                "9801"
+            ],
+            [
+                "Clinical Health Counseling",
+                "9812"
+            ],
+            [
+                "Addiction & Dependency",
+                "9816"
+            ],
+            [
+                "Practicum/Experiential",
+                "9818"
+            ],
+            [
+                "Life Span Development",
+                "9820"
+            ],
+            [
+                "Coping with Grief and Trauma",
+                "9825"
+            ],
+            [
+                "Assessment and Treatment of Obesity and Eating Disorders",
+                "9826"
+            ],
+            [
+                "Child and Adolescent Psychopathology: Assessment and Treatment",
+                "9827"
+            ],
+            [
+                "Theories of Counseling",
+                "9828"
+            ],
+            [
+                "Internship II",
+                "9831"
+            ],
+            [
+                "Research Seminar in Evaluation of Psychological Research (Seminar II)",
+                "99002"
+            ],
+            [
+                "Research Methodology (Thesis I)",
+                "99301"
+            ],
+            [
+                "Thesis (Thesis II)",
+                "99302"
+            ]
+        ],
+        "REL": [
+            [
+                "Classical Buddhism",
+                "2165"
+            ],
+            [
+                "The Tradition of Islam",
+                "3540"
+            ]
+        ],
+        "RES": [
+            [
+                "Real Estate Law",
+                "3000"
+            ],
+            [
+                "Real Estate Principles",
+                "3100"
+            ],
+            [
+                "Real Estate Finance and Investment",
+                "3200"
+            ],
+            [
+                "Real Estate Capital Markets",
+                "3400"
+            ],
+            [
+                "Real Estate Management",
+                "3700"
+            ],
+            [
+                "Real Estate Development",
+                "3900"
+            ],
+            [
+                "Special Topics in Real Estate",
+                "4093"
+            ],
+            [
+                "Investment Strategies in Property Markets",
+                "4200"
+            ],
+            [
+                "Analytical Skills in Real Estate",
+                "4550"
+            ],
+            [
+                "Real Estate Valuation and Market Analysis",
+                "9800"
+            ],
+            [
+                "Real Estate Capital Markets.",
+                "9850"
+            ],
+            [
+                "Advanced Real Estate Investment Analysis",
+                "9900"
+            ],
+            [
+                "Analytical Skills for Real Estate Decision Making",
+                "9910"
+            ],
+            [
+                "Real Estate Taxation",
+                "9930"
+            ]
+        ],
+        "SOC": [
+            [
+                "Introductory Sociology",
+                "1005"
+            ],
+            [
+                "Cuban Culture and Society",
+                "3015"
+            ],
+            [
+                "The U.S. and Mexican Border",
+                "3021"
+            ],
+            [
+                "Selected Topics in Sociology and Anthropology",
+                "3085"
+            ],
+            [
+                "Race and Ethnic Relation",
+                "3125"
+            ],
+            [
+                "Crime And Justice In Sociological Perspective",
+                "3154"
+            ],
+            [
+                "Urban Sociology",
+                "3155"
+            ],
+            [
+                "Social Inequality",
+                "3156"
+            ],
+            [
+                "The Tradition of Islam",
+                "3540"
+            ],
+            [
+                "Sociological Theory",
+                "4100"
+            ],
+            [
+                "Research Methods In Sociology And Anthropology",
+                "4110"
+            ],
+            [
+                "New York: The Global City",
+                "4400"
+            ],
+            [
+                "Sociological Analysis",
+                "4900"
+            ]
+        ],
+        "SPA": [
+            [
+                "Elementary Spanish I and II",
+                "1001"
+            ],
+            [
+                "Elementary Spanish II",
+                "1002"
+            ],
+            [
+                "Continuing Spanish for Non-Heritage Speakers",
+                "2009"
+            ],
+            [
+                "Intensive Intermediate Spanish I",
+                "3001"
+            ],
+            [
+                "Intensive Intermediate Spanish II",
+                "3002"
+            ],
+            [
+                "Spanish for Heritage Speakers II",
+                "3006"
+            ],
+            [
+                "Advanced Intermediate Spanish for Business",
+                "3999"
+            ],
+            [
+                "Advanced Oral Communication I",
+                "4000"
+            ],
+            [
+                "Advanced Oral Communication II",
+                "4001"
+            ],
+            [
+                "Seminar in Translation: Spanish-English",
+                "4004"
+            ],
+            [
+                "Structures of Modern Spanish",
+                "4011"
+            ],
+            [
+                "Introduction to Hispanic Literature",
+                "4050"
+            ],
+            [
+                "Latin American Cinema",
+                "4285"
+            ],
+            [
+                "Literature of the Hispanic Caribbean I",
+                "4383"
+            ],
+            [
+                "Special Studies in Spanish",
+                "4999"
+            ]
+        ],
+        "SPS": [
+            [
+                "Practicum in Student Leadership",
+                "2016"
+            ]
+        ],
+        "STA": [
+            [
+                "Business Statistics I",
+                "2000"
+            ],
+            [
+                "Honors - Business Statistics",
+                "2000H"
+            ],
+            [
+                "Business Statistics II",
+                "3154"
+            ],
+            [
+                "Regression and Forecasting Models for Business Applications",
+                "3155"
+            ],
+            [
+                "Data Mining for Business Analytics",
+                "3920"
+            ],
+            [
+                "Introduction to SAS Programming",
+                "4000"
+            ],
+            [
+                "Modern Regression Analysis",
+                "9700"
+            ],
+            [
+                "Multivariate Statistical Methods",
+                "9705"
+            ],
+            [
+                "Managerial Statistics",
+                "9708"
+            ],
+            [
+                "Statistical Methods in Sampling and Auditing",
+                "9710"
+            ],
+            [
+                "Experimental Design for Business",
+                "9714"
+            ],
+            [
+                "Applied Probability",
+                "9715"
+            ],
+            [
+                "Foundations of Statistical Inference",
+                "9719"
+            ],
+            [
+                "Basic Software Tools for Data Analysis",
+                "9750"
+            ],
+            [
+                "Big Data Technologies",
+                "9760"
+            ],
+            [
+                "Stochastic Processes for Application I",
+                "9783"
+            ],
+            [
+                "Statistical Learning for Data Mining",
+                "9890"
+            ]
+        ],
+        "STABD": [
+            [
+                "Study Abroad/Noncuny",
+                "10"
+            ],
+            [
+                "Study Abroad/NonCUNY FA",
+                "10103"
+            ],
+            [
+                "Study Abroad/Cuny",
+                "11103"
+            ],
+            [
+                "Study Abroad",
+                "11111"
+            ]
+        ],
+        "TAX": [
+            [
+                "Federal Income Taxation",
+                "3300"
+            ],
+            [
+                "Federal Income Taxation: Theory and Practice",
+                "9861"
+            ],
+            [
+                "Partnership Taxation",
+                "9868"
+            ],
+            [
+                "State and Local Taxes",
+                "9877"
+            ],
+            [
+                "Taxation of Business Entities",
+                "9878"
+            ],
+            [
+                "Current Problems in Taxation",
+                "9889"
+            ],
+            [
+                "Tax Procedure and Professional Responsibility in Tax Practice",
+                "9900"
+            ],
+            [
+                "Real Estate Taxation",
+                "9930"
+            ]
+        ],
+        "THE": [
+            [
+                "Introduction to the Theatre Arts",
+                "1041"
+            ],
+            [
+                "Introduction to Acting",
+                "1043"
+            ],
+            [
+                "Advanced Acting",
+                "3044"
+            ],
+            [
+                "Principles of Directing",
+                "3045"
+            ],
+            [
+                "Play Production",
+                "3046"
+            ],
+            [
+                "Performing with New Media",
+                "3050"
+            ],
+            [
+                "Selected Topics",
+                "4101"
+            ]
+        ],
+        "TRA": [
+            [
+                "Transfer Seminar",
+                "2000"
+            ]
+        ]
+    }
+}
