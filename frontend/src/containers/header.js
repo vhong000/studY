@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { Header } from '../components';
-import { logoutUser, getUserData } from '../actions/authActions';
+import { logoutUser, getUserData } from '../actions/authActions/authActions';
 
 class Wrapper extends Component  {
 
