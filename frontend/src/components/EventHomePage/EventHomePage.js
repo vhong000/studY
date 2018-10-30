@@ -4,7 +4,7 @@ import Calendar from 'react-calendar';
 import { EventListCard } from '../../components';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
-import { studyIcon } from '../../images';
+import { studyIcon, CCNY } from '../../images';
 import {
 
     Typography, Grid, withStyles, Paper, Divider, Toolbar,
@@ -34,9 +34,6 @@ const styles = theme => ({
     },
     typo_margin: {
     },
-    media: {
-        height: 90,
-    },
     column: {
         flexBasis: '33.33%',
     },
@@ -56,7 +53,7 @@ const styles = theme => ({
     },
     media: {
         height: 150
-	},
+    },
 
     grid: {
         margin: theme.spacing.unit * 3,
@@ -101,8 +98,8 @@ class EventHomePage extends Component {
                         </CardActionArea>
                     </Card>
                 </Grid>
-                )
-            return(profileCard);
+            )
+            return (profileCard);
 
         }
         return (
@@ -111,8 +108,8 @@ class EventHomePage extends Component {
                     <Grid className={classes.main_grid} container sm={12}>
                         <Grid container sm={2}>
                             <Grid className={classes.item_grid_left} item sm={12}>
-                                <Typography variant="subtitle1" color="textSecondary">
-                                    some image of school?
+                                <Typography className={classes.pos} color="textSecondary">
+                                    Google map not yet available
                                 </Typography>
                             </Grid>
                         </Grid>
@@ -187,9 +184,9 @@ class EventHomePage extends Component {
                                 </Typography>
                                 <Divider />
                             </Grid>
-                            
-                                {renderProfileCards()}
-                            
+
+                            {renderProfileCards()}
+
                         </Grid>
                         <Grid container className={classes.item_grid_left} sm={4}>
                             <Grid item sm={12}>

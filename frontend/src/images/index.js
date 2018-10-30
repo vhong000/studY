@@ -6,3 +6,4 @@ export { default as history } from './history_card.jpeg';
 export { default as art } from './art_card.jpeg';
 export { default as language } from './language_card.jpeg';
 export {default as studyIcon } from './icon.png';
+export { default as CCNY } from './ccny.png';
