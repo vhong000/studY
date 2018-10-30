@@ -218,4 +218,5 @@ Register.defaultProps = {
 export default reduxForm({
 	form: 'registerForm',
 	validate,
+	asyncBlurFields: [],
 })(Register);
