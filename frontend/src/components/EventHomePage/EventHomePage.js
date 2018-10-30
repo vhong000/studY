@@ -4,10 +4,11 @@ import Calendar from 'react-calendar';
 import { EventListCard } from '../../components';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
+import { studyIcon } from '../../images';
 import {
 
     Typography, Grid, withStyles, Paper, Divider, Toolbar,
-    Button, Card, CardContent
+    Button, Card, CardContent, CardMedia, CardActionArea
 
 } from '@material-ui/core';
 
@@ -19,6 +20,9 @@ const styles = theme => ({
     item_grid: {
         "margin-top": 5,
 
+    },
+    item_grid_left: {
+        "margin-left": 15,
     },
 
     date_group: {
@@ -50,18 +54,12 @@ const styles = theme => ({
         width: '1000px',
         height: '1000px'
     },
-    bullet: {
-        display: 'inline-block',
-        margin: '0 2px',
-        transform: 'scale(0.8)',
-    },
-    card: {
-        minWidth: 75,
-        height: 185,
-    },
+    media: {
+        height: 150
+	},
 
     grid: {
-        margin: theme.spacing.unit,
+        margin: theme.spacing.unit * 3,
     }
 });
 
@@ -71,7 +69,7 @@ class EventHomePage extends Component {
         this.state = {
             date: new Date(),
             Joined: false,
-            notInterested:false,
+            notInterested: false,
         }
 
     }
@@ -87,47 +85,83 @@ class EventHomePage extends Component {
         console.log(this.state.date);
         const bull = <span className={classes.bullet}>•</span>;
         //const icon_marker = <span className={}></span>
+
+        const renderProfileCards = () => {
+
+            const profileCard = [0, 1, 2, 3, 4].map((card, index) =>
+                <Grid key={index} item sm={3} spacing={16} >
+                    <Card className={classes.card}>
+                        <CardActionArea component={Link} to={'#'}>
+                            <CardMedia className={classes.media} image={studyIcon} />
+                            <CardContent>
+                                <Typography align="center" variant="bus">
+                                    {"Bobby Bobinski"}
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+                    </Card>
+                </Grid>
+                )
+            return(profileCard);
+
+        }
         return (
             <div>
                 <Grid className={classes.main_grid} container sm={12} spacing={16}>
                     <Grid className={classes.main_grid} container sm={12}>
                         <Grid container sm={2}>
-                            <Grid item sm={12}>
-                                Left grid
+                            <Grid className={classes.item_grid_left} item sm={12}>
+                                <Typography variant="subtitle1" color="textSecondary">
+                                    some image of school?
+                                </Typography>
                             </Grid>
                         </Grid>
-                        <Grid container sm={7}>
+
+
+                        <Grid container sm={6}>
                             <Grid item sm={12}>
                                 <h1>Title</h1>
                             </Grid>
+
                             <Grid item sm={12}>
                                 <Typography className={classes.pos} color="textSecondary">
-                                    {bull} Organizer: B.O.B
+                                    Organizer: B.O.B
                                 </Typography>
                                 <Typography className={classes.pos} color="textSecondary">
-                                    {bull} Study Group
+                                    Study Group
                                 </Typography>
                                 <Typography className={classes.pos} color="textSecondary">
-                                    {bull} Campus: City College
+                                    Campus: City College
                                 </Typography>
                             </Grid>
                         </Grid>
-                        <Grid justify="center" container sm={3}>
+
+
+
+                        <Grid justify="center" container sm={4}>
                             <Grid item justify="center" sm={12}>
                                 <Typography className={classes.pos} color="textSecondary">
-                                    Interest in this topic?
+                                    Interest in this topic?  {bull} 5 students joined
                                 </Typography>
-                                <Divider/>
-                                <Button >Join</Button>
+                                <Divider />
+                                <Button>Join</Button>
                                 <Button>not interested</Button>
                             </Grid>
                         </Grid>
                         <Divider />
                     </Grid>
+
+
+
+
+
                     <Grid className={classes.main_grid} container row sm={12}>
                         <Grid container sm={2}>
                         </Grid>
-                        <Grid container spacing={16} sm={7}>
+                        <Grid container spacing={16} sm={6}>
+                            <Grid item sm={12}>
+                                <h2>Detials</h2>
+                            </Grid>
                             <Grid item sm={12}>
                                 <Typography variant="body2">
                                     Settled opinion how enjoyed greater joy
@@ -135,13 +169,29 @@ class EventHomePage extends Component {
                                     expenses interest nor replying she she.
                                     Bore tall nay many many time yet less.
                                     Doubtful for answered one fat indulged margaret sir shutters together. Ladies so in wholly around
-                                    whence in at. Warmth he up giving oppose if. Impossible is dissimilar entreaties oh on terminated.
+                                    whence in at. Warmth he up giving oppose if.
+                                    Graphical elements that define a shape – ‘path’ elements,
+                                     basic shapes, and text content elements – are rendered by being filled, which is painting
+                                     the interior of the object, and stroked, which is painting along the outline of the object.
+                                     Filling and stroking are both painting operations.
+                                    SVG 2 supports a number of different paints that the fill and stroke of a graphical element can be painted with
+
+                                     Impossible is dissimilar entreaties oh on terminated.
                                     Earnest studied article country ten respect showing had. But required offering him elegance son improved informed.
                                     Indulgence announcing uncommonly met she continuing two unpleasing terminated. Now busy say down the shed eyes roof paid her. Of shameless collected suspicion existence in. Share walls stuff think but the arise guest. Course suffer to do he sussex it window advice. Yet matter enable misery end extent common men should. Her indulgence but assistance favourable cultivated everything collecting.
                                 </Typography>
                             </Grid>
+                            <Grid item sm={12}>
+                                <Typography variant="subtitle1" color="textSecondary">
+                                    Attending
+                                </Typography>
+                                <Divider />
+                            </Grid>
+                            
+                                {renderProfileCards()}
+                            
                         </Grid>
-                        <Grid container sm={3}>
+                        <Grid container className={classes.item_grid_left} sm={4}>
                             <Grid item sm={12}>
                                 <Calendar value={this.state.date} />
                             </Grid>
