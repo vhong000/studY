@@ -104,5 +104,6 @@ export default connect(
   onSubmit: submitValidate,
   onSubmitSuccess: submitValid,
   onSubmitFail: submitInvalid,
+  validate,
 })(Wrapper)
 );
