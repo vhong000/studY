@@ -6,6 +6,7 @@ import { reduxForm, formValueSelector } from 'redux-form';
 import { Register } from '../../components';
 import { registerUser } from '../../actions/authActions/authActions';
 import { fetchSchools } from '../../actions/eventActions/eventActions';
+import { SubmissionError } from 'redux-form';
 
 class Wrapper extends Component  {
 
@@ -20,8 +21,9 @@ class Wrapper extends Component  {
   }
 }
 
-function mapStateToProps(state) {
-  const selector = formValueSelector('registerForm');
+const selector = formValueSelector('registerForm');
+
+const applicantForm = (state) => {
   const {
     firstName, lastName, email,
     password, school, major,
@@ -30,23 +32,68 @@ function mapStateToProps(state) {
     'password', 'school', 'major'
   );
   return {
-    schools: state.Event.allSchools.results,
-    applicant: {
-      first_name: firstName, 
-      last_name: lastName, 
-      email: email,
-      password: password, 
-      school: school, 
-      major: major,
-    }
+    first_name: firstName, 
+    last_name: lastName, 
+    email: email,
+    password: password, 
+    school: school, 
+    major: major,
   }
 }
 
-function mapDispatchToProps(dispatch) {
+function mapStateToProps(state) {
+  return {
+    schools: state.Event.allSchools.results,
+    applicant: applicantForm(state),
+  }
+}
+
+function mapDispatchToProps(dispatch, state) {
   return {
     dispatch,
-    onSubmit(newUser, history) { dispatch(registerUser(newUser, history)); }
+    // onSubmit: (values) => { 
+    //   if (values.email && !values.email.includes('.cuny.edu')) {
+    //     throw new SubmissionError({
+    //       email: 'cuny only',
+    //       _error: 'cannot register'
+    //     })
+    //   }
+    //   else {
+    //   dispatch(registerUser(applicantForm(state))); 
+    //   dispatch(push('/'));
+    //   }
+    // }
   }
+}
+
+const submitValidate = ( values ) => {
+  if (values.email && !values.email.includes('.cuny.edu')) {
+    throw new SubmissionError({
+      email: 'cuny only',
+      _error: 'cannot register'
+    })
+  } else {
+    return values;
+  }
+}
+
+const submitValid = ( result, dispatch, props) => {
+  dispatch(registerUser(result, props.history))
+}
+
+const submitInvalid = ( errors, dispatch, submitError, props ) => {
+  console.log('props', props);
+  console.log('sub error', submitError);
+  return submitError.errors._error;
+}
+
+const validate = values => {
+	const errors = {};
+
+	if (values.email && !values.email.includes('.cuny.edu')) {
+		errors.email = 'CUNY email required';
+	}
+	return errors;
 }
 
 export default connect(
@@ -54,4 +101,9 @@ export default connect(
   mapDispatchToProps,
 )(reduxForm({
   form: 'registerForm',
-})(Wrapper));
+  onSubmit: submitValidate,
+  onSubmitSuccess: submitValid,
+  onSubmitFail: submitInvalid,
+  validate,
+})(Wrapper)
+);

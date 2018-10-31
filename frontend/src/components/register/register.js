@@ -9,52 +9,10 @@ import classes from './register.module.css';
 import icon from '../../images/icon.png'
 // more components at https://material-ui.com/getting-started/usage/
 
-import { connect } from 'react-redux';
-import { registerUser } from '../../actions/authActions/authActions';
-// import classes from './register.module.css';
-
-	// handleAlertClose() {
-	// 	this.setState({ openAlert: false })
-	// }
-
-	// handleSubmit(event) { // submit user state as json body
-	// 	event.preventDefault();
-	// 	const { applicant, emailError } = this.state;
-	// 	const { history } = this.props;
-	// 	const final = applicant;
-
-	// 	const required = {
-	// 		email: applicant.email,
-	// 		first_name: applicant.first_name,
-	// 		last_name: applicant.last_name,
-	// 		password: applicant.password,
-	// 		school: applicant.school,
-	// 	}
-
-	// 	const isComplete = !Object.values(required).every(x => (x === ''));
-	// 	if (isComplete && !emailError) {
-	// 		this.props.registerUser(final, history);
-
-	// 	} else {
-	// 		this.setState({ openAlert: true })
-	// 	}
-
-	// }
-// }
-
-const validate = values => {
-	const errors = {};
-
-	if (values.email && !values.email.includes('.cuny.edu')) {
-		errors.email = 'CUNY email required';
-	}
-	return errors;
-}
-
 const inputField = ({ 
 	input, children, id, 
 	label, type, variant,
-	placeholder, meta: { error },
+	placeholder, meta: { touched, error },
 	required
 }) => (
 	<TextField InputProps={{className: classes.TextField}}
@@ -82,14 +40,10 @@ const selectField = ({
 )
 
 export const Register = props => {
-	const { onSubmit, schools, applicant,
-		 submitting, pristine, history
+	const { onSubmit, schools, error,
+		 submitting, pristine, handleSubmit
 	} = props;
-	function handleSubmit(event) {
-		event.preventDefault();
-		onSubmit(applicant, history)
-	}
-
+		
 	return (
 		<div className={classes.Container}>
 			<div className={classes.PageColumns}>
@@ -106,7 +60,7 @@ export const Register = props => {
 						<p className={classes.Text2}>Sign up in just seconds.</p>
 						<form className={classes.Form} 
 								id="main_form"
-								onSubmit={handleSubmit}
+								onSubmit={handleSubmit(onSubmit)}
 								>
 							<Grid container justify='flex-start' >
 								<Grid container direction='column' xs='12' spacing='8' >
@@ -164,7 +118,7 @@ export const Register = props => {
 											component={selectField}>
 												{schools ? (
 													schools.map((school) => (
-													<MenuItem value={school.id}>{school.code}</MenuItem>
+													<MenuItem value={school.id}>{school.name}</MenuItem>
 												))) : (
 													<p>loading</p>
 												)}
@@ -217,6 +171,5 @@ Register.defaultProps = {
 
 export default reduxForm({
 	form: 'registerForm',
-	validate,
 	asyncBlurFields: [],
 })(Register);

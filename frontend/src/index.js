@@ -35,7 +35,7 @@ const subtopics = {
 		image: history
 	},
 	language: {
-		titles: ["English I", "English II", , "English III", "French I", "French II", "French III", "Spanish I", "Spanish II", "Spanish III",
+		titles: ["English I", "English II", "English III", "French I", "French II", "French III", "Spanish I", "Spanish II", "Spanish III",
 			"Italian I", "Italian II", "Italian III", "German I", "German II", "German III", "Chinese", "Japanese", "Russian", "Arabic", "Hindi"],
 		image: language
 	},
