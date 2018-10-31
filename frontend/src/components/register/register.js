@@ -15,7 +15,6 @@ const inputField = ({
 	placeholder, meta: { touched, error },
 	required
 }) => (
-<FormControl>
 	<TextField InputProps={{className: classes.TextField}}
 		id={id} label={label} type={type}
 		variant={variant} {...input}
@@ -23,7 +22,6 @@ const inputField = ({
 		children={children} required={required}
 		fullWidth error={error}
 	/>
-</FormControl>
 )
 
 const selectField = ({
