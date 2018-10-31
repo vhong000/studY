@@ -144,15 +144,15 @@ export const Register = props => {
 								</Grid>
 							</Grid>
 						</Grid>
- 							<Snackbar
-							open={error}
+{/* 							<Snackbar
+							open={openAlert}
+							onClose={this.handleAlertClose}
 							message={<span>Incomplete Form</span>}
-						/>
+						/> */}
 						</form>
 					<div>
 						<span>Already have a StudY Account?</span>&ensp;
 						<a href="/login" className={classes.Signin}>SIGN IN</a>
-						{error && <span>{error}</span>}
 					</div>
 				</div>
 			</div>

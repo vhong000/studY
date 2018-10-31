@@ -6,7 +6,7 @@ import App from './App';
 import { Login } from './components';
 import EventForm from './containers/eventForm';
 import Subtopic from './components/Subtopic/Subtopic';
-import { EventListPage, Header, Register } from './containers';
+import { EventListPage, Header, Register,EventPage } from './containers';
 import * as serviceWorker from './serviceWorker';
 
 import { Provider } from 'react-redux';
@@ -35,7 +35,7 @@ const subtopics = {
 		image: history
 	},
 	language: {
-		titles: ["English I", "English II", , "English III", "French I", "French II", "French III", "Spanish I", "Spanish II", "Spanish III",
+		titles: ["English I", "English II", "English III", "French I", "French II", "French III", "Spanish I", "Spanish II", "Spanish III",
 			"Italian I", "Italian II", "Italian III", "German I", "German II", "German III", "Chinese", "Japanese", "Russian", "Arabic", "Hindi"],
 		image: language
 	},
@@ -76,13 +76,16 @@ ReactDOM.render(
 				<Route exact path="/science" 
 					render={(props) => <Subtopic subtopic={subtopics.science} category={"science"}/> }/>
 				
-				<Route path="/:category/:subtopic" component={EventListPage}/>
+				<Route exact path="/:category/:subtopic" component={EventListPage}/>
+				<Route exact path="/:category/:subtopic/:eventId" component={EventPage}/> 
 				
 			</div>
 		</Router>
 	</Provider>,
 	document.getElementById('root')
 );
+
+//notes -> if we decide to do a search feature we would have another route for event page
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
