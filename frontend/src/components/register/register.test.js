@@ -23,7 +23,7 @@ const styles = theme => ({
 
 describe('Register component', () => {
 	const mock = jest.fn();
-	const wrapper = shallow(<Register onSubmit={mock} classes={styles} />);
+	const wrapper = shallow(<Register handleSubmit={mock} classes={styles} />);
 
 	it('should render all fields', () => {
     expect(wrapper.find('#first_name').exists()).toBe(true);
