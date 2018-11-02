@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { Header } from '../components';
 import { AuthContext } from '../contexts/Auth.context';
 
-class Wrapper extends Component  {
+class headerWrapper extends Component  {
   static contextType = AuthContext;
 
   render() {
@@ -14,4 +14,4 @@ class Wrapper extends Component  {
   }
 }
 
-export default Wrapper;
+export default headerWrapper;
