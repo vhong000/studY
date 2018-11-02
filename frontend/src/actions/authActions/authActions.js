@@ -74,8 +74,10 @@ export const logoutUser = () => dispatch => {
 export const registerUser = (newUser, history) => dispatch => {
   return fetch("/api/auth/signup", {
     method: "POST",
-    mode: "no-cors",
-		headers: { 'Content-Type': 'application/json' },
+		headers: {
+      'Content-Type': 'application/json', 
+      "Access-Control-Allow-Origin": '*'
+    },
 		body: JSON.stringify(newUser),
 	}).then((response) => {
     dispatch({ type: USER_REGISTER_REQUEST })

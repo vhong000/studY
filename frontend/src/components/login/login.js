@@ -4,7 +4,7 @@ import classes from './login.module.css';
 import icon from '../../images/icon.png'
 // more components at https://material-ui.com/getting-started/usage/
 
-import { loginUser } from '../../actions/authActions';
+import { loginUser } from '../../actions/authActions/authActions';
 import { connect } from 'react-redux';
 
 

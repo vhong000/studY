@@ -1,181 +1,175 @@
 import React, { Component } from 'react';
-import { Button, TextField, withStyles, Grid, Snackbar, Typography
+import { Button, TextField, withStyles, Grid, Snackbar, Typography,
+	Select, OutlinedInput, MenuItem, InputLabel, FormControl
 } from '@material-ui/core';
+import { Field, reduxForm } from 'redux-form';
+import propTypes from 'prop-types';
 
 import classes from './register.module.css';
 import icon from '../../images/icon.png'
 // more components at https://material-ui.com/getting-started/usage/
 
-import { connect } from 'react-redux';
-import { registerUser } from '../../actions/authActions';
-// import classes from './register.module.css';
+const inputField = ({ 
+	input, children, id, 
+	label, type, variant,
+	placeholder, meta: { touched, error },
+	required
+}) => (
+	<TextField InputProps={{className: classes.TextField}}
+		id={id} label={label} type={type}
+		variant={variant} {...input}
+		placeholder={placeholder}
+		children={children} required={required}
+		fullWidth error={error}
+	/>
+)
 
-export class Register extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			applicant: {
-				email: "",
-				first_name: "",
-				last_name: "",
-				password: "",
-				school: "",
-				major: "",
-				year: '6',
-			},
-			emailError: false,
-			openAlert: false,
-			// probably more, not final,
-		}
-		this.handleChange = this.handleChange.bind(this)
-		this.handleEmailChange = this.handleEmailChange.bind(this)
-		this.handleSubmit = this.handleSubmit.bind(this)
-		this.handleAlertClose = this.handleAlertClose.bind(this)
-	}
+const selectField = ({
+	input, children, id,
+	label, variant
+}) => (
+<FormControl fullWidth >
+	<InputLabel required variant={variant} >{label}</InputLabel>
+	<Select 
+	children={children}
+	id={id}
+	{...input}
+	input={<OutlinedInput margin='dense' />}
+	/>
+</FormControl>
+)
 
-	handleChange(event) { // update state on input change
-		this.setState({ 
-			applicant: {
-				...this.state.applicant,
-				[event.target.id]: event.target.value,
-			}
-		})
-	}
-
-	handleAlertClose() {
-		this.setState({ openAlert: false })
-	}
-
-	handleSubmit(event) { // submit user state as json body
-		event.preventDefault();
-		const { applicant, emailError } = this.state;
-		const { history } = this.props;
-		const final = applicant;
-
-		const required = {
-			email: applicant.email,
-			first_name: applicant.first_name,
-			last_name: applicant.last_name,
-			password: applicant.password,
-			school: applicant.school,
-		}
-
-		const isComplete = !Object.values(required).every(x => (x === ''));
-		if (isComplete && !emailError) {
-			this.props.registerUser(final, history);
-
-		} else {
-			this.setState({ openAlert: true })
-		}
-
-	}
-
-	handleEmailChange(event) {
-		const currEmail = event.target.value;
-		const isValid = !(currEmail.includes('.cuny.edu'));
-		this.setState({
-			applicant: {
-				...this.state.applicant,
-				email: event.target.value,
-			},
-			emailError: isValid,
-		})
-	}
-
-	render() {
-		const { emailError, openAlert } = this.state;
-	
-		return (
-			<div className={classes.Container}>
-                <div className={classes.PageColumns}>
-                    <div className={classes.PageColumn_left}>
-                        <div className={classes.Art}>
-                        </div>
-                    </div>
-                    <div className={classes.PageColumn_right}>
-                        <div className={classes.ColumnContainer}>
-							<div>
-								<img alt="icon" src={icon} className={classes.Icon}/>    
-							</div>
-							<h1 className={classes.Title}>Join the New York City student community.</h1>
-							<p className={classes.Text1}>By having a StudY account, you can create, find, and join groups on all of your favourite topics.</p>
-							<p className={classes.Text2}>Sign up in just seconds.</p>
-							<form className={classes.Form} 
-									id="main_form"
-									onSubmit={this.handleSubmit}>
-								<Grid container justify='flex-start' >
-									<Grid container direction='column' xs='12' spacing='8' >
-										<Grid container item direction='row' spacing='16' >
-											<Grid item xs='6'>
-												<TextField InputProps={{className: classes.TextField}}
-													id='first_name' label='First' type='text'
-													variant='outlined' onChange={this.handleChange}
-													fullWidth required
-												/>
-											</Grid>
-											<Grid item xs='6'>
-												<TextField InputProps={{className: classes.TextField}}
-													id='last_name' label='Last' type='text'
-													variant='outlined' onChange={this.handleChange}
-													fullWidth required
-												/>
-											</Grid>
+export const Register = props => {
+	const { onSubmit, schools, error,
+		 submitting, pristine, handleSubmit
+	} = props;
+		
+	return (
+		<div className={classes.Container}>
+			<div className={classes.PageColumns}>
+				<div className={classes.PageColumn_left}>
+					<div className={classes.Art} />
+				</div>
+				<div className={classes.PageColumn_right}>
+					<div className={classes.ColumnContainer}>
+						<div>
+							<img alt="icon" src={icon} className={classes.Icon}/>    
+						</div>
+						<h1 className={classes.Title}>Join the New York City student community.</h1>
+						<p className={classes.Text1}>By having a StudY account, you can create, find, and join groups on all of your favourite topics.</p>
+						<p className={classes.Text2}>Sign up in just seconds.</p>
+						<form className={classes.Form} 
+								id="main_form"
+								onSubmit={handleSubmit(onSubmit)}
+								>
+							<Grid container justify='flex-start' >
+								<Grid container direction='column' xs='12' spacing='8' >
+									<Grid container item direction='row' spacing='16' >
+										<Grid item xs='6'>
+											<Field 
+											name='firstName'
+											label='First'
+											id='first_name'
+											type='text'
+											variant='outlined'
+											required
+											component={inputField} />
 										</Grid>
-										<Grid item >
-											<TextField InputProps={{className: classes.TextField}}
-												id='email' label='E-mail' type='email'
-												variant='outlined' onChange={this.handleEmailChange}
-												fullWidth required error={emailError}
-											/>
-										</Grid>
-										<Grid item >
-											<TextField InputProps={{className: classes.TextField}}
-												id='password' label='Password' type='password'
-												variant='outlined' onChange={this.handleChange}
-												fullWidth required
-											/>
-										</Grid>
-										<Grid container item direction='row' spacing='16'>
-											<Grid item xs='8'>
-												<TextField InputProps={{className: classes.TextField}}
-													id='school' label='School' type='text'
-													variant='outlined' onChange={this.handleChange}
-													placeholder="eg. City College" 
-													fullWidth required
-												/>
-											</Grid>
-										<Grid item xs='4'>
-											<TextField InputProps={{className: classes.TextField}}
-												id='major' label='Major' type='text'
-												variant='outlined' onChange={this.handleChange}
-												placeholder="eg. Computer Science" 
-												fullWidth
-											/>
+										<Grid item xs='6'>
+											<Field 
+											name='lastName' 
+											id='last_name' 
+											label='Last' 
+											type='text'
+											variant='outlined' 
+											required
+											component={inputField} />
 										</Grid>
 									</Grid>
-									<Grid item>
-									<button type="submit" className={classes.Submit} onClick={this.handleSubmit}>SIGN UP</button>
+									<Grid item >
+											<Field 
+											name='email' 
+											id='email'
+											label='E-mail'
+											type='email'
+											variant='outlined'
+											required
+											component={inputField} />
+									</Grid>
+									<Grid item >
+											<Field 
+											name='password' 
+											id='password'
+											label='Password'
+											type='password'
+											variant='outlined'
+											required
+											component={inputField} />
+									</Grid>
+									<Grid container item direction='row' spacing='16'>
+										<Grid item xs='8'>
+											<Field 
+											name='school' 
+											id='school'
+											label='School' 
+											type='text'
+											variant='outlined'
+											required
+											component={selectField}>
+												{schools ? (
+													schools.map((school) => (
+													<MenuItem value={school.id}>{school.name}</MenuItem>
+												))) : (
+													<p>loading</p>
+												)}
+											</Field>
+										</Grid>
+									<Grid item xs='4'>
+											<Field 
+											name='major' 
+											id='major'
+											label='Major' 
+											type='text'
+											variant='outlined'
+											component={inputField} />
 									</Grid>
 								</Grid>
+								<Grid item>
+								<button 
+								type="submit"
+								disabled={submitting || pristine}
+								className={classes.Submit} >SIGN UP</button>
+								</Grid>
 							</Grid>
-							<Snackbar
-								open={openAlert}
-								onClose={this.handleAlertClose}
-								message={<span>Incomplete Form</span>}
-							/>
+						</Grid>
+{/* 							<Snackbar
+							open={openAlert}
+							onClose={this.handleAlertClose}
+							message={<span>Incomplete Form</span>}
+						/> */}
 						</form>
-						<div>
-							<span>Already have a StudY Account?</span>&ensp;
-							<a href="/login" className={classes.Signin}>SIGN IN</a>
-						</div>
-                    </div>
+					<div>
+						<span>Already have a StudY Account?</span>&ensp;
+						<a href="/login" className={classes.Signin}>SIGN IN</a>
+					</div>
 				</div>
 			</div>
 		</div>
-		)
-	}
+	</div>
+	)
 }
 
-const mapStateToProps = state => {};
+Register.propTypes = {
+	schools: propTypes.array,
+	applicant: propTypes.object,
+}
 
-export default connect(mapStateToProps,{ registerUser })(Register);
+Register.defaultProps = {
+	applicant: {},
+	schools: [],
+}
+
+export default reduxForm({
+	form: 'registerForm',
+	asyncBlurFields: [],
+})(Register);

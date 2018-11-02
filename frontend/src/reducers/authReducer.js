@@ -4,7 +4,7 @@ import {
   FETCH_USER_SUCCESS, FETCH_USER_FAILURE, FETCH_USER_REQUEST,
   USER_REGISTER_FAILURE, USER_REGISTER_REQUEST, USER_REGISTER_SUCCESS,
   USER_LOGOUT,
-} from '../actions/ActionTypes';
+} from '../actions/authActions/ActionTypes';
 
 const initialState = {
   token: localStorage.getItem('token'),

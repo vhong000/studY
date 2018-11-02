@@ -22,22 +22,23 @@ const styles = theme => ({
 })
 
 describe('Register component', () => {
-	const fn = jest.spyOn(Register.prototype, 'handleSubmit');
-	const wrapper = shallow(<Register classes={styles} />);
-	// console.log(wrapper.find('.main_form').debug())
+	const mock = jest.fn();
+	const wrapper = shallow(<Register handleSubmit={mock} classes={styles} />);
+
+	it('should render all fields', () => {
+    expect(wrapper.find('#first_name').exists()).toBe(true);
+    expect(wrapper.find('#last_name').exists()).toBe(true);
+    expect(wrapper.find('#email').exists()).toBe(true);
+    expect(wrapper.find('#password').exists()).toBe(true);
+    expect(wrapper.find('#school').exists()).toBe(true);
+    expect(wrapper.find('#major').exists()).toBe(true);
+	})
 
 	test('function call on submit', () => {
 		// check state on submit
 		wrapper.find('#main_form').simulate('submit', { preventDefault() {}});
-		expect(fn).toHaveBeenCalled();
+		expect(mock).toHaveBeenCalled();
 	})
 
-	test('Register state on change', () => {
-		// make sure state is changing with value
-		wrapper.find('#first_name').simulate('change', {target : {
-			value: 'test', 
-		}})
-		expect(wrapper.state().applicant.undefined).toEqual('test');
-	})
 })
 
