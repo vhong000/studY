@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import { Login } from './components';
 import EventForm from './containers/eventForm';
 import Subtopic from './components/Subtopic/Subtopic';
-import { EventListPage, Header, Register,EventPage } from './containers';
+import { EventListPage, Header, Register, Login, EventPage } from './containers';
 import * as serviceWorker from './serviceWorker';
 
-import { Provider } from 'react-redux';
-import store from './store';
+// import { Provider } from 'react-redux';
+// import store from './store';
+import { AuthProvider } from './contexts/Auth.context.js';
 
 import {
 	math, science, history, art, literature, language,
@@ -54,14 +54,15 @@ const subtopics = {
 }
 
 ReactDOM.render(
-	<Provider store={store}>
 		<Router>
 			<div>
-				<Header />
-				<Route exact path="/" component={App} />
-				<Route exact path="/register" component={Register} />
-				<Route exact path="/login" component={Login} />
-				<Route exact path="/eventform" component={EventForm} />
+				<AuthProvider>
+					<Header />
+					<Route exact path="/" component={App} />
+					<Route exact path="/register" component={Register} />
+					<Route exact path="/login" component={Login} />
+					<Route exact path="/eventform" component={EventForm} />
+				</AuthProvider>
   
 				<Route exact path="/math"
 					render={(props) => <Subtopic subtopic={subtopics.math} category={"math"}/> }/>
@@ -80,8 +81,7 @@ ReactDOM.render(
 				<Route exact path="/:category/:subtopic/:eventId" component={EventPage}/> 
 				
 			</div>
-		</Router>
-	</Provider>,
+		</Router>,
 	document.getElementById('root')
 );
 

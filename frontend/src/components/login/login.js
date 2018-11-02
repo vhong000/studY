@@ -4,10 +4,6 @@ import classes from './login.module.css';
 import icon from '../../images/icon.png'
 // more components at https://material-ui.com/getting-started/usage/
 
-import { loginUser } from '../../actions/authActions/authActions';
-import { connect } from 'react-redux';
-
-
 export class Login extends Component {
 
 	constructor(props) {
@@ -96,13 +92,4 @@ export class Login extends Component {
 	}
 }
 
-const mapStateToProps = state => ({
-	user: state.Authenticate.user,
-});
-
-export default connect(mapStateToProps, { loginUser })(Login);
-
-
-
-
-
+export default Login;

@@ -40,7 +40,7 @@ export const loginUser = (user, history) => dispatch => {
 
 // GET USER DATA
 export const getUserData = (token) => dispatch => {
-  return fetch("/api/auth/user", {
+  return fetch("/api/profile", {
     method: "GET",
     headers: {
       'Content-Type': 'application/json',
