@@ -15,8 +15,16 @@ export class AuthProvider extends Component {
 
 	onLogin(user) {
 		loginUser(user).then(result => {
+			localStorage.setItem('token', result.token)
 			this.setState({
-				token: result,
+				token: result.token,
+			})
+		}).then(() => {
+			// console.log(this.state.token);
+			getUserData(this.state.token).then(result => {
+				this.setState({ 
+					user: result,
+				})
 			})
 		})
 	}
@@ -56,4 +64,16 @@ export class AuthProvider extends Component {
 	}
  }
 
-export const AuthConsumer = AuthContext.Consumer;
+const AuthConsumer = AuthContext.Consumer;
+
+export function AuthWrapper(WrappedComponent) {
+	return function Wrapper(props) {
+		return(
+			<AuthConsumer >
+				{ value => (
+					<WrappedComponent {...props} {...value} />
+				) }
+			</AuthConsumer>
+		)
+	}
+}

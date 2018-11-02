@@ -3,44 +3,12 @@ import { TextField } from '@material-ui/core';
 import classes from './login.module.css';
 import icon from '../../images/icon.png'
 // more components at https://material-ui.com/getting-started/usage/
+import { withFormik } from 'formik';
 
 export class Login extends Component {
 
-	constructor(props) {
-		super(props);
-		this.state = {
-			user: {
-				email: "",
-				password: "",
-			}
-    }		
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-	}
-
-  // update state on input change
-	handleChange(event) {
-		this.setState({
-			user: {
-				...this.state.user,
-				[event.target.id]: event.target.value
-			}
-		});
-	//console.log(event.target.value);
-	}
-
- 	//submit user state as json body
-	handleSubmit(event) {
-		event.preventDefault();
-		const data = this.state.user;
-		const { history } = this.props;
-		console.log(data);
-
-		this.props.loginUser(data, history);
-	}
-
 	render() {
-		const { user } = this.props;
+		const { values, handleChange, handleSubmit } = this.props;
 		return (
 			<div className={classes.Container}>
 				<div className={classes.PageColumns}>
@@ -54,7 +22,7 @@ export class Login extends Component {
 								<img alt="icon" src={icon} className={classes.Icon}/>    
 							</div>
 							<h1 className={classes.Title}>Sign In</h1>
-							<form id="myForm" className={classes.Form} onSubmit={this.handleSubmit}>
+							<form id="myForm" className={classes.Form} onSubmit={handleSubmit}>
 								<TextField InputProps={{className: classes.TextField}}
 									id="email"
 									label="Email"
@@ -63,7 +31,7 @@ export class Login extends Component {
 									autoComplete="email"
 									margin="dense"
 									variant="outlined"
-									onChange={this.handleChange}
+									onChange={handleChange}
 									fullWidth={true}
 									/>
 								<TextField InputProps={{className: classes.TextField}}
@@ -73,7 +41,7 @@ export class Login extends Component {
 									autoComplete="current-password"
 									margin="dense"
 									variant="outlined"
-									onChange={this.handleChange}
+									onChange={handleChange}
 									fullWidth={true}
 									/>
 								<div>
@@ -92,4 +60,12 @@ export class Login extends Component {
 	}
 }
 
-export default Login;
+export default withFormik({
+	mapPropsToValues: () => ({
+		email: 'what',
+		password: 'what',
+  }),
+  handleSubmit: (user, { props }) => {
+    props.onLogin(user);
+  }
+})(Login);

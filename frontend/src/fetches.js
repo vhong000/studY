@@ -14,7 +14,7 @@ export const loginUser = (user) => {
       return Promise.reject({ message: "Unable to Login" });
     } else { return response.json(); }
   }).catch(error => { 
-    return error.json();
+    return error;
   });
 }
 
@@ -31,7 +31,7 @@ export const getUserData = (token) => {
       return Promise.reject({ message: "Unable to get user data" });
     } else { return response.json(); }
   }).catch(error => {
-    return error.json();
+    return error;
   });
 }
 
@@ -50,6 +50,6 @@ export const registerUser = (newUser) => {
     } else { return response.json(); }
   }).then(jsonData => { return jsonData; })
   .catch(error => { 
-    return error.json();
+    return error;
   });
 }
