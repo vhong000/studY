@@ -10,10 +10,11 @@ export const loginUser = (user) => {
 		body: JSON.stringify(user),
 		credentials: "include"
 	}).then((response) => {
-    if (response.status !== 200) {
-      return Promise.reject({message: "Unable to login"});
-      // throw new Error({message: "unable to login"});
-    } else { return response.json(); }
+    if (response.status === 200) {
+      return response.json(); 
+    } else if (response.status === 400) { 
+      return Promise.reject({message: "Wrong email or password"});
+    } else { return Promise.reject({ message: "Unable to login" })}
   })
 }
 
@@ -44,13 +45,11 @@ export const registerUser = (newUser) => {
     },
 		body: JSON.stringify(newUser),
 	}).then((response) => {
-    if (response.status !== 201) {
-      return Promise.reject({ message: "Unable to Register" });
-    } else { return response.json(); }
-  }).then(jsonData => { return jsonData; })
-  .catch(error => { 
-    return error;
-  });
+    if (response.status === 400) {
+      return Promise.reject({ message: "Email unavailable" });
+    } else if (response.status === 201) { return response.json(); }
+    else { Promise.reject({ message: "Unable to Register" })}
+  })
 }
 
 export const fetchSchools = () => {

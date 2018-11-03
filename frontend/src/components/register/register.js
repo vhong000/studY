@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Button, TextField, withStyles, Grid, Snackbar, Typography,
 	Select, OutlinedInput, MenuItem, InputLabel, FormControl
 } from '@material-ui/core';
@@ -16,12 +16,12 @@ const inputField = ({
 	input, children, id, 
 	label, type, variant,
 	placeholder, onChange,
-	required
+	required, helperText
 }) => (
 	<TextField InputProps={{className: classes.TextField}}
 		id={id} label={label} type={type}
 		variant={variant} {...input}
-		placeholder={placeholder}
+		placeholder={placeholder} helperText={helperText}
 		children={children} required={required}
 		fullWidth onChange={onChange}
 	/>
@@ -37,13 +37,16 @@ const selectField = ({
 	children={children}
 	id={id}
 	{...input}
-	input={<OutlinedInput value={values.school} onChange={onChange('school')} margin='dense' />}
+	input={<OutlinedInput 
+		value={values.school}
+		onChange={onChange('school')}
+		margin='dense' />}
 	/>
 </FormControl>
 )
 
 export const Register = props => {
-	const { schools, values, handleChange } = props;
+	const { schools, values, handleChange, touched, errors } = props;
 		
 	return (
 		<div className={classes.Container}>
@@ -98,6 +101,7 @@ export const Register = props => {
 											variant='outlined'
 											required
 											onChange={handleChange}
+											helperText={touched.email && errors.email && <p>{errors.email}</p>}
 											component={inputField} />
 									</Grid>
 									<Grid item >
@@ -135,9 +139,11 @@ export const Register = props => {
 											label='Major' 
 											type='text'
 											variant='outlined'
+											required
 											onChange = {handleChange}
 											component={inputField} />
 									</Grid>
+									{ errors.registerForm && <span>{errors.registerForm}</span> }
 								</Grid>
 								<Grid item>
 								<button 
@@ -177,12 +183,22 @@ Register.defaultProps = {
 
 export default withFormik({
 	mapPropsToValues: () => ({
-		firstName: '',
-		lastName: '',
+		first_name: '',
+		last_name: '',
 		email: '',
 		password: '',
 		school: '',
 		major: ''
+	}),
+	validationSchema: Yup.object().shape({
+		first_name: Yup.string().required(),
+		last_name: Yup.string().required(),
+		email: Yup.string()
+			.matches(/(.cuny.edu)/, 'Must be a valid CUNY Email')
+			.required('Email is required'),
+		password: Yup.string().required(),
+		school: Yup.number().required(),
+		major: Yup.string().required(),
 	}),
 	handleSubmit: (applicant, { props, setErrors, setSubmitting }) => {
 		registerUser(applicant).then(() => {

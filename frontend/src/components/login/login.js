@@ -11,14 +11,14 @@ import { loginUser } from '../../fetches';
 const inputField = ({ 
 	input, children, id, 
 	label, type, placeholder,
-	required, onChange,
+	required, onChange, helperText
 }) => (
 	<TextField InputProps={{className: classes.TextField}}
 		id={id} label={label} type={type}
 		variant='outlined' {...input}
 		placeholder={placeholder} margin='dense'
 		children={children} required={required}
-		fullWidth onChange={onChange} 
+		fullWidth onChange={onChange} helperText={helperText} 
 	/>
 )
 
@@ -37,6 +37,7 @@ export const Login = props => {
 							<div>
 								<img alt="icon" src={icon} className={classes.Icon}/>    
 							</div>
+
 							<h1 className={classes.Title}>Sign In</h1>
 							<Form name='loginForm' id="myForm" className={classes.Form} >
 								<Field 
@@ -44,25 +45,27 @@ export const Login = props => {
 								id='email'
 								label='Email' 
 								type='email' 
+								helperText={ touched.email && errors.email && <p>{errors.email}</p> }
 								onChange={handleChange}
 								component={inputField} />
-								{ touched.email && errors.email && <span>{errors.email}</span> }
 
 								<Field 
 								name='password' 
 								id='password'
 								label='Password' 
 								type='password' 
+								helperText={touched.password && errors.password && <p>{errors.password}</p>}
 								onChange={handleChange}
 								component={inputField} />
-								{ touched.password && errors.password && <span>{errors.password}</span> }
+								{ errors.loginForm && <span>{errors.loginForm}</span> }
+
 								<div>
 									<button type="submit" disabled={isSubmitting} className={classes.Submit}>
 										SIGN IN
 									</button>
 								</div>
 							</Form>
-							{ errors.loginForm && <span>{errors.loginForm}</span> }
+
 							<div>
 								<span>Don't have a StudY Account?</span>&ensp;
 								<a href="/register" className={classes.Signup}>SIGN UP</a>
