@@ -33,6 +33,9 @@ class Category(models.Model):
     class Meta:
         db_table = 'categories'
 
+    def __str__(self):
+        return f'{self.name} ({self.id})'
+
 
 class Topic(models.Model):
     name = models.CharField(max_length=50)
@@ -63,4 +66,4 @@ class Event(models.Model):
         db_table = 'events'
 
     def __str__(self):
-        return self.title
+        return self.name
