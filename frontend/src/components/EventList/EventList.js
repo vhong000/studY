@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { EventListCard } from '../../components';
 import classNames from 'classnames';
+import styles from './EventList.styles';
 import { Link } from 'react-router-dom';
 import {
 
@@ -8,37 +9,7 @@ import {
 
 } from '@material-ui/core';
 
-const styles = theme => ({
-    main_grid: {
-        "margin-top": 20,
-    },
-    item_grid: {
-        "margin-top": 5,
 
-    },
-
-    date_group: {
-        "top-padding": 30,
-    },
-    typo_margin: {
-    },
-    media: {
-        height: 90,
-    },
-    column: {
-        flexBasis: '33.33%',
-    },
-    helper: {
-        borderLeft: `2px solid ${theme.palette.divider}`,
-        padding: `${theme.spacing.unit}px ${theme.spacing.unit * 2}px`,
-    },
-    root: {
-        flexGrow: 1,
-    },
-    grow: {
-        flexGrow: 1,
-    },
-});
 
 class EventList extends Component {
 
