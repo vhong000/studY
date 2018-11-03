@@ -32,6 +32,7 @@ describe('<EvenHomePage /> ', ()=>{
 
     });
     test('snapshot',()=>{
+        ///
         const component = renderer.create(<EventHomePage event={mockEvent} classes={styles} />);
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot();
@@ -39,6 +40,7 @@ describe('<EvenHomePage /> ', ()=>{
     })
 
     it('allow us to set props', () => {
+        ///
         const wrapper = mount(<EventHomePage event={mockEvent} classes={styles} />);
     })
 })
