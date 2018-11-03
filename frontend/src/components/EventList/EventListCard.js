@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 //import { Header } from '../../components';
-import { Link } from 'react-router-dom';
+import { Link,  BrowserRouter as Router} from 'react-router-dom';
+
 import {
     Card, CardContent,
     Typography, Grid, withStyles, CardMedia,
@@ -65,6 +66,7 @@ class EventListCard extends Component {
                     </Grid>
                 </Grid>
                 </CardActionArea>
+                
             </Card>
         )
     }
