@@ -59,7 +59,7 @@ class ProfileView(generics.RetrieveAPIView):
 
         raise NotFound()
 
-        
+
 class SchoolViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = School.objects.all()
     serializer_class = SchoolSerializer
@@ -82,7 +82,7 @@ class CategoryView(viewsets.ModelViewSet):
     http_method_names = ['get']
     serializer_class = CategorySerializer
 
-    
+
 class EventList(generics.ListAPIView):
     serializer_class = EventSerializer
 

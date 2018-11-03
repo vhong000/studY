@@ -31,5 +31,5 @@ class AccountSerializer(serializers.ModelSerializer):
         user_data = validated_data.pop('owner')
         if User.objects.filter(email=user_data['email']).exists():
             raise ValidationError('email already exists')
-        user = User.objects.create_user(**user_data, is_active=True)
+        user = User.objects.create_user(**user_data, is_active=False)
         return Account.objects.create(**validated_data, owner=user)

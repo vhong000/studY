@@ -29,9 +29,6 @@ class SignupView(APIView):
 
 
 class AuthenticationView(ObtainAuthToken):
-    # authentication_classes = (TokenAuthentication, BasicAuthentication)
-    # permission_classes = (AllowAny,)
-    # parser_classes = (JSONParser,)
     http_method_names = ['post']
 
     def post(self, request, *args, **kwargs):
