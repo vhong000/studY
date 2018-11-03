@@ -15,9 +15,6 @@ export const loginUser = (user) => {
       // throw new Error({message: "unable to login"});
     } else { return response.json(); }
   })
-  // .catch(error => { 
-  //   throw error;
-  // });
 }
 
 // GET USER DATA
@@ -54,4 +51,16 @@ export const registerUser = (newUser) => {
   .catch(error => { 
     return error;
   });
+}
+
+export const fetchSchools = () => {
+  return fetch("/api/schools", {
+    method: "GET",
+  }).then(response => {
+    if (response.status !== 200) {
+      return Promise.reject({ message: "Unable to fetch schools" });
+    } else { return response.json(); }
+  }).catch(error => { 
+    return error;
+  })
 }

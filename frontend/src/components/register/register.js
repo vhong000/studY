@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import { Button, TextField, withStyles, Grid, Snackbar, Typography,
 	Select, OutlinedInput, MenuItem, InputLabel, FormControl
 } from '@material-ui/core';
-import { Field, reduxForm } from 'redux-form';
+import { Field, withFormik, Form } from 'formik';
+import * as Yup from 'yup';
 import propTypes from 'prop-types';
 
 import classes from './register.module.css';
 import icon from '../../images/icon.png'
+import isSubmitting from 'redux-form/lib/isSubmitting';
+import { registerUser } from '../../fetches';
 // more components at https://material-ui.com/getting-started/usage/
 
 const inputField = ({ 
@@ -40,9 +43,7 @@ const selectField = ({
 )
 
 export const Register = props => {
-	const { onSubmit, schools, error,
-		 submitting, pristine, handleSubmit
-	} = props;
+	const { schools } = props;
 		
 	return (
 		<div className={classes.Container}>
@@ -58,9 +59,9 @@ export const Register = props => {
 						<h1 className={classes.Title}>Join the New York City student community.</h1>
 						<p className={classes.Text1}>By having a StudY account, you can create, find, and join groups on all of your favourite topics.</p>
 						<p className={classes.Text2}>Sign up in just seconds.</p>
-						<form className={classes.Form} 
+
+						<Form name='registerForm' className={classes.Form} 
 								id="main_form"
-								onSubmit={handleSubmit(onSubmit)}
 								>
 							<Grid container justify='flex-start' >
 								<Grid container direction='column' xs='12' spacing='8' >
@@ -137,7 +138,7 @@ export const Register = props => {
 								<Grid item>
 								<button 
 								type="submit"
-								disabled={submitting || pristine}
+								disabled={isSubmitting}
 								className={classes.Submit} >SIGN UP</button>
 								</Grid>
 							</Grid>
@@ -147,7 +148,7 @@ export const Register = props => {
 							onClose={this.handleAlertClose}
 							message={<span>Incomplete Form</span>}
 						/> */}
-						</form>
+						</Form>
 					<div>
 						<span>Already have a StudY Account?</span>&ensp;
 						<a href="/login" className={classes.Signin}>SIGN IN</a>
@@ -169,7 +170,21 @@ Register.defaultProps = {
 	schools: [],
 }
 
-export default reduxForm({
-	form: 'registerForm',
-	asyncBlurFields: [],
+export default withFormik({
+	mapPropsToValues: () => ({
+		firstName: '',
+		lastName: '',
+		email: '',
+		password: '',
+		school: '',
+		major: ''
+	}),
+	handleSubmit: (applicant, { props, setErrors, setSubmitting }) => {
+		registerUser(applicant).then(() => {
+			props.history.push('/')
+		}).catch(error => {
+			setErrors({ registerForm: error.message });
+			setSubmitting(false);
+		})
+	}
 })(Register);
