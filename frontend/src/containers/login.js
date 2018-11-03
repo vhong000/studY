@@ -2,8 +2,7 @@
 import React, { Component } from 'react';
 
 import { Login } from '../components';
-import { AuthContext, AuthWrapper } from '../contexts/Auth.context';
-import { withFormik } from 'formik';
+import { AuthContext } from '../contexts/Auth.context';
 
 class loginWrapper extends Component {
   static contextType = AuthContext;
@@ -15,4 +14,4 @@ class loginWrapper extends Component {
   }
 }
 
-export default (loginWrapper);
+export default loginWrapper;

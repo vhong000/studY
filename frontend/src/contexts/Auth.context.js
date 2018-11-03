@@ -13,19 +13,13 @@ export class AuthProvider extends Component {
 		}
 	}
 
-	onLogin(user) {
-		loginUser(user).then(result => {
-			localStorage.setItem('token', result.token)
-			this.setState({
-				token: result.token,
-			})
-		}).then(() => {
-			// console.log(this.state.token);
-			getUserData(this.state.token).then(result => {
-				this.setState({ 
-					user: result,
-				})
-			})
+	onLogin(token) {
+		getUserData(token).then(result => {
+      localStorage.setItem('token', token);
+			this.setState({ 
+				token: token,
+				user: result,
+			});
 		})
 	}
 
@@ -56,7 +50,7 @@ export class AuthProvider extends Component {
 						this.setState({ token: '', user: '' });
 						localStorage.removeItem('token');
 					},
-					onLogin: (user) => { this.onLogin(user); }
+					onLogin: (token) => { this.onLogin(token); }
 				}}>
 				{this.props.children}
 			</AuthContext.Provider>

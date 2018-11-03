@@ -11,11 +11,13 @@ export const loginUser = (user) => {
 		credentials: "include"
 	}).then((response) => {
     if (response.status !== 200) {
-      return Promise.reject({ message: "Unable to Login" });
+      return Promise.reject({message: "Unable to login"});
+      // throw new Error({message: "unable to login"});
     } else { return response.json(); }
-  }).catch(error => { 
-    return error;
-  });
+  })
+  // .catch(error => { 
+  //   throw error;
+  // });
 }
 
 // GET USER DATA
