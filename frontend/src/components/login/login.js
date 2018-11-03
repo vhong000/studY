@@ -1,50 +1,29 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { TextField } from '@material-ui/core';
 import classes from './login.module.css';
 import icon from '../../images/icon.png'
 // more components at https://material-ui.com/getting-started/usage/
+import { withFormik, Field, Form } from 'formik';
+import * as Yup from 'yup';
+import { loginUser } from '../../fetches';
 
-import { loginUser } from '../../actions/authActions/authActions';
-import { connect } from 'react-redux';
+const inputField = ({ 
+	input, children, id, 
+	label, type, placeholder,
+	required, onChange, helperText
+}) => (
+	<TextField InputProps={{className: classes.TextField}}
+		id={id} label={label} type={type}
+		variant='outlined' {...input}
+		placeholder={placeholder} margin='dense'
+		children={children} required={required}
+		fullWidth onChange={onChange} helperText={helperText} 
+	/>
+)
 
+export const Login = props => {
+		const { handleChange, errors, touched, isSubmitting } = props;
 
-export class Login extends Component {
-
-	constructor(props) {
-		super(props);
-		this.state = {
-			user: {
-				email: "",
-				password: "",
-			}
-    }		
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-	}
-
-  // update state on input change
-	handleChange(event) {
-		this.setState({
-			user: {
-				...this.state.user,
-				[event.target.id]: event.target.value
-			}
-		});
-	//console.log(event.target.value);
-	}
-
- 	//submit user state as json body
-	handleSubmit(event) {
-		event.preventDefault();
-		const data = this.state.user;
-		const { history } = this.props;
-		console.log(data);
-
-		this.props.loginUser(data, history);
-	}
-
-	render() {
-		const { user } = this.props;
 		return (
 			<div className={classes.Container}>
 				<div className={classes.PageColumns}>
@@ -57,33 +36,35 @@ export class Login extends Component {
 							<div>
 								<img alt="icon" src={icon} className={classes.Icon}/>    
 							</div>
+
 							<h1 className={classes.Title}>Sign In</h1>
-							<form id="myForm" className={classes.Form} onSubmit={this.handleSubmit}>
-								<TextField InputProps={{className: classes.TextField}}
-									id="email"
-									label="Email"
-									type="email"
-									name="email"
-									autoComplete="email"
-									margin="dense"
-									variant="outlined"
-									onChange={this.handleChange}
-									fullWidth={true}
-									/>
-								<TextField InputProps={{className: classes.TextField}}
-									id="password"
-									label="Password"
-									type="password"
-									autoComplete="current-password"
-									margin="dense"
-									variant="outlined"
-									onChange={this.handleChange}
-									fullWidth={true}
-									/>
+							<Form name='loginForm' id="myForm" className={classes.Form} >
+								<Field 
+								name='email' 
+								id='email'
+								label='Email' 
+								type='email' 
+								helperText={ touched.email && errors.email && <p>{errors.email}</p> }
+								onChange={handleChange}
+								component={inputField} />
+
+								<Field 
+								name='password' 
+								id='password'
+								label='Password' 
+								type='password' 
+								helperText={touched.password && errors.password && <p>{errors.password}</p>}
+								onChange={handleChange}
+								component={inputField} />
+								{ errors.loginForm && <span>{errors.loginForm}</span> }
+
 								<div>
-									<button type="submit" className={classes.Submit}>SIGN IN</button>
+									<button type="submit" disabled={isSubmitting} className={classes.Submit}>
+										SIGN IN
+									</button>
 								</div>
-							</form>
+							</Form>
+
 							<div>
 								<span>Don't have a StudY Account?</span>&ensp;
 								<a href="/register" className={classes.Signup}>SIGN UP</a>
@@ -94,15 +75,25 @@ export class Login extends Component {
 			</div>
 		)
 	}
-}
 
-const mapStateToProps = state => ({
-	user: state.Authenticate.user,
-});
-
-export default connect(mapStateToProps, { loginUser })(Login);
-
-
-
-
-
+export default withFormik({
+	mapPropsToValues: () => ({
+		email: '',
+		password: '',
+	}),
+	validationSchema: Yup.object().shape({
+		email: Yup.string()
+			.matches(/(.cuny.edu)/, 'Must be a valid CUNY Email')
+			.required('Email is required'),
+		password: Yup.string().required(),
+	}),
+  handleSubmit: (user, { props, setErrors, setSubmitting }) => {
+    loginUser(user).then(result => {
+      props.onLogin(result.token)
+    }).then(() => props.history.push('/'))
+    .catch(error => {
+			setErrors({ loginForm: error.message});
+			setSubmitting(false);
+		})
+	}
+})(Login);

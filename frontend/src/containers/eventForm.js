@@ -1,56 +1,36 @@
 
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { reduxForm, formValueSelector } from 'redux-form';
 
 import { EventForm } from '../components';
+import { AuthContext } from '../contexts/Auth.context';
+import { fetchSchools } from '../fetches';
+import { isEmpty } from 'lodash';
 
-function mapStateToProps(state) {
-  const selector = formValueSelector('eventForm');
-  const { 
-    eventName, eventDate, 
-    eventTime, eventLocation,
-    eventLimit, eventDescription,
-    } = selector(
-      state, 'eventName', 'eventDate',
-      'eventTime', 'eventLocation',
-      'eventLimit', 'eventDescription'
-    );
-  // const eventOrganizer = (
-  //   state.Authenticate.user ? (
-  //     state.Authenticate.user.user_profile.first_name
-  //   ) : (
-  //     'default'
-  //  ))
-
-  
-  // const eventCategory = 'math';
-  const eventTopic = 'calc';
-
-  return {
-    newEvent: { 
-      name: eventName,
-      date: eventDate,
-      time: eventTime,
-      location: eventLocation,
-      limit: eventLimit,
-      description: eventDescription,
-      // organizer: eventOrganizer,
-      // category: eventCategory,
-      topic: eventTopic,
+class eventFormWrapper extends Component  {
+  constructor(props) {
+    super(props);
+    this.state = {
+      schools: [],
     }
   }
-}
 
-function mapDispatchToProps(dispatch) {
-  return {
-    dispatch,
-    onSubmit(newEvent) { console.log(newEvent); }
+  static contextType = AuthContext;
+
+  componentDidMount() {
+    fetchSchools().then(response => { 
+      this.setState({ schools: response.results })
+    }); 
+  }
+
+  render() {
+    const hasSchools = !isEmpty(this.state.schools);
+    return ( 
+      hasSchools ? (
+        <EventForm {...this.props} {...this.context} 
+        schools={this.state.schools} />
+      ) : (<p> Loading...</p>)
+    )
   }
 }
 
-export default connect(
-  mapStateToProps, mapDispatchToProps
-  )(reduxForm({
-  form: 'eventForm',
-})(EventForm))
+export default (eventFormWrapper)

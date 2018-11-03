@@ -1,41 +1,17 @@
 
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
 import { Header } from '../components';
-import { logoutUser, getUserData } from '../actions/authActions/authActions';
+import { AuthContext } from '../contexts/Auth.context';
 
-class Wrapper extends Component  {
-
-  componentDidMount() {
-    const token = localStorage.getItem('token');
-    if (token) { 
-      this.props.dispatch(getUserData(token)); 
-    }
-  }
+class headerWrapper extends Component  {
+  static contextType = AuthContext;
 
   render() {
     return ( 
-      <Header {...this.props} />
+      <Header {...this.props} {...this.context} />
     )
   }
 }
 
-
-function mapStateToProps(state) {
-  return { 
-    user: state.Authenticate.user,
-  }
-}
-
-function mapDispatchToProps(dispatch) {
-  return {
-    dispatch,
-    onLogout() { dispatch(logoutUser()); }
-  }
-}
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(Wrapper);
+export default headerWrapper;

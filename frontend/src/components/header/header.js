@@ -28,9 +28,9 @@ export function Header({
 		<AppBar position='static' >
 			<Toolbar>
 				<Typography	
-                    style={{ textDecoration: 'none' }}
-                    component={Link}
-                    to ="/"
+					style={{ textDecoration: 'none' }}
+					component={Link}
+					to ="/"
 					className={classes.title}
 					variant='headline'
 					color='inherit'>
@@ -43,7 +43,7 @@ export function Header({
 							className={classes.user_name}
 							variant='subtitle1'
 							color='inherit'>
-							{user.user_profile.first_name}
+							{user.owner.first_name}
 						</Typography>
 						<Button 
 							className={classes.logout_button}

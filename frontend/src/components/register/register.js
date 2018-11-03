@@ -1,32 +1,34 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Button, TextField, withStyles, Grid, Snackbar, Typography,
 	Select, OutlinedInput, MenuItem, InputLabel, FormControl
 } from '@material-ui/core';
-import { Field, reduxForm } from 'redux-form';
+import { Field, withFormik, Form } from 'formik';
+import * as Yup from 'yup';
 import propTypes from 'prop-types';
 
 import classes from './register.module.css';
 import icon from '../../images/icon.png'
+import { registerUser } from '../../fetches';
 // more components at https://material-ui.com/getting-started/usage/
 
 const inputField = ({ 
 	input, children, id, 
 	label, type, variant,
-	placeholder, meta: { touched, error },
-	required
+	placeholder, onChange,
+	required, helperText
 }) => (
 	<TextField InputProps={{className: classes.TextField}}
 		id={id} label={label} type={type}
 		variant={variant} {...input}
-		placeholder={placeholder}
+		placeholder={placeholder} helperText={helperText}
 		children={children} required={required}
-		fullWidth error={error}
+		fullWidth onChange={onChange}
 	/>
 )
 
 const selectField = ({
 	input, children, id,
-	label, variant
+	label, variant, onChange, values
 }) => (
 <FormControl fullWidth >
 	<InputLabel required variant={variant} >{label}</InputLabel>
@@ -34,15 +36,16 @@ const selectField = ({
 	children={children}
 	id={id}
 	{...input}
-	input={<OutlinedInput margin='dense' />}
+	input={<OutlinedInput 
+		value={values.school}
+		onChange={onChange('school')}
+		margin='dense' />}
 	/>
 </FormControl>
 )
 
 export const Register = props => {
-	const { onSubmit, schools, error,
-		 submitting, pristine, handleSubmit
-	} = props;
+	const { schools, values, handleChange, touched, errors, isSubmitting } = props;
 		
 	return (
 		<div className={classes.Container}>
@@ -58,9 +61,9 @@ export const Register = props => {
 						<h1 className={classes.Title}>Join the New York City student community.</h1>
 						<p className={classes.Text1}>By having a StudY account, you can create, find, and join groups on all of your favourite topics.</p>
 						<p className={classes.Text2}>Sign up in just seconds.</p>
-						<form className={classes.Form} 
+
+						<Form name='registerForm' className={classes.Form} 
 								id="main_form"
-								onSubmit={handleSubmit(onSubmit)}
 								>
 							<Grid container justify='flex-start' >
 								<Grid container direction='column' xs='12' spacing='8' >
@@ -73,6 +76,7 @@ export const Register = props => {
 											type='text'
 											variant='outlined'
 											required
+											onChange={handleChange}
 											component={inputField} />
 										</Grid>
 										<Grid item xs='6'>
@@ -83,6 +87,7 @@ export const Register = props => {
 											type='text'
 											variant='outlined' 
 											required
+											onChange={handleChange}
 											component={inputField} />
 										</Grid>
 									</Grid>
@@ -94,6 +99,8 @@ export const Register = props => {
 											type='email'
 											variant='outlined'
 											required
+											onChange={handleChange}
+											helperText={touched.email && errors.email && <p>{errors.email}</p>}
 											component={inputField} />
 									</Grid>
 									<Grid item >
@@ -104,6 +111,7 @@ export const Register = props => {
 											type='password'
 											variant='outlined'
 											required
+											onChange={handleChange}
 											component={inputField} />
 									</Grid>
 									<Grid container item direction='row' spacing='16'>
@@ -115,13 +123,12 @@ export const Register = props => {
 											type='text'
 											variant='outlined'
 											required
+											values={values}
+											onChange={handleChange}
 											component={selectField}>
-												{schools ? (
-													schools.map((school) => (
+												{schools.map((school) => (
 													<MenuItem value={school.id}>{school.name}</MenuItem>
-												))) : (
-													<p>loading</p>
-												)}
+												))}
 											</Field>
 										</Grid>
 									<Grid item xs='4'>
@@ -131,14 +138,18 @@ export const Register = props => {
 											label='Major' 
 											type='text'
 											variant='outlined'
+											required
+											onChange = {handleChange}
 											component={inputField} />
 									</Grid>
+									{ errors.registerForm && <span>{errors.registerForm}</span> }
 								</Grid>
 								<Grid item>
 								<button 
-								type="submit"
-								disabled={submitting || pristine}
-								className={classes.Submit} >SIGN UP</button>
+									type="submit"
+									disabled={isSubmitting}
+									className={classes.Submit} >SIGN UP
+								</button>
 								</Grid>
 							</Grid>
 						</Grid>
@@ -147,7 +158,7 @@ export const Register = props => {
 							onClose={this.handleAlertClose}
 							message={<span>Incomplete Form</span>}
 						/> */}
-						</form>
+						</Form>
 					<div>
 						<span>Already have a StudY Account?</span>&ensp;
 						<a href="/login" className={classes.Signin}>SIGN IN</a>
@@ -169,7 +180,31 @@ Register.defaultProps = {
 	schools: [],
 }
 
-export default reduxForm({
-	form: 'registerForm',
-	asyncBlurFields: [],
+export default withFormik({
+	mapPropsToValues: () => ({
+		first_name: '',
+		last_name: '',
+		email: '',
+		password: '',
+		school: '',
+		major: ''
+	}),
+	validationSchema: Yup.object().shape({
+		first_name: Yup.string().required(),
+		last_name: Yup.string().required(),
+		email: Yup.string()
+			.matches(/(.cuny.edu)/, 'Must be a valid CUNY Email')
+			.required('Email is required'),
+		password: Yup.string().required(),
+		school: Yup.number().required(),
+		major: Yup.string().required(),
+	}),
+	handleSubmit: (applicant, { props, setErrors, setSubmitting }) => {
+		registerUser(applicant).then(() => {
+			props.history.push('/')
+		}).catch(error => {
+			setErrors({ registerForm: error.message });
+			setSubmitting(false);
+		})
+	}
 })(Register);
