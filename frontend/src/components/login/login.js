@@ -4,7 +4,6 @@ import classes from './login.module.css';
 import icon from '../../images/icon.png'
 // more components at https://material-ui.com/getting-started/usage/
 import { withFormik, Field, Form } from 'formik';
-import isSubmitting from 'redux-form/lib/isSubmitting';
 import * as Yup from 'yup';
 import { loginUser } from '../../fetches';
 
@@ -23,7 +22,7 @@ const inputField = ({
 )
 
 export const Login = props => {
-		const { handleChange, errors, touched } = props;
+		const { handleChange, errors, touched, isSubmitting } = props;
 
 		return (
 			<div className={classes.Container}>

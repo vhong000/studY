@@ -8,7 +8,6 @@ import propTypes from 'prop-types';
 
 import classes from './register.module.css';
 import icon from '../../images/icon.png'
-import isSubmitting from 'redux-form/lib/isSubmitting';
 import { registerUser } from '../../fetches';
 // more components at https://material-ui.com/getting-started/usage/
 
@@ -46,7 +45,7 @@ const selectField = ({
 )
 
 export const Register = props => {
-	const { schools, values, handleChange, touched, errors } = props;
+	const { schools, values, handleChange, touched, errors, isSubmitting } = props;
 		
 	return (
 		<div className={classes.Container}>

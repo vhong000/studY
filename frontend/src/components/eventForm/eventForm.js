@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Field, reduxForm } from 'redux-form';
+import { Field } from 'formik';
 import { 
   TextField, Button, Grid,
   Select, MenuItem, FormControl,
@@ -218,6 +218,4 @@ EventForm.defaultProps = {
   newEvent: {}
 }
 
-export default reduxForm({
-  form: 'eventForm',
-})(withStyles(styles)(EventForm))
+export default withStyles(styles)(EventForm)
