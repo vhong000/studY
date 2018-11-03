@@ -1,11 +1,12 @@
 
 import React from 'react';
-import { Field } from 'formik';
+import { Field, withFormik } from 'formik';
+import * as Yup from 'yup';
 import { 
   TextField, Button, Grid,
   Select, MenuItem, FormControl,
   InputLabel, withStyles, Typography,
-  Paper,
+  Paper, OutlinedInput
 } from '@material-ui/core';
 // import Select from 'react-select';
 import propTypes from 'prop-types'
@@ -14,80 +15,45 @@ const styles = theme => ({
   main_form: { textAlign: 'center' }
 }) 
 
-const eventNameField = ({
-  input, label, children, id,
+const inputField = ({
+	input, children, id, 
+	label, type, variant,
+	placeholder, onChange,
+  required, helperText, margin,
+  defaultValue, multiline, rows
 }) => (
-  <FormControl
-    fullWidth
-    margin='normal'
-  >
-    <TextField 
-      required
-      id={id}
-      label={label}
-      fullWidth
-      type='text'
-      children={children}
-      {...input}
-      />
-  </FormControl>
+	<TextField
+		id={id} label={label} type={type}
+		variant={variant} {...input}
+		placeholder={placeholder} helperText={helperText}
+		children={children} required={required}
+    fullWidth onChange={onChange}
+    margin={margin} defaultValue={defaultValue}
+    multiline={multiline} rows={rows}
+	/>
 )
 
-const eventLocationField = ({
-  input, children, label
+const selectField = ({
+	input, children, id, margin,
+	label, variant, onChange, values
 }) => (
-  <FormControl
-    fullWidth
-    margin='normal'
-    select
-  >
-    <InputLabel>{label}</InputLabel>
-    <Select
-      fullWidth
-      {...input}
-      children={children} />
-  </FormControl>
+<FormControl fullWidth margin={margin}>
+	<InputLabel required variant={variant} >{label}</InputLabel>
+	<Select 
+	children={children}
+  id={id}
+	{...input}
+	input={<OutlinedInput 
+		value={values.event_location}
+		onChange={onChange('event_location')}
+		margin='dense' />}
+	/>
+</FormControl>
 )
 
-const eventLimitField = ({
-  input, children, id, label
-}) => (
-  <FormControl
-    fullWidth
-    margin='normal'
-  >
-    <TextField 
-      {...input}
-      fullWidth
-      id={id}
-      label={label}
-      children={children}
-      type='number'
-      />
-  </FormControl>
-)
-
-const eventDescriptionField = ({
-  input, children, id, label
-}) => (
-  <FormControl
-    fullWidth
-    margin='normal'
-  >
-    <TextField 
-      {...input}
-      id={id}
-      label={label}
-      multiline
-      rows='3'
-      children={children}
-      type='number'
-      />
-  </FormControl>
-)
-
-const eventDate = ({
-  input, children, id, label
+const temporalInputField = ({
+  input, children, id, label,
+  type, onChange
 }) => (
   <FormControl
     fullWidth
@@ -96,39 +62,19 @@ const eventDate = ({
     <TextField
       {...input}
       InputLabelProps={{ shrink: true}}
+      variant='outlined'
+      margin='dense'
+      onChange={onChange}
       id={id}
       children={children}
-      type='date'
-      label={label}
-    />
-  </FormControl>
-)
-
-const eventTime = ({
-  input, children, id, label
-}) => (
-  <FormControl
-    fullWidth
-    margin='normal'
-  >
-    <TextField
-      {...input}
-      InputLabelProps={{ shrink: true}}
-      id={id}
-      children={children}
-      type='time'
+      type={type}
       label={label}
     />
   </FormControl>
 )
 
 export const EventForm = props => {
-  const { onSubmit, classes, newEvent } = props;
-  function handleSubmit(event) {
-    event.preventDefault();
-    onSubmit(newEvent);
-  }
-
+  const { handleChange, handleSubmit, classes, values, schools } = props;
   return ( 
     <form onSubmit={handleSubmit}
       className={classes.main_form}
@@ -142,66 +88,94 @@ export const EventForm = props => {
           <Grid item>
             <Field 
               name='eventName'
-              component={eventNameField}
               label='Event Name'
-              id='eventName' />
+              id='event_name' 
+              variant='outlined'
+              type='text'
+              margin='dense'
+              required
+              onChange={handleChange}
+              component={inputField}
+              />
           </Grid>
 
-          <Grid container item spacing='16'>
-            <Grid item xs='6'>
+          <Grid container item spacing='8'>
+            <Grid item xs='8'>
               <Field
                 name='eventLocation' 
-                component={eventLocationField}
+                values={values}
+                type='text'
+                variant='outlined'
+                margin='dense'
+                component={selectField}
+                required
                 label='School'
-                id='eventLocation' >
-                <MenuItem value='city'> city </MenuItem>
-                <MenuItem value='hunter'> hunter </MenuItem>
-                <MenuItem value='bmcc'> bmcc </MenuItem>
+                onChange={handleChange}
+                id='event_location' >
+                  {schools.map((school) => (
+                    <MenuItem value={school.id}>{school.name}</MenuItem>
+                  ))}
               </Field>
             </Grid>
 
-            <Grid item xs='6'>
+            <Grid item xs='4'>
               <Field
                 name='eventLimit'
-                component={eventLimitField}
+                component={inputField}
+                variant='outlined'
+                margin='dense'
                 label='Limit'
-                id='eventLimit' />
+                onChange={handleChange}
+                id='event_limit'
+                type='number' 
+              />
             </Grid>
           </Grid>
 
-          <Grid container item spacing='16'>
+          <Grid container item spacing='8'>
             <Grid item xs='6' >
               <Field
                 name='eventDate'
-                component={eventDate}
+                component={temporalInputField}
                 label='Date'
-                id='eventDate'
+                onChange={handleChange}
+                id='event_date'
+                type="date"
               />
             </Grid>
             <Grid item xs='6'>
               <Field
                 name='eventTime'
-                component={eventTime}
+                component={temporalInputField}
                 label='Time'
-                id='eventTime'
+                onChange={handleChange}
+                id='event_time'
+                type="time"
               />
             </Grid>
           </Grid>
 
-            <Field
-              name='eventDescription'
-              component={eventDescriptionField}
-              label="Event Description"
-              id='eventDescription' />
+        <Grid item >
+          <Field
+            name='eventDescription'
+            component={inputField}
+            multiline
+            variant='outlined'
+            rows="4"
+            onChange={handleChange}
+            label="Event Description"
+            id='event_description' />
+          </Grid>
 
-          <Grid>
+          <Grid item >
+          <FormControl fullWidth margin='normal'>
             <Button
               type='submit'
-              fullWidth
               children='Create Event'
               color='primary'
-              id='submit-button'
+              id='submit_button'
             />
+          </FormControl>
           </Grid>   
         </Grid>
       </Grid>
@@ -209,13 +183,23 @@ export const EventForm = props => {
   )
 }
 
-EventForm.propTypes = {
-  newEvent: propTypes.object,
-  onSubmit: propTypes.func.isRequired,
-}
-
-EventForm.defaultProps = {
-  newEvent: {}
-}
-
-export default withStyles(styles)(EventForm)
+export default withFormik({
+	mapPropsToValues: () => ({
+		event_name: '',
+    event_location: '',
+    event_limit: '',
+		event_date: '',
+		event_time: '',
+		event_description: '',
+	}),
+	validationSchema: Yup.object().shape({
+		event_name: Yup.string().required(),
+    event_location: Yup.string().required(),
+    event_limit: Yup.number(),
+		event_date: Yup.string().required(),
+		event_time: Yup.string().required(),
+		event_description: Yup.string().required(),
+	}),
+	handleSubmit: (applicant, { props, setErrors, setSubmitting }) => {
+	}
+})(withStyles(styles)(EventForm))
