@@ -15,7 +15,7 @@ import { registerUser } from '../../fetches';
 const inputField = ({ 
 	input, children, id, 
 	label, type, variant,
-	placeholder, meta: { touched, error },
+	placeholder, onChange,
 	required
 }) => (
 	<TextField InputProps={{className: classes.TextField}}
@@ -23,13 +23,13 @@ const inputField = ({
 		variant={variant} {...input}
 		placeholder={placeholder}
 		children={children} required={required}
-		fullWidth error={error}
+		fullWidth onChange={onChange}
 	/>
 )
 
 const selectField = ({
 	input, children, id,
-	label, variant
+	label, variant, onChange, values
 }) => (
 <FormControl fullWidth >
 	<InputLabel required variant={variant} >{label}</InputLabel>
@@ -37,13 +37,13 @@ const selectField = ({
 	children={children}
 	id={id}
 	{...input}
-	input={<OutlinedInput margin='dense' />}
+	input={<OutlinedInput value={values.school} onChange={onChange('school')} margin='dense' />}
 	/>
 </FormControl>
 )
 
 export const Register = props => {
-	const { schools } = props;
+	const { schools, values, handleChange } = props;
 		
 	return (
 		<div className={classes.Container}>
@@ -74,6 +74,7 @@ export const Register = props => {
 											type='text'
 											variant='outlined'
 											required
+											onChange={handleChange}
 											component={inputField} />
 										</Grid>
 										<Grid item xs='6'>
@@ -84,6 +85,7 @@ export const Register = props => {
 											type='text'
 											variant='outlined' 
 											required
+											onChange={handleChange}
 											component={inputField} />
 										</Grid>
 									</Grid>
@@ -95,6 +97,7 @@ export const Register = props => {
 											type='email'
 											variant='outlined'
 											required
+											onChange={handleChange}
 											component={inputField} />
 									</Grid>
 									<Grid item >
@@ -105,6 +108,7 @@ export const Register = props => {
 											type='password'
 											variant='outlined'
 											required
+											onChange={handleChange}
 											component={inputField} />
 									</Grid>
 									<Grid container item direction='row' spacing='16'>
@@ -116,13 +120,12 @@ export const Register = props => {
 											type='text'
 											variant='outlined'
 											required
+											values={values}
+											onChange={handleChange}
 											component={selectField}>
-												{schools ? (
-													schools.map((school) => (
+												{schools.map((school) => (
 													<MenuItem value={school.id}>{school.name}</MenuItem>
-												))) : (
-													<p>loading</p>
-												)}
+												))}
 											</Field>
 										</Grid>
 									<Grid item xs='4'>
@@ -132,14 +135,16 @@ export const Register = props => {
 											label='Major' 
 											type='text'
 											variant='outlined'
+											onChange = {handleChange}
 											component={inputField} />
 									</Grid>
 								</Grid>
 								<Grid item>
 								<button 
-								type="submit"
-								disabled={isSubmitting}
-								className={classes.Submit} >SIGN UP</button>
+									type="submit"
+									disabled={isSubmitting}
+									className={classes.Submit} >SIGN UP
+								</button>
 								</Grid>
 							</Grid>
 						</Grid>
