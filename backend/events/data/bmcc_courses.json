@@ -1,1 +1,658 @@
-{"name": "Borough of Manhattan Community College", "code": "BMCC", "url": "https://www.coursicle.com/bmcccuny/", "courses": {"ACC": [["Accounting Principles I", "122"], ["Personal Accounting and Financial Literacy", "150"], ["Accounting Principles II", "222"], ["Accounting Applications on Microcomputers", "231"], ["Taxation: Federal", "241"], ["Taxation: Federal (Honors)", "241H"], ["Taxation of Business Entities", "242"], ["Intermediate Accounting I", "330"], ["Accounting Information Systems", "331"], ["Cost Accounting I", "350"], ["Government and Not-For-Profit Accounting", "360"], ["Forensic Accounting & Fraud Analysis", "370"], ["Intermediate Accounting II", "430"]], "ACR": [["Academic & Critical Reading I", "94"], ["Academic & Critical Reading II", "95"], ["Literacy Practices: Birth through Adolescence", "200"]], "AFL": [["Comparative Ethnic Studies (Same as SOC 125)", "125"], ["Health Problems in Urban Communities (Same as SOC 161)", "161"]], "AFN": [["African-American Art (Same as ART 802)", "102"], ["History of African Civilizations (Same as HIS 121)", "121"], ["Africa 1500 to Present (Same as HIS 122)", "122"], ["African-American History, 17th Century to 1865 (Same as HIS 123)", "123"], ["African-American History, 1865 to Present (Same as HIS 124)", "124"], ["Caribbean History (Same as HIS 126)", "126"], ["Black Women in the Americas and the Caribbean (Same as ANT 128)", "128"], ["The Black Man in Contemporary Society (Same as SOC 129)", "129"], ["Contemporary Black Writers", "322"]], "ANI": [["Introduction to 3D Animations", "401"], ["3D Animation Projects", "402"]], "ANT": [["Introduction to Anthropology", "100"], ["Peoples & Cultures of Latin America and the Caribbean", "200"], ["The Roles of Women in a Changing World", "210"]], "ARB": [["Elementary Arabic I", "105"], ["Elementary Arabic II", "106"], ["Elementary Arabic for Speakers of Arabic", "107"], ["Arabic III", "200"]], "ART": [["Digital Imaging Studio I", "101"], ["Survey of Art History I", "102"], ["Survey of Art History II", "104"], ["Modern and Contemporary Art", "106"], ["Color and Design I", "107"], ["Art Survey I", "110"], ["History of Graphic Design", "113"], ["Drawing Studio I", "166"], ["Life Drawing Studio I", "168"], ["Painting Studio I", "174"], ["Comic Art 1", "176"], ["Introduction to Sculpture Studio", "183"], ["Digital Creative Studio", "203"], ["Introduction to Photography", "236"], ["Asian Art History", "251"], ["Drawing Studio II", "266"], ["Life Drawing Studio II", "268"], ["Painting Studio II (Honors)", "274H"], ["Painting Studio II", "274"], ["Medieval Art: Age of Faith and Migration", "290"], ["Documentary & Narrative Photography", "300"], ["Photographic Studio & Light I", "337"], ["Digital Darkroom I", "338"], ["Painting Studio III", "374"], ["Final Lab Project", "420"], ["Final Thesis Lab", "450"]], "ASL": [["Introductory American Sign Language I", "105"], ["Introductory American Sign Language II", "106"]], "ASN": [["Chinese Culture and Heritage (Same as ANT 111)", "111"], ["Asian American History (Same as HIS 114)", "114"], ["Asian American Literature", "339"]], "AST": [["Astronomy: General Theory", "108"], ["Astronomy: General Observations", "109"], ["General Astronomy", "110"]], "BIO": [["General Biology Theory", "108"], ["General Biology", "109"], ["Human Biology", "111"], ["Biology I", "210"], ["Biology II", "220"], ["Biology II (Honors)", "220H"], ["Fundamentals of Microbiology", "230"], ["Genetics", "240"], ["Cell Biology", "260"], ["Microbiology", "420"], ["Anatomy and Physiology I", "425"], ["Anatomy and Physiology II", "426"], ["Anatomy and Physiology II (Honors)", "426H"]], "BUS": [["Introduction to Business", "104"], ["Business Law", "110"], ["Personal Finance", "121"], ["Business Communication", "150"], ["Business Organization and Management", "200"], ["Business Methods", "210"], ["Managerial Decision Making", "220"], ["Human Resources Management", "311"], ["Human Resources Management (Honors)", "311H"]], "CED": [["Career Planning (Classroom Course)", "201"], ["Accounting Internship I", "301"], ["Business Management Internship I", "361"], ["Small Business/ Entrepreneurship Internship I", "365"]], "CHE": [["Concepts in Chemistry", "108"], ["Concepts in Chemistry Laboratory", "109"], ["General Chemistry", "110"], ["Fundamentals of Chemistry", "118"], ["Fundamentals General, Organic, Biological Chemistry I", "121"], ["Fundamentals General, Organic, Biological Chemistry II", "122"], ["Chemistry I", "201"], ["College Chemistry II", "202"], ["Organic Chemistry I", "230"], ["Organic Chemistry II", "240"]], "CHI": [["Introductory Chinese I", "105"], ["Introductory Chinese II", "106"], ["Literature, Culture, and Civilization of China", "170"], ["Chinese III", "200"], ["Chinese IV", "210"], ["Modern Chinese Film", "411"], ["20th Century Chinese literature", "440"]], "CIS": [["Introduction to Computer Applications", "100"], ["Introduction to Computer and Information Security", "115"], ["Introduction to Operating Systems", "165"], ["Introduction to the Internet", "180"], ["Introduction Systems and Technologies", "200"], ["Computer Software", "255"], ["Telecommunication Networks I", "345"], ["Mobile Device Programming", "364"], ["Web Programming I", "385"], ["Database Systems I", "395"], ["Unix", "440"], ["Telecommunications Networks II / LAN", "445"], ["Network Security", "455"], ["Web Programming Il", "485"], ["Database Systems Il", "495"]], "COM": [["Introduction to Communication Studies", "100"], ["Interpersonal Communication", "240"], ["The Mass Media", "245"], ["Conflict Resolution", "250"], ["Intercultural Communication", "255"], ["Small Group Communication", "260"], ["Gender and Communication", "265"]], "CRJ": [["Introduction to Criminal Justice", "101"], ["Criminology", "102"], ["Constitutional Law", "200"], ["Policing", "201"], ["Corrections", "202"], ["Criminal Justice and the Urban Community", "204"]], "CRT": [["Critical Thinking (Same as PHI 115) (Honors)", "100H"], ["Critical Thinking (Same as PHI 115)", "100"], ["Critical Thinking for ACR 95", "100.5"], ["Critical Thinking for ESL 95", "100.6"], ["Critical Thinking and Social Justice", "120"], ["Critical Thinking: Inquiry through Queer Theories", "196"]], "CSC": [["Principles in Information Technology and Computation", "101"], ["Computer Programming I", "110"], ["Introduction to Programming", "111"], ["Computer Programming II", "210"], ["Advanced Programming Technique", "211"], ["Fundamentals of Computer Systems", "215"], ["Discrete Structures", "230"], ["Discrete Structures and Applications to Computer Science", "231"], ["Assembler Language and Architecture I", "310"], ["Data Structures I", "330"], ["Data Structures", "331"], ["Software Development", "350"], ["Assembler Language and Architecture II", "410"], ["Data Structures II", "430"]], "ECE": [["Psychological Foundations of Early Development and Education", "110"], ["Infant Care and Curriculum", "209"], ["Social Foundations of Early Care and Education", "210"], ["Curriculum for Young Children I", "211"], ["Infants and Toddlers Practicum I: Observing and Recording", "308"], ["Toddler Care and Curriculum", "309"], ["Early Childhood Practicum I: Observing and Recording", "311"], ["Curriculum for Young Children II", "312"], ["Infants and Toddlers Practicum II: Pedagogy for Infants and Toddlers", "409"], ["Educational Foundations and Pedagogy for The Exceptional Child", "410"], ["Early Childhood Practicum II: Pedagogy for Young Children", "411"]], "ECO": [["Introduction to Economics", "100"], ["Macroeconomics", "201"], ["Microeconomics", "202"], ["Microeconomics (Honors)", "202H"], ["Environmental Economics", "215"], ["Development Economics", "226"], ["Economics of Antitrust and Regulation", "229"]], "EDB": [["Schools in a Linguistically diverse American Society: Bilingual Education", "202"]], "EDS": [["Adolescent Learning and Development", "201"]], "EDU": [["Observing Children and their Development", "201"], ["Urban Schools in a Diverse American Society", "202"], ["Art in Education", "203"]], "EMC": [["Emergency Medical Care", "100"], ["Emergency Medical Care/Paramedic III", "201"], ["Emergency Medical Care/Paramedic IV", "202"], ["Emergency Medical Care/Paramedic Internship II", "302"]], "ENG": [["Intensive Writing", "88"], ["Intensive English Composition (Same as ENG 101)", "100.5"], ["English Composition", "101"], ["Introduction to Literature", "201"], ["Introduction To Literature (Honors)", "201H"], ["Introduction to Literary Studies", "250"], ["Fundamentals of Journalism", "300"], ["Journalism: News Writing", "303"], ["Journalism: Feature Writing", "304"], ["Creative Writing Workshop", "311"], ["Advanced Composition", "314"], ["Playwriting", "315"], ["Film", "321"], ["The Short Story", "333"], ["Children's Literature", "334"], ["Children's Literature (Honors)", "334H"], ["Postcolonial Literature", "336"], ["Science Fiction", "337"], ["Latino/a Literature in the U.S. (Same as LAT 338)", "338"], ["Asian American Literature", "339"], ["Topics in Literature", "350"], ["Women in Literature", "353"], ["Italian American Literature", "360"], ["British Literature from the Medieval Era to the Eighteenth Century", "371"], ["British Literature from the Romantic Era through the Twentieth Century", "372"], ["Introduction to Shakespeare", "373"], ["American Literature from the Reconstruction Era to the Present", "382"], ["World Literature I: From Antiquity to the Early Modern Era", "391"], ["World Literature II: From Early Modern Era to the Present", "392"]], "ESC": [["Elements of Engineering Design", "111"], ["Computer Aided Analysis for Engineering", "113"], ["Engineering Graphics", "130"], ["Engineering Graphics - AutoCAD", "131"], ["Engineering Mechanics I (Statics and Particle Kinematics)", "201"], ["Switching Systems and Logic Design", "223"]], "ESL": [["English as a Second Language", "49"], ["Intensive Reading and Writing", "96"]], "FNB": [["Introduction to Finance", "100"], ["Financial Management", "230"], ["Money and Banking (Same as ECO 250) (Honors)", "250H"], ["Money and Banking (Same as ECO 250)", "250"], ["Investments", "300"]], "FRN": [["Introductory French I", "105"], ["Introductory French II", "106"], ["Elementary Intensive French 1 & 2", "121"], ["French Caribbean Literature in Translation", "160"], ["French III", "200"], ["French Film and Conversation", "204"], ["French IV", "210"], ["Survey of French Literature II", "435"], ["French VII: 20th-Century French Literature", "440"]], "FYE": [["Freshman Year Experience", "1"]], "GEO": [["Introduction to Human Geography", "100"], ["Environmental Conservation: Resource Management", "226"], ["Population Geography", "241"]], "GIS": [["Digital Earth", "101"], ["Introduction to Geographic Methods", "201"]], "GWS": [["Introduction to Gender & Women's Studies", "100"], ["Gender & Women's Studies Capstone", "300"]], "HED": [["Health Education", "100"], ["Comprehensive Health Education", "110"], ["Food, Culture and Society (Honors)", "195H"], ["Food, Culture and Society", "195"], ["Health Education and Exercise", "201"], ["Drug Use in American Society", "202"], ["Critical Health Topics & Issues", "211"], ["Human Sexuality", "220"], ["Health Concerns of Women", "225"], ["Consumer Health Survey", "230"], ["Nutrition for Health", "235"], ["First Aid, Stafety and Cardio Pulmonary Resuscitation", "240"], ["Stress: Awareness, Understanding and Mangement", "250"], ["Wellness Cardiovascular Care", "260"], ["History and Principles of Public Health", "280"], ["Epidemiology for Public Health Practice", "295"], ["Biostatistics in Public Health", "296"], ["Introduction of Community Health Education", "301"], ["Health Counseling", "302"]], "HIS": [["Western Civilization: From Ancient to Early Modern Times", "101"], ["Western Civilization: From Ancient to Early Modern Times (Honors)", "101H"], ["Western Civilization: The Emergence of the Modern World", "102"], ["World History I", "115"], ["Early American History: Colonial Period to Civil War", "120"], ["Modern American History: Civil War to Present", "125"], ["History of Women", "225"], ["Conflict in the Middle East (Honors)", "226H"], ["History Research and Writing Methods", "275"]], "HIT": [["Pathology and Pharmacology", "206"], ["ICD-CM PCS Coding", "209"], ["HIM Medical/Legal Applications", "215"], ["Management in the HIM Department", "423"], ["Medical Record Clinical Practicum", "430"]], "HTT": [["Introduction to Hotels, Travel and Tourism", "200"]], "HUM": [["Introduction to Human Services and Social Work", "101"], ["Human Services Skills", "201"], ["Introduction to Gerontology", "211"], ["Introduction to Disabilities and Behavior Change", "212"], ["Child Welfare", "213"], ["Field Experience in Human Services I", "301"], ["Field Experience in Human Services II", "401"], ["Social Welfare Programs and Policies", "411"]], "ITL": [["Introductory Italian I", "105"], ["Introductory Italian II", "106"], ["Elementary Intensive Italian 1 & 2", "121"], ["Italian IV", "210"]], "LAT": [["Puerto Rican Culture and Folklore (Same as ANT 125)", "125"], ["History of Latin America (Same as HIS 130)", "130"], ["History of the Dominican Republic (Same as HIS 131)", "131"], ["The Latino Experience in the U.S. (Same as SOC 150)", "150"], ["Puerto Rican Experience in Urban U.S. Settings (Same as SOC 152)", "152"]], "LIN": [["Language and Culture (Same as ANT 115)", "100"], ["Language and Culture (Same as ANT 115) (Honors)", "100H"], ["Language and Culture for ESL 95", "100.6"], ["Language and Culture for ACR 95", "100.5"], ["Introduction to Linguistics", "101"], ["Introduction to Linguistics for ESL 95", "101.6"], ["The Structure of English", "110"], ["Language, Race, and Ethnicity in the US and Its Territories", "150"], ["Language and Power", "240"], ["Forensic Linguistics", "250"]], "MAR": [["Introduction to Marketing", "100"], ["Consumer Motivation & Behavior", "210"], ["Essentials of Advertising", "220"], ["Essentials of Public Relations", "230"], ["Sales Principles and Practices", "300"], ["Retail Organization, Operation and Buying", "320"], ["Marketing Research and Analytics", "330"]], "MAT": [["Basic Mathematics", "8"], ["Basic Arithmetic and Algebra", "12"], ["Mathematics Literacy with Computational Support", "14"], ["Mathematics Literacy - Quantway I", "41"], ["Elementary Algebra", "51"], ["Intermediate Algebra and Trigonometry", "56"], ["Elementary and Intermediate Algebra with Trigonometry", "56.5"], ["Fundamentals of Mathematics I", "100"], ["Mathematics for Health Sciences", "104"], ["Mathematics for Respiratory Therapy", "109"], ["Introduction to Statistics", "150"], ["Introduction to Statistics with Algebra", "150.5"], ["Quantitative Reasoning", "160"], ["Topics in Quantitative Reasoning", "161"], ["Mathematics Literacy and Quantitative Reasoning", "161.5"], ["Introduction to Discrete Mathematics", "200"], ["Precalculus", "206"], ["Intermediate Algebra & Precalculus (Same as MAT 206)", "206.5"], ["Statistics", "209"], ["Mathematics for Elementary Education I", "214"], ["Mathematics for Elementary Education", "214.5"], ["Mathematics for Elementary Education II", "216"], ["Introduction to Geometry", "300"], ["Analytic Geometry and Calculus I", "301"], ["Analytic Geometry and Calculus II", "302"], ["Analytic Geometry and Calculus III", "303"], ["Bridge to Advanced Mathematics", "310"], ["Linear Algebra", "315"], ["Ordinary Differential Equations", "501"]], "MEA": [["Professional Development and Career Planning in Media Arts and Technology", "201"], ["Introduction to Digital Fabrication and Physical Computing", "211"], ["Topics in Media Arts and Technology", "300"], ["Media Arts and Technology Internship", "371"]], "MES": [["Introduction to Moving Image", "140"], ["Introduction to Contemporary Media", "152"], ["Script Writing", "153"], ["Script Writing (Honors)", "153H"]], "MMA": [["Foundations of Digital Graphic Design", "100"], ["Typography and Layout", "215"], ["Digital Imaging for Graphic Design", "225"], ["Visual Communication and Design", "235"]], "MMP": [["Introduction to Multimedia", "100"], ["Multimedia Design", "200"], ["Multimedia Programming I", "210"], ["Web Design", "240"], ["Digital Film Fundamentals", "250"], ["Introduction to 2d Animation", "260"], ["Multimedia Programming II", "310"], ["Advanced Web Design", "350"], ["Multimedia Project Lab", "460"]], "MUS": [["Principles of Music", "102"], ["Music and Western Civilization", "103"], ["The World of Jazz", "104"], ["Basic Music", "105"], ["Introduction of World Music", "107"], ["Music and Movement in Learning", "116"], ["Music Theory I", "117"], ["Aural Skills I", "118"], ["Keyboard Workshop I", "119"], ["Strings", "125"], ["Percussion", "135"], ["Piano Class I", "140"], ["Piano Class II", "150"], ["Voice Class I", "160"], ["Methods: Voice", "161"], ["College Chorus I", "165"], ["College Chorus II", "166"], ["College Chorus III", "167"], ["College Chorus IV", "168"], ["Voice Class II", "170"], ["Guitar Class I", "180"], ["Guitar Class II", "190"], ["Music Theory II", "217"], ["Aural Skills II", "218"], ["Keyboard Workshop II", "219"], ["Concert Choir I", "265"], ["Concert Choir II", "266"], ["Concert Choir III", "267"], ["Concert Choir IV", "268"], ["Jazz Performance Workshop I", "301"], ["Jazz Performance Workshop II", "302"], ["Jazz Performance Workshop III", "303"], ["Jazz Performance Workshop IV", "304"], ["Orchestral Performance I", "305"], ["Orchestral Performance II", "306"], ["Orchestral Performance III", "307"], ["Orchestral Performance IV", "308"], ["Music Theory III", "317"], ["Aural Skills III", "318"], ["Keyboard Workshop III", "319"], ["Instrumental Ensemble I", "510"], ["Instrumental Ensemble II", "520"], ["String Ensemble I", "701"], ["String Ensemble II", "702"], ["String Ensemble III", "703"], ["String Ensemble IV", "704"], ["Guitar Ensemble I", "705"], ["Guitar Ensemble II", "706"], ["Guitar Ensemble III", "707"], ["Guitar Ensemble IV", "708"]], "NUR": [["Nursing Process I: Fundamentals of Patient Care", "112"], ["Nursing Process II: Obstetrical and Psychiatric Nursing Care", "211"], ["Nursing Process III: Pediatric and Basic Medical-Surgical Nursing Care", "313"], ["Nursing Process IV: Medical-Surgical Nursing", "411"]], "OFF": [["Computer Keyboarding", "111"]], "PHI": [["Philosophy", "100"], ["Philosophy (Honors)", "100H"], ["Logic", "110"], ["Cultural and Ethical Issues in Science and Technology", "111"], ["Ethics", "120"], ["Great Issues in Philosophy", "200"]], "PHY": [["General Physics Theory", "108"], ["General Physics Experiments", "109"], ["General Physics", "110"], ["General Physics (Honors)", "110H"], ["Physics I", "210"], ["University Physics I", "215"], ["Physics II", "220"], ["University Physics II", "225"], ["Modern Physics", "240"], ["The Physics of Music", "400"]], "POL": [["American Government", "100"], ["Introduction to Politics", "110"], ["Gender and Politics", "120"], ["World Politics", "210"], ["Politics and Government in New York City", "220"], ["Power in American Politics", "230"], ["Political Theory", "260"]], "PSY": [["Introduction to Psychology", "100"], ["Introduction to Psychology (Honors)", "100H"], ["Social Psychology", "200"], ["Psychology of Death and Dying", "210"], ["Psychology of Personality", "230"], ["Developmental Psychology", "240"], ["Psychology of Women", "245"], ["Child Psychology", "250"], ["Child Psychology (Honors)", "250H"], ["Cognitive Psychology", "255"], ["Abnormal Psychology", "260"], ["Research in Psychology", "265"], ["Cultural Psychology", "280"]], "RTT": [["Respiratory Therapy I", "201"], ["Respiratory Therapy Clinical Practicum I", "202"], ["Respiratory Therapy III", "401"], ["Respiratory Therapy Clinical Practicum III", "403"], ["Fundamentals of Clinical Medicine", "410"]], "SBE": [["Product and Service Creation", "100"], ["International Business", "201"], ["Small Business Management", "400"]], "SCI": [["Computer Methods in Science", "120"], ["Nutrition", "150"], ["Scientific Instrumentation", "430"], ["Pathophysiology", "510"], ["Pharmacology", "530"]], "SOC": [["Introduction to Sociology", "100"], ["Social Problems", "200"], ["Gender and Society", "210"], ["Ethnic Groups in American Life", "230"], ["Urban Sociology", "240"], ["The Family", "250"], ["Sociology Capstone", "350"]], "SPE": [["Fundamentals of Speech", "100"], ["Fundamentals of Speech for Non-Native Speakers", "102"], ["Voice and Articulation", "103"], ["Oral Interpretation", "210"], ["Advanced Public Speaking", "220"]], "SPN": [["Introductory Spanish I", "105"], ["Introductory Spanish II", "106"], ["Introductory Spanish for Speakers of Spanish", "107"], ["Introductory Spanish II for Speakers of Spanish", "108"], ["Elementary Intensive Spanish 1 & 2", "121"], ["Spanish III", "200"], ["Spanish Film and Conversation", "204"], ["Intermediate Spanish I for Speakers of Spanish", "207"], ["Spanish IV", "210"], ["Intermediate Spanish II for Speakers of Spanish", "211"], ["Introduction to Spanish Theatre", "420"], ["Spanish V: Survey of Spanish Literature I", "430"], ["Spanish IX: 20th Century Spanish-American Literature", "450"], ["Advanced Spanish Composition", "456"], ["Spanish and Latin American Texts Into Films", "480"]], "THE": [["Introduction to Theatre (Honors)", "100H"], ["Introduction to Theatre", "100"], ["Acting I", "110"], ["Voice and Movement for the Actor", "115"], ["Elements of Production", "121"], ["Scenic Practicum", "125"], ["Costume Practicum", "126"], ["Performance Practicum", "127"], ["Special Topics Practicum", "128"], ["Theatre Management", "141"], ["Acting II", "210"], ["Page-to-Stage", "220"], ["Acting for the Camera", "280"], ["History of Theatre", "300"], ["Women in US American Theater", "305"], ["Advanced Theatre Workshop", "310"], ["Playwriting", "315"]], "VAT": [["Introduction to Video Technology", "100"], ["TV Studio Production I", "161"], ["Sound for Performance/Digital Media I", "165"], ["Remote Production/Video Editing I", "171"], ["TV Studio Production II", "261"], ["Remote Production/Video Editing II", "271"], ["Introduction to Video Graphics", "301"], ["Cinematography", "303"]]}}
+{
+    "name": "Borough of Manhattan Community College",
+    "code": "BMCC",
+    "url": "https://www.coursicle.com/bmcccuny/",
+    "courses": {
+        "ACC": [
+            ["Accounting Principles I", "122"],
+            ["Personal Accounting and Financial Literacy", "150"],
+            ["Accounting Principles II", "222"],
+            ["Accounting Applications on Microcomputers", "231"],
+            ["Taxation: Federal", "241"],
+            ["Taxation: Federal (Honors)", "241H"],
+            ["Taxation of Business Entities", "242"],
+            ["Intermediate Accounting I", "330"],
+            ["Accounting Information Systems", "331"],
+            ["Cost Accounting I", "350"],
+            ["Government and Not-For-Profit Accounting", "360"],
+            ["Forensic Accounting & Fraud Analysis", "370"],
+            ["Intermediate Accounting II", "430"]
+        ],
+        "ACR": [
+            ["Academic & Critical Reading I", "94"],
+            ["Academic & Critical Reading II", "95"],
+            ["Literacy Practices: Birth through Adolescence", "200"]
+        ],
+        "AFL": [
+            ["Comparative Ethnic Studies (Same as SOC 125)", "125"],
+            ["Health Problems in Urban Communities (Same as SOC 161)", "161"]
+        ],
+        "AFN": [
+            ["African-American Art (Same as ART 802)", "102"],
+            ["History of African Civilizations (Same as HIS 121)", "121"],
+            ["Africa 1500 to Present (Same as HIS 122)", "122"],
+            ["African-American History, 17th Century to 1865 (Same as HIS 123)", "123"],
+            ["African-American History, 1865 to Present (Same as HIS 124)", "124"],
+            ["Caribbean History (Same as HIS 126)", "126"],
+            ["Black Women in the Americas and the Caribbean (Same as ANT 128)", "128"],
+            ["The Black Man in Contemporary Society (Same as SOC 129)", "129"],
+            ["Contemporary Black Writers", "322"]
+        ],
+        "ANI": [
+            ["Introduction to 3D Animations", "401"],
+            ["3D Animation Projects", "402"]
+        ],
+        "ANT": [
+            ["Introduction to Anthropology", "100"],
+            ["Peoples & Cultures of Latin America and the Caribbean", "200"],
+            ["The Roles of Women in a Changing World", "210"]
+        ],
+        "ARB": [
+            ["Elementary Arabic I", "105"],
+            ["Elementary Arabic II", "106"],
+            ["Elementary Arabic for Speakers of Arabic", "107"],
+            ["Arabic III", "200"]
+        ],
+        "ART": [
+            ["Digital Imaging Studio I", "101"],
+            ["Survey of Art History I", "102"],
+            ["Survey of Art History II", "104"],
+            ["Modern and Contemporary Art", "106"],
+            ["Color and Design I", "107"],
+            ["Art Survey I", "110"],
+            ["History of Graphic Design", "113"],
+            ["Drawing Studio I", "166"],
+            ["Life Drawing Studio I", "168"],
+            ["Painting Studio I", "174"],
+            ["Comic Art 1", "176"],
+            ["Introduction to Sculpture Studio", "183"],
+            ["Digital Creative Studio", "203"],
+            ["Introduction to Photography", "236"],
+            ["Asian Art History", "251"],
+            ["Drawing Studio II", "266"],
+            ["Life Drawing Studio II", "268"],
+            ["Painting Studio II (Honors)", "274H"],
+            ["Painting Studio II", "274"],
+            ["Medieval Art: Age of Faith and Migration", "290"],
+            ["Documentary & Narrative Photography", "300"],
+            ["Photographic Studio & Light I", "337"],
+            ["Digital Darkroom I", "338"],
+            ["Painting Studio III", "374"],
+            ["Final Lab Project", "420"],
+            ["Final Thesis Lab", "450"]
+        ],
+        "ASL": [
+            ["Introductory American Sign Language I", "105"],
+            ["Introductory American Sign Language II", "106"]
+        ],
+        "ASN": [
+            ["Chinese Culture and Heritage (Same as ANT 111)", "111"],
+            ["Asian American History (Same as HIS 114)", "114"],
+            ["Asian American Literature", "339"]
+        ],
+        "AST": [
+            ["Astronomy: General Theory", "108"],
+            ["Astronomy: General Observations", "109"],
+            ["General Astronomy", "110"]
+        ],
+        "BIO": [
+            ["General Biology Theory", "108"],
+            ["General Biology", "109"],
+            ["Human Biology", "111"],
+            ["Biology I", "210"],
+            ["Biology II", "220"],
+            ["Biology II (Honors)", "220H"],
+            ["Fundamentals of Microbiology", "230"],
+            ["Genetics", "240"],
+            ["Cell Biology", "260"],
+            ["Microbiology", "420"],
+            ["Anatomy and Physiology I", "425"],
+            ["Anatomy and Physiology II", "426"],
+            ["Anatomy and Physiology II (Honors)", "426H"]
+        ],
+        "BUS": [
+            ["Introduction to Business", "104"],
+            ["Business Law", "110"],
+            ["Personal Finance", "121"],
+            ["Business Communication", "150"],
+            ["Business Organization and Management", "200"],
+            ["Business Methods", "210"],
+            ["Managerial Decision Making", "220"],
+            ["Human Resources Management", "311"],
+            ["Human Resources Management (Honors)", "311H"]
+        ],
+        "CED": [
+            ["Career Planning (Classroom Course)", "201"],
+            ["Accounting Internship I", "301"],
+            ["Business Management Internship I", "361"],
+            ["Small Business/ Entrepreneurship Internship I", "365"]
+        ],
+        "CHE": [
+            ["Concepts in Chemistry", "108"],
+            ["Concepts in Chemistry Laboratory", "109"],
+            ["General Chemistry", "110"],
+            ["Fundamentals of Chemistry", "118"],
+            ["Fundamentals General, Organic, Biological Chemistry I", "121"],
+            ["Fundamentals General, Organic, Biological Chemistry II", "122"],
+            ["Chemistry I", "201"],
+            ["College Chemistry II", "202"],
+            ["Organic Chemistry I", "230"],
+            ["Organic Chemistry II", "240"]
+        ],
+        "CHI": [
+            ["Introductory Chinese I", "105"],
+            ["Introductory Chinese II", "106"],
+            ["Literature, Culture, and Civilization of China", "170"],
+            ["Chinese III", "200"],
+            ["Chinese IV", "210"],
+            ["Modern Chinese Film", "411"],
+            ["20th Century Chinese literature", "440"]
+        ],
+        "CIS": [
+            ["Introduction to Computer Applications", "100"],
+            ["Introduction to Computer and Information Security", "115"],
+            ["Introduction to Operating Systems", "165"],
+            ["Introduction to the Internet", "180"],
+            ["Introduction Systems and Technologies", "200"],
+            ["Computer Software", "255"],
+            ["Telecommunication Networks I", "345"],
+            ["Mobile Device Programming", "364"],
+            ["Web Programming I", "385"],
+            ["Database Systems I", "395"],
+            ["Unix", "440"],
+            ["Telecommunications Networks II / LAN", "445"],
+            ["Network Security", "455"],
+            ["Web Programming Il", "485"],
+            ["Database Systems Il", "495"]
+        ],
+        "COM": [
+            ["Introduction to Communication Studies", "100"],
+            ["Interpersonal Communication", "240"],
+            ["The Mass Media", "245"],
+            ["Conflict Resolution", "250"],
+            ["Intercultural Communication", "255"],
+            ["Small Group Communication", "260"],
+            ["Gender and Communication", "265"]
+        ],
+        "CRJ": [
+            ["Introduction to Criminal Justice", "101"],
+            ["Criminology", "102"],
+            ["Constitutional Law", "200"],
+            ["Policing", "201"],
+            ["Corrections", "202"],
+            ["Criminal Justice and the Urban Community", "204"]
+        ],
+        "CRT": [
+            ["Critical Thinking (Same as PHI 115) (Honors)", "100H"],
+            ["Critical Thinking (Same as PHI 115)", "100"],
+            ["Critical Thinking for ACR 95", "100.5"],
+            ["Critical Thinking for ESL 95", "100.6"],
+            ["Critical Thinking and Social Justice", "120"],
+            ["Critical Thinking: Inquiry through Queer Theories", "196"]
+        ],
+        "CSC": [
+            ["Principles in Information Technology and Computation", "101"],
+            ["Computer Programming I", "110"],
+            ["Introduction to Programming", "111"],
+            ["Computer Programming II", "210"],
+            ["Advanced Programming Technique", "211"],
+            ["Fundamentals of Computer Systems", "215"],
+            ["Discrete Structures", "230"],
+            ["Discrete Structures and Applications to Computer Science", "231"],
+            ["Assembler Language and Architecture I", "310"],
+            ["Data Structures I", "330"],
+            ["Data Structures", "331"],
+            ["Software Development", "350"],
+            ["Assembler Language and Architecture II", "410"],
+            ["Data Structures II", "430"]
+        ],
+        "ECE": [
+            ["Psychological Foundations of Early Development and Education", "110"],
+            ["Infant Care and Curriculum", "209"],
+            ["Social Foundations of Early Care and Education", "210"],
+            ["Curriculum for Young Children I", "211"],
+            ["Infants and Toddlers Practicum I: Observing and Recording", "308"],
+            ["Toddler Care and Curriculum", "309"],
+            ["Early Childhood Practicum I: Observing and Recording", "311"],
+            ["Curriculum for Young Children II", "312"],
+            ["Infants and Toddlers Practicum II: Pedagogy for Infants and Toddlers", "409"],
+            ["Educational Foundations and Pedagogy for The Exceptional Child", "410"],
+            ["Early Childhood Practicum II: Pedagogy for Young Children", "411"]
+        ],
+        "ECO": [
+            ["Introduction to Economics", "100"],
+            ["Macroeconomics", "201"],
+            ["Microeconomics", "202"],
+            ["Microeconomics (Honors)", "202H"],
+            ["Environmental Economics", "215"],
+            ["Development Economics", "226"],
+            ["Economics of Antitrust and Regulation", "229"]
+        ],
+        "EDB": [
+            ["Schools in a Linguistically diverse American Society: Bilingual Education", "202"]
+        ],
+        "EDS": [
+            ["Adolescent Learning and Development", "201"]
+        ],
+        "EDU": [
+            ["Observing Children and their Development", "201"],
+            ["Urban Schools in a Diverse American Society", "202"],
+            ["Art in Education", "203"]
+        ],
+        "EMC": [
+            ["Emergency Medical Care", "100"],
+            ["Emergency Medical Care/Paramedic III", "201"],
+            ["Emergency Medical Care/Paramedic IV", "202"],
+            ["Emergency Medical Care/Paramedic Internship II", "302"]
+        ],
+        "ENG": [
+            ["Intensive Writing", "88"],
+            ["Intensive English Composition (Same as ENG 101)", "100.5"],
+            ["English Composition", "101"],
+            ["Introduction to Literature", "201"],
+            ["Introduction To Literature (Honors)", "201H"],
+            ["Introduction to Literary Studies", "250"],
+            ["Fundamentals of Journalism", "300"],
+            ["Journalism: News Writing", "303"],
+            ["Journalism: Feature Writing", "304"],
+            ["Creative Writing Workshop", "311"],
+            ["Advanced Composition", "314"],
+            ["Playwriting", "315"],
+            ["Film", "321"],
+            ["The Short Story", "333"],
+            ["Children's Literature", "334"],
+            ["Children's Literature (Honors)", "334H"],
+            ["Postcolonial Literature", "336"],
+            ["Science Fiction", "337"],
+            ["Latino/a Literature in the U.S. (Same as LAT 338)", "338"],
+            ["Asian American Literature", "339"],
+            ["Topics in Literature", "350"],
+            ["Women in Literature", "353"],
+            ["Italian American Literature", "360"],
+            ["British Literature from the Medieval Era to the Eighteenth Century", "371"],
+            ["British Literature from the Romantic Era through the Twentieth Century", "372"],
+            ["Introduction to Shakespeare", "373"],
+            ["American Literature from the Reconstruction Era to the Present", "382"],
+            ["World Literature I: From Antiquity to the Early Modern Era", "391"],
+            ["World Literature II: From Early Modern Era to the Present", "392"]
+        ],
+        "ESC": [
+            ["Elements of Engineering Design", "111"],
+            ["Computer Aided Analysis for Engineering", "113"],
+            ["Engineering Graphics", "130"],
+            ["Engineering Graphics - AutoCAD", "131"],
+            ["Engineering Mechanics I (Statics and Particle Kinematics)", "201"],
+            ["Switching Systems and Logic Design", "223"]
+        ],
+        "ESL": [
+            ["English as a Second Language", "49"],
+            ["Intensive Reading and Writing", "96"]
+        ],
+        "FNB": [
+            ["Introduction to Finance", "100"],
+            ["Financial Management", "230"],
+            ["Money and Banking (Same as ECO 250) (Honors)", "250H"],
+            ["Money and Banking (Same as ECO 250)", "250"],
+            ["Investments", "300"]
+        ],
+        "FRN": [
+            ["Introductory French I", "105"],
+            ["Introductory French II", "106"],
+            ["Elementary Intensive French 1 & 2", "121"],
+            ["French Caribbean Literature in Translation", "160"],
+            ["French III", "200"],
+            ["French Film and Conversation", "204"],
+            ["French IV", "210"],
+            ["Survey of French Literature II", "435"],
+            ["French VII: 20th-Century French Literature", "440"]
+        ],
+        "FYE": [
+            ["Freshman Year Experience", "1"]
+        ],
+        "GEO": [
+            ["Introduction to Human Geography", "100"],
+            ["Environmental Conservation: Resource Management", "226"],
+            ["Population Geography", "241"]
+        ],
+        "GIS": [
+            ["Digital Earth", "101"],
+            ["Introduction to Geographic Methods", "201"]
+        ],
+        "GWS": [
+            ["Introduction to Gender & Women's Studies", "100"],
+            ["Gender & Women's Studies Capstone", "300"]
+        ],
+        "HED": [
+            ["Health Education", "100"],
+            ["Comprehensive Health Education", "110"],
+            ["Food, Culture and Society (Honors)", "195H"],
+            ["Food, Culture and Society", "195"],
+            ["Health Education and Exercise", "201"],
+            ["Drug Use in American Society", "202"],
+            ["Critical Health Topics & Issues", "211"],
+            ["Human Sexuality", "220"],
+            ["Health Concerns of Women", "225"],
+            ["Consumer Health Survey", "230"],
+            ["Nutrition for Health", "235"],
+            ["First Aid, Stafety and Cardio Pulmonary Resuscitation", "240"],
+            ["Stress: Awareness, Understanding and Mangement", "250"],
+            ["Wellness Cardiovascular Care", "260"],
+            ["History and Principles of Public Health", "280"],
+            ["Epidemiology for Public Health Practice", "295"],
+            ["Biostatistics in Public Health", "296"],
+            ["Introduction of Community Health Education", "301"],
+            ["Health Counseling", "302"]
+        ],
+        "HIS": [
+            ["Western Civilization: From Ancient to Early Modern Times", "101"],
+            ["Western Civilization: From Ancient to Early Modern Times (Honors)", "101H"],
+            ["Western Civilization: The Emergence of the Modern World", "102"],
+            ["World History I", "115"],
+            ["Early American History: Colonial Period to Civil War", "120"],
+            ["Modern American History: Civil War to Present", "125"],
+            ["History of Women", "225"],
+            ["Conflict in the Middle East (Honors)", "226H"],
+            ["History Research and Writing Methods", "275"]
+        ],
+        "HIT": [
+            ["Pathology and Pharmacology", "206"],
+            ["ICD-CM PCS Coding", "209"],
+            ["HIM Medical/Legal Applications", "215"],
+            ["Management in the HIM Department", "423"],
+            ["Medical Record Clinical Practicum", "430"]
+        ],
+        "HTT": [
+            ["Introduction to Hotels, Travel and Tourism", "200"]
+        ],
+        "HUM": [
+            ["Introduction to Human Services and Social Work", "101"],
+            ["Human Services Skills", "201"],
+            ["Introduction to Gerontology", "211"],
+            ["Introduction to Disabilities and Behavior Change", "212"],
+            ["Child Welfare", "213"],
+            ["Field Experience in Human Services I", "301"],
+            ["Field Experience in Human Services II", "401"],
+            ["Social Welfare Programs and Policies", "411"]
+        ],
+        "ITL": [
+            ["Introductory Italian I", "105"],
+            ["Introductory Italian II", "106"],
+            ["Elementary Intensive Italian 1 & 2", "121"],
+            ["Italian IV", "210"]
+        ],
+        "LAT": [
+            ["Puerto Rican Culture and Folklore (Same as ANT 125)", "125"],
+            ["History of Latin America (Same as HIS 130)", "130"],
+            ["History of the Dominican Republic (Same as HIS 131)", "131"],
+            ["The Latino Experience in the U.S. (Same as SOC 150)", "150"],
+            ["Puerto Rican Experience in Urban U.S. Settings (Same as SOC 152)", "152"]
+        ],
+        "LIN": [
+            ["Language and Culture (Same as ANT 115)", "100"],
+            ["Language and Culture (Same as ANT 115) (Honors)", "100H"],
+            ["Language and Culture for ESL 95", "100.6"],
+            ["Language and Culture for ACR 95", "100.5"],
+            ["Introduction to Linguistics", "101"],
+            ["Introduction to Linguistics for ESL 95", "101.6"],
+            ["The Structure of English", "110"],
+            ["Language, Race, and Ethnicity in the US and Its Territories", "150"],
+            ["Language and Power", "240"],
+            ["Forensic Linguistics", "250"]
+        ],
+        "MAR": [
+            ["Introduction to Marketing", "100"],
+            ["Consumer Motivation & Behavior", "210"],
+            ["Essentials of Advertising", "220"],
+            ["Essentials of Public Relations", "230"],
+            ["Sales Principles and Practices", "300"],
+            ["Retail Organization, Operation and Buying", "320"],
+            ["Marketing Research and Analytics", "330"]
+        ],
+        "MAT": [
+            ["Basic Mathematics", "8"],
+            ["Basic Arithmetic and Algebra", "12"],
+            ["Mathematics Literacy with Computational Support", "14"],
+            ["Mathematics Literacy - Quantway I", "41"],
+            ["Elementary Algebra", "51"],
+            ["Intermediate Algebra and Trigonometry", "56"],
+            ["Elementary and Intermediate Algebra with Trigonometry", "56.5"],
+            ["Fundamentals of Mathematics I", "100"],
+            ["Mathematics for Health Sciences", "104"],
+            ["Mathematics for Respiratory Therapy", "109"],
+            ["Introduction to Statistics", "150"],
+            ["Introduction to Statistics with Algebra", "150.5"],
+            ["Quantitative Reasoning", "160"],
+            ["Topics in Quantitative Reasoning", "161"],
+            ["Mathematics Literacy and Quantitative Reasoning", "161.5"],
+            ["Introduction to Discrete Mathematics", "200"],
+            ["Precalculus", "206"],
+            ["Intermediate Algebra & Precalculus (Same as MAT 206)", "206.5"],
+            ["Statistics", "209"],
+            ["Mathematics for Elementary Education I", "214"],
+            ["Mathematics for Elementary Education", "214.5"],
+            ["Mathematics for Elementary Education II", "216"],
+            ["Introduction to Geometry", "300"],
+            ["Analytic Geometry and Calculus I", "301"],
+            ["Analytic Geometry and Calculus II", "302"],
+            ["Analytic Geometry and Calculus III", "303"],
+            ["Bridge to Advanced Mathematics", "310"],
+            ["Linear Algebra", "315"],
+            ["Ordinary Differential Equations", "501"]
+        ],
+        "MEA": [
+            ["Professional Development and Career Planning in Media Arts and Technology", "201"],
+            ["Introduction to Digital Fabrication and Physical Computing", "211"],
+            ["Topics in Media Arts and Technology", "300"],
+            ["Media Arts and Technology Internship", "371"]
+        ],
+        "MES": [
+            ["Introduction to Moving Image", "140"],
+            ["Introduction to Contemporary Media", "152"],
+            ["Script Writing", "153"],
+            ["Script Writing (Honors)", "153H"]
+        ],
+        "MMA": [
+            ["Foundations of Digital Graphic Design", "100"],
+            ["Typography and Layout", "215"],
+            ["Digital Imaging for Graphic Design", "225"],
+            ["Visual Communication and Design", "235"]
+        ],
+        "MMP": [
+            ["Introduction to Multimedia", "100"],
+            ["Multimedia Design", "200"],
+            ["Multimedia Programming I", "210"],
+            ["Web Design", "240"],
+            ["Digital Film Fundamentals", "250"],
+            ["Introduction to 2d Animation", "260"],
+            ["Multimedia Programming II", "310"],
+            ["Advanced Web Design", "350"],
+            ["Multimedia Project Lab", "460"]
+        ],
+        "MUS": [
+            ["Principles of Music", "102"],
+            ["Music and Western Civilization", "103"],
+            ["The World of Jazz", "104"],
+            ["Basic Music", "105"],
+            ["Introduction of World Music", "107"],
+            ["Music and Movement in Learning", "116"],
+            ["Music Theory I", "117"],
+            ["Aural Skills I", "118"],
+            ["Keyboard Workshop I", "119"],
+            ["Strings", "125"],
+            ["Percussion", "135"],
+            ["Piano Class I", "140"],
+            ["Piano Class II", "150"],
+            ["Voice Class I", "160"],
+            ["Methods: Voice", "161"],
+            ["College Chorus I", "165"],
+            ["College Chorus II", "166"],
+            ["College Chorus III", "167"],
+            ["College Chorus IV", "168"],
+            ["Voice Class II", "170"],
+            ["Guitar Class I", "180"],
+            ["Guitar Class II", "190"],
+            ["Music Theory II", "217"],
+            ["Aural Skills II", "218"],
+            ["Keyboard Workshop II", "219"],
+            ["Concert Choir I", "265"],
+            ["Concert Choir II", "266"],
+            ["Concert Choir III", "267"],
+            ["Concert Choir IV", "268"],
+            ["Jazz Performance Workshop I", "301"],
+            ["Jazz Performance Workshop II", "302"],
+            ["Jazz Performance Workshop III", "303"],
+            ["Jazz Performance Workshop IV", "304"],
+            ["Orchestral Performance I", "305"],
+            ["Orchestral Performance II", "306"],
+            ["Orchestral Performance III", "307"],
+            ["Orchestral Performance IV", "308"],
+            ["Music Theory III", "317"],
+            ["Aural Skills III", "318"],
+            ["Keyboard Workshop III", "319"],
+            ["Instrumental Ensemble I", "510"],
+            ["Instrumental Ensemble II", "520"],
+            ["String Ensemble I", "701"],
+            ["String Ensemble II", "702"],
+            ["String Ensemble III", "703"],
+            ["String Ensemble IV", "704"],
+            ["Guitar Ensemble I", "705"],
+            ["Guitar Ensemble II", "706"],
+            ["Guitar Ensemble III", "707"],
+            ["Guitar Ensemble IV", "708"]
+        ],
+        "NUR": [
+            ["Nursing Process I: Fundamentals of Patient Care", "112"],
+            ["Nursing Process II: Obstetrical and Psychiatric Nursing Care", "211"],
+            ["Nursing Process III: Pediatric and Basic Medical-Surgical Nursing Care", "313"],
+            ["Nursing Process IV: Medical-Surgical Nursing", "411"]
+        ],
+        "OFF": [
+            ["Computer Keyboarding", "111"]
+        ],
+        "PHI": [
+            ["Philosophy", "100"],
+            ["Philosophy (Honors)", "100H"],
+            ["Logic", "110"],
+            ["Cultural and Ethical Issues in Science and Technology", "111"],
+            ["Ethics", "120"],
+            ["Great Issues in Philosophy", "200"]
+        ],
+        "PHY": [
+            ["General Physics Theory", "108"],
+            ["General Physics Experiments", "109"],
+            ["General Physics", "110"],
+            ["General Physics (Honors)", "110H"],
+            ["Physics I", "210"],
+            ["University Physics I", "215"],
+            ["Physics II", "220"],
+            ["University Physics II", "225"],
+            ["Modern Physics", "240"],
+            ["The Physics of Music", "400"]
+        ],
+        "POL": [
+            ["American Government", "100"],
+            ["Introduction to Politics", "110"],
+            ["Gender and Politics", "120"],
+            ["World Politics", "210"],
+            ["Politics and Government in New York City", "220"],
+            ["Power in American Politics", "230"],
+            ["Political Theory", "260"]
+        ],
+        "PSY": [
+            ["Introduction to Psychology", "100"],
+            ["Introduction to Psychology (Honors)", "100H"],
+            ["Social Psychology", "200"],
+            ["Psychology of Death and Dying", "210"],
+            ["Psychology of Personality", "230"],
+            ["Developmental Psychology", "240"],
+            ["Psychology of Women", "245"],
+            ["Child Psychology", "250"],
+            ["Child Psychology (Honors)", "250H"],
+            ["Cognitive Psychology", "255"],
+            ["Abnormal Psychology", "260"],
+            ["Research in Psychology", "265"],
+            ["Cultural Psychology", "280"]
+        ],
+        "RTT": [
+            ["Respiratory Therapy I", "201"],
+            ["Respiratory Therapy Clinical Practicum I", "202"],
+            ["Respiratory Therapy III", "401"],
+            ["Respiratory Therapy Clinical Practicum III", "403"],
+            ["Fundamentals of Clinical Medicine", "410"]
+        ],
+        "SBE": [
+            ["Product and Service Creation", "100"],
+            ["International Business", "201"],
+            ["Small Business Management", "400"]
+        ],
+        "SCI": [
+            ["Computer Methods in Science", "120"],
+            ["Nutrition", "150"],
+            ["Scientific Instrumentation", "430"],
+            ["Pathophysiology", "510"],
+            ["Pharmacology", "530"]
+        ],
+        "SOC": [
+            ["Introduction to Sociology", "100"],
+            ["Social Problems", "200"],
+            ["Gender and Society", "210"],
+            ["Ethnic Groups in American Life", "230"],
+            ["Urban Sociology", "240"],
+            ["The Family", "250"],
+            ["Sociology Capstone", "350"]
+        ],
+        "SPE": [
+            ["Fundamentals of Speech", "100"],
+            ["Fundamentals of Speech for Non-Native Speakers", "102"],
+            ["Voice and Articulation", "103"],
+            ["Oral Interpretation", "210"],
+            ["Advanced Public Speaking", "220"]
+        ],
+        "SPN": [
+            ["Introductory Spanish I", "105"],
+            ["Introductory Spanish II", "106"],
+            ["Introductory Spanish for Speakers of Spanish", "107"],
+            ["Introductory Spanish II for Speakers of Spanish", "108"],
+            ["Elementary Intensive Spanish 1 & 2", "121"],
+            ["Spanish III", "200"],
+            ["Spanish Film and Conversation", "204"],
+            ["Intermediate Spanish I for Speakers of Spanish", "207"],
+            ["Spanish IV", "210"],
+            ["Intermediate Spanish II for Speakers of Spanish", "211"],
+            ["Introduction to Spanish Theatre", "420"],
+            ["Spanish V: Survey of Spanish Literature I", "430"],
+            ["Spanish IX: 20th Century Spanish-American Literature", "450"],
+            ["Advanced Spanish Composition", "456"],
+            ["Spanish and Latin American Texts Into Films", "480"]
+        ],
+        "THE": [
+            ["Introduction to Theatre (Honors)", "100H"],
+            ["Introduction to Theatre", "100"],
+            ["Acting I", "110"],
+            ["Voice and Movement for the Actor", "115"],
+            ["Elements of Production", "121"],
+            ["Scenic Practicum", "125"],
+            ["Costume Practicum", "126"],
+            ["Performance Practicum", "127"],
+            ["Special Topics Practicum", "128"],
+            ["Theatre Management", "141"],
+            ["Acting II", "210"],
+            ["Page-to-Stage", "220"],
+            ["Acting for the Camera", "280"],
+            ["History of Theatre", "300"],
+            ["Women in US American Theater", "305"],
+            ["Advanced Theatre Workshop", "310"],
+            ["Playwriting", "315"]
+        ],
+        "VAT": [
+            ["Introduction to Video Technology", "100"],
+            ["TV Studio Production I", "161"],
+            ["Sound for Performance/Digital Media I", "165"],
+            ["Remote Production/Video Editing I", "171"],
+            ["TV Studio Production II", "261"],
+            ["Remote Production/Video Editing II", "271"],
+            ["Introduction to Video Graphics", "301"],
+            ["Cinematography", "303"]
+        ]
+    }
+}

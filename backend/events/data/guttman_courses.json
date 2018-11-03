@@ -1,1 +1,22 @@
-{"name": "Guttman Community College", "code": "Guttman", "url": "https://www.coursicle.com/guttmancuny/", "courses": {"ENGL": [["Composition I", "103"]], "LASC": [["Studio", "100"], ["City Seminar I", "101"]], "MATH": [["Statistics B", "103B"], ["Statistics", "103"], ["Statistics A", "103A"]], "SOSC": [["Ethnographies of Work II", "113"]]}}
+{
+    "name": "Guttman Community College",
+    "code": "Guttman",
+    "url": "https://www.coursicle.com/guttmancuny/",
+    "courses": {
+        "ENGL": [
+            ["Composition I", "103"]
+        ],
+        "LASC": [
+            ["Studio", "100"],
+            ["City Seminar I", "101"]
+        ],
+        "MATH": [
+            ["Statistics B", "103B"],
+            ["Statistics", "103"],
+            ["Statistics A", "103A"]
+        ],
+        "SOSC": [
+            ["Ethnographies of Work II", "113"]
+        ]
+    }
+}
