@@ -20,8 +20,13 @@ class Command(BaseCommand):
 
         for cat, obj in categories.items():
             category, created = Category.objects.get_or_create(name=cat)
-            topics = list(chain.from_iterable(obj.values()))
+            topics = obj.get("titles")
+            images = obj.get("image")
+            if(len(images)==0):
+                for i in range(len(topics)):
+                    images.append("")
+            # topics = list(chain.from_iterable(obj.values()))
 
-            for topic in topics:
-                category.topics.get_or_create(name=topic)
+            for topic,image in zip(topics,images):
+                category.topics.get_or_create(name=topic,image=image)
 

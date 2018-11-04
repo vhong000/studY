@@ -39,6 +39,7 @@ class Category(models.Model):
 
 class Topic(models.Model):
     name = models.CharField(max_length=50)
+    image = models.CharField(max_length=100,null=True)
     category = models.ForeignKey(
         Category, on_delete=models.SET_NULL, related_name='topics', null=True)
 

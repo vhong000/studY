@@ -4,27 +4,34 @@
 			"Linear Algebra", "Differential Equations", "Mathematical Statistics", "Numerical Analysis",
 			"Geometry", "Financial Mathematics", "Set Theory", "Pure Mathematics", "Classical Analysis",
 			"Mathematical Logic", "Topology", "Probability Theory", "Fourier Analysis", "Differential Geometry",
-			"Optimization Theory"]
+			"Optimization Theory"],
+    "image":[]
 	},
 	"history": {
-		"titles": ["US History","Global History","Asia History","Europe History","Africa History"]
+		"titles": ["US History","Global History","Asia History","Europe History","Africa History"],
+    "image":[]
 	},
 	"language": {
-		"titles": ["English",  "French", "Spanish", "Italian", "German", "Chinese", "Japanese", "Russian", "Arabic", "Hindi"]
+		"titles": ["English",  "French", "Spanish", "Italian", "German", "Chinese", "Japanese", "Russian", "Arabic", "Hindi"],
+    "image":[]
 	},
 	"science": {
-		"titles": ["https://c1.staticflickr.com/9/8166/6961732976_3d76a9f61a_b.jpg"
-              ,"https://comps.canstockphoto.com/physics-word-cloud-clip-art_csp20692422.jpg"
-              ,"http://p3cdn4static.sharpschool.com/UserFiles/Servers/Server_1019357/Image/images/Biology.png"
-              ,"https://blogs.egu.eu/divisions/essi/files/2016/07/wordle.jpg"
-              ,"https://comps.canstockphoto.com/astronomy-word-cloud-concept-drawing_csp28026844.jpg"
-              ,"https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX17671811.jpg"]
+    "titles":[ "Physics","Chemistry","Earth Science","Astronomy","Biology","Engineering"],
+		"image": ["https://i.imgur.com/8iUfben.png"
+              ,"https://i.imgur.com/QBzFbpO.png"
+              ,"https://i.imgur.com/060vLZl.png"
+              ,"https://i.imgur.com/j2a65Or.png"
+              ,"https://i.imgur.com/X2BnFSc.png"
+              ,"https://i.imgur.com/TGtbnZG.png"
+    ]
 	},
 	"computer science": {
 		"titles": ["Algorithms","Data Structure", "Computational complexity theory", "Machine learning","Cryptography"
-              ,"Functional programing","Artificial intelligence"]
+              ,"Functional programing","Artificial intelligence"],
+    "image":[]
 	},
 	"literature": {
-		"titles": ["Fiction","Non-fiction","Poetry","Prose"]
+		"titles": ["Fiction","Non-fiction","Poetry","Prose"],
+    "image":[]
   }
 }
