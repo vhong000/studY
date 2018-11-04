@@ -23,5 +23,5 @@ class Command(BaseCommand):
             topics = list(chain.from_iterable(obj.values()))
 
             for topic in topics:
-                category.topics.get_or_create(name=topic[0])
+                category.topics.get_or_create(name=topic)
 
