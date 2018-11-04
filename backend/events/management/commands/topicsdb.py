@@ -19,9 +19,16 @@ class Command(BaseCommand):
             categories = json.load(fh)
 
         for cat, obj in categories.items():
-            category, created = Category.objects.get_or_create(name=cat)
-            topics = list(chain.from_iterable(obj.values()))
+            topics = obj.get("titles")
+            image_topic = obj.get("image_topic")
+            image = obj.get("image")
+            if(len(image_topic)==0):
+                for i in range(len(topics)):
+                    image_topic.append("")
+            category, created = Category.objects.get_or_create(name=cat,
+                                                image=image)
+            # topics = list(chain.from_iterable(obj.values()))
 
-            for topic in topics:
-                category.topics.get_or_create(name=topic)
+            for topic,image in zip(topics,image_topic):
+                category.topics.get_or_create(name=topic,image=image)
 
