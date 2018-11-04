@@ -5,33 +5,39 @@
 			"Geometry", "Financial Mathematics", "Set Theory", "Pure Mathematics", "Classical Analysis",
 			"Mathematical Logic", "Topology", "Probability Theory", "Fourier Analysis", "Differential Geometry",
 			"Optimization Theory"],
-    "image":[]
+    "image_topic":[],
+    "image":"https://i.imgur.com/7XBdJ1F.jpg"
 	},
 	"history": {
 		"titles": ["US History","Global History","Asia History","Europe History","Africa History"],
-    "image":[]
+    "image_topic":[],
+    "image":"https://i.imgur.com/gJ6TMtW.jpg"
 	},
 	"language": {
 		"titles": ["English",  "French", "Spanish", "Italian", "German", "Chinese", "Japanese", "Russian", "Arabic", "Hindi"],
-    "image":[]
+    "image_topic":[],
+    "image":"https://i.imgur.com/ejrBCJK.png"
 	},
 	"science": {
     "titles":[ "Physics","Chemistry","Earth Science","Astronomy","Biology","Engineering"],
-		"image": ["https://i.imgur.com/8iUfben.png"
+		"image_topic": ["https://i.imgur.com/8iUfben.png"
               ,"https://i.imgur.com/QBzFbpO.png"
               ,"https://i.imgur.com/060vLZl.png"
               ,"https://i.imgur.com/j2a65Or.png"
               ,"https://i.imgur.com/X2BnFSc.png"
               ,"https://i.imgur.com/TGtbnZG.png"
-    ]
+    ],
+    "image":"https://i.imgur.com/OcMyDti.png"
 	},
 	"computer science": {
 		"titles": ["Algorithms","Data Structure", "Computational complexity theory", "Machine learning","Cryptography"
               ,"Functional programing","Artificial intelligence"],
-    "image":[]
+    "image_topic":[],
+    "image":"https://i.imgur.com/rPmwwd7.png"
 	},
 	"literature": {
 		"titles": ["Fiction","Non-fiction","Poetry","Prose"],
-    "image":[]
+    "image_topic":[],
+    "image":"https://i.imgur.com/8H7vSwJ.png"
   }
 }

@@ -29,6 +29,7 @@ class Course(models.Model):
 
 class Category(models.Model):
     name = models.CharField(max_length=50)
+    image = models.CharField(max_length=100,null=True)
 
     class Meta:
         db_table = 'categories'
