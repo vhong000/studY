@@ -11,7 +11,7 @@ class headerWrapper extends Component  {
     super(props);
     this.state = {
       loginOpen: false,
-      registerOpen: false,
+      registerOpen: true,
     }
     this.handleClose = this.handleClose.bind(this);
     this.handleOpen = this.handleOpen.bind(this);

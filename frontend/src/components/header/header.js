@@ -21,7 +21,7 @@ const styles = theme => ({
 		marginTop: 'auto',
 		marginBottom: 'auto',
 	},
-	paper: {
+	loginPaper: {
 		position: 'absolute',
 		left: '50%',
 		width: '600px',
@@ -29,11 +29,19 @@ const styles = theme => ({
 		backgroundColor: theme.palette.background.paper,
 		transform: 'translate(-50%, 50%)',
 	},
+	registerPaper: {
+		position: 'absolute',
+		left: '50%',
+		width: '700px',
+		height: '60%',
+		backgroundColor: theme.palette.background.paper,
+		transform: 'translate(-50%, 40%)',
+	}
 })
 
 export function Header({
 	user, handleLogout, classes, handleModalClose,
-	handleModalOpen, loginOpen, 
+	handleModalOpen, loginOpen, registerOpen
 }) {
 	return (
 		<AppBar position='static' >
@@ -73,16 +81,22 @@ export function Header({
 							children="Login"
 							color='inherit' />
 						<Button 
-							component={Link} 
-							to="/register"
+/* 							component={Link} 
+							to="/register" */
+							onClick={() => handleModalOpen('register')}
 							className='register-button'
 							color='inherit'
 							children="Register"
 						/>
 
 						<Modal open={loginOpen} onClose={() => handleModalClose('login')}>
-							<div className={classes.paper}>
+							<div className={classes.loginPaper}>
 								<Login />
+							</div>
+						</Modal>
+						<Modal open={registerOpen} onClose={() => handleModalClose('register')}>
+							<div className={classes.registerPaper}>
+								<Register handleModalClose={handleModalClose} />
 							</div>
 						</Modal>
 					</div>

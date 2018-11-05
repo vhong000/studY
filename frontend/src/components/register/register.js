@@ -201,7 +201,7 @@ export default withFormik({
 	}),
 	handleSubmit: (applicant, { props, setErrors, setSubmitting }) => {
 		registerUser(applicant).then(() => {
-			props.history.push('/')
+			props.handleModalClose('register');
 		}).catch(error => {
 			setErrors({ registerForm: error.message });
 			setSubmitting(false);
