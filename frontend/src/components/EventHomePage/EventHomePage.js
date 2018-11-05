@@ -31,27 +31,32 @@ class EventHomePage extends Component {
     }
 
     render() {
-        const { classes, event } = this.props;
-        console.log(this.state.date);
+        const { classes, event, eventAttendees,campusInfo } = this.props;
+        console.log(campusInfo);
+
+        
         const bull = <span className={classes.bullet}>•</span>;
-        //const icon_marker = <span className={}></span>
-
+        
         const renderProfileCards = () => {
-
-            const profileCard = event.attendees.map((student, index) =>
-                <Grid key={index} item sm={3} spacing={16} >
-                    <Card className={classes.card}>
-                        <CardActionArea>
-                            <CardMedia className={classes.media} image={studyIcon} />
-                            <CardContent>
-                                <Typography align="center" variant="bus">
-                                    {student.name}
-                                </Typography>
-                            </CardContent>
-                        </CardActionArea>
-                    </Card>
-                </Grid>
-            )
+            let profileCard;
+            if (eventAttendees.length > 0) {
+                profileCard = eventAttendees.map((student, index) =>
+                    <Grid key={index} item sm={3} spacing={16} >
+                        <Card className={classes.card}>
+                            <CardActionArea>
+                                <CardMedia className={classes.media} image={studyIcon} />
+                                <CardContent>
+                                    <Typography align="center" variant="bus">
+                                        {student.name}
+                                    </Typography>
+                                </CardContent>
+                            </CardActionArea>
+                        </Card>
+                    </Grid>
+                )
+            } else {
+                profileCard = <Typography variant="subtitle1" color="textSecondary"> No one is attend this event yet </Typography>
+            }
             return (profileCard);
 
         }
@@ -81,7 +86,7 @@ class EventHomePage extends Component {
                                     Study Group
                                 </Typography>
                                 <Typography className={classes.pos} color="textSecondary">
-                                    {`Campus: ${event.location}`}
+                                    {`Campus: ${campusInfo.name}`}
                                 </Typography>
                             </Grid>
                         </Grid>
@@ -91,7 +96,7 @@ class EventHomePage extends Component {
                         <Grid justify="center" container sm={4}>
                             <Grid item justify="center" sm={12}>
                                 <Typography className={classes.pos} color="textSecondary">
-                                    Interest in this topic?  {bull} {`${event.attendees.length} students are going`}
+                                    Interest in this topic?  {bull} {`${eventAttendees.length} students are going`} 
                                 </Typography>
                                 <Divider />
                                 <Button>Join</Button>

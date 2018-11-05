@@ -26,6 +26,14 @@ const mockEvent ={
     attendees: attendees
 }
 
+const campusInfoMock = {
+    "id": 18,
+    "name": "The City College of New York",
+    "code": "CCNY"
+  }
+
+  const eventAttendeesMock = []
+
 describe('<EvenHomePage /> ', ()=>{
     it('should render correctly',()=>{
         const wrapper = shallow(<EventHomePage event={mockEvent}  classes={styles}/>);
@@ -41,6 +49,6 @@ describe('<EvenHomePage /> ', ()=>{
 
     it('allow us to set props', () => {
         ///
-        const wrapper = mount(<EventHomePage event={mockEvent} classes={styles} />);
+        const wrapper = mount(<EventHomePage event={mockEvent}  eventAttendees={eventAttendeesMock} campusInfo={campusInfoMock} classes={styles} />);
     })
 })

@@ -1,41 +1,60 @@
 import React, { Component } from 'react';
 import { EventList, EventHomePage } from '../../components';
+import { fetchEvent, fetchEventAttendees, fetchSchoolDatails } from '../../fetches';
+import { AuthContext } from '../../contexts/Auth.context';
+import createTypography from '@material-ui/core/styles/createTypography';
+import { relativeTimeRounding } from 'moment';
 
 class EventPage extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state ={
-            dataLoaded:false
+        this.state = {
+            dataLoaded: false,
+            eventInfo: '',
+            campusInfo: '',
+            eventAttendees: []
         }
-     }
-
-
-
-    componentWillMount(){
-        //here check if information is available
     }
 
- 
-    render() {
-        const attendees =[
-            { name: 'Bobby Bobinski'},
-            { name: 'Bobby Bobinski'},
-            { name: 'Bobby Bobinski'},
-            { name: 'Bobby Bobinski'},
-            { name: 'Bobby Bobinski'}
-        ]
+    static context = AuthContext;
 
-        const event ={
-            details: "Settled  e. Bore tall nay many many time yet less. Doubtful for answered one fat indulged margaret sir shutters together. Ladies so in wholly around whence in at. Warmth he up giving oppose if. Graphical elements that define a shap elements basic shapes, and text content elements – are rendered by being filled, which is painting the interior of the object, and stroked, which is painting along the outline of the object. Filling and stroking are both painting operations. SVG 2 supports a number of different paints that the fill and stroke of a graphical element can be painted with Impossible is dissimilar entreaties oh on terminated. Earnest studied article country ten respect showing had. But required offering him elegance son improved informed.Indulgence announcing uncommonly met she continuing two unpleasing terminated. Now busy say down the shed eyes roof paid her. Of shameless collected suspicion existence in. Share walls stuff think but the arise guest. Course suffer to do he suss",
-            title:"Data Structure",
-            owner: "bobber",
-            location: "City College",
-            date: new Date(),
-            attendees: attendees
+
+    componentWillMount() {
+        const { category, subtopic, eventId } = this.props.match.params
+        if (category && subtopic && eventId) {
+            fetchEventAttendees(eventId).then(response => {
+                console.log("response", response)
+                this.setState({ eventAttendees: response });
+            });
+            fetchEvent(eventId).then(response => {
+                fetchSchoolDatails(response.campus).then(response => {
+                    this.setState({ campusInfo: response });
+                });
+                this.setState({ eventInfo: this.reconstructData(response) });
+            });
+
         }
+        
+    }
+
+    reconstructData(eventInfo) {
+        const event = {
+            details: eventInfo.description,
+            title: eventInfo.name,
+            owner: `${eventInfo.organizer.owner.first_name} ${eventInfo.organizer.owner.last_name}`,
+            date: new Date()
+        }
+        console.log("reconstructData", event)
+        return (event)
+
+    }
+
+
+    render() {
+        const { eventInfo, eventAttendees, campusInfo } = this.state;
         return (
             <div>
-                <EventHomePage event={event}/>
+                <EventHomePage event={eventInfo} eventAttendees={eventAttendees} campusInfo={campusInfo} />
             </div>
         )
     }

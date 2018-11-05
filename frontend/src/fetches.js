@@ -81,3 +81,59 @@ export const fetchAllEvents = () => {
   });
 
 }
+
+//FETCH EVENT BY ID
+export const fetchEvent = (id) => {
+  return fetch(`/api/events/${id}`, {
+    method: "GET",
+    headers: {
+      'Content-Type': 'application/json',
+      //'Authorization': 'Token ' + token,
+    }
+  }).then((response) => {
+    if (response.status !== 200) {
+      return Promise.reject({ message: "Unable to get events" });
+    } else { return response.json(); }
+  }).catch(error => {
+    return error;
+  });
+
+}
+
+//FETCH EVENT ATTENDEES 
+export const fetchEventAttendees = (id) => {
+  return fetch(`/api/events/${id}/attendees`, {
+    method: "GET",
+    headers: {
+      'Content-Type': 'application/json',
+      //'Authorization': 'Token ' + token,
+    }
+  }).then((response) => {
+    if (response.status !== 200) {
+      return Promise.reject({ message: "Unable to get events attendees" });
+    } else { return response.json(); }
+  }).catch(error => {
+    return error;
+  });
+
+
+  
+
+}
+
+
+export const fetchSchoolDatails= (id) => {
+  return fetch(`/api/schools/${id}`, {
+    method: "GET",
+    headers: {
+      'Content-Type': 'application/json',
+      //'Authorization': 'Token ' + token,
+    }
+  }).then((response) => {
+    if (response.status !== 200) {
+      return Promise.reject({ message: "Unable to get school" });
+    } else { return response.json(); }
+  }).catch(error => {
+    return error;
+  });
+}
