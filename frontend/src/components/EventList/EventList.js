@@ -8,6 +8,7 @@ import {
     Typography, Grid, withStyles, Divider, Toolbar,Button
 
 } from '@material-ui/core';
+import DateRangeIcon from '@material-ui/icons/DateRange';
 
 
 
@@ -21,7 +22,8 @@ class EventList extends Component {
 
             const dates = listofevents.map((eventDates) =>
                 <Grid className={classes.date_group} item sm >
-                    <Typography variant="subheading">
+                    <Typography variant="subheading" className={classes.date}>
+                        <DateRangeIcon className={classes.icon} />&ensp;
                         {eventDates.date}
                     </Typography>
                     <Divider light />
@@ -52,20 +54,20 @@ class EventList extends Component {
                     <Typography className={classes.grow} color="inherit">
                         Here you can either join or create a study group event
                     </Typography>
-                    <Button color="inherit">create event</Button>
+                    <Button className={classes.button} variant='raised'>Create event</Button>
                 </Toolbar>
                 <Divider />
-                <Grid className={classes.main_grid} container sm={12}>
-                    <Grid item sm={2}>
-                    </Grid>
-                    <Grid item sm={6}>
+                <Grid className={classes.main_grid} justify="center" container sm={16}>
+                    {/* <Grid item sm={2}>
+                    </Grid> */}
+                    <Grid item sm={8}>
                         {renderEventCardGrid()}
                     </Grid>
-                    <Grid item justify="center" sm={3}>
+                    {/* <Grid item justify="center" sm={3}>
                         <Typography align="center" variant="subheading">
                             Map?
                         </Typography>
-                    </Grid>
+                    </Grid> */}
                 </Grid>
             </div>
         )
