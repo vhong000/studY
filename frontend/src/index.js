@@ -59,8 +59,6 @@ ReactDOM.render(
 				<AuthProvider>
 					<Header />
 					<Route exact path="/" component={App} />
-					<Route exact path="/register" component={Register} />
-					<Route exact path="/login" component={Login} />
 					<Route exact path="/eventform" component={EventForm} />
 				</AuthProvider>
   
