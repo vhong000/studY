@@ -52,15 +52,32 @@ const styles = theme => ({
 })
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      registerOpen: false,
+    }
+    this.handleClose = this.handleClose.bind(this);
+		this.handleOpen = this.handleOpen.bind(this);
+	}
+
+	handleClose() { this.setState({ registerOpen: false})}
+	handleOpen() { this.setState({ registerOpen: true})}
+
 	static contextType = AuthContext;
 
   render() {
 		const { classes } = this.props;
 		const { user } = this.context;
+		const { registerOpen } = this.state;
     return (
 			<div className='App'>
 				<div className='banner-container'>
-					<Banner user={user} />
+					<Banner 
+					registerOpen={registerOpen}
+					user={user}
+					handleModalClose={this.handleClose}
+					handleModalOpen={this.handleOpen} />
 				</div>
 				<Grid className={classes.main_grid} container justify='center' >
 					<Grid 
