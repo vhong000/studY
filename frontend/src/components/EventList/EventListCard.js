@@ -7,14 +7,19 @@ import {
     Typography, Grid, withStyles, CardMedia,
     CardActionArea, Divider, Button
 } from '@material-ui/core';
+import TimerIcon from '@material-ui/icons/Timer';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+import classNames from 'classnames';
 
 const styles = {
     main_grid: {
         "margin-top": 15,
+        
     },
     card: {
         minWidth: 275,
         height: 185,
+        
     },
     bullet: {
         display: 'inline-block',
@@ -22,11 +27,29 @@ const styles = {
         transform: 'scale(0.8)',
     },
     title: {
-        fontSize: 16,
+        fontFamily: "Raleway",
+        fontSize: "30px",
+        fontWeight: "700",
     },
     pos: {
         marginBottom: 12,
+    },
+    icon: {
+        fontSize: 28,
+        //color: "rgb(48, 60, 125)",
+        color: "#B22222",
+        verticalAlign: "text-bottom",
+    },
+    coord: {
+        fontFamily: "Raleway",
+        fontSize: "16px",
+        fontWeight: "700",
+    },
+    description: {
+        fontFamily: "Raleway",
     }
+    
+
 }
 
 class EventListCard extends Component {
@@ -45,21 +68,23 @@ class EventListCard extends Component {
                 <Grid className={classes.main_grid} container sm={12}>
                     <Grid item sm={3}>
                         <CardContent>
-                            <Typography className={classes.pos} color="textSecondary">
+                            <Typography className={classNames(classes.pos, classes.coord)} color="textSecondary">
+                                <TimerIcon className={classes.icon}/>
                                 {event.time}
                             </Typography>
                             <Divider />
-                            <Typography className={classes.pos} color="textSecondary">
+                            <Typography className={classNames(classes.pos, classes.coord)} color="textSecondary">
+                                <LocationOnIcon className={classes.icon}/>
                                 {event.location}
                             </Typography>
                         </CardContent>
                     </Grid>
                     <Grid item sm={9}>
                         <CardContent>
-                            <Typography className={classes.title} color="textSecondary" gutterBottom>
+                            <Typography className={classes.title} gutterBottom>
                                 {event.title}
                             </Typography>
-                            <Typography component="p">
+                            <Typography component="p" className={classes.description}>
                                 {event.Description}
                             </Typography>
                         </CardContent>
