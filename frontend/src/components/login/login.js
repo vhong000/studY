@@ -90,7 +90,7 @@ export default withFormik({
   handleSubmit: (user, { props, setErrors, setSubmitting }) => {
     loginUser(user).then(result => {
       props.onLogin(result.token)
-    }).then(() => props.history.push('/'))
+    })// .then(() => props.history.push('/'))
     .catch(error => {
 			setErrors({ loginForm: error.message});
 			setSubmitting(false);

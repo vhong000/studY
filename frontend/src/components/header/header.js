@@ -3,7 +3,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {
 	Button, AppBar, Typography, Toolbar, withStyles,
+	Modal,
 } from '@material-ui/core';
+import { Login, Register } from '../../containers';
 import PropTypes from 'prop-types';
 
 const styles = theme => ({
@@ -18,11 +20,20 @@ const styles = theme => ({
 		marginRight: theme.spacing.unit,
 		marginTop: 'auto',
 		marginBottom: 'auto',
-	}
+	},
+	paper: {
+		position: 'absolute',
+		left: '50%',
+		width: '600px',
+		height: '50%',
+		backgroundColor: theme.palette.background.paper,
+		transform: 'translate(-50%, 50%)',
+	},
 })
 
 export function Header({
-	user, onLogout, classes
+	user, handleLogout, classes, handleModalClose,
+	handleModalOpen, loginOpen, 
 }) {
 	return (
 		<AppBar position='static' >
@@ -49,14 +60,15 @@ export function Header({
 							className={classes.logout_button}
 							color='inherit'
 							children="logout"
-							onClick={onLogout}
+							onClick={() => handleLogout()}
 						/>
 					</div>
 				) : (
 					<div>
 						<Button
-							component={Link}
-							to="/login"
+/* 							component={Link}
+							to="/login" */
+							onClick={() => handleModalOpen('login')}
 							className='login-button'
 							children="Login"
 							color='inherit' />
@@ -67,6 +79,12 @@ export function Header({
 							color='inherit'
 							children="Register"
 						/>
+
+						<Modal open={loginOpen} onClose={() => handleModalClose('login')}>
+							<div className={classes.paper}>
+								<Login />
+							</div>
+						</Modal>
 					</div>
 				)}
 		</Toolbar>
@@ -76,12 +94,12 @@ export function Header({
 	
 Header.propTypes = { 
 	user: PropTypes.object,
-	onLogout: PropTypes.func,
+	handleLogout: PropTypes.func,
 }
 
 Header.defaultProps = {
 	user: null,
-	onLogout: undefined,
+	handleLogout: undefined,
 }
 
 export default withStyles(styles)(Header);
