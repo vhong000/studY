@@ -11,6 +11,7 @@ import Banner from './components/banner/banner'
 import { 
 	math, science, history, art, literature, language,
 } from './images'
+import { AuthContext } from './contexts/Auth.context';
 
 const topics = [
 	{ 
@@ -51,12 +52,15 @@ const styles = theme => ({
 })
 
 class App extends Component {
+	static contextType = AuthContext;
+
   render() {
 		const { classes } = this.props;
+		const { user } = this.context;
     return (
 			<div className='App'>
 				<div className='banner-container'>
-					<Banner />
+					<Banner user={user} />
 				</div>
 				<Grid className={classes.main_grid} container justify='center' >
 					<Grid 

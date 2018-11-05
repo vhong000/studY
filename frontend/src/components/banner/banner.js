@@ -59,14 +59,16 @@ const Banner = (props) => (
    noWrap>
     What do you StudY?
   </Typography>
-  <Button 
-    component={Link}
-    to='/register'
-    className={props.classes.banner_button}
-    children="Sign Up"
-    variant='text'
-    size='large'
-  />
+  {props.user ? ( null ) : (
+    <Button 
+      component={Link}
+      to='/register'
+      className={props.classes.banner_button}
+      children="Sign Up"
+      variant='text'
+      size='large'
+    />
+  )}
 </div>
 )
 
