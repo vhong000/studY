@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 //import { Header } from '../../components';
 import { Link,  BrowserRouter as Router} from 'react-router-dom';
-
+import moment from 'moment';
 import {
     Card, CardContent,
     Typography, Grid, withStyles, CardMedia,
@@ -70,22 +70,22 @@ class EventListCard extends Component {
                         <CardContent>
                             <Typography className={classNames(classes.pos, classes.coord)} color="textSecondary">
                                 <TimerIcon className={classes.icon}/>
-                                {event.time}
+                                {moment(event.time).format("hh:mm a")}
                             </Typography>
                             <Divider />
                             <Typography className={classNames(classes.pos, classes.coord)} color="textSecondary">
                                 <LocationOnIcon className={classes.icon}/>
-                                {event.location}
+                                {event.location? event.location:"add location"}
                             </Typography>
                         </CardContent>
                     </Grid>
                     <Grid item sm={9}>
                         <CardContent>
                             <Typography className={classes.title} gutterBottom>
-                                {event.title}
+                                {event.name}
                             </Typography>
                             <Typography component="p" className={classes.description}>
-                                {event.Description}
+                                {event.description}
                             </Typography>
                         </CardContent>
                     </Grid>
