@@ -3,15 +3,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import {
 	Button, AppBar, Typography, Toolbar, withStyles,
-	Modal,
+	Modal, Divider
 } from '@material-ui/core';
 import { Login, Register } from '../../containers';
 import PropTypes from 'prop-types';
 
 const styles = theme => ({
 	title: {
-		flex: 1,
+		'&:hover': {
+			backgroundColor: theme.palette.primary,
+			color: 'white',
+		},
 	},
+	divide: { flex: 1 },
 	right_actions: {
 		display: 'flex',
 		flex: -1,
@@ -55,6 +59,7 @@ export function Header({
 					color='inherit'>
 					studY
 				</Typography>
+				<div className={classes.divide} />
 				{user ? ( 
 					<div className={classes.right_actions}>
 						<Typography

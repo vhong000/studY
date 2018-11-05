@@ -19,6 +19,7 @@ const styles = theme => ({
 		backgroundColor: theme.palette.primary.dark,
 		'&:hover': {
 			backgroundColor: theme.palette.primary.dark,
+			color: 'white',
 		},
 		transform: 'translate(-50%, 50%)',
     color: 'white',
