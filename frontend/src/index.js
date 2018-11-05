@@ -2,10 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
 import EventForm from './containers/eventForm';
 import Subtopic from './components/Subtopic/Subtopic';
-import { EventListPage, Header, Register, Login, EventPage } from './containers';
+import { EventListPage, Header, Register, Login, EventPage,
+	App } from './containers';
 import * as serviceWorker from './serviceWorker';
 
 // import { Provider } from 'react-redux';

@@ -11,7 +11,6 @@ import Banner from './components/banner/banner'
 import { 
 	math, science, history, art, literature, language,
 } from './images'
-import { AuthContext } from './contexts/Auth.context';
 
 const topics = [
 	{ 
@@ -51,33 +50,19 @@ const styles = theme => ({
 	},
 })
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      registerOpen: false,
-    }
-    this.handleClose = this.handleClose.bind(this);
-		this.handleOpen = this.handleOpen.bind(this);
-	}
-
-	handleClose() { this.setState({ registerOpen: false})}
-	handleOpen() { this.setState({ registerOpen: true})}
-
-	static contextType = AuthContext;
+export class App extends Component {
 
   render() {
-		const { classes } = this.props;
-		const { user } = this.context;
-		const { registerOpen } = this.state;
+		const { classes, user, registerOpen,
+			handleModalClose, handleModalOpen } = this.props;
     return (
 			<div className='App'>
 				<div className='banner-container'>
 					<Banner 
 					registerOpen={registerOpen}
 					user={user}
-					handleModalClose={this.handleClose}
-					handleModalOpen={this.handleOpen} />
+					handleModalClose={() => handleModalClose()}
+					handleModalOpen={() => handleModalOpen()} />
 				</div>
 				<Grid className={classes.main_grid} container justify='center' >
 					<Grid 
