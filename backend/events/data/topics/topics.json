@@ -1,43 +1,49 @@
 {
 	"math": {
 		"titles": ["Precalculus", "Calculus",  "Probability and Statistics",
-			"Linear Algebra", "Differential Equations", "Mathematical Statistics", "Numerical Analysis",
+			"Linear Algebra", "Differential Equations", "Statistics", "Numerical Analysis",
 			"Geometry", "Financial Mathematics", "Set Theory", "Pure Mathematics", "Classical Analysis",
-			"Mathematical Logic", "Topology", "Probability Theory", "Fourier Analysis", "Differential Geometry",
-			"Optimization Theory"],
-    "image_topic":[],
+			"Topology", "Probability Theory", "Fourier Analysis", "Differential Geometry"],
+    "image_topic":["https://i.imgur.com/AigfkBj.png","https://i.imgur.com/0SqUlh0.png","https://i.imgur.com/Mijid1o.png"
+                  ,"https://i.imgur.com/WvvlrYw.png","https://i.imgur.com/NQ88Uns.png","https://i.imgur.com/JE653Yi.png"
+                  ,"https://i.imgur.com/QgXbJce.png","https://i.imgur.com/sV5GFPV.png","https://i.imgur.com/ZWFzjZc.png"
+                  ,"https://i.imgur.com/RaFPl2H.pnghttps://us.123rf.com/450wm/radiantskies/radiantskies1212/radiantskies121200167/16628002-abstract-word-cloud-for-set-theory-with-related-tags-and-terms.jpg?ver=6",
+                  ,"https://i.imgur.com/fg02PEj.png","https://i.imgur.com/mpzFr1p.png","https://i.imgur.com/5pScNMB.png"
+                  ,"https://i.imgur.com/TQiciNo.png","https://i.imgur.com/kcwpUt7.png","https://i.imgur.com/TzqMykD.png"],
+
     "image":"https://i.imgur.com/7XBdJ1F.jpg"
 	},
 	"history": {
 		"titles": ["US History","Global History","Asia History","Europe History","Africa History"],
-    "image_topic":[],
+    "image_topic":["https://i.imgur.com/5hxtOeU.png","https://i.imgur.com/3IGp8eK.jpg","https://i.imgur.com/QR4eIWQ.png"
+                  ,"https://i.imgur.com/q5ht75O.png","https://i.imgur.com/KItISZv.jpg"],
     "image":"https://i.imgur.com/gJ6TMtW.jpg"
 	},
 	"language": {
 		"titles": ["English",  "French", "Spanish", "Italian", "German", "Chinese", "Japanese", "Russian", "Arabic", "Hindi"],
-    "image_topic":[],
+    "image_topic":["https://i.imgur.com/Cg7DGi8.png","https://i.imgur.com/6GH3ucR.png","https://i.imgur.com/vXbZEve.png"
+                  ,"https://i.imgur.com/Fmxb1tm.png","https://i.imgur.com/44fWi9M.png","https://i.imgur.com/RdpGX4r.png"
+                  ,"https://i.imgur.com/ZV4Lnnv.png","https://i.imgur.com/06QVPT3.jpg","https://i.imgur.com/wRq6Svx.png"
+                  ,"https://i.imgur.com/UhnSo5h.png"],
     "image":"https://i.imgur.com/ejrBCJK.png"
 	},
 	"science": {
     "titles":[ "Physics","Chemistry","Earth Science","Astronomy","Biology","Engineering"],
-		"image_topic": ["https://i.imgur.com/8iUfben.png"
-              ,"https://i.imgur.com/QBzFbpO.png"
-              ,"https://i.imgur.com/060vLZl.png"
-              ,"https://i.imgur.com/j2a65Or.png"
-              ,"https://i.imgur.com/X2BnFSc.png"
-              ,"https://i.imgur.com/TGtbnZG.png"
-    ],
+		"image_topic": ["https://i.imgur.com/8iUfben.png" ,"https://i.imgur.com/QBzFbpO.png","https://i.imgur.com/060vLZl.png"
+                    ,"https://i.imgur.com/j2a65Or.png" ,"https://i.imgur.com/X2BnFSc.png","https://i.imgur.com/TGtbnZG.png"],
     "image":"https://i.imgur.com/OcMyDti.png"
 	},
 	"computer science": {
 		"titles": ["Algorithms","Data Structure", "Computational complexity theory", "Machine learning","Cryptography"
               ,"Functional programing","Artificial intelligence"],
-    "image_topic":[],
+    "image_topic":["https://i.imgur.com/TVKrSiS.png","https://i.imgur.com/VMhXbG1.png","https://i.imgur.com/xhvTU2K.png"
+                  ,"https://i.imgur.com/PyHUMhM.png","https://i.imgur.com/erkX0fy.jpg","https://i.imgur.com/XcCXyan.png"
+                  ,"https://i.imgur.com/fr4jfuK.jpg"],
     "image":"https://i.imgur.com/rPmwwd7.png"
 	},
 	"literature": {
 		"titles": ["Fiction","Non-fiction","Poetry","Prose"],
-    "image_topic":[],
+    "image_topic":["https://i.imgur.com/p2RFV8M.png","https://i.imgur.com/lVqTS6I.png","https://i.imgur.com/9z2VkZT.png","https://i.imgur.com/OKZkbVb.png"],
     "image":"https://i.imgur.com/8H7vSwJ.png"
   }
 }
