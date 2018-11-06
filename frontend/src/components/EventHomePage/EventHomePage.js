@@ -14,6 +14,9 @@ import {
 } from '@material-ui/core';
 import DoneIcon from '@material-ui/icons/Done';
 import CloseIcon from '@material-ui/icons/Close';
+import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
+import PeopleIcon from '@material-ui/icons/People';
+import LocationONIcon from '@material-ui/icons/LocationOn';
 
 class EventHomePage extends Component {
     constructor(props) {
@@ -25,6 +28,7 @@ class EventHomePage extends Component {
         }
 
     }
+
 
     handleChange(event) {
         //handle
@@ -82,12 +86,14 @@ class EventHomePage extends Component {
 
                             <Grid item sm={12}>
                                 <Typography className={classes.pos} color="textSecondary">
+                                <PersonOutlineIcon className={classes.iconIm}/>
                                     {`Organizer: ${event.owner}`}
                                 </Typography>
-                                <Typography className={classes.pos} color="textSecondary">
+                                {/* <Typography className={classes.pos} color="textSecondary">
                                     Study Group
-                                </Typography>
+                                </Typography> */}
                                 <Typography className={classes.pos} color="textSecondary">
+                                    <LocationONIcon className={classes.iconIm}/>
                                     {`Campus: ${campusInfo.name}`}
                                 </Typography>
                             </Grid>
@@ -97,10 +103,11 @@ class EventHomePage extends Component {
 
                         <Grid justify="center" container sm={4}>
                             <Grid item justify="center" sm={12}>
-                                <Typography className={classes.pos} color="textSecondary">
-                                    Interest in this topic?  {bull} {`${eventAttendees.length} students are going`} 
+                                <Typography className={classes.pos} >
+                                    <span className={classes.interest}>Interested?</span>&ensp;&ensp;
+                                    <span className={classes.going}>{bull} {`${eventAttendees.length} going`}</span> 
                                 </Typography>
-                                <Divider />
+                                <Divider className={classes.divider}/>
                                 <Button className={classes.button}><DoneIcon className={classes.icon}/></Button>
                                 <Button className={classes.button}><CloseIcon className={classes.icon}/></Button>
                             </Grid>
@@ -114,7 +121,7 @@ class EventHomePage extends Component {
                         </Grid>
                         <Grid container spacing={16} sm={6}>
                             <Grid item sm={12}>
-                                <h2>Detials</h2>
+                                <h2>What we're about</h2>
                             </Grid>
                             <Grid item sm={12}>
                                 <Typography variant="body2">
@@ -123,6 +130,7 @@ class EventHomePage extends Component {
                             </Grid>
                             <Grid item sm={12}>
                                 <Typography variant="subtitle1" color="textSecondary">
+                                    <PeopleIcon className={classes.iconIm}/>&ensp;
                                     Attending
                                 </Typography>
                                 <Divider />

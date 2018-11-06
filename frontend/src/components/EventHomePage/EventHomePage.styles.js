@@ -56,7 +56,27 @@
         "color": "white",
         "font-size": "32px",
         "font-weight": "bold",
-    }
+    },
+    divider: {
+        "width": "30%",
+        "background-color": "red",
+        "margin": "10px 0",
+    },
+    interest: {
+        "font-family": "Raleway",
+        "font-size": "18px",
+    },
+    going: {
+        "font-family": "Raleway",
+        "font-size": "15px",
+        "color": "darkgrey",
+    },
+    iconIm: {
+        fontSize: 28,
+        color: "#B22222",
+        verticalAlign: "text-bottom",
+        
+    },
 });
 
 export default styles;
