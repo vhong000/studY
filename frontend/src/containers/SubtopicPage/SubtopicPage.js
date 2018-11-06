@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 
 import { SubtopicPage } from '../../components';
-import { fetchSubtopics } from '../../fetches';
+import { fetchCategory } from '../../fetches';
 
 class subtopicsWrapper extends Component {
   constructor(props) {
@@ -13,17 +13,18 @@ class subtopicsWrapper extends Component {
   }
 
   componentDidMount() {
-    fetchSubtopics().then(response => {
-      const id = this.props.match.category;
-      console.log(id);
-     //  const filtered = response
-     //    .filter(topic => topic.category === id);
+    const id = this.props.match.params.category;
+    fetchCategory(id).then(response => {
+      const filtered = response.topics;
+      this.setState({ 
+        currSubtopics: filtered
+       })
     })
   }
 
   render() {
     return (
-      <p>testing</p>
+      <SubtopicPage {...this.props} subtopics={this.state.currSubtopics} />
     )
   }
 }

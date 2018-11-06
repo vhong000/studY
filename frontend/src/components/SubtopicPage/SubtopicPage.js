@@ -19,10 +19,9 @@ const styles = {
 	}
 }
 
-class Subtopic extends Component {
+class SubtopicPage extends Component {
     render() {
-			const { classes, subtopic, category } = this.props;
-			console.log(" Subtopic ",this.props);
+			const { classes, subtopics, category } = this.props;
         return (
           <Grid container justify='center' className={classes.main_grid} >
 					<Grid 
@@ -30,26 +29,26 @@ class Subtopic extends Component {
 						md='10'
 						spacing='24'
 					>
-						{subtopic.titles.map((topic, i) => {
+						{subtopics ? (subtopics.map((topic, i) => {
 							return (
 								<Grid item md='3' >
 									<Card className={classes.card}>
 										<CardActionArea
 											component={Link}
-											to={`/${category}/${topic.replace(/\s+/g, '')}`}>
+											to={'/'} >
 											<CardMedia 
 												className={classes.media}
-												image={subtopic.image} />
+												image={topic.image} />
 											<CardContent>
 												<Typography align="center" variant="h6">
-													{topic}
+													{topic.name}
 												</Typography>
 											</CardContent>
 										</CardActionArea>
 									</Card>
 								</Grid>
 							)})
-							}
+						) : ( <p>loading...</p> )}
 					</Grid>
 				</Grid>
         )
@@ -57,4 +56,4 @@ class Subtopic extends Component {
    
 }
     
-export default withStyles(styles)(Subtopic);
+export default withStyles(styles)(SubtopicPage);

@@ -52,7 +52,7 @@ export class App extends Component {
 												image={topic.image} />
 											<CardContent>
 												<Typography variant="h6">
-													{topic.name}
+													{topic.name.toUpperCase()}
 												</Typography>
 											</CardContent>
 										</CardActionArea>

@@ -147,6 +147,21 @@ export const fetchCategories = () => {
   }).catch(error => { return error; });
 }
 
+// FETCH ONE CATEGORY
+
+export const fetchCategory = (id) => {
+  return fetch('/api/categories/' + id, {
+    method: "GET",
+    headers: {
+      'Content-Type': 'application/json',
+    }
+  }).then((response) => {
+    if (response.status !== 200) {
+      return Promise.reject({ message: "Unable to get category" });
+    } else { return response.json(); }
+  }).catch(error => { return error; });
+}
+
 // FETCH ALL SUBTOPICS
 export const fetchSubtopics = () => {
   return fetch('/api/topics', {
