@@ -22,15 +22,15 @@ class SubtopicPage extends Component {
 			const { classes, subtopics, category } = this.props;
         return (
 					<div>
+					<Typography variant='display1' align='center' >
+						{category}
+					</Typography>
           <Grid container justify='center' className={classes.main_grid} >
 					<Grid 
 						container item
 						xs='8'
 						spacing='24'
 					>
-						<Typography variant='display1' >
-							{category}
-						</Typography>
 						{subtopics ? (subtopics.map((topic, i) => {
 							return (
 								<Grid item xs='12' md='6' lg='4' >
