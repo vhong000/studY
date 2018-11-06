@@ -8,37 +8,6 @@ import {
 import './App.css';
 import Banner from './components/banner/banner'
 
-import { 
-	math, science, history, art, literature, language,
-} from './images'
-
-const topics = [
-	{ 
-		name: "Math",
-		image: math,
-	},
-	{ 
-		name: "History",
-		image: history,
-	},
-	{ 
-		name: "Language",
-		image: language,
-	},
-	{ 
-		name: "Science",
-		image: science,
-	},
-	{ 
-		name: "Art",
-		image: art,
-	},
-	{ 
-		name: "Literature",
-		image: literature,
-	},
-]
-
 const styles = theme => ({
 	main_grid: {
 		"margin-top": 20,
@@ -53,7 +22,7 @@ const styles = theme => ({
 export class App extends Component {
 
   render() {
-		const { classes, user, registerOpen,
+		const { classes, user, registerOpen, categories,
 			handleModalClose, handleModalOpen } = this.props;
     return (
 			<div className='App'>
@@ -71,13 +40,13 @@ export class App extends Component {
 						xs='8'
 						spacing='24'
 					>
-						{topics.map((topic) => {
+						{categories ? (categories.map((topic) => {
 							return (
 								<Grid item xs='12' md='6' lg='4' >
 									<Card className={classes.card}>
 										<CardActionArea
 											component={Link}
-											to={"/" + topic.name.toLowerCase()}>
+											to={"/" + topic.id}>
 											<CardMedia 
 												className={classes.media}
 												image={topic.image} />
@@ -90,7 +59,7 @@ export class App extends Component {
 									</Card>
 								</Grid>
 							)})
-							}
+						) : ( <p>loading...</p>)}
 					</Grid>
 				</Grid>
 			</div>

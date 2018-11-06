@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 
 import App from '../App';
+import { fetchCategories } from '../fetches';
 import { AuthContext } from '../contexts/Auth.context';
 
 class appWrapper extends Component  {
@@ -14,7 +15,13 @@ class appWrapper extends Component  {
     }
     this.handleClose = this.handleClose.bind(this);
 		this.handleOpen = this.handleOpen.bind(this);
-	}
+  }
+  
+  componentDidMount() {
+    fetchCategories().then(response => {
+      this.setState({ categories: response.results });
+    })
+  }
 
 	handleClose() { this.setState({ registerOpen: false})}
 	handleOpen() { this.setState({ registerOpen: true})}
