@@ -4,8 +4,10 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import EventForm from './containers/eventForm';
-import Subtopic from './components/Subtopic/Subtopic';
-import { EventListPage, Header, Register, Login, EventPage } from './containers';
+// import SubtopicPage from './components/SubtopicPage/SubtopicPage';
+import { EventListPage, 
+	Header, Register, Login, 
+	EventPage, SubtopicPage } from './containers';
 import * as serviceWorker from './serviceWorker';
 
 // import { Provider } from 'react-redux';
@@ -64,19 +66,8 @@ ReactDOM.render(
 					<Route exact path="/eventform" component={EventForm} />
 				</AuthProvider>
   
-				<Route exact path="/math"
-					render={(props) => <Subtopic subtopic={subtopics.math} category={"math"}/> }/>
-				<Route exact path="/history" 
-					render={(props) => <Subtopic subtopic={subtopics.history} category={"history"}/> }/>
-				<Route exact path="/language" 
-					render={(props) => <Subtopic subtopic={subtopics.language} category={"language"}/> }/>
-				<Route exact path="/art"
-					render={(props) => <Subtopic subtopic={subtopics.art} category={"art"}/> }/> 
-				<Route exact path="/literature" 
-					render={(props) => <Subtopic subtopic={subtopics.literature} category={"literature"}/> }/>
-				<Route exact path="/science" 
-					render={(props) => <Subtopic subtopic={subtopics.science} category={"science"}/> }/>
-				
+				<Route exact path="/:category" component={SubtopicPage} />
+                                 
 				<Route exact path="/:category/:subtopic" component={EventListPage}/>
 				<Route exact path="/:category/:subtopic/:eventId" component={EventPage}/> 
 				
