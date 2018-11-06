@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Header from '../header/header';
 import { Link } from 'react-router-dom';
 import {
-	Card, CardContent, 
+	Card, CardContent,
 	Typography, Grid, withStyles, CardMedia,
 	CardActionArea,
 } from '@material-ui/core';
@@ -18,15 +18,15 @@ const styles = {
 }
 
 class SubtopicPage extends Component {
-    render() {
-			const { classes, subtopics, category } = this.props;
-        return (
-					<div>
-					<Typography variant='display1' align='center' >
-						{category}
-					</Typography>
-          <Grid container justify='center' className={classes.main_grid} >
-					<Grid 
+	render() {
+		const { classes, subtopics, category } = this.props;
+		return (
+			<div>
+				<Typography variant='display1' align='center' >
+					{category}
+				</Typography>
+				<Grid container justify='center' className={classes.main_grid} >
+					<Grid
 						container item
 						xs='8'
 						spacing='24'
@@ -38,7 +38,7 @@ class SubtopicPage extends Component {
 										<CardActionArea
 											component={Link}
 											to={`/${category}/${topic.id}`} >
-											<CardMedia 
+											<CardMedia
 												className={classes.media}
 												image={topic.image} />
 											<CardContent>
@@ -49,14 +49,15 @@ class SubtopicPage extends Component {
 										</CardActionArea>
 									</Card>
 								</Grid>
-							)})
-						) : ( <p>loading...</p> )}
+							)
+						})
+						) : (<p>loading...</p>)}
 					</Grid>
 				</Grid>
-				</div>
-        )
-    }
-   
+			</div>
+		)
+	}
+
 }
-    
+
 export default withStyles(styles)(SubtopicPage);

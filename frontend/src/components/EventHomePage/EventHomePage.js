@@ -21,22 +21,20 @@ class EventHomePage extends Component {
             Joined: false,
             notInterested: false,
         }
+        //this.handleJoin = this.handleJoin.bind(this);
 
     }
 
-    handleChange(event) {
-        //handle
-        alert("Add to event")
-        console.log(event)
-    }
+
+
 
     render() {
-        const { classes, event, eventAttendees,campusInfo } = this.props;
-        console.log(campusInfo);
+        const { classes, event, eventAttendees, campusInfo } = this.props;
+        console.log("This.Props[0]", this.props);
 
-        
+
         const bull = <span className={classes.bullet}>•</span>;
-        
+
         const renderProfileCards = () => {
             let profileCard;
             if (eventAttendees.length > 0) {
@@ -96,11 +94,10 @@ class EventHomePage extends Component {
                         <Grid justify="center" container sm={4}>
                             <Grid item justify="center" sm={12}>
                                 <Typography className={classes.pos} color="textSecondary">
-                                    Interest in this topic?  {bull} {`${eventAttendees.length} students are going`} 
+                                    Interest in this topic?  {bull} {`${eventAttendees.length} students are going`}
                                 </Typography>
                                 <Divider />
-                                <Button>Join</Button>
-                                <Button>not interested</Button>
+                                <Button disabled={this.props.Joined} onClick={this.props.handleJoinEvent}>Join</Button>
                             </Grid>
                         </Grid>
                         <Divider />

@@ -191,3 +191,21 @@ export const fetchSubtopics = () => {
     } else { return response.json(); }
   }).catch(error => { return error; });
 }
+
+//Join Event
+export const JoinEvent = (eventId,token) => {
+  return fetch(`/api/events/${eventId}/join`, {
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Token ' + token,
+    }
+  }).then((response) => {
+    if (response.status !== 200) {
+      return Promise.reject({ message: "Unable to get events" });
+    } else { return response.json(); }
+  }).catch(error => {
+    return error;
+  });
+
+}
