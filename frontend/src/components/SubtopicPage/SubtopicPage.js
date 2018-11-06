@@ -37,7 +37,7 @@ class SubtopicPage extends Component {
 									<Card className={classes.card}>
 										<CardActionArea
 											component={Link}
-											to={`/${topic.name}/${topic.id}`} >
+											to={`/${category}/${topic.id}`} >
 											<CardMedia 
 												className={classes.media}
 												image={topic.image} />
