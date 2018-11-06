@@ -64,9 +64,25 @@ export const fetchSchools = () => {
   })
 }
 //FETCH ALL THE EVENTS
-//
+//http://localhost:8000/api/events?topic
 export const fetchAllEvents = () => {
   return fetch("/api/events", {
+    method: "GET",
+    headers: {
+      'Content-Type': 'application/json',
+      //'Authorization': 'Token ' + token,
+    }
+  }).then((response) => {
+    if (response.status !== 200) {
+      return Promise.reject({ message: "Unable to get events" });
+    } else { return response.json(); }
+  }).catch(error => {
+    return error;
+  });
+
+}
+export const fetchEventByTopic = (id) => {
+  return fetch(`/api/events?topic=${id}`, {
     method: "GET",
     headers: {
       'Content-Type': 'application/json',

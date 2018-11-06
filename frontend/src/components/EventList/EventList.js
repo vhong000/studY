@@ -5,7 +5,7 @@ import styles from './EventList.styles';
 import { Link } from 'react-router-dom';
 import {
 
-    Typography, Grid, withStyles, Divider, Toolbar,Button
+    Typography, Grid, withStyles, Divider, Toolbar, Button
 
 } from '@material-ui/core';
 import DateRangeIcon from '@material-ui/icons/DateRange';
@@ -15,6 +15,7 @@ import DateRangeIcon from '@material-ui/icons/DateRange';
 class EventList extends Component {
 
     render() {
+        const { classes } = this.props;
         const { listofevents } = this.props;
         console.log("Eventlist[0]", this.props);
 
@@ -46,29 +47,42 @@ class EventList extends Component {
             return (events);
 
         }
-
-        const { classes } = this.props;
-        return (
-            <div>
+        const renderToolbar = () => {
+            return (
                 <Toolbar variant="dense">
                     <Typography className={classes.grow} color="inherit">
                         Here you can either join or create a study group event
                     </Typography>
                     <Button className={classes.button} variant='raised'>Create event</Button>
                 </Toolbar>
-                <Divider />
-                <Grid className={classes.main_grid} justify="center" container sm={16}>
-                    {/* <Grid item sm={2}>
+            )
+        }
+
+        const renderPage = () => {
+            return (
+                <div>
+                    
+                    <Grid className={classes.main_grid} justify="center" container sm={16}>
+                        {/* <Grid item sm={2}>
                     </Grid> */}
-                    <Grid item sm={8}>
-                        {renderEventCardGrid()}
-                    </Grid>
-                    {/* <Grid item justify="center" sm={3}>
+                        <Grid item sm={8}>
+                            {renderEventCardGrid()}
+                        </Grid>
+                        {/* <Grid item justify="center" sm={3}>
                         <Typography align="center" variant="subheading">
                             Map?
                         </Typography>
                     </Grid> */}
-                </Grid>
+                    </Grid>
+                </div>
+            )
+        }
+
+        return (
+            <div>
+                {renderToolbar()}
+                <Divider />
+                {listofevents.length ? renderPage() : <h4> There are no Topics for this event  </h4>}
             </div>
         )
     }
