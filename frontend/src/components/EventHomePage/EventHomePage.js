@@ -12,6 +12,8 @@ import {
     Button, Card, CardContent, CardMedia, CardActionArea
 
 } from '@material-ui/core';
+import DoneIcon from '@material-ui/icons/Done';
+import CloseIcon from '@material-ui/icons/Close';
 
 class EventHomePage extends Component {
     constructor(props) {
@@ -66,9 +68,9 @@ class EventHomePage extends Component {
                     <Grid className={classes.main_grid} container sm={12}>
                         <Grid container sm={2}>
                             <Grid className={classes.item_grid_left} item sm={12}>
-                                <Typography className={classes.pos} color="textSecondary">
+                                {/* <Typography className={classes.pos} color="textSecondary">
                                     Google map not yet available
-                                </Typography>
+                                </Typography> */}
                             </Grid>
                         </Grid>
 
@@ -99,8 +101,8 @@ class EventHomePage extends Component {
                                     Interest in this topic?  {bull} {`${eventAttendees.length} students are going`} 
                                 </Typography>
                                 <Divider />
-                                <Button>Join</Button>
-                                <Button>not interested</Button>
+                                <Button className={classes.button}><DoneIcon className={classes.icon}/></Button>
+                                <Button className={classes.button}><CloseIcon className={classes.icon}/></Button>
                             </Grid>
                         </Grid>
                         <Divider />

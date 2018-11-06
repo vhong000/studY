@@ -42,6 +42,20 @@
 
     grid: {
         margin: theme.spacing.unit * 3,
+    },
+    button: {
+        "background-color": "rgb(94, 106, 192)",
+        "padding": 0,
+        "width": "42%",
+        "margin": "10px 5px 10px 0",
+        '&:hover': {
+        "background-color": "rgb(64, 76, 165)",
+        },
+    },
+    icon: {
+        "color": "white",
+        "font-size": "32px",
+        "font-weight": "bold",
     }
 });
 
