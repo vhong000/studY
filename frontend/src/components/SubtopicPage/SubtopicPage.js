@@ -12,10 +12,8 @@ const styles = {
 	main_grid: {
 		"margin-top": 20,
 	},
-	card: {
-	},
 	media: {
-        height: 90
+		height: 200
 	}
 }
 
@@ -23,15 +21,19 @@ class SubtopicPage extends Component {
     render() {
 			const { classes, subtopics, category } = this.props;
         return (
+					<div>
           <Grid container justify='center' className={classes.main_grid} >
 					<Grid 
 						container item
-						md='10'
+						xs='8'
 						spacing='24'
 					>
+						<Typography variant='display1' >
+							{category}
+						</Typography>
 						{subtopics ? (subtopics.map((topic, i) => {
 							return (
-								<Grid item md='3' >
+								<Grid item xs='12' md='6' lg='4' >
 									<Card className={classes.card}>
 										<CardActionArea
 											component={Link}
@@ -51,6 +53,7 @@ class SubtopicPage extends Component {
 						) : ( <p>loading...</p> )}
 					</Grid>
 				</Grid>
+				</div>
         )
     }
    

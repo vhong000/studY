@@ -17,14 +17,18 @@ class subtopicsWrapper extends Component {
     fetchCategory(id).then(response => {
       const filtered = response.topics;
       this.setState({ 
-        currSubtopics: filtered
+        currSubtopics: filtered,
+        categoryName: response.name.toUpperCase(),
        })
     })
   }
 
   render() {
     return (
-      <SubtopicPage {...this.props} subtopics={this.state.currSubtopics} />
+      <SubtopicPage 
+      {...this.props} 
+      subtopics={this.state.currSubtopics} 
+      category={this.state.categoryName} />
     )
   }
 }
