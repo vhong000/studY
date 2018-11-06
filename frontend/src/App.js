@@ -50,13 +50,19 @@ const styles = theme => ({
 	},
 })
 
-class App extends Component {
+export class App extends Component {
+
   render() {
-		const { classes } = this.props;
+		const { classes, user, registerOpen,
+			handleModalClose, handleModalOpen } = this.props;
     return (
 			<div className='App'>
 				<div className='banner-container'>
-					<Banner />
+					<Banner 
+					registerOpen={registerOpen}
+					user={user}
+					handleModalClose={() => handleModalClose()}
+					handleModalOpen={() => handleModalOpen()} />
 				</div>
 				<Grid className={classes.main_grid} container justify='center' >
 					<Grid 

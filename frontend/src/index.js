@@ -2,16 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './index.css';
-import App from './App';
+// import App from './App';
 import EventForm from './containers/eventForm';
 // import SubtopicPage from './components/SubtopicPage/SubtopicPage';
 import { EventListPage, 
 	Header, Register, Login, 
-	EventPage, SubtopicPage } from './containers';
+	EventPage, SubtopicPage, App } from './containers';
 import * as serviceWorker from './serviceWorker';
 
-// import { Provider } from 'react-redux';
-// import store from './store';
 import { AuthProvider } from './contexts/Auth.context.js';
 
 import {
@@ -61,8 +59,6 @@ ReactDOM.render(
 				<AuthProvider>
 					<Header />
 					<Route exact path="/" component={App} />
-					<Route exact path="/register" component={Register} />
-					<Route exact path="/login" component={Login} />
 					<Route exact path="/eventform" component={EventForm} />
 				</AuthProvider>
   

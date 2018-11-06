@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { EventList, EventHomePage } from '../../components';
+import { EventHomePage } from '../../components';
 import { fetchEvent, fetchEventAttendees, fetchSchoolDatails } from '../../fetches';
 import { AuthContext } from '../../contexts/Auth.context';
-import createTypography from '@material-ui/core/styles/createTypography';
-import { relativeTimeRounding } from 'moment';
+
 
 class EventPage extends Component {
     constructor(props) {
@@ -22,19 +21,26 @@ class EventPage extends Component {
     componentWillMount() {
         const { category, subtopic, eventId } = this.props.match.params
         if (category && subtopic && eventId) {
-            fetchEventAttendees(eventId).then(response => {
-                console.log("response", response)
-                this.setState({ eventAttendees: response });
-            });
             fetchEvent(eventId).then(response => {
                 fetchSchoolDatails(response.campus).then(response => {
                     this.setState({ campusInfo: response });
                 });
-                this.setState({ eventInfo: this.reconstructData(response) });
+                //console.log(response)
+                if (!response.message) {
+                    this.setState({ eventInfo: this.reconstructData(response) });
+                    
+                    fetchEventAttendees(eventId).then(response => {
+                        console.log("response", response)
+                        this.setState({ eventAttendees: response });
+                    });
+                }
+                else {
+                    this.setState({ eventInfo: '' });
+                }
             });
 
         }
-        
+
     }
 
     reconstructData(eventInfo) {
@@ -54,7 +60,7 @@ class EventPage extends Component {
         const { eventInfo, eventAttendees, campusInfo } = this.state;
         return (
             <div>
-                <EventHomePage event={eventInfo} eventAttendees={eventAttendees} campusInfo={campusInfo} />
+                {eventInfo ? <EventHomePage event={eventInfo} eventAttendees={eventAttendees} campusInfo={campusInfo} /> : <h1>Event does not exist</h1>}
             </div>
         )
     }

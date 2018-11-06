@@ -27,7 +27,7 @@ body {
     -ms-flex-align: center;
     align-items: center;
     overflow-x: hidden;
-    min-height: 100vh;
+    min-height: 60vh;
 }
 
 .PageColumn_left {
@@ -36,7 +36,7 @@ body {
 
 .Art {
     background-image: url('../../images/sideImg.png');
-    height: 100vh;
+    height: 60vh;
 
     background-repeat: no-repeat;
     background-size: cover;
