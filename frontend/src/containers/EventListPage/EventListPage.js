@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { EventList } from '../../components';
-import { fetchAllEvents } from '../../fetches';
+import { fetchAllEvents, fetchEventByTopic } from '../../fetches';
 import { AuthContext } from '../../contexts/Auth.context';
-import  moment  from 'moment';
+import moment from 'moment';
 
 class EventListPage extends Component {
     constructor(props) {
@@ -16,8 +16,9 @@ class EventListPage extends Component {
     static contextType = AuthContext;
 
     componentWillMount() {
+        const id = this.props.match.params.subtopic;
         if (this.props.match.params) {
-            fetchAllEvents().then(response => {
+            fetchEventByTopic(id).then(response => {
                 this.setState({ events: response.results })
                 this.arangeEventsByDates(response.results);
             });
@@ -30,33 +31,33 @@ class EventListPage extends Component {
         //var date = new Date('2018-10-28T05:50:22.715000Z').getMonth();
         //var monthName = moment.months(monthNum - 1); get month name.
         let results = []
-        if (eventsArray){
+        if (eventsArray.length) {
             let date = new Date(eventsArray[0].time).getMonth();
             //console.log(date)
             let eventformat = {
                 date: moment.months(date),
-                events:[]
+                events: []
 
             }
-            eventsArray.map((eventObject, i)=>{
+            eventsArray.map((eventObject, i) => {
                 //console.log(eventObject);
-                if(date ===  new Date(eventObject.time).getMonth()){
+                if (date === new Date(eventObject.time).getMonth()) {
                     eventformat.events.push(eventObject);
                 }
-                else{
+                else {
                     const oldEventFormat = eventformat;
                     date = new Date(eventObject.time).getMonth();
                     eventformat = {
                         date: moment.months(date),
-                        events:[eventObject]
+                        events: [eventObject]
                     }
                     results.push(oldEventFormat);
                 }
             })
             results.push(eventformat)
         }
-        console.log("result",results);
-        this.setState({listofevents:results});
+        console.log("result", results);
+        this.setState({ listofevents: results });
     }
 
 
@@ -67,9 +68,10 @@ class EventListPage extends Component {
 
     render() {
         console.log(this.state.events);
+        const { listofevents } = this.state;
         return (
             <div>
-                <EventList listofevents={this.state.listofevents} params={this.props.match.params} />
+                <EventList listofevents={listofevents} params={this.props.match.params} />
             </div>
         )
     }
