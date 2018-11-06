@@ -115,13 +115,9 @@ export const fetchEventAttendees = (id) => {
   }).catch(error => {
     return error;
   });
-
-
-  
-
 }
 
-
+// FETCH SCHOOL DETAILS
 export const fetchSchoolDatails= (id) => {
   return fetch(`/api/schools/${id}`, {
     method: "GET",
@@ -136,4 +132,46 @@ export const fetchSchoolDatails= (id) => {
   }).catch(error => {
     return error;
   });
+}
+
+export const fetchCategories = () => {
+  return fetch('/api/categories', {
+    method: "GET",
+    headers: {
+      'Content-Type': 'application/json',
+    }
+  }).then((response) => {
+    if (response.status !== 200) {
+      return Promise.reject({ message: "Unable to get categories" });
+    } else { return response.json(); }
+  }).catch(error => { return error; });
+}
+
+// FETCH ONE CATEGORY
+
+export const fetchCategory = (id) => {
+  return fetch('/api/categories/' + id, {
+    method: "GET",
+    headers: {
+      'Content-Type': 'application/json',
+    }
+  }).then((response) => {
+    if (response.status !== 200) {
+      return Promise.reject({ message: "Unable to get category" });
+    } else { return response.json(); }
+  }).catch(error => { return error; });
+}
+
+// FETCH ALL SUBTOPICS
+export const fetchSubtopics = () => {
+  return fetch('/api/topics', {
+    method: "GET",
+    headers: {
+      'Content-Type': 'application/json',
+    }
+  }).then((response) => {
+    if (response.status !== 200) {
+      return Promise.reject({ message: "Unable to get subtopics" });
+    } else { return response.json(); }
+  }).catch(error => { return error; });
 }
