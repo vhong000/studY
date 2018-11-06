@@ -134,6 +134,19 @@ export const fetchSchoolDatails= (id) => {
   });
 }
 
+export const fetchCategories = () => {
+  return fetch('/api/categories', {
+    method: "GET",
+    headers: {
+      'Content-Type': 'application/json',
+    }
+  }).then((response) => {
+    if (response.status !== 200) {
+      return Promise.reject({ message: "Unable to get categories" });
+    } else { return response.json(); }
+  }).catch(error => { return error; });
+}
+
 // FETCH ALL SUBTOPICS
 export const fetchSubtopics = () => {
   return fetch('/api/topics', {
