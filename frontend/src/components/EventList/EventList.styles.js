@@ -1,11 +1,12 @@
 const styles = theme => ({
     main_grid: {
         "padding-top": 30,
-        // "background-color": "rgba(121, 134, 204, 0.2)",
     },
     item_grid: {
         "margin-top": 10,
-        
+        '&:hover': {
+            "box-shadow": "0px 0px 5px 1px rgba(0,0,0,0.38)",
+            },   
     },
     date_group: {
         "top-padding": 30,
@@ -17,12 +18,15 @@ const styles = theme => ({
     },
     column: {
         flexBasis: '33.33%',
-        //"background-color": "rgba(255, 182, 77, 0.7)",
+        "background-color": "rgba(255, 182, 77, 0.7)",   
     },
     helper: {
         border: 'none',
         borderRadius: "5px",
-        padding: `${theme.spacing.unit}px ${theme.spacing.unit * 2}px`,
+        marginBottom: "20px",
+        //padding: `${theme.spacing.unit}px ${theme.spacing.unit * 2}px`,
+        padding: "1px 10px 10px 10px",
+        
     },
     root: {
         flexGrow: 1,
@@ -46,7 +50,7 @@ const styles = theme => ({
         fontFamily: "Raleway",
         textTransform: "uppercase",
         letterSpacing: "1.5px",
-        fontWeight: "800",
+        fontWeight: "700",
         color: "rgb(26, 32, 67)",
     },
     button: {

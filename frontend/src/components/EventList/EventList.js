@@ -11,7 +11,6 @@ import {
 import DateRangeIcon from '@material-ui/icons/DateRange';
 
 
-
 class EventList extends Component {
 
     render() {
@@ -28,8 +27,8 @@ class EventList extends Component {
                         {eventDates.date}
                     </Typography>
                     <Divider light />
-                    <div style={{border: "1px solid red"}}>
-                    {renderCardItems(eventDates.events)}
+                    <div className={classNames(classes.column, classes.helper)}>
+                        {renderCardItems(eventDates.events)}
                     </div>
                 </Grid>
             );
@@ -39,11 +38,10 @@ class EventList extends Component {
         const renderCardItems = (eventArray) => {
 
             const events = eventArray.map((event) =>
-                <div className={classNames(classes.column, classes.helper)}>
-                    <Grid className={classes.item_grid} item >
-                        <EventListCard event={event} params={this.props.params} />
-                    </Grid>
-                </div>
+                <Grid className={classes.item_grid} item >
+                    <EventListCard event={event} params={this.props.params} />
+                </Grid>
+               
             );
 
             return (events);
@@ -63,7 +61,6 @@ class EventList extends Component {
         const renderPage = () => {
             return (
                 <div>
-                    
                     <Grid className={classes.main_grid} justify="center" container sm={16}>
                         <Grid item sm={8}>
                             {renderEventCardGrid()}
