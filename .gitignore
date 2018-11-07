@@ -6,4 +6,4 @@
 **/.coverage
 **/coverage.xml
 **/.vscode
-**/migrations
+**/migrations/0*.py
