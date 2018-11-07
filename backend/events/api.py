@@ -1,7 +1,5 @@
-# from rest_framework.authentication import (BasicAuthentication,
-#                                            SessionAuthentication,
-#                                            TokenAuthentication)
-# from django.db.models import Q
+from rest_framework.authentication import (BasicAuthentication,
+                                           TokenAuthentication)
 from rest_framework import generics, viewsets, views, permissions, status
 from rest_framework_extensions.mixins import NestedViewSetMixin
 from rest_framework.parsers import JSONParser
@@ -20,6 +18,7 @@ from accounts.serializers import AccountSerializer
 class EventViewSet(NestedViewSetMixin, viewsets.ModelViewSet):
     queryset = Event.objects.all()
     serializer_class = EventSerializer
+    authentication_classes = (BasicAuthentication, TokenAuthentication)
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)  # IsOwnerOrReadOnly
     filterset_fields = ('campus', 'topic', 'topic__category')
     # search_fields = ('description', 'topic', 'campus', 'name')
@@ -47,6 +46,7 @@ class EventGuestsViewSet(NestedViewSetMixin, viewsets.ModelViewSet):
     queryset = Account.objects.all()
     serializer_class = AccountSerializer
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+    authentication_classes = (BasicAuthentication, TokenAuthentication)
 
     def get_event_object(self, request, *args, **kwargs):
         return get_object_or_404(Event, pk=kwargs['parent_lookup_events'])
@@ -71,6 +71,8 @@ class EventGuestsViewSet(NestedViewSetMixin, viewsets.ModelViewSet):
 class ProfileView(generics.RetrieveAPIView):
     queryset = Account.objects.all()
     serializer_class = AccountSerializer
+    http_method_names = ('get',)
+    # authentication_classes = (BasicAuthentication, TokenAuthentication)
 
     def get_object(self):
         qs = self.get_queryset()

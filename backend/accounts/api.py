@@ -15,6 +15,7 @@ import uuid
 
 class SignupView(APIView):
     http_method_names = ['post']
+    authentication_classes = (BasicAuthentication, TokenAuthentication)
 
     def post(self, request):
         payload = request.data
@@ -30,6 +31,7 @@ class SignupView(APIView):
 
 class AuthenticationView(ObtainAuthToken):
     http_method_names = ['post']
+    authentication_classes = (BasicAuthentication, TokenAuthentication)
 
     def post(self, request, *args, **kwargs):
         request.data['username'] = request.data['email']
@@ -45,7 +47,6 @@ class AuthenticationView(ObtainAuthToken):
 
 class EmailConfirmationView(APIView):
     authentication_classes = (BasicAuthentication, TokenAuthentication)
-    permission_classes = (IsAuthenticatedOrReadOnly,)
 
     def get(self, request):
         try:
