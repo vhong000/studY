@@ -1,6 +1,7 @@
 import factory
 from factory.django import DjangoModelFactory
 from django.contrib.auth import get_user_model
+import pytz
 from accounts.models import Account
 from events import serializers
 from events.models import School, Event, Topic
@@ -26,7 +27,7 @@ class AccountFactory(DjangoModelFactory):
         django_get_or_create = ('owner',)
 
     owner = factory.SubFactory(UserFactory)
-    school = factory.Iterator(School.objects.all())
+    school = factory.Iterator(School.objects.all(), cycle=False)
 
 
 class EventFactory(DjangoModelFactory):
@@ -37,7 +38,8 @@ class EventFactory(DjangoModelFactory):
                          variable_nb_words=True)
     description = factory.Faker('paragraph', nb_sentences=4,
                                 variable_nb_sentences=True)
-    time = factory.Faker('iso8601')
+    time = factory.Faker('date_time_this_month', before_now=True,
+                         after_now=False, tzinfo=pytz.UTC)
     capacity = factory.Faker('random_int', min=0, max=50)
     campus = factory.Iterator(School.objects.all())
     organizer = factory.Iterator(Account.objects.all())
@@ -70,6 +72,7 @@ class SchoolFactory:
         def __iter__(self):
             return self
 
+    @classmethod
     def create(self, num=20):
         ret = []
         for name, code in self.SchoolIterator(num):

@@ -7,7 +7,7 @@ from rest_framework_extensions.mixins import NestedViewSetMixin
 from rest_framework.parsers import JSONParser
 from rest_framework.response import Response
 from rest_framework.decorators import action
-from rest_framework.exceptions import NotFound
+from rest_framework.exceptions import NotFound, PermissionDenied
 from django.shortcuts import get_object_or_404
 from django.conf import settings
 
@@ -28,6 +28,12 @@ class EventViewSet(NestedViewSetMixin, viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         serializer.save(organizer=self.request.user.account)
+
+    def perform_destroy(self, instance):
+        if instance.organizer == self.request.user.account:
+            instance.delete()
+        else:
+            raise PermissionDenied()
 
     def get_queryset(self):
         qs = Event.objects.all()
