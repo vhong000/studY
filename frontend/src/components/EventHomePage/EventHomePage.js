@@ -89,9 +89,10 @@ class EventHomePage extends Component {
                         </Grid>
 
 
-                        <Grid container sm={6}>
+                        <Grid container sm={6} >
+                        <div className={classes.white}>
                             <Grid item sm={12}>
-                                <h1>{event.title}</h1>
+                                <h1 style={{fontSize: "30px"}}>{event.title}</h1>
                             </Grid>
 
                             <Grid item sm={12}>
@@ -115,6 +116,7 @@ class EventHomePage extends Component {
                                     <a href="https://www.linkedin.com/"><img alt="icon" src={linkedInIcon} className={classes.share}/></a>
                                 </Typography>
                             </Grid>
+                            </div>
                         </Grid>
 
 
