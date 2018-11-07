@@ -28,7 +28,9 @@ class EventList extends Component {
                         {eventDates.date}
                     </Typography>
                     <Divider light />
+                    <div style={{border: "1px solid red"}}>
                     {renderCardItems(eventDates.events)}
+                    </div>
                 </Grid>
             );
             return (dates);
@@ -49,7 +51,7 @@ class EventList extends Component {
         }
         const renderToolbar = () => {
             return (
-                <Toolbar variant="dense">
+                <Toolbar variant="dense" style={{backgroundColor: "white"}}> 
                     <Typography className={classes.grow} color="inherit">
                         Here you can either join or create a study group event
                     </Typography>
@@ -63,16 +65,9 @@ class EventList extends Component {
                 <div>
                     
                     <Grid className={classes.main_grid} justify="center" container sm={16}>
-                        {/* <Grid item sm={2}>
-                    </Grid> */}
                         <Grid item sm={8}>
                             {renderEventCardGrid()}
                         </Grid>
-                        {/* <Grid item justify="center" sm={3}>
-                        <Typography align="center" variant="subheading">
-                            Map?
-                        </Typography>
-                    </Grid> */}
                     </Grid>
                 </div>
             )

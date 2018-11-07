@@ -1,7 +1,7 @@
 const styles = theme => ({
     main_grid: {
         "padding-top": 30,
-        "background-color": "rgba(121, 134, 204, 0.2)",
+        // "background-color": "rgba(121, 134, 204, 0.2)",
     },
     item_grid: {
         "margin-top": 10,
@@ -17,7 +17,7 @@ const styles = theme => ({
     },
     column: {
         flexBasis: '33.33%',
-        "background-color": "rgba(255, 182, 77, 0.7)",
+        //"background-color": "rgba(255, 182, 77, 0.7)",
     },
     helper: {
         border: 'none',
