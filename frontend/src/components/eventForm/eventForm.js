@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Field, withFormik } from 'formik';
+import { Form, Field, withFormik } from 'formik';
 import * as Yup from 'yup';
 import { 
   TextField, Button, Grid,
@@ -76,9 +76,10 @@ const temporalInputField = ({
 )
 
 export const EventForm = props => {
-  const { handleChange, handleSubmit, classes, values, schools } = props;
+  const { handleChange, classes, values,
+    schools, isSubmitting, touched, errors } = props;
   return ( 
-    <form onSubmit={handleSubmit}
+    <Form name='createEventForm'
       className={classes.main_form}
       id='main_form' >
       <Typography 
@@ -98,6 +99,7 @@ export const EventForm = props => {
               required
               onChange={handleChange}
               component={inputField}
+              helperText={touched.event_name && errors.event_name}
               />
           </Grid>
 
@@ -174,6 +176,7 @@ export const EventForm = props => {
             <Button
               type='submit'
               children='Create Event'
+              disabled={isSubmitting}
               color='primary'
               id='submit_button'
             />
@@ -181,7 +184,7 @@ export const EventForm = props => {
           </Grid>   
         </Grid>
       </Grid>
-    </form>
+    </Form>
   )
 }
 
@@ -203,16 +206,23 @@ export default withFormik({
 		event_description: Yup.string().required(),
 	}),
 	handleSubmit: (applicant, { props, setErrors, setSubmitting }) => {
-    let parsedTime = `${applicant.event_date} ${applicant.event_time}`;
+    let Time = `${applicant.event_date} ${applicant.event_time}`;
+    const parsedTime = moment(Time).toISOString();
+    
     const finalForm = {
       time: parsedTime,
       name: applicant.event_name,
       description: applicant.event_description,
       campus: applicant.event_location,
       topic: props.subtopic,
-
+      capacity: applicant.event_limit
     }
     console.log('time', finalForm);
-    // createEvent(user)
+    createEvent(finalForm, props.token).then(() => {
+      props.handleClose();
+    }).catch(error => {
+      setErrors({ createEventForm: error.message })
+      setSubmitting(false);
+    });
 	}
 })(withStyles(styles)(EventForm))
