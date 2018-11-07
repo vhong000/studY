@@ -13,14 +13,7 @@ class Command(BaseCommand):
         )
 
     def handle(self, *args, **options):
-        DUMP_DIR = Path(options['dirpath'])
-        if not DUMP_DIR.is_dir():
-            raise FileNotFoundError()
-
-        schools = []
-        for file_ in DUMP_DIR.glob('*.json'):
-            with file_.open() as fh:
-                schools.append(json.load(fh))
+        schools = load_from_disk(options['dirpath'])
 
         for sch in schools:
             new_school, created = School.objects.get_or_create(name=sch['name'],
@@ -32,8 +25,20 @@ class Command(BaseCommand):
                     try:
                         new_school.courses.get_or_create(name=course[0],
                                                          number=''.join(
-                                                             filter(lambda c: c.isdigit(), courses[1])),
+                                                                filter(lambda c: c.isdigit(), courses[1])),
                                                          dept=dept)
                     except Exception as e:
-                        # print(e)
                         pass
+
+
+def load_from_disk(dirpath):
+    DUMP_DIR = Path(dirpath)
+    if not DUMP_DIR.is_dir():
+        raise FileNotFoundError()
+
+    school_list = []
+    for file_ in DUMP_DIR.glob('*.json'):
+        with file_.open() as fh:
+            school_list.append(json.load(fh))
+
+    return school_list

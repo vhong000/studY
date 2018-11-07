@@ -1,22 +1,25 @@
 import React, { Component } from 'react';
 import { EventListCard } from '../../components';
+import { EventForm } from '../../containers';
 import classNames from 'classnames';
 import styles from './EventList.styles';
 import { Link } from 'react-router-dom';
 import {
-
-    Typography, Grid, withStyles, Divider, Toolbar, Button
-
+    Typography, Grid, withStyles,
+    Divider, Toolbar, Button,
+    Modal,
 } from '@material-ui/core';
 import DateRangeIcon from '@material-ui/icons/DateRange';
-
 
 class EventList extends Component {
 
     render() {
-        const { classes } = this.props;
-        const { listofevents } = this.props;
+        const { classes, listofevents, createEventModal,
+        handleClose, handleOpen } = this.props;
         console.log("Eventlist[0]", this.props);
+
+        const styles = theme => ({
+        })
 
         const renderEventCardGrid = () => {
 
@@ -53,8 +56,17 @@ class EventList extends Component {
                     <Typography className={classes.grow} color="inherit">
                         Here you can either join or create a study group event
                     </Typography>
-                    <Button className={classes.button} variant='raised'>Create event</Button>
+                    <Button className={classes.button} variant='raised'
+                    onClick={() => handleOpen()} >Create event</Button>
                 </Toolbar>
+                <Modal open={createEventModal} onClose={() => handleClose()} >
+                    <div className={classes.eventFormPaper}>
+                        <EventForm 
+                        subtopic={parseInt(this.props.params.subtopic)} 
+                        handleClose={handleClose} />
+                    </div>
+                </Modal>
+                </div>
             )
         }
 

@@ -1,66 +1,133 @@
 import React, { Component } from 'react';
 import { EventHomePage } from '../../components';
-import { fetchEvent, fetchEventAttendees, fetchSchoolDatails } from '../../fetches';
+import { 
+    fetchEvent, 
+    fetchEventAttendees, 
+    fetchSchoolDatails, 
+    JoinEvent,
+    leaveEvent,
+    deleteEvent,
+    getUserData } from '../../fetches';
 import { AuthContext } from '../../contexts/Auth.context';
-
+import { includes } from 'lodash';
 
 class EventPage extends Component {
+    static contextType = AuthContext;
+
     constructor(props) {
         super(props);
         this.state = {
             dataLoaded: false,
             eventInfo: '',
             campusInfo: '',
-            eventAttendees: []
+            Joined: false,
+            isOrganizer: false,
+            eventAttendees: [],
+            JoinEventResponse: []
         }
+        this.handleJoinEvent = this.handleJoinEvent.bind(this);
+        this.handleLeaveEvent = this.handleLeaveEvent.bind(this);
+        this.handleDeleteEvent = this.handleDeleteEvent.bind(this);
     }
 
-    static context = AuthContext;
-
-
-    componentWillMount() {
+    componentDidMount() {
+        document.body.style.background = 'rgb(245, 247, 249)';
         const { category, subtopic, eventId } = this.props.match.params
+        const token = localStorage.getItem('token');
+
         if (category && subtopic && eventId) {
             fetchEvent(eventId).then(response => {
-                fetchSchoolDatails(response.campus).then(response => {
-                    this.setState({ campusInfo: response });
+                this.setState({ eventInfo: this.reconstructData(response) });
+
+                fetchSchoolDatails(response.campus).then(school => {
+                    this.setState({ campusInfo: school });
                 });
                 //console.log(response)
-                if (!response.message) {
-                    this.setState({ eventInfo: this.reconstructData(response) });
-                    
-                    fetchEventAttendees(eventId).then(response => {
-                        console.log("response", response)
-                        this.setState({ eventAttendees: response });
-                    });
-                }
-                else {
-                    this.setState({ eventInfo: '' });
-                }
-            });
+                
+                fetchEventAttendees(eventId).then(response => {
+                    //console.log("response", response)
+                    this.setState({ eventAttendees: response.results });
+                }).then(() => {
+                    const { eventAttendees, eventInfo } = this.state;
+                    let condition = false
+
+                    getUserData(token).then(user => {
+                        // console.log('user', user);
+                        if (user) {
+                            if (response.organizer.owner.id === user.owner.id) {
+                                this.setState({ isOrganizer: true });
+                            }
+                        }
+                        if (eventAttendees.length && user) {
+                            eventAttendees.map((userobject) => {
+                                if (userobject.owner.id === user.owner.id) {
+                                    condition = true
+                                }
+                            })
+                            this.setState({ Joined: condition });
+                        }
+                    })
+                })
+            }).catch(error => { this.setState({ eventInfo: '' }); });
+
 
         }
 
-    }
+    }//end of compnent did mount
 
     reconstructData(eventInfo) {
         const event = {
             details: eventInfo.description,
             title: eventInfo.name,
             owner: `${eventInfo.organizer.owner.first_name} ${eventInfo.organizer.owner.last_name}`,
+            capacity: eventInfo.capacity,
+            time: eventInfo.time,
             date: new Date()
         }
-        console.log("reconstructData", event)
+        //console.log("reconstructData", event)
         return (event)
 
+    }
+    handleJoinEvent(event) {
+        const { eventId } = this.props.match.params;
+        const { token } = this.context;
+        JoinEvent(eventId, token).then(response => {
+            this.setState({ joinEventResponse: response, Joined: true })
+        })
+    }
+
+    handleLeaveEvent() {
+        const { eventId,category,subtopic } = this.props.match.params;
+        const { token } = this.context;
+        leaveEvent(eventId,token).then(response => {
+            this.setState({Joined: false})
+            //this.props.history.push(`/${category}/${subtopic}`);
+        })
+    }
+
+    handleDeleteEvent() {
+        const { eventId,category,subtopic } = this.props.match.params;
+        const { token } = this.context;
+        deleteEvent(eventId,token).then(response=>{
+            this.props.history.push(`/${category}/${subtopic}`);
+        })
     }
 
 
     render() {
-        const { eventInfo, eventAttendees, campusInfo } = this.state;
+        const { eventInfo, eventAttendees, campusInfo, isOrganizer } = this.state;
+        // const { user } = this.context
         return (
             <div>
-                {eventInfo ? <EventHomePage event={eventInfo} eventAttendees={eventAttendees} campusInfo={campusInfo} /> : <h1>Event does not exist</h1>}
+                {eventInfo ? <EventHomePage Joined={this.state.Joined}
+                    handleJoinEvent={this.handleJoinEvent}
+                    handleDeleteEvent={this.handleDeleteEvent}
+                    handleLeaveEvent={this.handleLeaveEvent}
+                    {...this.props} {...this.context}
+                    isOrganizer={isOrganizer}
+                    event={eventInfo}
+                    eventAttendees={eventAttendees}
+                    campusInfo={campusInfo} /> : <h1>Event does not exist</h1>}
             </div>
         )
     }

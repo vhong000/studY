@@ -12,6 +12,7 @@ import {
     Button, Card, CardContent, CardMedia, CardActionArea
 
 } from '@material-ui/core';
+import moment from 'moment'
 import DoneIcon from '@material-ui/icons/Done';
 import CloseIcon from '@material-ui/icons/Close';
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
@@ -23,40 +24,16 @@ import twitterIcon from '../../images/twitter-icon.png';
 import linkedInIcon from '../../images/linkedIn-icon.png';
 
 class EventHomePage extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            date: new Date(),
-            Joined: false,
-            notInterested: false,
-        }
-
-    }
-
-    componentDidMount() {
-        document.body.style.background = 'rgb(245, 247, 249)';
-    }
-
-    componentWillUnmount() {
-        document.body.style.background = 'white';
-    }
-
-    handleChange(event) {
-        //handle
-        alert("Add to event")
-        console.log(event)
-    }
-
     render() {
-        const { classes, event, eventAttendees,campusInfo } = this.props;
-        console.log(campusInfo);
+        const { classes, event, eventAttendees, campusInfo } = this.props;
+        // console.log("This.Props[0]", this.props);
 
-        
         const bull = <span className={classes.bullet}>•</span>;
-        
+
         const renderProfileCards = () => {
             let profileCard;
             if (eventAttendees.length > 0) {
+                console.log("Event Attendees",eventAttendees)
                 profileCard = eventAttendees.map((student, index) =>
                     <Grid key={index} item sm={3} spacing={16} >
                         <Card className={classes.card}>
@@ -64,7 +41,7 @@ class EventHomePage extends Component {
                                 <CardMedia className={classes.media} image={studyIcon} />
                                 <CardContent>
                                     <Typography align="center" variant="bus">
-                                        {student.name}
+                                        {student.owner.first_name}
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>
@@ -76,6 +53,26 @@ class EventHomePage extends Component {
             }
             return (profileCard);
 
+        }
+
+        const renderButton = () => {
+            const { Joined, isOrganizer, handleDeleteEvent, handleJoinEvent, handleLeaveEvent} = this.props;
+
+            if (Joined) {
+                return (
+                    <Button onClick={handleLeaveEvent}>Leave Event</Button>
+                )
+            }
+            else if (isOrganizer) {
+                return (
+                    <Button onClick={handleDeleteEvent}>Delete Event</Button>
+                )
+            }
+            else {
+                return (
+                    <Button onClick={handleJoinEvent}>Join Event</Button>
+                )
+            }
         }
         return (
             <div>
@@ -94,7 +91,7 @@ class EventHomePage extends Component {
                             </Typography>
                             <Typography color="textSecondary">
                                 <TimerIcon className={classes.iconIm}/>
-                                Time: 
+                                {`time: ${moment(event.time).format("hh:mm a")}`}
                             </Typography>
                         </Grid>
                       
@@ -132,8 +129,7 @@ class EventHomePage extends Component {
                                 <span className={classes.going}>{bull} {`${eventAttendees.length} going`}</span> 
                             </Typography>
                             <Divider className={classes.divider}/>
-                            <Button className={classes.button}><DoneIcon className={classes.icon}/></Button>
-                            <Button className={classes.button}><CloseIcon className={classes.icon}/></Button>
+                            {renderButton()}
                         </Grid>
 
                         <Grid item sm={12} style={{marginTop: "0px"}}>

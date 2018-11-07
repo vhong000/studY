@@ -6,4 +6,4 @@
 **/.coverage
 **/coverage.xml
 **/.vscode
-**/backend/requirements.txt
+**/migrations/0*.py

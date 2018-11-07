@@ -24,7 +24,7 @@ export const getUserData = (token) => {
     method: "GET",
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Token ' + token,
+      'Authorization': `Token ${token}`,
     }
   }).then((response) => {
     if (response.status !== 200) {
@@ -188,6 +188,74 @@ export const fetchSubtopics = () => {
   }).then((response) => {
     if (response.status !== 200) {
       return Promise.reject({ message: "Unable to get subtopics" });
+    } else { return response.json(); }
+  }).catch(error => { return error; });
+}
+
+//Join Event
+export const JoinEvent = (eventId,token) => {
+  return fetch(`/api/events/${eventId}/attendees`, {
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Token ${token}`,
+    }
+  }).then((response) => {
+    if (response.status !== 200) {
+      return Promise.reject({ message: "Unable to get events" });
+    } else { return response.json(); }
+  }).catch(error => {
+    return error;
+  });
+
+}
+
+export const leaveEvent = (eventId,token) => {
+  return fetch(`/api/events/${eventId}/attendees`, {
+    method: "DELETE",
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Token ${token}`,
+    }
+  }).then((response) => {
+    if (response.status !== 200) {
+      return Promise.reject({ message: "Unable to get events" });
+    } else { return response.json(); }
+  }).catch(error => {
+    return error;
+  });
+
+}
+
+
+export const deleteEvent = (eventId,token) => {
+  return fetch(`/api/events/${eventId}`, {
+    method: "DELETE",
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Token ${token}`,
+    }
+  }).then((response) => {
+    if (response.status !== 200) {
+      return Promise.reject({ message: "Unable to get events" });
+    } else { return response.json(); }
+  }).catch(error => {
+    return error;
+  });
+}
+
+// CREATE EVENT 
+export const createEvent = (event, token) => {
+  return fetch('/api/events', {
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Token ' + token,
+    },
+		body: JSON.stringify(event),
+  }).then((response) => {
+    if (response.status !== 200) {
+      return Promise.reject({ message: "Unable to create event" });
     } else { return response.json(); }
   }).catch(error => { return error; });
 }

@@ -11,7 +11,11 @@ class EventListPage extends Component {
             events: [],
             topicid: '',
             listofevents: [],
+            createEventModal: false,
         }
+        this.handleCreateModalClose = this.handleCreateModalClose.bind(this);
+        this.handleCreateModalOpen = this.handleCreateModalOpen.bind(this);
+
     }
     static contextType = AuthContext;
 
@@ -19,6 +23,7 @@ class EventListPage extends Component {
         const id = this.props.match.params.subtopic;
         if (this.props.match.params) {
             fetchEventByTopic(id).then(response => {
+                console.log(response)
                 this.setState({ events: response.results })
                 this.arangeEventsByDates(response.results);
             });
@@ -65,22 +70,27 @@ class EventListPage extends Component {
             })
             results.push(eventformat)
         }
-        console.log("result", results);
         this.setState({ listofevents: results });
     }
 
+    handleCreateModalClose() {
+        this.setState({ createEventModal: false })
+    }
 
-
-
-
-
+    handleCreateModalOpen() {
+        this.setState({ createEventModal: true })
+    }
 
     render() {
-        console.log(this.state.events);
-        const { listofevents } = this.state;
+        const { listofevents, createEventModal } = this.state;
         return (
             <div>
-                <EventList listofevents={listofevents} params={this.props.match.params} />
+                <EventList 
+                listofevents={listofevents} 
+                params={this.props.match.params} 
+                createEventModal={createEventModal}
+                handleClose={this.handleCreateModalClose}
+                handleOpen={this.handleCreateModalOpen} />
             </div>
         )
     }
