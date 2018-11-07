@@ -77,6 +77,11 @@
         verticalAlign: "text-bottom",
         
     },
+    share: {
+        "width": "27px",
+        "height": "27px",
+        verticalAlign: "sub",
+    }
 });
 
 export default styles;

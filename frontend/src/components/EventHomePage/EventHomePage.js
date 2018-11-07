@@ -17,6 +17,9 @@ import CloseIcon from '@material-ui/icons/Close';
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 import PeopleIcon from '@material-ui/icons/People';
 import LocationONIcon from '@material-ui/icons/LocationOn';
+import facebookIcon from '../../images/facebook-icon.png';
+import twitterIcon from '../../images/twitter-icon.png';
+import linkedInIcon from '../../images/linkedIn-icon.png';
 
 class EventHomePage extends Component {
     constructor(props) {
@@ -29,6 +32,13 @@ class EventHomePage extends Component {
 
     }
 
+    componentDidMount() {
+        document.body.style.background = 'rgb(245, 247, 249)';
+    }
+
+    componentWillUnmount() {
+        document.body.style.background = 'white';
+    }
 
     handleChange(event) {
         //handle
@@ -95,6 +105,14 @@ class EventHomePage extends Component {
                                 <Typography className={classes.pos} color="textSecondary">
                                     <LocationONIcon className={classes.iconIm}/>
                                     {`Campus: ${campusInfo.name}`}
+                                </Typography>
+                            </Grid>
+                            <Grid item sm={12} style={{paddingTop: "50px"}}>
+                                <Typography>
+                                    <span style={{verticalAlign: "super", fontFamily: "Raleway"}}>Share:</span> &ensp;
+                                    <a href="https://www.facebook.com/"><img alt="icon" src={facebookIcon} className={classes.share}/></a>
+                                    <a href="https://twitter.com/"><img alt="icon" src={twitterIcon} className={classes.share}/></a>
+                                    <a href="https://www.linkedin.com/"><img alt="icon" src={linkedInIcon} className={classes.share}/></a>
                                 </Typography>
                             </Grid>
                         </Grid>
