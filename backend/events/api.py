@@ -54,7 +54,6 @@ class ProfileView(generics.RetrieveAPIView):
             return qs.get(id=self.request.GET['id'])
 
         if not self.request.user.is_anonymous:
-            print(self.request.user)
             return qs.get(owner=self.request.user)
 
         raise NotFound()

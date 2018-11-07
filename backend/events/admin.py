@@ -35,7 +35,7 @@ class TopicAdmin(admin.ModelAdmin):
 
 @admin.register(models.Event)
 class EventAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'time', 'capacity', 'guest_count', 'created',
+    list_display = ('id', 'name', 'time', 'capacity', 'guest_count', 'created_at',
                     'campus_code', 'topic_name',  'organizer_name')
 
     def guest_count(self, event):
