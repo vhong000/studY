@@ -10,6 +10,8 @@ import {
 } from '@material-ui/core';
 // import Select from 'react-select';
 import propTypes from 'prop-types'
+import { createEvent } from '../../fetches';
+import moment from 'moment';
 
 const styles = theme => ({
   main_form: { textAlign: 'center' }
@@ -201,5 +203,16 @@ export default withFormik({
 		event_description: Yup.string().required(),
 	}),
 	handleSubmit: (applicant, { props, setErrors, setSubmitting }) => {
+    let parsedTime = `${applicant.event_date} ${applicant.event_time}`;
+    const finalForm = {
+      time: parsedTime,
+      name: applicant.event_name,
+      description: applicant.event_description,
+      campus: applicant.event_location,
+      topic: props.subtopic,
+
+    }
+    console.log('time', finalForm);
+    // createEvent(user)
 	}
 })(withStyles(styles)(EventForm))

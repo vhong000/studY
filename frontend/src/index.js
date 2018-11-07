@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './index.css';
-// import App from './App';
-import EventForm from './containers/eventForm';
 // import SubtopicPage from './components/SubtopicPage/SubtopicPage';
 import { EventListPage, Header,
 	EventPage, SubtopicPage, App } from './containers';
@@ -17,14 +15,10 @@ ReactDOM.render(
 				<AuthProvider>
 					<Header />
 					<Route exact path="/" component={App} />
-					<Route exact path="/eventform" component={EventForm} />
+					<Route exact path="/:category" component={SubtopicPage} />
+					<Route exact path="/:category/:subtopic" component={EventListPage}/>
+					<Route exact path="/:category/:subtopic/:eventId" component={EventPage}/> 
 				</AuthProvider>
-  
-				<Route exact path="/:category" component={SubtopicPage} />
-                                 
-				<Route exact path="/:category/:subtopic" component={EventListPage}/>
-				<Route exact path="/:category/:subtopic/:eventId" component={EventPage}/> 
-				
 			</div>
 		</Router>,
 	document.getElementById('root')

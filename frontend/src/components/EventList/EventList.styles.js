@@ -58,6 +58,14 @@ const styles = theme => ({
         '&:hover': {
             backgroundColor: "rgb(121, 134, 204)",
           },
+    },
+    eventFormPaper: {
+        position: 'absolute',
+        left: '50%',
+        width: '700px',
+        height: '50%',
+        backgroundColor: theme.palette.background.paper,
+        transform: 'translate(-50%, 50%)',
     }
     
 });
