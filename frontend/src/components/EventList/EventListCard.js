@@ -36,7 +36,6 @@ const styles = {
     },
     icon: {
         fontSize: 28,
-        //color: "rgb(48, 60, 125)",
         color: "#B22222",
         verticalAlign: "text-bottom",
     },
