@@ -242,5 +242,20 @@ export const deleteEvent = (eventId,token) => {
   }).catch(error => {
     return error;
   });
+}
 
+// CREATE EVENT 
+export const createEvent = (event, token) => {
+  return fetch('/api/events', {
+    method: "POST",
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Token ' + token,
+    },
+		body: JSON.stringify(event),
+  }).then((response) => {
+    if (response.status !== 200) {
+      return Promise.reject({ message: "Unable to create event" });
+    } else { return response.json(); }
+  }).catch(error => { return error; });
 }

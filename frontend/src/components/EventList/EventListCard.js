@@ -74,7 +74,7 @@ class EventListCard extends Component {
                             <Divider />
                             <Typography className={classNames(classes.pos, classes.coord)} color="textSecondary">
                                 <LocationOnIcon className={classes.icon}/>
-                                {event.location? event.location:"add location"}
+                                {event.location? event.location:"Location"}
                             </Typography>
                         </CardContent>
                     </Grid>

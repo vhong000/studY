@@ -6,11 +6,14 @@ import {
     fetchSchoolDatails, 
     JoinEvent,
     leaveEvent,
-    deleteEvent } from '../../fetches';
+    deleteEvent,
+    getUserData } from '../../fetches';
 import { AuthContext } from '../../contexts/Auth.context';
 import { includes } from 'lodash';
 
 class EventPage extends Component {
+    static contextType = AuthContext;
+
     constructor(props) {
         super(props);
         this.state = {
@@ -26,55 +29,47 @@ class EventPage extends Component {
         this.handleLeaveEvent = this.handleLeaveEvent.bind(this);
         this.handleDeleteEvent = this.handleDeleteEvent.bind(this);
     }
-    static contextType = AuthContext;
 
-
-    componentWillMount() {
+    componentDidMount() {
+        document.body.style.background = 'rgb(245, 247, 249)';
         const { category, subtopic, eventId } = this.props.match.params
-
+        const token = localStorage.getItem('token');
 
         if (category && subtopic && eventId) {
             fetchEvent(eventId).then(response => {
-                fetchSchoolDatails(response.campus).then(response => {
-                    this.setState({ campusInfo: response });
+                this.setState({ eventInfo: this.reconstructData(response) });
+
+                fetchSchoolDatails(response.campus).then(school => {
+                    this.setState({ campusInfo: school });
                 });
                 //console.log(response)
-                if (!response.message) {
-                    this.setState({ eventInfo: this.reconstructData(response) });
-                    const { user } = this.context;
-                    if (response && user) {
-                        console.log("Organizer Info",response.organizer.owner,user);
-                        if (response.organizer.owner.id === user.owner.id) {
-                            this.setState({ isOrganizer: true });
+                
+                fetchEventAttendees(eventId).then(response => {
+                    //console.log("response", response)
+                    this.setState({ eventAttendees: response.results });
+                }).then(() => {
+                    const { eventAttendees, eventInfo } = this.state;
+                    let condition = false
+
+                    getUserData(token).then(user => {
+                        // console.log('user', user);
+                        if (user) {
+                            if (response.organizer.owner.id === user.owner.id) {
+                                this.setState({ isOrganizer: true });
+                            }
                         }
-                    }
-
-                    fetchEventAttendees(eventId).then(response => {
-                        //console.log("response", response)
-                        this.setState({ eventAttendees: response.results });
-                    }).then(() => {
-
-
-                        const { eventAttendees, eventInfo } = this.state;
-                        const { user } = this.context;
-                        let condition = false
-
                         if (eventAttendees.length && user) {
                             eventAttendees.map((userobject) => {
-                                //console.log("User object{{{{{{{}}}}}}}} ",userobject)
                                 if (userobject.owner.id === user.owner.id) {
                                     condition = true
                                 }
                             })
-
                             this.setState({ Joined: condition });
                         }
                     })
-                }
-                else {
-                    this.setState({ eventInfo: '' });
-                }
-            });
+                })
+            }).catch(error => { this.setState({ eventInfo: '' }); });
+
 
         }
 
@@ -105,7 +100,7 @@ class EventPage extends Component {
         const { eventId,category,subtopic } = this.props.match.params;
         const { token } = this.context;
         leaveEvent(eventId,token).then(response => {
-            this.this.setState({Joined:false})
+            this.setState({Joined: false})
             //this.props.history.push(`/${category}/${subtopic}`);
         })
     }
@@ -121,7 +116,7 @@ class EventPage extends Component {
 
     render() {
         const { eventInfo, eventAttendees, campusInfo, isOrganizer } = this.state;
-        //const { user } = this.context
+        // const { user } = this.context
         return (
             <div>
                 {eventInfo ? <EventHomePage Joined={this.state.Joined}

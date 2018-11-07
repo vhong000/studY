@@ -24,32 +24,9 @@ import twitterIcon from '../../images/twitter-icon.png';
 import linkedInIcon from '../../images/linkedIn-icon.png';
 
 class EventHomePage extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            date: new Date()
-        }
-
-    }
-
-    componentDidMount() {
-        document.body.style.background = 'rgb(245, 247, 249)';
-    }
-
-    componentWillUnmount() {
-        document.body.style.background = 'white';
-    }
-
-    handleChange(event) {
-        //handle
-        alert("Add to event")
-        console.log(event)
-    }
-
     render() {
         const { classes, event, eventAttendees, campusInfo } = this.props;
-        console.log("This.Props[0]", this.props);
-
+        // console.log("This.Props[0]", this.props);
 
         const bull = <span className={classes.bullet}>•</span>;
 
@@ -79,19 +56,21 @@ class EventHomePage extends Component {
         }
 
         const renderButton = () => {
-            if (this.props.Joined) {
+            const { Joined, isOrganizer, handleDeleteEvent, handleJoinEvent, handleLeaveEvent} = this.props;
+
+            if (Joined) {
                 return (
-                    <Button onClick={this.props.handleLeaveEvent}>Leave Event</Button>
+                    <Button onClick={handleLeaveEvent}>Leave Event</Button>
                 )
             }
-            else if (this.props.isOrganizer) {
+            else if (isOrganizer) {
                 return (
-                    <Button onClick={this.props.handleDeleteEvent}>Delete Event</Button>
+                    <Button onClick={handleDeleteEvent}>Delete Event</Button>
                 )
             }
             else {
                 return (
-                    <Button onClick={this.props.handleJoinEvent}>Join Event</Button>
+                    <Button onClick={handleJoinEvent}>Join Event</Button>
                 )
             }
         }
