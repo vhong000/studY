@@ -23,6 +23,7 @@ class EventListPage extends Component {
         const id = this.props.match.params.subtopic;
         if (this.props.match.params) {
             fetchEventByTopic(id).then(response => {
+                console.log(response)
                 this.setState({ events: response.results })
                 this.arangeEventsByDates(response.results);
             });

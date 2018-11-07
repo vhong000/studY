@@ -3,8 +3,10 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './index.css';
 // import SubtopicPage from './components/SubtopicPage/SubtopicPage';
-import { EventListPage, Header,
-	EventPage, SubtopicPage, App } from './containers';
+import {
+	EventListPage, Header,
+	EventPage, SubtopicPage, App
+} from './containers';
 import * as serviceWorker from './serviceWorker';
 
 import { AuthProvider } from './contexts/Auth.context.js';
