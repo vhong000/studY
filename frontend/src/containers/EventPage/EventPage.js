@@ -51,14 +51,13 @@ class EventPage extends Component {
                     const { eventAttendees, eventInfo } = this.state;
                     let condition = false
 
+                    if (token) { 
                     getUserData(token).then(user => {
                         // console.log('user', user);
-                        if (user) {
-                            if (response.organizer.owner.id === user.owner.id) {
-                                this.setState({ isOrganizer: true });
-                            }
+                        if (response.organizer.owner.id === user.owner.id) {
+                            this.setState({ isOrganizer: true });
                         }
-                        if (eventAttendees.length && user) {
+                        if (eventAttendees.length) {
                             eventAttendees.map((userobject) => {
                                 if (userobject.owner.id === user.owner.id) {
                                     condition = true
@@ -67,6 +66,7 @@ class EventPage extends Component {
                             this.setState({ Joined: condition });
                         }
                     })
+                    }
                 })
             }).catch(error => { this.setState({ eventInfo: '' }); });
 
@@ -116,7 +116,7 @@ class EventPage extends Component {
 
     render() {
         const { eventInfo, eventAttendees, campusInfo, isOrganizer } = this.state;
-        // const { user } = this.context
+        const { user } = this.context
         return (
             <div>
                 {eventInfo ? <EventHomePage Joined={this.state.Joined}
@@ -125,6 +125,7 @@ class EventPage extends Component {
                     handleLeaveEvent={this.handleLeaveEvent}
                     {...this.props} {...this.context}
                     isOrganizer={isOrganizer}
+                    user={user}
                     event={eventInfo}
                     eventAttendees={eventAttendees}
                     campusInfo={campusInfo} /> : <h1>Event does not exist</h1>}

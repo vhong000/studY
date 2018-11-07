@@ -56,7 +56,7 @@ class EventHomePage extends Component {
         }
 
         const renderButton = () => {
-            const { Joined, isOrganizer, handleDeleteEvent, handleJoinEvent, handleLeaveEvent} = this.props;
+            const { user, Joined, isOrganizer, handleDeleteEvent, handleJoinEvent, handleLeaveEvent} = this.props;
 
             if (Joined) {
                 return (
@@ -70,7 +70,7 @@ class EventHomePage extends Component {
             }
             else {
                 return (
-                    <Button onClick={handleJoinEvent}>Join Event</Button>
+                    <Button disabled={!user} onClick={handleJoinEvent}>Join Event</Button>
                 )
             }
         }

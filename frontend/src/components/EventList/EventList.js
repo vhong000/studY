@@ -30,7 +30,9 @@ class EventList extends Component {
                         {eventDates.date}
                     </Typography>
                     <Divider light />
-                    {renderCardItems(eventDates.events)}
+                    <div className={classNames(classes.column, classes.helper)}>
+                        {renderCardItems(eventDates.events)}
+                    </div>
                 </Grid>
             );
             return (dates);
@@ -39,11 +41,10 @@ class EventList extends Component {
         const renderCardItems = (eventArray) => {
 
             const events = eventArray.map((event) =>
-                <div className={classNames(classes.column, classes.helper)}>
-                    <Grid className={classes.item_grid} item >
-                        <EventListCard event={event} params={this.props.params} />
-                    </Grid>
-                </div>
+                <Grid className={classes.item_grid} item >
+                    <EventListCard event={event} params={this.props.params} />
+                </Grid>
+               
             );
 
             return (events);
@@ -52,7 +53,7 @@ class EventList extends Component {
         const renderToolbar = () => {
             return (
                 <div>
-                <Toolbar variant="dense">
+                <Toolbar variant="dense" style={{backgroundColor: "white"}}> 
                     <Typography className={classes.grow} color="inherit">
                         Here you can either join or create a study group event
                     </Typography>
@@ -73,18 +74,10 @@ class EventList extends Component {
         const renderPage = () => {
             return (
                 <div>
-                    
                     <Grid className={classes.main_grid} justify="center" container sm={16}>
-                        {/* <Grid item sm={2}>
-                    </Grid> */}
                         <Grid item sm={8}>
                             {renderEventCardGrid()}
                         </Grid>
-                        {/* <Grid item justify="center" sm={3}>
-                        <Typography align="center" variant="subheading">
-                            Map?
-                        </Typography>
-                    </Grid> */}
                     </Grid>
                 </div>
             )

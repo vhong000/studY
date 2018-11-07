@@ -10,46 +10,7 @@ import {
 import TimerIcon from '@material-ui/icons/Timer';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import classNames from 'classnames';
-
-const styles = {
-    main_grid: {
-        "margin-top": 15,
-        
-    },
-    card: {
-        minWidth: 275,
-        height: 185,
-        
-    },
-    bullet: {
-        display: 'inline-block',
-        margin: '0 2px',
-        transform: 'scale(0.8)',
-    },
-    title: {
-        fontFamily: "Raleway",
-        fontSize: "30px",
-        fontWeight: "700",
-    },
-    pos: {
-        marginBottom: 12,
-    },
-    icon: {
-        fontSize: 28,
-        color: "#B22222",
-        verticalAlign: "text-bottom",
-    },
-    coord: {
-        fontFamily: "Raleway",
-        fontSize: "16px",
-        fontWeight: "700",
-    },
-    description: {
-        fontFamily: "Raleway",
-    }
-    
-
-}
+import styles from './EventListCard.styles';
 
 class EventListCard extends Component {
 
@@ -62,7 +23,7 @@ class EventListCard extends Component {
         const bull = <span className={classes.bullet}>•</span>;
         return (
             <Card className={classes.card}>
-            <CardActionArea component={Link}
+            <CardActionArea component={Link} style={{color: "white"}}
                 to={`/${params.category}/${params.subtopic}/${event.id}`}>
                 <Grid className={classes.main_grid} container sm={12}>
                     <Grid item sm={3}>
@@ -89,8 +50,7 @@ class EventListCard extends Component {
                         </CardContent>
                     </Grid>
                 </Grid>
-                </CardActionArea>
-                
+                </CardActionArea>    
             </Card>
         )
     }

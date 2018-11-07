@@ -31,6 +31,15 @@ class EventListPage extends Component {
 
     }
 
+    componentDidMount() {
+        document.body.style.background = 'rgb(245, 247, 249)';
+    }
+
+    componentWillUnmount() {
+        document.body.style.background = 'white';
+    }
+
+
     arangeEventsByDates(eventsArray) {
         //var date1 = new Date('2018-10-28T05:50:22.715000Z').getDate();
         //var date = new Date('2018-10-28T05:50:22.715000Z').getMonth();
