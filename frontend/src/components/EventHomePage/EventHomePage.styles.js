@@ -84,7 +84,7 @@
     },
     white: {
         backgroundColor: "white",
-        padding: "10px 320px 10px 15px",
+        padding: "15px 350px 20px 15px",
         borderRadius: "9px",
         '&:hover': {
             "box-shadow": "0px 0px 5px 1px rgba(0,0,0,0.38)",
