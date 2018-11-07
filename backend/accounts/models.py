@@ -7,7 +7,7 @@ import uuid
 
 class Account(models.Model):
     school = models.ForeignKey('events.school', on_delete=models.SET_NULL, null=True)
-    major = models.CharField(max_length=20)
+    major = models.CharField(max_length=20, null=True)
     owner = models.OneToOneField(
         settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='account')
     reg_key = models.UUIDField(default=uuid.uuid4)
