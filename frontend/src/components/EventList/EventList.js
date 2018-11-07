@@ -52,6 +52,7 @@ class EventList extends Component {
         }
         const renderToolbar = () => {
             return (
+                <div>
                 <Toolbar variant="dense" style={{backgroundColor: "white"}}> 
                     <Typography className={classes.grow} color="inherit">
                         Here you can either join or create a study group event
