@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import { EventHomePage } from '../../components';
-import { fetchEvent, fetchEventAttendees, fetchSchoolDatails, JoinEvent } from '../../fetches';
+import { 
+    fetchEvent, 
+    fetchEventAttendees, 
+    fetchSchoolDatails, 
+    JoinEvent,
+    leaveEvent,
+    deleteEvent } from '../../fetches';
 import { AuthContext } from '../../contexts/Auth.context';
 import { includes } from 'lodash';
 
@@ -80,6 +86,7 @@ class EventPage extends Component {
             title: eventInfo.name,
             owner: `${eventInfo.organizer.owner.first_name} ${eventInfo.organizer.owner.last_name}`,
             capacity: eventInfo.capacity,
+            time: eventInfo.time,
             date: new Date()
         }
         //console.log("reconstructData", event)
@@ -89,18 +96,26 @@ class EventPage extends Component {
     handleJoinEvent(event) {
         const { eventId } = this.props.match.params;
         const { token } = this.context;
-        //alert(token);
         JoinEvent(eventId, token).then(response => {
             this.setState({ joinEventResponse: response, Joined: true })
         })
     }
 
     handleLeaveEvent() {
-        //will handle users leaving the event
+        const { eventId,category,subtopic } = this.props.match.params;
+        const { token } = this.context;
+        leaveEvent(eventId,token).then(response => {
+            this.this.setState({Joined:false})
+            //this.props.history.push(`/${category}/${subtopic}`);
+        })
     }
 
     handleDeleteEvent() {
-        //Will handle orgnaizers deleting events
+        const { eventId,category,subtopic } = this.props.match.params;
+        const { token } = this.context;
+        deleteEvent(eventId,token).then(response=>{
+            this.props.history.push(`/${category}/${subtopic}`);
+        })
     }
 
 

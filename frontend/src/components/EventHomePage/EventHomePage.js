@@ -12,6 +12,7 @@ import {
     Button, Card, CardContent, CardMedia, CardActionArea
 
 } from '@material-ui/core';
+import moment from 'moment'
 import DoneIcon from '@material-ui/icons/Done';
 import CloseIcon from '@material-ui/icons/Close';
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
@@ -55,6 +56,7 @@ class EventHomePage extends Component {
         const renderProfileCards = () => {
             let profileCard;
             if (eventAttendees.length > 0) {
+                console.log("Event Attendees",eventAttendees)
                 profileCard = eventAttendees.map((student, index) =>
                     <Grid key={index} item sm={3} spacing={16} >
                         <Card className={classes.card}>
@@ -62,7 +64,7 @@ class EventHomePage extends Component {
                                 <CardMedia className={classes.media} image={studyIcon} />
                                 <CardContent>
                                     <Typography align="center" variant="bus">
-                                        {student.name}
+                                        {student.owner.first_name}
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>
@@ -110,7 +112,7 @@ class EventHomePage extends Component {
                             </Typography>
                             <Typography color="textSecondary">
                                 <TimerIcon className={classes.iconIm}/>
-                                Time: 
+                                {`time: ${moment(event.time).format("hh:mm a")}`}
                             </Typography>
                         </Grid>
                       
@@ -148,8 +150,7 @@ class EventHomePage extends Component {
                                 <span className={classes.going}>{bull} {`${eventAttendees.length} going`}</span> 
                             </Typography>
                             <Divider className={classes.divider}/>
-                            <Button className={classes.button}><DoneIcon className={classes.icon}/></Button>
-                            <Button className={classes.button}><CloseIcon className={classes.icon}/></Button>
+                            {renderButton()}
                         </Grid>
 
                         <Grid item sm={12} style={{marginTop: "0px"}}>

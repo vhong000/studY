@@ -36,7 +36,7 @@ const campusInfoMock = {
 
 describe('<EvenHomePage /> ', ()=>{
     it('should render correctly',()=>{
-        const wrapper = shallow(<EventHomePage event={mockEvent}  classes={styles}/>);
+        const wrapper = shallow(<EventHomePage event={mockEvent}  eventAttendees={eventAttendeesMock} classes={styles}/>);
 				console.log(wrapper.find('Calendar').debug());
     });
 	//    test('snapshot',()=>{
@@ -49,6 +49,6 @@ describe('<EvenHomePage /> ', ()=>{
 
     it('allow us to set props', () => {
         ///
-        const wrapper = mount(<EventHomePage event={mockEvent}  eventAttendees={eventAttendeesMock} campusInfo={campusInfoMock} classes={styles} />);
+        const wrapper = mount(<EventHomePage event={mockEvent}  eventAttendees={eventAttendeesMock} campusInfo={campusInfoMock} classes={styles}/> );
     })
 })
