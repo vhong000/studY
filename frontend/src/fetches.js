@@ -24,7 +24,7 @@ export const getUserData = (token) => {
     method: "GET",
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Token ' + token,
+      'Authorization': `Token ${token}`,
     }
   }).then((response) => {
     if (response.status !== 200) {
@@ -194,11 +194,28 @@ export const fetchSubtopics = () => {
 
 //Join Event
 export const JoinEvent = (eventId,token) => {
-  return fetch(`/api/events/${eventId}/join`, {
+  return fetch(`/api/events/${eventId}/attendees`, {
     method: "POST",
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Token ' + token,
+      'Authorization': `Token ${token}`,
+    }
+  }).then((response) => {
+    if (response.status !== 200) {
+      return Promise.reject({ message: "Unable to get events" });
+    } else { return response.json(); }
+  }).catch(error => {
+    return error;
+  });
+
+}
+
+export const leaveEvent = (eventId,token) => {
+  return fetch(`/api/events/${eventId}/attendees`, {
+    method: "DELETE",
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': `Token ${token}`,
     }
   }).then((response) => {
     if (response.status !== 200) {

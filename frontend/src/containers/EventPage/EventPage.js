@@ -12,17 +12,20 @@ class EventPage extends Component {
             eventInfo: '',
             campusInfo: '',
             Joined: false,
+            isOrganizer: false,
             eventAttendees: [],
             JoinEventResponse: []
         }
         this.handleJoinEvent = this.handleJoinEvent.bind(this);
+        this.handleLeaveEvent = this.handleLeaveEvent.bind(this);
+        this.handleDeleteEvent = this.handleDeleteEvent.bind(this);
     }
-
     static contextType = AuthContext;
 
 
     componentWillMount() {
         const { category, subtopic, eventId } = this.props.match.params
+
 
         if (category && subtopic && eventId) {
             fetchEvent(eventId).then(response => {
@@ -32,31 +35,35 @@ class EventPage extends Component {
                 //console.log(response)
                 if (!response.message) {
                     this.setState({ eventInfo: this.reconstructData(response) });
+                    const { user } = this.context;
+                    if (response && user) {
+                        console.log("Organizer Info",response.organizer.owner,user);
+                        if (response.organizer.owner.id === user.owner.id) {
+                            this.setState({ isOrganizer: true });
+                        }
+                    }
 
                     fetchEventAttendees(eventId).then(response => {
                         //console.log("response", response)
-                        this.setState({ eventAttendees: response });
+                        this.setState({ eventAttendees: response.results });
                     }).then(() => {
 
-                        const { user } = this.context;
-                        const { eventAttendees } = this.state;
-                        let condition;
 
-                        if (eventAttendees.length) {
-                            condition = eventAttendees.map((userobject) => {
+                        const { eventAttendees, eventInfo } = this.state;
+                        const { user } = this.context;
+                        let condition = false
+
+                        if (eventAttendees.length && user) {
+                            eventAttendees.map((userobject) => {
+                                //console.log("User object{{{{{{{}}}}}}}} ",userobject)
                                 if (userobject.owner.id === user.owner.id) {
-                                    return true
+                                    condition = true
                                 }
                             })
 
                             this.setState({ Joined: condition });
                         }
-
                     })
-
-
-
-
                 }
                 else {
                     this.setState({ eventInfo: '' });
@@ -65,9 +72,7 @@ class EventPage extends Component {
 
         }
 
-    }
-
-    componentDidUpdate
+    }//end of compnent did mount
 
     reconstructData(eventInfo) {
         const event = {
@@ -84,19 +89,35 @@ class EventPage extends Component {
     handleJoinEvent(event) {
         const { eventId } = this.props.match.params;
         const { token } = this.context;
-        alert(token);
+        //alert(token);
         JoinEvent(eventId, token).then(response => {
             this.setState({ joinEventResponse: response, Joined: true })
         })
     }
 
+    handleLeaveEvent() {
+        //will handle users leaving the event
+    }
+
+    handleDeleteEvent() {
+        //Will handle orgnaizers deleting events
+    }
+
 
     render() {
-        const { eventInfo, eventAttendees, campusInfo } = this.state;
+        const { eventInfo, eventAttendees, campusInfo, isOrganizer } = this.state;
         //const { user } = this.context
         return (
             <div>
-                {eventInfo ? <EventHomePage Joined={this.state.Joined} handleJoinEvent={this.handleJoinEvent} {...this.props} {...this.context} event={eventInfo} eventAttendees={eventAttendees} campusInfo={campusInfo} /> : <h1>Event does not exist</h1>}
+                {eventInfo ? <EventHomePage Joined={this.state.Joined}
+                    handleJoinEvent={this.handleJoinEvent}
+                    handleDeleteEvent={this.handleDeleteEvent}
+                    handleLeaveEvent={this.handleLeaveEvent}
+                    {...this.props} {...this.context}
+                    isOrganizer={isOrganizer}
+                    event={eventInfo}
+                    eventAttendees={eventAttendees}
+                    campusInfo={campusInfo} /> : <h1>Event does not exist</h1>}
             </div>
         )
     }

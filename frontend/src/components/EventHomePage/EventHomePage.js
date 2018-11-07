@@ -17,11 +17,8 @@ class EventHomePage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            date: new Date(),
-            Joined: false,
-            notInterested: false,
+            date: new Date()
         }
-        //this.handleJoin = this.handleJoin.bind(this);
 
     }
 
@@ -58,6 +55,24 @@ class EventHomePage extends Component {
             return (profileCard);
 
         }
+
+        const renderButton = () => {
+            if (this.props.Joined) {
+                return (
+                    <Button onClick={this.props.handleLeaveEvent}>Leave Event</Button>
+                )
+            }
+            else if (this.props.isOrganizer) {
+                return (
+                    <Button onClick={this.props.handleDeleteEvent}>Delete Event</Button>
+                )
+            }
+            else {
+                return (
+                    <Button onClick={this.props.handleJoinEvent}>Join Event</Button>
+                )
+            }
+        }
         return (
             <div>
                 <Grid className={classes.main_grid} container sm={12} spacing={16}>
@@ -69,13 +84,10 @@ class EventHomePage extends Component {
                                 </Typography>
                             </Grid>
                         </Grid>
-
-
                         <Grid container sm={6}>
                             <Grid item sm={12}>
                                 <h1>{event.title}</h1>
                             </Grid>
-
                             <Grid item sm={12}>
                                 <Typography className={classes.pos} color="textSecondary">
                                     {`Organizer: ${event.owner}`}
@@ -88,16 +100,13 @@ class EventHomePage extends Component {
                                 </Typography>
                             </Grid>
                         </Grid>
-
-
-
                         <Grid justify="center" container sm={4}>
                             <Grid item justify="center" sm={12}>
                                 <Typography className={classes.pos} color="textSecondary">
                                     Interest in this topic?  {bull} {`${eventAttendees.length} students are going`}
                                 </Typography>
                                 <Divider />
-                                <Button disabled={this.props.Joined} onClick={this.props.handleJoinEvent}>Join</Button>
+                                {renderButton()}
                             </Grid>
                         </Grid>
                         <Divider />
