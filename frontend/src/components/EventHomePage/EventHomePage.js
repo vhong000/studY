@@ -84,15 +84,15 @@ class EventHomePage extends Component {
 
                         <Grid item sm={12} className={classes.white}>
                             <h1 style={{fontSize: "30px"}}>{event.title}</h1>
-                            <Typography className={classes.pos} color="textSecondary">
+                            <Typography color="textSecondary">
                             <PersonOutlineIcon className={classes.iconIm}/>
                                 {`Organizer: ${event.owner}`}
                             </Typography>
-                            <Typography className={classes.pos} color="textSecondary">
+                            <Typography color="textSecondary">
                                 <LocationONIcon className={classes.iconIm}/>
                                 {`Campus: ${campusInfo.name}`}
                             </Typography>
-                            <Typography className={classes.pos} color="textSecondary">
+                            <Typography color="textSecondary">
                                 <TimerIcon className={classes.iconIm}/>
                                 Time: 
                             </Typography>
@@ -107,19 +107,18 @@ class EventHomePage extends Component {
                             </Typography>
                         </Grid>
                            
-                        <Grid item sm={12} style={{margin: "50px 0 20px 0"}}>
+                        <Grid item sm={12} style={{margin: "50px 0 50px 0"}}>
                             <h2  style={{margin: "0"}}>What we're about</h2>
                             <Divider className={classes.divider}/>
-                            <Typography variant="body2">
+                            <Typography variant="body2" style={{marginTop: "20px"}}>
                                 {event.details}
                             </Typography> 
                         </Grid>
 
                         <Grid item sm={12}>
-                            <Typography variant="subtitle1">
-                                <PeopleIcon className={classes.iconIm}/>&ensp;
-                                Attending
-                            </Typography>
+                            <h3  style={{margin: "0", fontSize: "18px", fontWeight: "bold"}}>
+                                <span><PeopleIcon className={classes.iconIm}/></span>
+                            Attending</h3>
                             <Divider className={classes.divider}/>
                         </Grid>
                             {renderProfileCards()}
@@ -127,7 +126,7 @@ class EventHomePage extends Component {
 
                     <Grid justify="center" container sm={4}>
 
-                        <Grid item justify="center" sm={12}>
+                        <Grid item justify="center" sm={12} style={{marginTop: "30px"}}>
                             <Typography className={classes.pos} >
                                 <span className={classes.interest}>Interested?</span>&ensp;&ensp;
                                 <span className={classes.going}>{bull} {`${eventAttendees.length} going`}</span> 
@@ -139,6 +138,9 @@ class EventHomePage extends Component {
 
                         <Grid item sm={12} style={{marginTop: "0px"}}>
                             <Calendar value={event.date} />
+                        </Grid>
+                        <Grid item sm={12}>
+                            <p>Map will be here</p>
                         </Grid>
                     </Grid>
                 
