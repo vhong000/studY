@@ -17,6 +17,22 @@ StydY is inspired by the software engineering project proposal of Rohan Swaby:
 * Moustafa Abdou - Continuous Integration/Delivery
 * Carlos Ng Sang - Code Reviewer
 * Francisco Springer - Designer
+### API Docs
+[https://documenter.getpostman.com/view/3106741/RWguwGu4](https://documenter.getpostman.com/view/3106741/RWguwGu4)
+### Continuous Integration
+We use a self-hosted CI/CD solution (Jenkins) with a multibranch pipeline that has the following hooks:
+- push events to feature branches 
+- PRs: test + build against master
+- post-merge checks + deployment/release
+
+##### pipeline stats: [http://52.207.169.97:8080/blue/organizations/jenkins/studY/activity](http://52.207.169.97:8080/blue/organizations/jenkins/studY/activity)
+
+----
+##### deployment setup
+- Nginx
+- uWSGI
+
+##### host: [http://52.207.169.97:8000](http://52.207.169.97:8000)
 
 
 
