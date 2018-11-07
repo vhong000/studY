@@ -29,7 +29,7 @@ class Course(models.Model):
 
 class Category(models.Model):
     name = models.CharField(max_length=50)
-    image = models.CharField(max_length=100,null=True)
+    # image = models.CharField(max_length=100, null=True)
 
     class Meta:
         db_table = 'categories'
@@ -40,7 +40,7 @@ class Category(models.Model):
 
 class Topic(models.Model):
     name = models.CharField(max_length=50)
-    image = models.CharField(max_length=100,null=True)
+    # image = models.CharField(max_length=100, null=True)
     category = models.ForeignKey(
         Category, on_delete=models.SET_NULL, related_name='topics', null=True)
 
@@ -55,14 +55,14 @@ class Event(models.Model):
     name = models.CharField(max_length=100)
     description = models.CharField(max_length=1000)
     time = models.DateTimeField()
-    topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
+    topic = models.ForeignKey(Topic, on_delete=models.SET_NULL, null=True)
     organizer = models.ForeignKey(Account, on_delete=models.SET_NULL, null=True)
     attendees = models.ManyToManyField(Account, related_name='events')
-    created = models.DateTimeField(auto_now=False, auto_now_add=True)
+    created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
     campus = models.ForeignKey(School, on_delete=models.CASCADE,
                                related_name='events', null=True)
     location = models.CharField(max_length=100, default='')
-    capacity = models.PositiveSmallIntegerField()
+    capacity = models.PositiveSmallIntegerField(default=20)
 
     class Meta:
         db_table = 'events'

@@ -51,7 +51,7 @@ class TokenAuthTest(APITestCase):
 
     def test_invalid_method(self):
         res = self.client.get(self.url)
-        self.assertEquals(res.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
+        self.assertEqual(res.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
 
     def test_valid_credentials(self):
 

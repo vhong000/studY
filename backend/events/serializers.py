@@ -25,7 +25,6 @@ class CategorySerializer(serializers.ModelSerializer):
 
 
 class EventSerializer(serializers.ModelSerializer):
-    # campus = SchoolSerializer()
     organizer = AccountSerializer(read_only=True)
 
     class Meta:
