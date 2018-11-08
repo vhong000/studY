@@ -11,6 +11,10 @@ import {
 } from '@material-ui/core';
 import DateRangeIcon from '@material-ui/icons/DateRange';
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> eventListCard style improved
 class EventList extends Component {
 
     render() {
