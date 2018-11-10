@@ -6,3 +6,4 @@ export { default as EventList } from './EventList/EventList';
 export { default as EventListCard } from './EventList/EventListCard';
 export { default as EventHomePage } from './EventHomePage/EventHomePage';
 export { default as SubtopicPage } from './SubtopicPage/SubtopicPage';
+export { default as UserProfilePage } from './UserProfilePage/UserProfilePage';

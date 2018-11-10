@@ -5,11 +5,11 @@ import './index.css';
 // import SubtopicPage from './components/SubtopicPage/SubtopicPage';
 import {
 	EventListPage, Header,
-	EventPage, SubtopicPage, App
+	EventPage, SubtopicPage, App, UserProfile
 } from './containers';
 import * as serviceWorker from './serviceWorker';
 
-import { AuthProvider } from './contexts/Auth.context.js';
+import { AuthProvider, AuthWrapper } from './contexts/Auth.context.js';
 
 ReactDOM.render(
 		<Router>
@@ -17,9 +17,10 @@ ReactDOM.render(
 				<AuthProvider>
 					<Header />
 					<Route exact path="/" component={App} />
-					<Route exact path="/:category" component={SubtopicPage} />
-					<Route exact path="/:category/:subtopic" component={EventListPage}/>
-					<Route exact path="/:category/:subtopic/:eventId" component={EventPage}/> 
+					<Route exact path="/category/:category" component={SubtopicPage} />
+					<Route exact path="/category/:category/:subtopic" component={EventListPage}/>
+					<Route exact path="/category/:category/:subtopic/:eventId" component={EventPage}/> 
+					<Route exact path="/profile" component={AuthWrapper(UserProfile)} />
 				</AuthProvider>
 			</div>
 		</Router>,

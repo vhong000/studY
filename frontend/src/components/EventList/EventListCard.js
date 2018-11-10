@@ -24,7 +24,7 @@ class EventListCard extends Component {
         return (
             <Card className={classes.card}>
             <CardActionArea component={Link} style={{color: "white"}}
-                to={`/${params.category}/${params.subtopic}/${event.id}`}>
+                to={`/category/${params.category}/${params.subtopic}/${event.id}`}>
                 <Grid className={classes.main_grid} container sm={12}>
                     <Grid item sm={3}>
                         <CardContent>
