@@ -12,27 +12,26 @@ class EventListPage extends Component {
             topicid: '',
             listofevents: [],
             createEventModal: false,
+            isLoggedIn: false,
         }
         this.handleCreateModalClose = this.handleCreateModalClose.bind(this);
         this.handleCreateModalOpen = this.handleCreateModalOpen.bind(this);
-
     }
     static contextType = AuthContext;
 
-    componentWillMount() {
+    componentDidMount() {
+        document.body.style.background = 'rgb(245, 247, 249)';
+        const token = localStorage.getItem('token');
         const id = this.props.match.params.subtopic;
         if (this.props.match.params) {
             fetchEventByTopic(id).then(response => {
-                console.log(response)
                 this.setState({ events: response.results })
                 this.arangeEventsByDates(response.results);
             });
         }
-
-    }
-
-    componentDidMount() {
-        document.body.style.background = 'rgb(245, 247, 249)';
+        if (token) {
+            this.setState({ isLoggedIn: true });
+        }
     }
 
     componentWillUnmount() {
@@ -47,14 +46,12 @@ class EventListPage extends Component {
         let results = []
         if (eventsArray.length) {
             let date = new Date(eventsArray[0].time).getMonth();
-            //console.log(date)
             let eventformat = {
                 date: moment.months(date),
                 events: []
 
             }
             eventsArray.map((eventObject, i) => {
-                //console.log(eventObject);
                 if (date === new Date(eventObject.time).getMonth()) {
                     eventformat.events.push(eventObject);
                 }
@@ -82,7 +79,7 @@ class EventListPage extends Component {
     }
 
     render() {
-        const { listofevents, createEventModal } = this.state;
+        const { listofevents, createEventModal, isLoggedIn } = this.state;
         return (
             <div>
                 <EventList 
@@ -90,7 +87,8 @@ class EventListPage extends Component {
                 params={this.props.match.params} 
                 createEventModal={createEventModal}
                 handleClose={this.handleCreateModalClose}
-                handleOpen={this.handleCreateModalOpen} />
+                handleOpen={this.handleCreateModalOpen}
+                isLoggedIn={isLoggedIn} />
             </div>
         )
     }

@@ -14,8 +14,10 @@ import DateRangeIcon from '@material-ui/icons/DateRange';
 class EventList extends Component {
 
     render() {
-        const { classes, listofevents, createEventModal,
-        handleClose, handleOpen } = this.props;
+        const {
+            classes, listofevents, createEventModal,
+            handleClose, handleOpen, isLoggedIn,
+        } = this.props;
         console.log("Eventlist[0]", this.props);
 
         const styles = theme => ({
@@ -58,6 +60,7 @@ class EventList extends Component {
                         Here you can either join or create a study group event
                     </Typography>
                     <Button className={classes.button} variant='raised'
+                    disabled={!isLoggedIn}
                     onClick={() => handleOpen()} >Create event</Button>
                 </Toolbar>
                 <Modal open={createEventModal} onClose={() => handleClose()} >
