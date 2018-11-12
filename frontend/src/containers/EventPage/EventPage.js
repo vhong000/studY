@@ -81,9 +81,8 @@ class EventPage extends Component {
             owner: `${eventInfo.organizer.owner.first_name} ${eventInfo.organizer.owner.last_name}`,
             capacity: eventInfo.capacity,
             time: eventInfo.time,
-            date: new Date()
+            date: new Date(eventInfo.time)
         }
-        //console.log("reconstructData", event)
         return (event)
 
     }
