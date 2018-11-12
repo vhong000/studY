@@ -9,7 +9,6 @@ import {
     deleteEvent,
     getUserData } from '../../fetches';
 import { AuthContext } from '../../contexts/Auth.context';
-import { includes } from 'lodash';
 
 class EventPage extends Component {
     static contextType = AuthContext;
@@ -93,6 +92,10 @@ class EventPage extends Component {
         const { token } = this.context;
         JoinEvent(eventId, token).then(response => {
             this.setState({ joinEventResponse: response, Joined: true })
+        }).then(() => {
+            fetchEventAttendees(eventId).then(response => {
+                this.setState({ eventAttendees: response.results });
+            })
         })
     }
 
@@ -101,7 +104,10 @@ class EventPage extends Component {
         const { token } = this.context;
         leaveEvent(eventId,token).then(response => {
             this.setState({Joined: false})
-            //this.props.history.push(`/${category}/${subtopic}`);
+        }).then(() => {
+            fetchEventAttendees(eventId).then(response => {
+                this.setState({ eventAttendees: response.results });
+            })
         })
     }
 
