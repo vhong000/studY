@@ -9,7 +9,7 @@ import {
 } from './containers';
 import * as serviceWorker from './serviceWorker';
 
-import { AuthProvider, AuthWrapper } from './contexts/Auth.context.js';
+import AuthProvider, { AuthWrapper } from './contexts/Auth.context.js';
 
 ReactDOM.render(
 		<Router>
