@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { EventList } from '../../components';
 import { fetchAllEvents, fetchEventByTopic } from '../../fetches';
-import { AuthContext } from '../../contexts/Auth.context';
+import { AuthContext, AuthWrapper } from '../../contexts/Auth.context';
 import moment from 'moment';
 
 class EventListPage extends Component {
@@ -17,20 +17,28 @@ class EventListPage extends Component {
         this.handleCreateModalClose = this.handleCreateModalClose.bind(this);
         this.handleCreateModalOpen = this.handleCreateModalOpen.bind(this);
     }
-    static contextType = AuthContext;
+	static contextType = AuthContext;
 
     componentDidMount() {
         document.body.style.background = 'rgb(245, 247, 249)';
-        const token = localStorage.getItem('token');
         const id = this.props.match.params.subtopic;
+        const { user } = this.context;
+        
         if (this.props.match.params) {
             fetchEventByTopic(id).then(response => {
                 this.setState({ events: response.results })
                 this.arangeEventsByDates(response.results);
             });
         }
-        if (token) {
+        if (user.owner) {
             this.setState({ isLoggedIn: true });
+        }
+    }
+
+    componentWillUpdate(nextContext) {
+        const loggedIn = this.state.isLoggedIn;
+        if (nextContext.user !== this.context.user) {
+            this.setState({ isLoggedIn: !loggedIn })
         }
     }
 
@@ -95,6 +103,6 @@ class EventListPage extends Component {
 
 }
 
-export default EventListPage;
+export default AuthWrapper(EventListPage);
 
 
