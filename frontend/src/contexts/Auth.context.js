@@ -42,7 +42,6 @@ class AuthProvider extends Component {
 				this.setState({ token: '', user: '' });
 				localStorage.removeItem('token');
 			}).then(() => { this.props.history.push('/'); })
-			// not working idk why
 		}
 	}
 

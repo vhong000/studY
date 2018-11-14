@@ -8,7 +8,7 @@ import {
     leaveEvent,
     deleteEvent,
     getUserData } from '../../fetches';
-import { AuthContext } from '../../contexts/Auth.context';
+import { AuthContext, AuthWrapper } from '../../contexts/Auth.context';
 
 class EventPage extends Component {
     static contextType = AuthContext;
@@ -41,10 +41,8 @@ class EventPage extends Component {
                 fetchSchoolDatails(response.campus).then(school => {
                     this.setState({ campusInfo: school });
                 });
-                //console.log(response)
                 
                 fetchEventAttendees(eventId).then(response => {
-                    //console.log("response", response)
                     this.setState({ eventAttendees: response.results });
                 }).then(() => {
                     const { eventAttendees, eventInfo } = this.state;
@@ -52,7 +50,6 @@ class EventPage extends Component {
 
                     if (token) { 
                     getUserData(token).then(user => {
-                        // console.log('user', user);
                         if (response.organizer.owner.id === user.owner.id) {
                             this.setState({ isOrganizer: true });
                         }
@@ -68,17 +65,23 @@ class EventPage extends Component {
                     }
                 })
             }).catch(error => { this.setState({ eventInfo: '' }); });
-
-
         }
+    }
 
-    }//end of compnent did mount
+    componentWillUpdate(nextProps) {
+        if (nextProps.user !== this.props.user) {
+            if (nextProps.user && nextProps.user.owner.id === this.state.eventInfo.ownerId) {
+                this.setState({ isOrganizer: true })
+            } else { this.setState({ isOrganizer: false })} 
+        }
+    }
 
     reconstructData(eventInfo) {
         const event = {
             details: eventInfo.description,
             title: eventInfo.name,
             owner: `${eventInfo.organizer.owner.first_name} ${eventInfo.organizer.owner.last_name}`,
+            ownerId: eventInfo.organizer.owner.id,
             capacity: eventInfo.capacity,
             time: eventInfo.time,
             date: new Date(eventInfo.time)
@@ -140,6 +143,6 @@ class EventPage extends Component {
 
 }
 
-export default EventPage;
+export default AuthWrapper(EventPage);
 
 

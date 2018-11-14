@@ -17,12 +17,12 @@ class EventListPage extends Component {
         this.handleCreateModalClose = this.handleCreateModalClose.bind(this);
         this.handleCreateModalOpen = this.handleCreateModalOpen.bind(this);
     }
-	static contextType = AuthContext;
+	// static contextType = AuthContext;
 
     componentDidMount() {
         document.body.style.background = 'rgb(245, 247, 249)';
         const id = this.props.match.params.subtopic;
-        const { user } = this.context;
+        const { user } = this.props;
         
         if (this.props.match.params) {
             fetchEventByTopic(id).then(response => {
@@ -35,9 +35,9 @@ class EventListPage extends Component {
         }
     }
 
-    componentWillUpdate(nextContext) {
+    componentWillUpdate(nextProps) {
         const loggedIn = this.state.isLoggedIn;
-        if (nextContext.user !== this.context.user) {
+        if (nextProps.user !== this.props.user) {
             this.setState({ isLoggedIn: !loggedIn })
         }
     }
