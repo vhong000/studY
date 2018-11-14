@@ -23,7 +23,7 @@ const styles = theme => ({
 })
 	
 describe('Header', () => {
-	const wrapper = shallow(<Header classes={styles} /> );
+	const wrapper = shallow(<Header user={{owner: ''}} classes={styles} /> );
 	it('should render login button', () => {
 		expect(wrapper.find('.login-button').exists()).toBe(true);
 		expect(wrapper.find('.register-button').exists()).toBe(true);

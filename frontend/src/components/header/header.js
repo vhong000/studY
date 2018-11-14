@@ -60,7 +60,7 @@ export function Header({
 					studY
 				</Typography>
 				<div className={classes.divide} />
-				{user ? ( 
+				{user.owner ? ( 
 					<div className={classes.right_actions}>
 						<Typography 
 							style={{ textDecoration: 'none' }}
