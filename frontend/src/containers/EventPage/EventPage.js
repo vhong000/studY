@@ -61,7 +61,9 @@ class EventPage extends Component {
                             })
                             this.setState({ Joined: condition });
                         }
-                    })
+                    }).catch((error) => {
+											this.context.onLogout();
+										})
                     }
                 })
             }).catch(error => { this.setState({ eventInfo: '' }); });
@@ -69,8 +71,8 @@ class EventPage extends Component {
     }
 
     componentWillUpdate(nextProps) {
-        if (nextProps.user !== this.props.user) {
-            if (nextProps.user && nextProps.user.owner.id === this.state.eventInfo.ownerId) {
+        if (nextProps.user && nextProps.user !== this.props.user) {
+            if (nextProps.user.owner && nextProps.user.owner.id === this.state.eventInfo.ownerId) {
                 this.setState({ isOrganizer: true })
             } else { this.setState({ isOrganizer: false })} 
         }
