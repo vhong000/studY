@@ -60,9 +60,12 @@ export function Header({
 					studY
 				</Typography>
 				<div className={classes.divide} />
-				{user ? ( 
+				{user.owner ? ( 
 					<div className={classes.right_actions}>
-						<Typography
+						<Typography 
+							style={{ textDecoration: 'none' }}
+							component={Link}
+							to = "/profile"
 							margin='10px'
 							className={classes.user_name}
 							variant='subtitle1'

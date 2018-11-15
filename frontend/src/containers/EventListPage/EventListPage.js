@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { EventList } from '../../components';
 import { fetchAllEvents, fetchEventByTopic } from '../../fetches';
-import { AuthContext } from '../../contexts/Auth.context';
+import { AuthContext, AuthWrapper } from '../../contexts/Auth.context';
 import moment from 'moment';
 
 class EventListPage extends Component {
@@ -12,27 +12,34 @@ class EventListPage extends Component {
             topicid: '',
             listofevents: [],
             createEventModal: false,
+            isLoggedIn: false,
         }
         this.handleCreateModalClose = this.handleCreateModalClose.bind(this);
         this.handleCreateModalOpen = this.handleCreateModalOpen.bind(this);
-
     }
-    static contextType = AuthContext;
+	// static contextType = AuthContext;
 
-    componentWillMount() {
+    componentDidMount() {
+        document.body.style.background = 'rgb(245, 247, 249)';
         const id = this.props.match.params.subtopic;
+        const { user } = this.props;
+        
         if (this.props.match.params) {
             fetchEventByTopic(id).then(response => {
-                console.log(response)
                 this.setState({ events: response.results })
                 this.arangeEventsByDates(response.results);
             });
         }
-
+        if (user.owner) {
+            this.setState({ isLoggedIn: true });
+        }
     }
 
-    componentDidMount() {
-        document.body.style.background = 'rgb(245, 247, 249)';
+    componentWillUpdate(nextProps) {
+        const loggedIn = this.state.isLoggedIn;
+        if (nextProps.user !== this.props.user) {
+            this.setState({ isLoggedIn: !loggedIn })
+        }
     }
 
     componentWillUnmount() {
@@ -47,14 +54,12 @@ class EventListPage extends Component {
         let results = []
         if (eventsArray.length) {
             let date = new Date(eventsArray[0].time).getMonth();
-            //console.log(date)
             let eventformat = {
                 date: moment.months(date),
                 events: []
 
             }
             eventsArray.map((eventObject, i) => {
-                //console.log(eventObject);
                 if (date === new Date(eventObject.time).getMonth()) {
                     eventformat.events.push(eventObject);
                 }
@@ -82,7 +87,7 @@ class EventListPage extends Component {
     }
 
     render() {
-        const { listofevents, createEventModal } = this.state;
+        const { listofevents, createEventModal, isLoggedIn } = this.state;
         return (
             <div>
                 <EventList 
@@ -90,13 +95,14 @@ class EventListPage extends Component {
                 params={this.props.match.params} 
                 createEventModal={createEventModal}
                 handleClose={this.handleCreateModalClose}
-                handleOpen={this.handleCreateModalOpen} />
+                handleOpen={this.handleCreateModalOpen}
+                isLoggedIn={isLoggedIn} />
             </div>
         )
     }
 
 }
 
-export default EventListPage;
+export default AuthWrapper(EventListPage);
 
 

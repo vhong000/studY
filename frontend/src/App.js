@@ -46,7 +46,7 @@ export class App extends Component {
 									<Card className={classes.card}>
 										<CardActionArea
 											component={Link}
-											to={"/" + topic.id}>
+											to={"/category/" + topic.id}>
 											<CardMedia 
 												className={classes.media}
 												image={topic.image} />

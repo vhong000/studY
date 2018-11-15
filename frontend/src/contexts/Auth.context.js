@@ -1,10 +1,11 @@
 
 import React, { Component } from 'react';
+import { withRouter } from 'react-router';
 import { getUserData, loginUser } from '../fetches';
 
 export const AuthContext = React.createContext();
 
-export class AuthProvider extends Component {
+class AuthProvider extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -37,7 +38,10 @@ export class AuthProvider extends Component {
 					token: currToken,
 					user: result,
 				})
-			})
+			}).catch((error) => {
+				this.setState({ token: '', user: '' });
+				localStorage.removeItem('token');
+			}).then(() => { this.props.history.push('/'); })
 		}
 	}
 
@@ -57,6 +61,8 @@ export class AuthProvider extends Component {
 		)
 	}
  }
+
+export default withRouter(AuthProvider);
 
 const AuthConsumer = AuthContext.Consumer;
 
