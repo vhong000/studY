@@ -12,10 +12,8 @@ import {
 import propTypes from 'prop-types'
 import { createEvent } from '../../fetches';
 import moment from 'moment';
+import styles from './eventForm.styles';
 
-const styles = theme => ({
-  main_form: { textAlign: 'center' }
-}) 
 
 const inputField = ({
 	input, children, id, 
@@ -77,7 +75,7 @@ const temporalInputField = ({
 
 export const EventForm = props => {
   const { handleChange, classes, values,
-    schools, isSubmitting, touched, errors } = props;
+    schools, isSubmitting, touched, errors, user } = props;
   return ( 
     <Form name='createEventForm'
       className={classes.main_form}
@@ -86,6 +84,10 @@ export const EventForm = props => {
         variant='display1'
         children="Create An Event"
       />
+      <Typography variant="subtitle1" gutterBottom>
+        Name:
+          {`${user.owner.first_name}`}
+      </Typography>
       <Grid container justify='center' >
         <Grid container item xs='6' direction='column' >
           <Grid item>
