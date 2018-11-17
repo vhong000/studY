@@ -6,6 +6,7 @@ import { EventListCard } from '../../components';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import { studyIcon, CCNY } from '../../images';
+import  EventMap  from './EventMap';
 import {
 
     Typography, Grid, withStyles, Paper, Divider, Toolbar,
@@ -33,7 +34,7 @@ class EventHomePage extends Component {
         const renderProfileCards = () => {
             let profileCard;
             if (eventAttendees.length > 0) {
-                console.log("Event Attendees",eventAttendees)
+                console.log("Event Attendees", eventAttendees)
                 profileCard = eventAttendees.map((student, index) =>
                     <Grid key={index} item sm={3} spacing={16} >
                         <Card className={classes.card}>
@@ -56,7 +57,7 @@ class EventHomePage extends Component {
         }
 
         const renderButton = () => {
-            const { user, Joined, isOrganizer, handleDeleteEvent, handleJoinEvent, handleLeaveEvent} = this.props;
+            const { user, Joined, isOrganizer, handleDeleteEvent, handleJoinEvent, handleLeaveEvent } = this.props;
 
             if (Joined) {
                 return (
@@ -77,69 +78,69 @@ class EventHomePage extends Component {
         return (
             <div>
                 <Grid className={classes.main_grid} container sm={12} spacing={16}>
-                    <Grid container sm={6} style={{margin: "30px 40px 60px 130px"}}>
+                    <Grid container sm={6} style={{ margin: "30px 40px 60px 130px" }}>
 
                         <Grid item sm={12} className={classes.white}>
-                            <h1 style={{fontSize: "30px"}}>{event.title}</h1>
+                            <h1 style={{ fontSize: "30px" }}>{event.title}</h1>
                             <Typography color="textSecondary">
-                            <PersonOutlineIcon className={classes.iconIm}/>
+                                <PersonOutlineIcon className={classes.iconIm} />
                                 {`Organizer: ${event.owner}`}
                             </Typography>
                             <Typography color="textSecondary">
-                                <LocationONIcon className={classes.iconIm}/>
+                                <LocationONIcon className={classes.iconIm} />
                                 {`Campus: ${campusInfo.name}`}
                             </Typography>
                             <Typography color="textSecondary">
-                                <TimerIcon className={classes.iconIm}/>
+                                <TimerIcon className={classes.iconIm} />
                                 {`time: ${moment(event.time).format("hh:mm a")}`}
                             </Typography>
                         </Grid>
-                      
-                        <Grid item sm={12} style={{paddingTop: "50px"}}>
+
+                        <Grid item sm={12} style={{ paddingTop: "50px" }}>
                             <Typography>
-                                <span style={{verticalAlign: "super", fontFamily: "Raleway"}}>Share:</span> &ensp;
-                                <a href="https://www.facebook.com/"><img alt="icon" src={facebookIcon} className={classes.share}/></a>
-                                <a href="https://twitter.com/"><img alt="icon" src={twitterIcon} className={classes.share}/></a>
-                                <a href="https://www.linkedin.com/"><img alt="icon" src={linkedInIcon} className={classes.share}/></a>
+                                <span style={{ verticalAlign: "super", fontFamily: "Raleway" }}>Share:</span> &ensp;
+                                <a href="https://www.facebook.com/"><img alt="icon" src={facebookIcon} className={classes.share} /></a>
+                                <a href="https://twitter.com/"><img alt="icon" src={twitterIcon} className={classes.share} /></a>
+                                <a href="https://www.linkedin.com/"><img alt="icon" src={linkedInIcon} className={classes.share} /></a>
                             </Typography>
                         </Grid>
-                           
-                        <Grid item sm={12} style={{margin: "50px 0 50px 0"}}>
-                            <h2  style={{margin: "0"}}>What we're about</h2>
-                            <Divider className={classes.divider}/>
-                            <Typography variant="body2" style={{marginTop: "20px"}}>
+
+                        <Grid item sm={12} style={{ margin: "50px 0 50px 0" }}>
+                            <h2 style={{ margin: "0" }}>What we're about</h2>
+                            <Divider className={classes.divider} />
+                            <Typography variant="body2" style={{ marginTop: "20px" }}>
                                 {event.details}
-                            </Typography> 
+                            </Typography>
                         </Grid>
 
                         <Grid item sm={12}>
-                            <h3  style={{margin: "0", fontSize: "18px", fontWeight: "bold"}}>
-                                <span><PeopleIcon className={classes.iconIm}/></span>
-                            Attending</h3>
-                            <Divider className={classes.divider}/>
+                            <h3 style={{ margin: "0", fontSize: "18px", fontWeight: "bold" }}>
+                                <span><PeopleIcon className={classes.iconIm} /></span>
+                                Attending</h3>
+                            <Divider className={classes.divider} />
                         </Grid>
-                            {renderProfileCards()}
-                    </Grid> 
+                        {renderProfileCards()}
+                    </Grid>
 
                     <Grid justify="center" container sm={4}>
 
-                        <Grid item justify="center" sm={12} style={{marginTop: "30px"}}>
+                        <Grid item justify="center" sm={12} style={{ marginTop: "30px" }}>
                             <Typography className={classes.pos} >
                                 <span className={classes.interest}>Interested?</span>&ensp;&ensp;
-                                <span className={classes.going}>{bull} {`${eventAttendees.length} going`}</span> 
+                                <span className={classes.going}>{bull} {`${eventAttendees.length} going`}</span>
                             </Typography>
-                            <Divider className={classes.divider}/>
+                            <Divider className={classes.divider} />
                             {renderButton()}
                         </Grid>
 
-                        <Grid item sm={12} style={{marginTop: "0px"}}>
+                        <Grid item sm={12} style={{ marginTop: "0px" }}>
                             <Calendar value={event.date} />
                         </Grid>
                         <Grid item sm={12}>
-                            <p>Map will be here</p>
+                            <EventMap />
                         </Grid>
                     </Grid>
-                
+
                 </Grid>
             </div>
         )
