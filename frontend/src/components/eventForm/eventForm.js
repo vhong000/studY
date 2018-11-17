@@ -132,6 +132,7 @@ export const EventForm = props => {
                 onChange={handleChange}
                 id='event_limit'
                 type='number' 
+								helperText={touched.event_limit && errors.event_limit}
               />
             </Grid>
           </Grid>
@@ -200,7 +201,7 @@ export default withFormik({
 	validationSchema: Yup.object().shape({
 		event_name: Yup.string().required(),
     event_location: Yup.string().required(),
-    event_limit: Yup.number(),
+    event_limit: Yup.number().moreThan(0, "Must be greater than 0").required(),
 		event_date: Yup.string().required(),
 		event_time: Yup.string().required(),
 		event_description: Yup.string().required(),
