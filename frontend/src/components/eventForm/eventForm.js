@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Form, Field, withFormik } from 'formik';
 import * as Yup from 'yup';
@@ -6,13 +5,14 @@ import {
   TextField, Button, Grid,
   Select, MenuItem, FormControl,
   InputLabel, withStyles, Typography,
-  Paper, OutlinedInput
+  Paper, OutlinedInput, Divider
 } from '@material-ui/core';
 // import Select from 'react-select';
 import propTypes from 'prop-types'
 import { createEvent } from '../../fetches';
 import moment from 'moment';
 import styles from './eventForm.styles';
+import icon from '../../images/icon.png'
 
 
 const inputField = ({
@@ -22,7 +22,7 @@ const inputField = ({
   required, helperText, margin,
   defaultValue, multiline, rows
 }) => (
-	<TextField
+	<TextField 
 		id={id} label={label} type={type}
 		variant={variant} {...input}
 		placeholder={placeholder} helperText={helperText}
@@ -80,112 +80,123 @@ export const EventForm = props => {
     <Form name='createEventForm'
       className={classes.main_form}
       id='main_form' >
-      <Typography 
-        variant='display1'
-        children="Create An Event"
-      />
-      <Typography variant="subtitle1" gutterBottom>
-        Name:
-          {`${user.owner.first_name}`}
-      </Typography>
-      <Grid container justify='center' >
-        <Grid container item xs='6' direction='column' >
-          <Grid item>
-            <Field 
-              name='eventName'
-              label='Event Name'
-              id='event_name' 
-              variant='outlined'
-              type='text'
-              margin='dense'
-              required
-              onChange={handleChange}
-              component={inputField}
-              helperText={touched.event_name && errors.event_name}
-              />
+        <Grid container direction='row'   style={{height: "60px"}} >
+          <Grid item xs='1' style={{marginTop: "12px"}}>
+            <img alt="icon" src={icon} className={classes.icon}/> 
           </Grid>
-
-          <Grid container item spacing='8'>
-            <Grid item xs='8'>
-              <Field
-                name='eventLocation' 
-                values={values}
-                type='text'
-                variant='outlined'
-                margin='dense'
-                component={selectField}
-                required
-                label='School'
-                onChange={handleChange}
-                id='event_location' >
-                  {schools.map((school) => (
-                    <MenuItem value={school.id}>{school.name}</MenuItem>
-                  ))}
-              </Field>
-            </Grid>
-
-            <Grid item xs='4'>
-              <Field
-                name='eventLimit'
-                component={inputField}
-                variant='outlined'
-                margin='dense'
-                label='Limit'
-                onChange={handleChange}
-                id='event_limit'
-                type='number' 
-              />
-            </Grid>
+          <Grid item xs='1' style={{marginTop: "15px"}}>
+            <Typography style={{fontFamily: "Raleway", fontWeight: '600'}}
+              variant='display1'>studY</Typography>
           </Grid>
-
-          <Grid container item spacing='8'>
-            <Grid item xs='6' >
-              <Field
-                name='eventDate'
-                component={temporalInputField}
-                label='Date'
-                onChange={handleChange}
-                id='event_date'
-                type="date"
+          <Grid item xs='6'></Grid>
+          <Grid item xs='4' style={{paddingRight: "20px"}}> 
+            <FormControl fullWidth margin='normal'>
+              <Button
+                type='submit'
+                variant="contained"
+                children='Save Event'
+                disabled={isSubmitting}
+                color='primary'
+                id='submit_button'
               />
-            </Grid>
-            <Grid item xs='6'>
-              <Field
-                name='eventTime'
-                component={temporalInputField}
-                label='Time'
-                onChange={handleChange}
-                id='event_time'
-                type="time"
-              />
-            </Grid>
-          </Grid>
-
-        <Grid item >
-          <Field
-            name='eventDescription'
-            component={inputField}
-            multiline
-            variant='outlined'
-            rows="4"
-            onChange={handleChange}
-            label="Event Description"
-            id='event_description' />
-          </Grid>
-
-          <Grid item >
-          <FormControl fullWidth margin='normal'>
-            <Button
-              type='submit'
-              children='Create Event'
-              disabled={isSubmitting}
-              color='primary'
-              id='submit_button'
-            />
-          </FormControl>
+            </FormControl>
           </Grid>   
         </Grid>
-      </Grid>
+
+        <Divider />
+
+        <div style={{backgroundColor: "rgb(245, 247, 249)", paddingBottom: "20px"}}>
+          <Typography variant="subtitle1" gutterBottom className={classes.text}>
+              {`${user.owner.first_name}`}, tell us more about your event!
+          </Typography>
+          
+          <Grid container justify='center' >
+            <Grid container item xs='6' direction='column' justify='center' >
+              <Grid item>
+                <Field 
+                  name='eventName'
+                  label='Event Name'
+                  id='event_name' 
+                  variant='outlined'
+                  type='text'
+                  margin='dense'
+                  required
+                  onChange={handleChange}
+                  component={inputField}
+                  helperText={touched.event_name && errors.event_name}
+                  />
+              </Grid>
+
+              <Grid container item spacing='8'>
+                <Grid item xs='8'>
+                  <Field
+                    name='eventLocation' 
+                    values={values}
+                    type='text'
+                    variant='outlined'
+                    margin='dense'
+                    component={selectField}
+                    required
+                    label='School'
+                    onChange={handleChange}
+                    id='event_location' >
+                      {schools.map((school) => (
+                        <MenuItem value={school.id}>{school.name}</MenuItem>
+                      ))}
+                  </Field>
+                </Grid>
+
+                <Grid item xs='4'>
+                  <Field
+                    name='eventLimit'
+                    component={inputField}
+                    variant='outlined'
+                    margin='dense'
+                    label='Limit'
+                    onChange={handleChange}
+                    id='event_limit'
+                    type='number' 
+                  />
+                </Grid>
+              </Grid>
+
+              <Grid container item spacing='8'>
+                <Grid item xs='6' >
+                  <Field
+                    name='eventDate'
+                    component={temporalInputField}
+                    label='Date'
+                    onChange={handleChange}
+                    id='event_date'
+                    type="date"
+                  />
+                </Grid>
+                <Grid item xs='6'>
+                  <Field
+                    name='eventTime'
+                    component={temporalInputField}
+                    label='Time'
+                    onChange={handleChange}
+                    id='event_time'
+                    type="time"
+                  />
+                </Grid>
+              </Grid>
+
+            <Grid item >
+              <Field
+                name='eventDescription'
+                component={inputField}
+                multiline
+                variant='outlined'
+                rows="4"
+                onChange={handleChange}
+                label="Event Description"
+                id='event_description' />
+              </Grid>
+            </Grid>
+          </Grid>
+        </div> 
     </Form>
   )
 }
