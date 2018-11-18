@@ -26,6 +26,7 @@ const styles = theme => ({
         return (
             <ReactMapGL
                 mapStyle={"mapbox://styles/mapbox/streets-v9"}
+                //maybe this is a bad idea. i will remove it when everyone had here own key
                 mapboxApiAccessToken={"pk.eyJ1Ijoicm9oYW4tc3dhYnkiLCJhIjoiY2pvbHphM3dxMGcwYjNxbzluNGthazM5YyJ9.3buTivFCvbOVrVMCKERy-g"}
                 {...this.state.viewport}
                 onViewportChange={(viewport) => this.setState({ viewport })}>
