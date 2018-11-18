@@ -76,6 +76,7 @@ const temporalInputField = ({
 export const EventForm = props => {
   const { handleChange, classes, values,
     schools, isSubmitting, touched, errors, user } = props;
+  console.log(user);
   return ( 
     <Form name='createEventForm'
       className={classes.main_form}
