@@ -7,7 +7,7 @@ from accounts.models import Account
 class SchoolSerializer(serializers.ModelSerializer):
     class Meta:
         model = School
-        fields = ('id', 'name', 'code')
+        fields = ('__all__')
 
 
 class TopicSerializer(serializers.ModelSerializer):
