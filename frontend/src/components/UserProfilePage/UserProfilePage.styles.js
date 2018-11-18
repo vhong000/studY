@@ -1,10 +1,11 @@
 const styles = {
     main_grid: {
-        "margin": 20,   
+        "marginTop": 20,
+        "paddingLeft": "16%"   
     },
     icon: {
-        position: "fixed",
-        top: "145px",
+        position: "absolute",
+        top: "140px",
         left: "100px",
         height: "150px",
         width: "150px",
@@ -15,7 +16,7 @@ const styles = {
         verticalAlign: "text-bottom",
     }, 
     header_grid: {
-        marginLeft: "25%",
+        marginLeft: "24%",
         paddingTop: "50px"
     },
     header_typography: {
@@ -23,6 +24,12 @@ const styles = {
         fontSize: "18px",
         fontFamily: "Raleway",
         fontWeight: "600"
+    },
+    h2: {
+        marginBottom: "5px"
+    },
+    typography: {
+        marginBottom: "0"
     }
 
 }
