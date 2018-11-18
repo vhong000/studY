@@ -1,29 +1,45 @@
 import React, { Component } from 'react';
 import ReactMapGL, { Marker } from 'react-map-gl';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
-
-export default class EventMap extends Component {
+import { withStyles }  from '@material-ui/core';
+const styles = theme => ({
+    iconIm: {
+        fontSize: 38,
+        color: "#B22222",
+        verticalAlign: "text-bottom",
+    }
+});
+ class EventMap extends Component {
     state = {
         viewport: {
-            width: 400,
-            height: 400,
-            latitude: 37.7577,
-            longitude: -122.4376,
-            zoom: 15
+            width: 350,
+            height: 300,
+            latitude: this.props.location.latitude,
+            longitude: this.props.location.longitude,
+            zoom: 13.5
         }
     };
     render() {
+        console.log(this.props);
+        const { classes } = this.props;
+
         return (
             <ReactMapGL
                 mapStyle={"mapbox://styles/mapbox/streets-v9"}
                 mapboxApiAccessToken={"pk.eyJ1Ijoicm9oYW4tc3dhYnkiLCJhIjoiY2pvbHphM3dxMGcwYjNxbzluNGthazM5YyJ9.3buTivFCvbOVrVMCKERy-g"}
                 {...this.state.viewport}
                 onViewportChange={(viewport) => this.setState({ viewport })}>
-                <Marker latitude={37.7577} longitude={-122.4376} offsetLeft={-20} offsetTop={-10} >
-                    <LocationOnIcon/>
+                <Marker
+                    latitude={this.props.location.latitude}
+                    longitude={this.props.location.longitude}
+                    offsetLeft={-20}
+                    offsetTop={-10} >
+                    <LocationOnIcon className={classes.iconIm} />
                 </Marker>
             </ReactMapGL>
 
         );
     }
 }
+
+export default withStyles(styles)(EventMap);

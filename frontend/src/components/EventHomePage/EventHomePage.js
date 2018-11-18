@@ -6,7 +6,7 @@ import { EventListCard } from '../../components';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import { studyIcon, CCNY } from '../../images';
-import  EventMap  from './EventMap';
+import EventMap from './EventMap';
 import {
 
     Typography, Grid, withStyles, Paper, Divider, Toolbar,
@@ -23,6 +23,11 @@ import TimerIcon from '@material-ui/icons/Timer';
 import facebookIcon from '../../images/facebook-icon.png';
 import twitterIcon from '../../images/twitter-icon.png';
 import linkedInIcon from '../../images/linkedIn-icon.png';
+
+const dummylocation={
+    latitude:40.8194,
+    longitude:-73.95
+}
 
 class EventHomePage extends Component {
     render() {
@@ -50,7 +55,7 @@ class EventHomePage extends Component {
                     </Grid>
                 )
             } else {
-                profileCard = <Typography variant="subtitle1" color="textSecondary"> No one is attend this event yet </Typography>
+                profileCard = <Typography variant="subtitle1" color="textSecondary"> No one has Joined </Typography>
             }
             return (profileCard);
 
@@ -133,11 +138,11 @@ class EventHomePage extends Component {
                             {renderButton()}
                         </Grid>
 
-                        <Grid item sm={12} style={{ marginTop: "0px" }}>
-                            <Calendar value={event.date} />
+                        <Grid item sm={12} style={{ marginTop: "1px" }}>
+                            <EventMap location={dummylocation} />
                         </Grid>
-                        <Grid item sm={12}>
-                            <EventMap />
+                        <Grid item sm={12} style={{ marginTop: "15px" }}>
+                            <Calendar value={event.date} />
                         </Grid>
                     </Grid>
 
