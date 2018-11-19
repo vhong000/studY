@@ -33,7 +33,7 @@ class UserProfile extends Component {
 
     render() {  
         const { user = null } = this.props;
-        console.log(this.state);
+        //console.log(this.state);
         return (
             <>
                 {this.state.dataLoaded ? (<UserProfilePage user={user} 
