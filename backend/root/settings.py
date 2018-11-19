@@ -6,11 +6,20 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'ot=6xctd1o9ltmrq)dj0hkxt&umw*xjexfg!2nwob8_n9yd5y)'
 TRUSTED_ORIGINS = ['localhost', '127.0.0.1']
 DEBUG = True
+DB_BACKEND = None
 
 if os.getenv('DJAPP_ENV', default='DEV') == 'PROD':
     TRUSTED_ORIGINS.append(os.getenv('DJAPP_HOST'))
     SECRET_KEY = os.getenv('DJAPP_SECRET_KEY')
     DEBUG = False
+    DB_BACKEND = {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.getenv('MYSQL_DBNAME'),
+        'USER': os.getenv('MYSQL_USERNAME'),
+        'PASSWORD': os.getenv('MYSQL_PWD'),
+        'HOST': 'localhost',
+        'PORT': '3306',
+    }
 
 ALLOWED_HOSTS = TRUSTED_ORIGINS
 INTERNAL_IPS = TRUSTED_ORIGINS
@@ -77,23 +86,11 @@ TEMPLATES = [
 WSGI_APPLICATION = 'root.wsgi.application'
 
 
-db_config = {
-    'mysql': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'db_name',
-        'USER': 'username',
-        'PASSWORD': 'password',
-        'HOST': 'hostname',
-        'PORT': '3306',
-    },
-    'sqlite': {
+DATABASES = {
+    'default': DB_BACKEND or {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
-}
-
-DATABASES = {
-    'default': db_config['sqlite']
 }
 
 
