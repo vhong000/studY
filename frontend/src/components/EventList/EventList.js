@@ -66,8 +66,8 @@ class EventList extends Component {
                 <Modal open={createEventModal} onClose={() => handleClose()} >
                     <div className={classes.eventFormPaper}>
                         <EventForm 
-                        subtopic={parseInt(this.props.params.subtopic)} 
-                        handleClose={handleClose} />
+                            subtopic={parseInt(this.props.params.subtopic)} 
+                            handleClose={handleClose} />
                     </div>
                 </Modal>
                 </div>

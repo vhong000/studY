@@ -12,10 +12,11 @@ const styles = theme => ({
 }) 
 
 const schools = [{id: 0, name: "city"}, {id: 1, name: "baruch"}]
+const user = {owner: {id: 1, first_name: "Bobby"}}
 
 describe('EventForm', () => {
   const mock = jest.fn();
-  const wrapper = mount(<EventForm schools={schools} classes={styles} /> );
+  const wrapper = mount(<EventForm schools={schools} classes={styles} user={user}/> );
 
   it('should render all fields', () => {
     expect(wrapper.find('#event_name').exists()).toBe(true);
