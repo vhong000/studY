@@ -190,7 +190,22 @@ export const EventForm = props => {
                 component={inputField}
                 multiline
                 variant='outlined'
-                rows="4"
+                margin='dense'
+                label='Limit'
+                onChange={handleChange}
+                id='event_limit'
+                type='number' 
+								helperText={touched.event_limit && errors.event_limit}
+              />
+            </Grid>
+          </Grid>
+
+          <Grid container item spacing='8'>
+            <Grid item xs='6' >
+              <Field
+                name='eventDate'
+                component={temporalInputField}
+                label='Date'
                 onChange={handleChange}
                 label="Event Description"
                 id='event_description' />
@@ -214,7 +229,7 @@ export default withFormik({
 	validationSchema: Yup.object().shape({
 		event_name: Yup.string().required(),
     event_location: Yup.string().required(),
-    event_limit: Yup.number(),
+    event_limit: Yup.number().moreThan(0, "Must be greater than 0").required(),
 		event_date: Yup.string().required(),
 		event_time: Yup.string().required(),
 		event_description: Yup.string().required(),
