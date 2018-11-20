@@ -17,16 +17,18 @@ class eventFormWrapper extends Component  {
   static contextType = AuthContext;
 
   componentDidMount() {
+    
     fetchSchools().then(response => { 
       this.setState({ schools: response.results })
     }); 
   }
 
   render() {
+    const { user } = this.props;
     const hasSchools = !isEmpty(this.state.schools);
     return ( 
       hasSchools ? (
-        <EventForm {...this.props} {...this.context} 
+        <EventForm user = {user} {...this.props} {...this.context} 
         schools={this.state.schools} />
       ) : (<p> Loading...</p>)
     )

@@ -67,9 +67,9 @@ const styles = theme => ({
         position: 'absolute',
         left: '50%',
         width: '700px',
-        height: '50%',
+        //height: '50%',
         backgroundColor: theme.palette.background.paper,
-        transform: 'translate(-50%, 50%)',
+        transform: 'translate(-50%, 40%)',
     }
     
 });
