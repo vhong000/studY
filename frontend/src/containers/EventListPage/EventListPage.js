@@ -79,7 +79,14 @@ class EventListPage extends Component {
     }
 
     handleCreateModalClose() {
-        this.setState({ createEventModal: false })
+        this.setState({ createEventModal: false });
+        const id = this.props.match.params.subtopic;
+        if (this.props.match.params) {
+            fetchEventByTopic(id).then(response => {
+                this.setState({ events: response.results })
+                this.arangeEventsByDates(response.results);
+            });
+        }
     }
 
     handleCreateModalOpen() {
