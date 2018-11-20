@@ -7,23 +7,24 @@ import {
 	EventListPage, Header,
 	EventPage, SubtopicPage, App, UserProfile
 } from './containers';
+import  ProtectedRoute  from './ProtectedRoute/ProtectedRoute'
 import * as serviceWorker from './serviceWorker';
 
 import AuthProvider, { AuthWrapper } from './contexts/Auth.context.js';
 
 ReactDOM.render(
-		<Router>
-			<div>
-				<AuthProvider>
-					<Header />
-					<Route exact path="/" component={App} />
-					<Route exact path="/category/:category" component={SubtopicPage} />
-					<Route exact path="/category/:category/:subtopic" component={EventListPage}/>
-					<Route exact path="/category/:category/:subtopic/:eventId" component={EventPage}/> 
-					<Route exact path="/profile" component={AuthWrapper(UserProfile)} />
-				</AuthProvider>
-			</div>
-		</Router>,
+	<Router>
+		<div>
+			<AuthProvider>
+				<Header />
+				<Route exact path="/" component={App} />
+				<Route exact path="/category/:category" component={SubtopicPage} />
+				<Route exact path="/category/:category/:subtopic" component={EventListPage} />
+				<Route exact path="/category/:category/:subtopic/:eventId" component={EventPage} />
+				<ProtectedRoute exact path="/profile"  component={AuthWrapper(UserProfile)} />
+			</AuthProvider>
+		</div>
+	</Router>,
 	document.getElementById('root')
 );
 
