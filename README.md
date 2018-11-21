@@ -16,7 +16,6 @@ StydY is inspired by the software engineering project proposal of Rohan Swaby:
 ### backend
 * Moustafa Abdou - Continuous Integration/Delivery
 * Carlos Ng Sang - Code Reviewer
-* Francisco Springer - Designer
 ### API Docs
 [https://documenter.getpostman.com/view/3106741/RWguwGu4](https://documenter.getpostman.com/view/3106741/RWguwGu4)
 ### Continuous Integration
