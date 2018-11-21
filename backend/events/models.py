@@ -5,6 +5,8 @@ from accounts.models import Account
 class School(models.Model):
     name = models.CharField(max_length=100)
     code = models.CharField(max_length=10)
+    lat  = models.CharField(max_length=15)
+    long = models.CharField(max_length=15)
 
     def __str__(self):
         return f'{self.name.title()} - {self.code}'

@@ -2,6 +2,8 @@ from django.core.management.base import BaseCommand
 from events.models import School
 import json
 from pathlib import Path
+import sys
+from itertools import chain
 
 
 class Command(BaseCommand):
