@@ -14,13 +14,15 @@ const styles = theme => ({
         viewport: {
             width: 350,
             height: 300,
-            latitude: this.props.location.latitude,
-            longitude: this.props.location.longitude,
+            latitude:  parseFloat(this.props.campusInfo.lat),
+            longitude: 0 - parseFloat(this.props.campusInfo.long),
             zoom: 13.5
         }
     };
     render() {
-        console.log(this.props);
+        const latitude = parseFloat(this.props.campusInfo.lat);
+        const longitude = 0 - parseFloat(this.props.campusInfo.long);
+        console.log(latitude, longitude)
         const { classes } = this.props;
 
         return (
@@ -31,8 +33,8 @@ const styles = theme => ({
                 {...this.state.viewport}
                 onViewportChange={(viewport) => this.setState({ viewport })}>
                 <Marker
-                    latitude={this.props.location.latitude}
-                    longitude={this.props.location.longitude}
+                    latitude={latitude}
+                    longitude={longitude}
                     offsetLeft={-20}
                     offsetTop={-10} >
                     <LocationOnIcon className={classes.iconIm} />

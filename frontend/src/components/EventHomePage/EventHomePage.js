@@ -32,7 +32,7 @@ const dummylocation={
 class EventHomePage extends Component {
     render() {
         const { classes, event, eventAttendees, campusInfo } = this.props;
-        // console.log("This.Props[0]", this.props);
+        console.log("This.Props[0]", campusInfo);
 
         const bull = <span className={classes.bullet}>•</span>;
 
@@ -139,7 +139,7 @@ class EventHomePage extends Component {
                         </Grid>
 
                         <Grid item sm={12} style={{ marginTop: "1px" }}>
-                            <EventMap location={dummylocation} />
+                            {campusInfo? <EventMap location={dummylocation} campusInfo={campusInfo} />:null}
                         </Grid>
                         <Grid item sm={12} style={{ marginTop: "15px" }}>
                             <Calendar value={event.date} />
