@@ -5,7 +5,7 @@ import icon from '../../images/icon.jpg';
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
 
-class UserProfilePage extends Component {
+export class UserProfilePage extends Component {
    
     render() {
         const { classes, user, school } = this.props;
@@ -57,7 +57,7 @@ class UserProfilePage extends Component {
                     </Grid>
                 
                     <Grid item >
-                        <Button>Edit</Button>
+                        <Button id='edit-button'>Edit</Button>
                     </Grid>
                 </Grid>  
             </>
