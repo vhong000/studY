@@ -1,6 +1,7 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { UserProfilePage } from '../../components';
 import { fetchSchoolDatails } from '../../fetches';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 class UserProfile extends Component {
     constructor(props) {
@@ -13,32 +14,31 @@ class UserProfile extends Component {
 
     getSchoolDetails() {
         const { user } = this.props;
-        if(user.school && !this.state.school) {
+        if (user.school && !this.state.school) {
             fetchSchoolDatails(user.school).then(school => {
-                this.setState({ 
-                    school: school, 
+                this.setState({
+                    school: school,
                     dataLoaded: true
                 });
             });
-        }        
+        }
     }
 
     componentDidMount() {
-        this.getSchoolDetails();     
+        this.getSchoolDetails();
     }
 
     componentDidUpdate() {
-        this.getSchoolDetails();     
+        this.getSchoolDetails();
     }
-
-    render() {  
+    render() {
         const { user = null } = this.props;
         //console.log(this.state);
         return (
             <>
-                {this.state.dataLoaded ? (<UserProfilePage user={user} 
-                                      school={this.state.school}/>) : false}
-            </>       
+                {this.state.dataLoaded && user ? (<UserProfilePage user={user}
+                    school={this.state.school} />) : <h3>you are logged out</h3>}
+            </>
         )
     }
 }
