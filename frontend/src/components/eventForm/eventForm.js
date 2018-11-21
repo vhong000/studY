@@ -157,6 +157,7 @@ export const EventForm = props => {
                     onChange={handleChange}
                     id='event_limit'
                     type='number' 
+                    helperText={touched.event_limit && errors.event_limit}
                   />
                 </Grid>
               </Grid>
@@ -189,28 +190,17 @@ export const EventForm = props => {
                 name='eventDescription'
                 component={inputField}
                 multiline
+                rows={4}
                 variant='outlined'
                 margin='dense'
-                label='Limit'
+                label='Event Description'
                 onChange={handleChange}
-                id='event_limit'
-                type='number' 
-								helperText={touched.event_limit && errors.event_limit}
+                id='event_description'
+                type="text"
               />
             </Grid>
           </Grid>
 
-          <Grid container item spacing='8'>
-            <Grid item xs='6' >
-              <Field
-                name='eventDate'
-                component={temporalInputField}
-                label='Date'
-                onChange={handleChange}
-                label="Event Description"
-                id='event_description' />
-              </Grid>
-            </Grid>
           </Grid>
         </div> 
     </Form>
