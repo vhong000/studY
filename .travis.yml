@@ -18,10 +18,10 @@ matrix:
         directories:
           - node_modules
       before_script:
-        - cd frontend
+        - cd frontend && npm install
       script:
         - npm test
-        - npm run build
+        # - npm run build
       # deploy:
       # on:
       #   branch: master
