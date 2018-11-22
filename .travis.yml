@@ -12,7 +12,17 @@ matrix:
         - coverage run --source='.' manage.py test --noinput
     
     - language: node_js
+      node_js: 
+        - "stable"
+      cache:
+        directories:
+          - node_modules
       before_script:
-        - cd frontend
+        - cd frontend && npm install
       script:
-        - ls
+        - npm test
+        # - npm run build
+      # deploy:
+      # on:
+      #   branch: master
+      
