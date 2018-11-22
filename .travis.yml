@@ -1,0 +1,18 @@
+matrix:
+  include:
+    - language: python
+      python: 3.6
+      install:
+        - pip install -r backend/requirements.txt
+      before_script:
+        - cd backend
+        - rm -f */migrations/0*.py 2> /dev/null
+        - ./manage.py makemigrations && ./manage.py migrate
+      script:
+        - coverage run --source='.' manage.py test --noinput
+    
+    - language: node_js
+      before_script:
+        - cd frontend
+      script:
+        - ls
