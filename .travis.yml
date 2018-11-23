@@ -19,12 +19,10 @@ matrix:
       cache:
         directories:
           - frontend/node_modules
-    
       before_script:
         - cd frontend && npm install
       script:
         - npm test
-
       before_deploy:
         - npm run build 
         - mv build/static/* ../backend/static/
