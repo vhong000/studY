@@ -22,15 +22,12 @@ const styles = theme => ({
         }
     };
     render() { 
-        //const latitude = parseFloat(this.props.campusInfo.lat);
-        //const longitude =  parseFloat(this.props.campusInfo.long);
         console.log(this.latitude, this.longitude)
         const { classes } = this.props;
 
         return (
             <ReactMapGL
                 mapStyle={"mapbox://styles/mapbox/streets-v9"}
-                //maybe this is a bad idea. i will remove it when everyone had here own key
                 mapboxApiAccessToken={"pk.eyJ1Ijoicm9oYW4tc3dhYnkiLCJhIjoiY2pvbHphM3dxMGcwYjNxbzluNGthazM5YyJ9.3buTivFCvbOVrVMCKERy-g"}
                 {...this.state.viewport}
                 onViewportChange={(viewport) => this.setState({ viewport })}>
