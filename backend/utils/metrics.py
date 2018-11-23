@@ -6,7 +6,7 @@ import os
 import matplotlib.pyplot as plt
 from matplotlib.dates import date2num
 
-HEADERS = {'Authorization': 'bearer 08b7510d30b54ffe876a1618f4e0804a5808e34f'}
+HEADERS = {'Authorization': 'bearer %s' % os.getenv('GITHUB_TOKEN')}
 SEARCH_URL = 'https://api.github.com/search/issues?q=repo:csc59939/studY+type:pr+is:merged+'
 FILTERS = 'created:{start_date}..{end_date}&per_page=100&order=created'
 START_DATE = '2018-11-08'
