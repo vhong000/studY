@@ -10,19 +10,21 @@ const styles = theme => ({
     }
 });
  class EventMap extends Component {
+    latitude = parseFloat(this.props.campusInfo.lat);
+    longitude = parseFloat(this.props.campusInfo.long);
     state = {
         viewport: {
             width: 350,
             height: 300,
-            latitude:  parseFloat(this.props.campusInfo.lat),
-            longitude:  parseFloat(this.props.campusInfo.long),
+            latitude: this.latitude,
+            longitude: this.longitude,
             zoom: 13.5
         }
     };
     render() { 
-        const latitude = parseFloat(this.props.campusInfo.lat);
-        const longitude =  parseFloat(this.props.campusInfo.long);
-        console.log(latitude, longitude)
+        //const latitude = parseFloat(this.props.campusInfo.lat);
+        //const longitude =  parseFloat(this.props.campusInfo.long);
+        console.log(this.latitude, this.longitude)
         const { classes } = this.props;
 
         return (
@@ -33,8 +35,8 @@ const styles = theme => ({
                 {...this.state.viewport}
                 onViewportChange={(viewport) => this.setState({ viewport })}>
                 <Marker
-                    latitude={latitude}
-                    longitude={longitude}
+                    latitude={this.latitude}
+                    longitude={this.longitude}
                     offsetLeft={-20}
                     offsetTop={-10} >
                     <LocationOnIcon className={classes.iconIm} />
