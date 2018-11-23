@@ -15,13 +15,13 @@ const styles = theme => ({
             width: 350,
             height: 300,
             latitude:  parseFloat(this.props.campusInfo.lat),
-            longitude: 0 - parseFloat(this.props.campusInfo.long),
+            longitude:  parseFloat(this.props.campusInfo.long),
             zoom: 13.5
         }
     };
-    render() {
+    render() { 
         const latitude = parseFloat(this.props.campusInfo.lat);
-        const longitude = 0 - parseFloat(this.props.campusInfo.long);
+        const longitude =  parseFloat(this.props.campusInfo.long);
         console.log(latitude, longitude)
         const { classes } = this.props;
 
