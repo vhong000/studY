@@ -2,6 +2,8 @@ matrix:
   include:
     - language: python
       python: 3.6
+      cache:
+        pip: true
       install:
         - pip install -r backend/requirements.txt
       before_script:
@@ -9,20 +11,31 @@ matrix:
         - rm -f */migrations/0*.py 2> /dev/null
         - ./manage.py makemigrations && ./manage.py migrate
       script:
-        - coverage run --source='.' manage.py test --noinput
+        - coverage run --source='.' manage.py test --noinput && cd ..
     
     - language: node_js
       node_js: 
         - "stable"
       cache:
         directories:
-          - node_modules
+          - frontend/node_modules
+    
       before_script:
         - cd frontend && npm install
       script:
         - npm test
+
+      before_deploy:
+        - npm run build 
+        - mv build/static/* ../backend/static/
+        - cp -r build/* ../backend/templates/
+        - cd ../backend
+      deploy:
+        provider: heroku
+        api_key: $HEROKU_API_KEY
+        app: studyy-app
+        skip_cleanup: true
+        on:
+          branch: master
+          # type: push
         # - npm run build
-      # deploy:
-      # on:
-      #   branch: master
-      
