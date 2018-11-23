@@ -1,5 +1,6 @@
 
 import os
+import django_heroku
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -12,14 +13,14 @@ if os.getenv('DJAPP_ENV', default='DEV') == 'PROD':
     TRUSTED_ORIGINS.append(os.getenv('DJAPP_HOST'))
     SECRET_KEY = os.getenv('DJAPP_SECRET_KEY')
     DEBUG = False
-    DB_BACKEND = {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.getenv('MYSQL_DBNAME'),
-        'USER': os.getenv('MYSQL_USERNAME'),
-        'PASSWORD': os.getenv('MYSQL_PWD'),
-        'HOST': 'localhost',
-        'PORT': '3306',
-    }
+    # DB_BACKEND = {
+    #     'ENGINE': 'django.db.backends.mysql',
+    #     'NAME': os.getenv('MYSQL_DBNAME'),
+    #     'USER': os.getenv('MYSQL_USERNAME'),
+    #     'PASSWORD': os.getenv('MYSQL_PWD'),
+    #     'HOST': 'localhost',
+    #     'PORT': '3306',
+    # }
 
 ALLOWED_HOSTS = TRUSTED_ORIGINS
 INTERNAL_IPS = TRUSTED_ORIGINS
@@ -33,6 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'accounts',
     'events',
@@ -43,6 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -70,7 +73,7 @@ ROOT_URLCONF = 'root.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'build/static')],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,11 +122,17 @@ USE_L10N = True
 
 USE_TZ = True
 
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-STATIC_URL = '/build/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'build/static')]
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-MEDIA_URL = '/media/'
+if "TRAVIS" not in os.environ:
+    django_heroku.settings(locals())
+    # WHITENOISE_INDEX_FILE = True
+
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+# MEDIA_URL = '/media/'
 
 CONFIRM_EMAIL = False
 # EMAIL_USE_TLS = True
