@@ -13,7 +13,6 @@ from events.serializers import SchoolSerializer, TopicSerializer, EventSerialize
 from events.models import Event, Course, Topic, School, Category
 from accounts.models import Account
 from accounts.serializers import AccountSerializer
-from django.views.generic import TemplateView
 
 
 class EventViewSet(NestedViewSetMixin, viewsets.ModelViewSet):
@@ -107,6 +106,3 @@ class CategoryView(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     http_method_names = ['get']
     serializer_class = CategorySerializer
-
-
-catchall = TemplateView.as_view(template_name='index.html')

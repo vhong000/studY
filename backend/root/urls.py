@@ -9,4 +9,4 @@ urlpatterns = [
     path('api/auth/', include('accounts.urls')),
     path('api/', include('events.urls')),
     re_path(r'^', TemplateView.as_view(template_name='index.html')),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
