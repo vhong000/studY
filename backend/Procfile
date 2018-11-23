@@ -1,2 +1,2 @@
-release: python manage.py makemigrations && python manage.py migrate
+release: ./post_release.sh
 web: gunicorn root.wsgi --log-file -
