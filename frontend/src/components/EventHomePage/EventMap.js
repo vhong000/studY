@@ -10,31 +10,30 @@ const styles = theme => ({
     }
 });
  class EventMap extends Component {
+    latitude = parseFloat(this.props.campusInfo.lat);
+    longitude = parseFloat(this.props.campusInfo.long);
     state = {
         viewport: {
             width: 350,
             height: 300,
-            latitude:  parseFloat(this.props.campusInfo.lat),
-            longitude: 0 - parseFloat(this.props.campusInfo.long),
+            latitude: this.latitude,
+            longitude: this.longitude,
             zoom: 13.5
         }
     };
-    render() {
-        const latitude = parseFloat(this.props.campusInfo.lat);
-        const longitude = 0 - parseFloat(this.props.campusInfo.long);
-        console.log(latitude, longitude)
+    render() { 
+        console.log(this.latitude, this.longitude)
         const { classes } = this.props;
 
         return (
             <ReactMapGL
                 mapStyle={"mapbox://styles/mapbox/streets-v9"}
-                //maybe this is a bad idea. i will remove it when everyone had here own key
                 mapboxApiAccessToken={"pk.eyJ1Ijoicm9oYW4tc3dhYnkiLCJhIjoiY2pvbHphM3dxMGcwYjNxbzluNGthazM5YyJ9.3buTivFCvbOVrVMCKERy-g"}
                 {...this.state.viewport}
                 onViewportChange={(viewport) => this.setState({ viewport })}>
                 <Marker
-                    latitude={latitude}
-                    longitude={longitude}
+                    latitude={this.latitude}
+                    longitude={this.longitude}
                     offsetLeft={-20}
                     offsetTop={-10} >
                     <LocationOnIcon className={classes.iconIm} />

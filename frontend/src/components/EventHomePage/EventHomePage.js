@@ -24,9 +24,9 @@ import facebookIcon from '../../images/facebook-icon.png';
 import twitterIcon from '../../images/twitter-icon.png';
 import linkedInIcon from '../../images/linkedIn-icon.png';
 
-const dummylocation={
-    latitude:40.8194,
-    longitude:-73.95
+const dummylocation = {
+    latitude: 40.8194,
+    longitude: -73.95
 }
 
 class EventHomePage extends Component {
@@ -139,7 +139,7 @@ class EventHomePage extends Component {
                         </Grid>
 
                         <Grid item sm={12} style={{ marginTop: "1px" }}>
-                            {campusInfo? <EventMap location={dummylocation} campusInfo={campusInfo} />:null}
+                            {campusInfo ? <EventMap location={dummylocation} campusInfo={campusInfo} /> : null}
                         </Grid>
                         <Grid item sm={12} style={{ marginTop: "15px" }}>
                             <Calendar value={event.date} />
