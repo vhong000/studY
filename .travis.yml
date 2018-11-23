@@ -35,5 +35,3 @@ matrix:
         skip_cleanup: true
         on:
           branch: master
-          # type: push
-        # - npm run build

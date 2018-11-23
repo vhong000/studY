@@ -5,7 +5,7 @@ import django_heroku
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = 'ot=6xctd1o9ltmrq)dj0hkxt&umw*xjexfg!2nwob8_n9yd5y)'
-TRUSTED_ORIGINS = ['localhost', '127.0.0.1']
+TRUSTED_ORIGINS = ['localhost', '127.0.0.1', 'https://studyy-app.herokuapp.com/']
 DEBUG = True
 DB_BACKEND = None
 
