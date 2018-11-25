@@ -2,8 +2,7 @@ from rest_framework.authentication import (BasicAuthentication,
                                            TokenAuthentication)
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.authtoken.models import Token as REST_Token
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
-# from rest_framework.parsers import JSONParser
+# from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
@@ -22,11 +21,13 @@ class SignupView(APIView):
         payload['username'] = payload.get('username', None) or uuid.uuid4().hex
         data = dict([(k, payload.pop(k, None)) for k in ['school', 'year', 'major']])
         data['owner'] = payload
-        account_serializer = AccountSerializer(data=data)
-        if account_serializer.is_valid(raise_exception=True):
-            account_serializer.save()
+        acc_serializer = AccountSerializer(data=data)
+        acc_serializer.is_valid(raise_exception=True)
+        acc_serializer.save()
+        ret = acc_serializer.data
+        ret['token'] = acc_serializer.instance.owner.auth_token.key
 
-        return Response(data=account_serializer.data, status=status.HTTP_201_CREATED, content_type='application/json')
+        return Response(data=ret, status=status.HTTP_201_CREATED, content_type='application/json')
 
 
 class AuthenticationView(ObtainAuthToken):

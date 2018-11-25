@@ -3,10 +3,8 @@ from factory.django import DjangoModelFactory
 from django.contrib.auth import get_user_model
 import pytz
 from accounts.models import Account
-from events import serializers
-from events.models import School, Event, Topic
+from events.models import School, Event
 from .helpers import get_cuny_schools
-# from accounts.serializers import Account
 
 
 class UserFactory(DjangoModelFactory):
@@ -18,7 +16,7 @@ class UserFactory(DjangoModelFactory):
     last_name = factory.Faker('last_name')
     email = factory.Faker('email')
     username = factory.Faker('user_name')
-    password = factory.Faker('password')
+    password = factory.PostGenerationMethodCall('set_password', 'p@$$w0rd')
 
 
 class AccountFactory(DjangoModelFactory):
@@ -27,7 +25,7 @@ class AccountFactory(DjangoModelFactory):
         django_get_or_create = ('owner',)
 
     owner = factory.SubFactory(UserFactory)
-    school = factory.Iterator(School.objects.all(), cycle=False)
+    school = factory.Iterator(School.objects.all(), cycle=True)
 
 
 class EventFactory(DjangoModelFactory):
