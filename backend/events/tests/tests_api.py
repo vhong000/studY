@@ -1,14 +1,11 @@
 from rest_framework.test import APITestCase, APIClient
 from rest_framework import status
-from rest_framework.authtoken.models import Token
-from django.contrib.auth import get_user_model
 from django.urls import reverse
-import json
 
-from .factories import AccountFactory, UserFactory, SchoolFactory, EventFactory
+from .factories import AccountFactory, SchoolFactory, EventFactory
 from events.serializers import EventSerializer
-from accounts.serializers import AccountSerializer
 from events.models import Event
+from accounts.serializers import AccountSerializer
 
 
 class EventTests(APITestCase):
@@ -78,26 +75,26 @@ class EventGuestsTest(APITestCase):
         SchoolFactory.create()
         cls.account = AccountFactory.create()
 
+    @classmethod
+    def get_collection_url(cls, event_id):
+        return reverse('event-attendees-list', kwargs={'parent_lookup_events': event_id})
+
     def setUp(self):
         self.client = APIClient()
-        self.client.credentials(HTTP_AUTHORIZATION='Token ' +
-                                self.account.owner.auth_token.key)
+        self.set_credentials(self.account)
 
     def set_credentials(self, acc):
-        self.client.credentials(HTTP_AUTHORIZATION='Token ' +
-                                acc.owner.auth_token.key)
+        self.client.credentials(HTTP_AUTHORIZATION='Token ' + acc.owner.auth_token.key)
 
     def test_join_event(self):
         event = EventSerializer(EventFactory.create()).data
-        url = reverse('event-attendees-list',
-                      kwargs={'parent_lookup_events': event['id']})
+        url = self.get_collection_url(event['id'])
         res = self.client.post(url)
         self.assertEqual(res.json()[0], AccountSerializer(self.account).data)
 
     def test_join_full_event(self):
         event = EventSerializer(EventFactory.create(capacity=5)).data
-        url = reverse('event-attendees-list',
-                      kwargs={'parent_lookup_events': event['id']})
+        url = self.get_collection_url(event['id'])
 
         for acc in AccountFactory.create_batch(5):
             self.set_credentials(acc)
@@ -111,8 +108,7 @@ class EventGuestsTest(APITestCase):
     def test_leave_event(self):
         event = EventSerializer(EventFactory.create(attendees=[self.account])).data
         self.assertEqual(Event.objects.count(), 1)
-        url = reverse('event-attendees-list',
-                      kwargs={'parent_lookup_events': event['id']})
+        url = self.get_collection_url(event['id'])
         res = self.client.delete(url)
         self.assertEqual(res.status_code, 200)
         self.assertEqual(res.json(), 'guest dropped')
@@ -121,7 +117,6 @@ class EventGuestsTest(APITestCase):
         accounts = AccountFactory.create_batch(5)
         guest_list = list(map(lambda acc: AccountSerializer(acc).data, accounts))
         event = EventSerializer(EventFactory.create(attendees=accounts)).data
-        url = reverse('event-attendees-list',
-                      kwargs={'parent_lookup_events': event['id']})
+        url = self.get_collection_url(event['id'])
         res = self.client.get(url)
         self.assertEqual(res.json()['results'], guest_list)
