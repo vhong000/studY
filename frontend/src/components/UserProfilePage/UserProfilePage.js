@@ -13,17 +13,17 @@ export class UserProfilePage extends Component {
             <>
                 <div style={{height: "160px", backgroundColor: "rgb(148, 160, 231)"}}> 
                     <Grid container> 
-                        <img alt="icon" src={icon} className={classes.icon}/> 
+                        <img alt="icon" id="icon" src={icon} className={classes.icon}/> 
                         <Grid container direction="column" className={classes.header_grid}>
                             <Grid item> 
                                 <Typography variant="subtitle1" gutterBottom className={classes.header_typography}>
-                                    <PersonOutlineIcon className={classes.iconUi}/>&ensp;
+                                    <PersonOutlineIcon id="person-icon" className={classes.iconUi}/>&ensp;
                                     {`${user.owner.first_name} ${user.owner.last_name}`}
                             </Typography>
                             </Grid>
                             <Grid>
                                 <Typography variant="subtitle1" gutterBottom className={classes.header_typography}>
-                                    <AlternateEmailIcon className={classes.iconUi}/>&ensp;
+                                    <AlternateEmailIcon id="email-icon"className={classes.iconUi}/>&ensp;
                                     {`${user.owner.email}`}
                             </Typography>
                             </Grid>
