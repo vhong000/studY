@@ -34,7 +34,7 @@ class SubtopicPage extends Component {
 						{subtopics ? (subtopics.map((topic, i) => {
 							return (
 								<Grid item xs='12' md='6' lg='4' >
-									<Card className={classes.card}>
+									<Card id="card" className={classes.card}>
 										<CardActionArea
 											component={Link}
 											to={`/category/${category}/${topic.id}`} >
@@ -42,7 +42,7 @@ class SubtopicPage extends Component {
 												className={classes.media}
 												image={topic.image} />
 											<CardContent>
-												<Typography align="center" variant="h6">
+												<Typography id="name" align="center" variant="h6">
 													{topic.name}
 												</Typography>
 											</CardContent>
