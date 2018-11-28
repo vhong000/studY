@@ -27,7 +27,7 @@ const inputField = ({
 		variant={variant} {...input}
 		placeholder={placeholder} helperText={helperText}
 		children={children} required={required}
-    fullWidth onChange={onChange}
+    fullWidth onBlur={onChange}
     margin={margin} defaultValue={defaultValue}
     multiline={multiline} rows={rows}
 	/>
@@ -64,7 +64,7 @@ const temporalInputField = ({
       InputLabelProps={{ shrink: true}}
       variant='outlined'
       margin='dense'
-      onChange={onChange}
+      onBlur={onChange}
       id={id}
       children={children}
       type={type}
@@ -76,7 +76,6 @@ const temporalInputField = ({
 export const EventForm = props => {
   const { handleChange, classes, values,
     schools, isSubmitting, touched, errors, user } = props;
-  console.log(user);
   return ( 
     <Form name='createEventForm'
       className={classes.main_form}
