@@ -159,10 +159,6 @@ export const Register = props => {
 							message={<span>Incomplete Form</span>}
 						/> */}
 						</Form>
-					<div>
-						<span>Already have a StudY Account?</span>&ensp;
-						<a href="/login" className={classes.Signin}>SIGN IN</a>
-					</div>
 				</div>
 			</div>
 		</div>
