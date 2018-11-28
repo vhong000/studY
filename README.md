@@ -1,4 +1,4 @@
-## StudYUP [![Build Status](https://travis-ci.com/CSC59939/studY.svg?branch=master)](https://travis-ci.com/CSC59939/studY)
+## StudY [![Build Status](https://travis-ci.com/CSC59939/studY.svg?branch=master)](https://travis-ci.com/CSC59939/studY)
 ---
 ### Welcome to StudY!
 The purpose of this project is to bring New York City college students together and help them organize study groups to share  information, knowledge, and expertise about a subject in which they have particular interest. 
@@ -14,11 +14,11 @@ StydY is inspired by the software engineering project proposal of Rohan Swaby:
 
 | Name                  | Release 1                         |  Release 2            |
 | -------------         |:---------------------------------:|:---------------------:|
-| Victor Hong           | Unit Tester & Presenter           |                       |
+| Victor Hong           | Unit Tester & Presenter           | Presenter & Unit Tester|
 | Hanna Nekhniadovich   | Documenter                        | Documenter            |
-| Rohan Swaby           | Customer                          |                       |
+| Rohan Swaby           | Customer                          | Code reviewer & Tracker|
 | Moustafa Abdou        | Continuous Integration/Delivery   | CI/CD                 |
-| Carlos Ng Sang        | Code Reviewer                     | Customer & Presenter  |
+| Carlos Ng Sang        | Code Reviewer                     | Customer & Designer   |
 
 
 ----

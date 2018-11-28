@@ -64,11 +64,6 @@ export const Login = props => {
 									</button>
 								</div>
 							</Form>
-
-							<div>
-								<span>Don't have a StudY Account?</span>&ensp;
-								<a href="/register" className={classes.Signup}>SIGN UP</a>
-							</div>
 						</div>
 					</div>
 				</div>
