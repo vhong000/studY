@@ -66,8 +66,14 @@ export class UserProfilePage extends Component {
             </Typography>
             <h2 className={classes.h2}>Additional information:</h2>
             <Typography variant="subtitle1" gutterBottom>
-              {/* Events Joined: */}
+                <span>Events joined:</span> 
             </Typography>
+            <ul>
+                {events.length > 0 && events.map(event => 
+                    <li key={event.id}>{event.name}</li>
+                    )
+                }
+            </ul>
           </Grid>
 
           <Grid item>
