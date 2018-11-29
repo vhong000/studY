@@ -12,17 +12,12 @@ import { registerUser } from '../../fetches';
 // more components at https://material-ui.com/getting-started/usage/
 
 const inputField = ({ 
-	input, children, id, 
-	label, type, variant,
-	placeholder, onChange,
-	required, helperText
+	input, ...rest
 }) => (
 	<TextField InputProps={{className: classes.TextField}}
-		id={id} label={label} type={type}
-		variant={variant} {...input}
-		placeholder={placeholder} helperText={helperText}
-		children={children} required={required}
-		fullWidth onBlur={onChange}
+		{...input}
+		fullWidth 
+		{...rest}
 	/>
 )
 
@@ -76,7 +71,7 @@ export const Register = props => {
 											type='text'
 											variant='outlined'
 											required
-											onChange={handleChange}
+											onBlur={handleChange}
 											component={inputField} />
 										</Grid>
 										<Grid item xs='6'>
@@ -87,7 +82,7 @@ export const Register = props => {
 											type='text'
 											variant='outlined' 
 											required
-											onChange={handleChange}
+											onBlur={handleChange}
 											component={inputField} />
 										</Grid>
 									</Grid>
@@ -99,7 +94,7 @@ export const Register = props => {
 											type='email'
 											variant='outlined'
 											required
-											onChange={handleChange}
+											onBlur={handleChange}
 											helperText={touched.email && errors.email && <p>{errors.email}</p>}
 											component={inputField} />
 									</Grid>
@@ -111,7 +106,7 @@ export const Register = props => {
 											type='password'
 											variant='outlined'
 											required
-											onChange={handleChange}
+											onBlur={handleChange}
 											component={inputField} />
 									</Grid>
 									<Grid container item direction='row' spacing='16'>
@@ -139,7 +134,7 @@ export const Register = props => {
 											type='text'
 											variant='outlined'
 											required
-											onChange = {handleChange}
+											onBlur = {handleChange}
 											component={inputField} />
 									</Grid>
 									{ errors.registerForm && <span>{errors.registerForm}</span> }

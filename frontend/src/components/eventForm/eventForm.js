@@ -16,20 +16,12 @@ import icon from '../../images/icon.png'
 
 
 const inputField = ({
-	input, children, id, 
-	label, type, variant,
-	placeholder, onChange,
-  required, helperText, margin,
-  defaultValue, multiline, rows
+	input, ...rest
 }) => (
 	<TextField 
-		id={id} label={label} type={type}
-		variant={variant} {...input}
-		placeholder={placeholder} helperText={helperText}
-		children={children} required={required}
-    fullWidth onBlur={onChange}
-    margin={margin} defaultValue={defaultValue}
-    multiline={multiline} rows={rows}
+		{...input}
+		{...rest}
+		fullWidth
 	/>
 )
 
@@ -37,18 +29,18 @@ const selectField = ({
 	input, children, id, margin,
 	label, variant, onChange, values
 }) => (
-<FormControl fullWidth margin={margin}>
-	<InputLabel required variant={variant} >{label}</InputLabel>
-	<Select 
-	children={children}
-  id={id}
-	{...input}
-	input={<OutlinedInput 
-		value={values.event_location}
-		onChange={onChange('event_location')}
-		margin='dense' />}
-	/>
-</FormControl>
+	<FormControl fullWidth margin={margin}>
+		<InputLabel required variant={variant} >{label}</InputLabel>
+		<Select 
+		children={children}
+		id={id}
+		{...input}
+		input={<OutlinedInput 
+			value={values.event_location}
+			onChange={onChange('event_location')}
+			margin='dense' />}
+		/>
+	</FormControl>
 )
 
 const temporalInputField = ({
@@ -121,7 +113,7 @@ export const EventForm = props => {
                   type='text'
                   margin='dense'
                   required
-                  onChange={handleChange}
+                  onBlur={handleChange}
                   component={inputField}
                   helperText={touched.event_name && errors.event_name}
                   />
@@ -153,7 +145,7 @@ export const EventForm = props => {
                     variant='outlined'
                     margin='dense'
                     label='Limit'
-                    onChange={handleChange}
+                    onBlur={handleChange}
                     id='event_limit'
                     type='number' 
                     helperText={touched.event_limit && errors.event_limit}
@@ -193,7 +185,7 @@ export const EventForm = props => {
                 variant='outlined'
                 margin='dense'
                 label='Event Description'
-                onChange={handleChange}
+                onBlur={handleChange}
                 id='event_description'
                 type="text"
               />
