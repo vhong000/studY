@@ -17,7 +17,7 @@ const inputField = ({
 		variant='outlined' {...input}
 		placeholder={placeholder} margin='dense'
 		children={children} required={required}
-		fullWidth onChange={onChange} helperText={helperText} 
+		fullWidth onBlur={onChange} helperText={helperText} 
 	/>
 )
 

@@ -22,7 +22,7 @@ const inputField = ({
 		variant={variant} {...input}
 		placeholder={placeholder} helperText={helperText}
 		children={children} required={required}
-		fullWidth onChange={onChange}
+		fullWidth onBlur={onChange}
 	/>
 )
 
