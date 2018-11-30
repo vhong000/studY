@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { Header } from '../components';
 import { AuthContext } from '../contexts/Auth.context';
 
-class headerWrapper extends Component  {
+class headerWrapper extends Component {
   static contextType = AuthContext;
 
   constructor(props) {
@@ -19,7 +19,7 @@ class headerWrapper extends Component  {
   }
 
   handleClose(modal) {
-    if(modal === 'login') {
+    if (modal === 'login') {
       this.setState({ loginOpen: false })
     } else if (modal === 'register') {
       this.setState({ registerOpen: false })
@@ -27,7 +27,7 @@ class headerWrapper extends Component  {
   }
 
   handleOpen(modal) {
-    if(modal === 'login') {
+    if (modal === 'login') {
       this.setState({ loginOpen: true })
     } else if (modal === 'register') {
       this.setState({ registerOpen: true })
@@ -41,14 +41,14 @@ class headerWrapper extends Component  {
 
   render() {
     const { user } = this.context;
-    return ( 
-      <Header 
-      {...this.state} 
-      user={user}
-      handleModalClose={this.handleClose}
-      handleModalOpen={this.handleOpen}
-      handleLogout={this.handleLogout}
-       />
+    return (
+      <Header
+        {...this.state}
+        user={user}
+        handleModalClose={this.handleClose}
+        handleModalOpen={this.handleOpen}
+        handleLogout={this.handleLogout}
+      />
     )
   }
 }

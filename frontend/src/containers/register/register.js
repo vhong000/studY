@@ -34,4 +34,4 @@ class registerWrapper extends Component  {
   }
 }
 
-export default (registerWrapper)
+export default registerWrapper;

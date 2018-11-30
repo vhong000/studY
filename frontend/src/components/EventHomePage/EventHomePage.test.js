@@ -1,3 +1,5 @@
+
+/* eslint-disable */
 import React from 'react';
 import * as enzyme from 'enzyme';
 import renderer from 'react-test-renderer';
