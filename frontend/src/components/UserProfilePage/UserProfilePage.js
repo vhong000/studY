@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import {
-  Typography, Grid, withStyles, Button,
-} from '@material-ui/core';
+import { Typography, Grid, withStyles, Button, Modal } from '@material-ui/core';
+import EditForm from '../EditForm/EditForm'
+import icon from '../../images/icon.jpg';
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
 import propTypes from 'prop-types';
@@ -9,8 +9,9 @@ import styles from './UserProfilePage.styles';
 import icon from '../../images/icon.jpg';
 
 export class UserProfilePage extends Component {
+
   render() {
-    const { classes, user, school } = this.props;
+    const { classes, user, school, events, handleOpen, handleClose, editModalOpened } = this.props;
     return (
       <>
         <div style={{ height: '160px', backgroundColor: 'rgb(148, 160, 231)' }}>
@@ -75,11 +76,17 @@ export class UserProfilePage extends Component {
                 }
             </ul>
           </Grid>
-
-          <Grid item>
-            <Button id="edit-button">Edit</Button>
-          </Grid>
         </Grid>
+          <Grid item >
+          <Button id='edit-button'
+              onClick={() => handleOpen()}>Edit</Button>
+          </Grid>
+          <Modal open={editModalOpened} onClose={() => handleClose()} >
+            <div className={classes.editForm}>
+                    <EditForm />
+                </div>
+          </Modal>
+        
       </>
     );
   }

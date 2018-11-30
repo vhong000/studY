@@ -31,7 +31,14 @@ const styles = {
   typography: {
     marginBottom: '0',
   },
-
+  editForm: {
+    position: 'absolute',
+    left: '50%',
+    width: '700px',
+    //height: '50%',
+    backgroundColor: 'lightgrey',
+    transform: 'translate(-50%, 40%)',
+}
 };
 
 export default styles;
