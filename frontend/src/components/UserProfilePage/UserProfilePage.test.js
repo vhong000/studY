@@ -20,8 +20,14 @@ const user = {
   major: "cs"
 };
 
+const events = [
+  { id: 1, name: "midterm review" },
+  { id: 2, name: "final review" },
+  { id: 3, name: "linear algebra" },
+]
+
 describe('UserProfilePage', () => {
-  const wrapper = shallow(<UserProfilePage user={user} school={school} classes={styles} /> );
+  const wrapper = shallow(<UserProfilePage user={user} school={school} classes={styles} events={events}/> );
   it('should render all fields', () => {
     expect(wrapper.find('#edit-button').exists()).toBe(true);
     expect(wrapper.find('#person-icon').exists()).toBe(true);
