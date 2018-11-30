@@ -38,7 +38,12 @@ const styles = {
     //height: '50%',
     backgroundColor: 'lightgrey',
     transform: 'translate(-50%, 40%)',
-}
+  },
+  list: {
+    listStyleType: 'none',
+    margin: 0,
+    padding: 0
+    }
 };
 
 export default styles;

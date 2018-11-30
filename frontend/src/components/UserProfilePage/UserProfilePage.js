@@ -66,27 +66,32 @@ export class UserProfilePage extends Component {
               {`${user.major}`}
             </Typography>
             <h2 className={classes.h2}>Additional information:</h2>
-            <Typography variant="subtitle1" gutterBottom>
-                <span>Events joined:</span> 
+            <Typography variant="subtitle1" gutterBottom className={classes.typography}>
+            <span>Events Joined:</span> 
             </Typography>
-            <ul>
-                {events.length > 0 && events.map(event => 
+            {/* <ul>
+                {events.length > 0 ? (events.map(event => 
+                    <li key={event.id}>{event.name}</li>
+                )) : <p>You didn't join any events</p>}
+            </ul> */}
+            <ul className={classes.list}>
+                {events.map(event => 
                     <li key={event.id}>{event.name}</li>
                     )
                 }
             </ul>
-          </Grid>
         </Grid>
-          <Grid item >
-          <Button id='edit-button'
-              onClick={() => handleOpen()}>Edit</Button>
-          </Grid>
-          <Modal open={editModalOpened} onClose={() => handleClose()} >
-            <div className={classes.editForm}>
-                    <EditForm />
-                </div>
-          </Modal>
-        
+                
+        <Grid item >
+            <Button id='edit-button'
+                onClick={() => handleOpen()}>Edit</Button>
+        </Grid>
+    </Grid>  
+    <Modal open={editModalOpened} onClose={() => handleClose()} >
+        <div className={classes.editForm}>
+            <EditForm />
+        </div>
+    </Modal>
       </>
     );
   }
