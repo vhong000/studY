@@ -10,10 +10,9 @@ DEBUG = True
 DB_BACKEND = None
 
 if os.getenv('DJAPP_ENV', default='DEV') == 'PROD':
-    # TRUSTED_ORIGINS.append(os.getenv('DJAPP_HOST'))
-    DJAPP_ENV = 'PROD'
-    SECRET_KEY = '9vv_1r4izg89q@t)wt3a9k!%%(hwq2+fxr-#1(m%ogxxi&%v*&'
+    SECRET_KEY = os.getenv('DJAPP_SECRET_KEY')
     DEBUG = False
+    # TRUSTED_ORIGINS.append(os.getenv('DJAPP_HOST'))
     # DB_BACKEND = {
     #     'ENGINE': 'django.db.backends.mysql',
     #     'NAME': os.getenv('MYSQL_DBNAME'),
