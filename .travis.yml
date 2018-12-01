@@ -18,6 +18,8 @@ matrix:
         - "stable"
       before_script:
         - cd frontend && npm install
+      after_script:
+          - CI=false && npm run build 
       script:
         - npm test
       before_deploy:
