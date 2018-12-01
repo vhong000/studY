@@ -23,7 +23,6 @@ matrix:
       script:
         - npm test
       before_deploy:
-        - CI=false && npm run build 
         - mv build/static/* ../backend/static/
         - cp -r build/* ../backend/templates/
         - cd ../backend
