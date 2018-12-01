@@ -3,7 +3,7 @@ from django.urls import path, include
 from events.api import (EventViewSet, SchoolViewSet,
                         CourseViewSet, CategoryView,
                         TopicView, ProfileView,
-                        EventGuestsViewSet)
+                        EventGuestsViewSet,ProfileEditView)
 
 
 router = ExtendedSimpleRouter(trailing_slash=False)
@@ -24,5 +24,7 @@ router.register(r'topics', TopicView)
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('profile', ProfileView.as_view(), name='profile')
+    path('profile', ProfileView.as_view(), name='profile'),
+    path('profile-update', ProfileEditView.as_view(), name='profile-update')
+
 ]

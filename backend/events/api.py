@@ -9,7 +9,8 @@ from django.shortcuts import get_object_or_404
 from events.serializers import SchoolSerializer, TopicSerializer, EventSerializer, CourseSerializer, CategorySerializer
 from events.models import Event, Course, Topic, School, Category
 from accounts.models import Account
-from accounts.serializers import AccountSerializer
+from django.contrib.auth.models import User
+from accounts.serializers import AccountSerializer,UserSerializer
 
 
 class EventViewSet(NestedViewSetMixin, viewsets.ModelViewSet):
@@ -21,6 +22,7 @@ class EventViewSet(NestedViewSetMixin, viewsets.ModelViewSet):
     # search_fields = ('description', 'topic', 'campus', 'name')
     # ordering_fields = '__all__'
     # ordering = ('created',)
+
 
     def perform_create(self, serializer):
         serializer.save(organizer=self.request.user.account)
@@ -65,6 +67,7 @@ class EventGuestsViewSet(NestedViewSetMixin, viewsets.ModelViewSet):
             return Response(data=str(e), status=status.HTTP_404_NOT_FOUND)
 
 
+# check back later
 class ProfileView(generics.RetrieveAPIView):
     queryset = Account.objects.all()
     serializer_class = AccountSerializer
@@ -81,6 +84,34 @@ class ProfileView(generics.RetrieveAPIView):
 
         raise NotFound()
 
+class ProfileEditView(generics.RetrieveAPIView):
+    # email, first, last, school, major
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    http_method_names = ('put',)
+
+    def put(self,request):
+        qs = self.get_queryset()
+        payload = request.data
+        qs.get(id=self.request.GET['id'])
+        data = payload
+
+        user = User.objects.get(id=payload['owner'])
+        user.name = data['first_name']
+        user.last_name= data['last_name']
+        user.email= data['email']
+        user.save()
+
+        acc = Account.objects.get(owner=user)
+        acc.school = data['school']
+        acc.major = data['major']
+        acc.save()
+
+        acc = Account.objects.get(owner=user)
+        ser = AccountSerializer(acc)
+        ret = ser.data
+
+        return Response(data=ret, status=status.HTTP_200_OK, content_type='application/json')
 
 class SchoolViewSet(NestedViewSetMixin, viewsets.ReadOnlyModelViewSet):
     queryset = School.objects.all()

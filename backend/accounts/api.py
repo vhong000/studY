@@ -45,7 +45,6 @@ class AuthenticationView(ObtainAuthToken):
             'token': token.key,
         }, status=status.HTTP_200_OK, content_type='application/json')
 
-
 class EmailConfirmationView(APIView):
     authentication_classes = (BasicAuthentication, TokenAuthentication)
 

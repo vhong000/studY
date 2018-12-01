@@ -35,7 +35,7 @@ class Command(BaseCommand):
             with open(file) as fh:
                 coordinate= json.load(fh)
 
-            print("adding lat")
+            print("adding lat&lon")
             for code, obj in coordinate.items():
                 lat = obj[0]
                 long = obj[1]
