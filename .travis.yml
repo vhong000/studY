@@ -16,9 +16,6 @@ matrix:
     - language: node_js
       node_js: 
         - "stable"
-      cache:
-        directories:
-          - frontend/node_modules
       before_script:
         - cd frontend && npm install
       script:
