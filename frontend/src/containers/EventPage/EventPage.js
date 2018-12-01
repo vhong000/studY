@@ -10,6 +10,8 @@ import {
     getUserData
 } from '../../fetches';
 import { AuthContext, AuthWrapper } from '../../contexts/Auth.context';
+import CircularProgress from '@material-ui/core/CircularProgress';
+
 
 class EventPage extends Component {
     static contextType = AuthContext;
@@ -124,7 +126,7 @@ class EventPage extends Component {
             //this.props.history.push(`/category/${category}/${subtopic}`);
             this.props.history.goBack();
 
-            
+
         })
     }
 
@@ -143,7 +145,7 @@ class EventPage extends Component {
                     user={user}
                     event={eventInfo}
                     eventAttendees={eventAttendees}
-                    campusInfo={campusInfo} /> : <h1>Event does not exist</h1>}
+                    campusInfo={campusInfo} /> :<CircularProgress disableShrink />}
             </div>
         )
     }
