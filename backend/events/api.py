@@ -2,6 +2,7 @@ from rest_framework.authentication import (BasicAuthentication,
                                            TokenAuthentication)
 from rest_framework import generics, viewsets, permissions, status
 from rest_framework_extensions.mixins import NestedViewSetMixin
+from rest_framework.mixins import UpdateModelMixin
 from rest_framework.response import Response
 from rest_framework.exceptions import NotFound, PermissionDenied
 from django.shortcuts import get_object_or_404
@@ -68,50 +69,46 @@ class EventGuestsViewSet(NestedViewSetMixin, viewsets.ModelViewSet):
 
 
 # check back later
-class ProfileView(generics.RetrieveAPIView):
+class ProfileView(UpdateModelMixin,generics.RetrieveAPIView):
     queryset = Account.objects.all()
     serializer_class = AccountSerializer
-    http_method_names = ('get',)
+    lookup_field = 'school'
     # authentication_classes = (BasicAuthentication, TokenAuthentication)
 
     def get_object(self):
-        qs = self.get_queryset()
-        if self.request.GET.get('id', None):
-            return qs.get(owner__id=self.request.GET['id'])
-
-        if not self.request.user.is_anonymous:
-            return qs.get(owner=self.request.user)
+        qs = Account.objects.all()
+        user_id = self.request.GET.get('id', None)
+        if user_id is not None:
+            qs = Account.objects.get(owner__id=user_id)
+        else:
+            qs = Account.objects.get(owner=self.request.user)
+        return qs
 
         raise NotFound()
 
-class ProfileEditView(generics.RetrieveAPIView):
-    # email, first, last, school, major
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
-    http_method_names = ('put',)
-
     def put(self,request):
-        qs = self.get_queryset()
-        payload = request.data
-        qs.get(id=self.request.GET['id'])
-        data = payload
-
-        user = User.objects.get(id=payload['owner'])
-        user.name = data['first_name']
-        user.last_name= data['last_name']
-        user.email= data['email']
+        id = request.data.get('id',None)
+        user = User.objects.get(id=id)
+        user.first_name = request.data.get('first_name',None)
+        user.last_name = request.data.get('last_name',None)
+        user.email = request.data.get('email',None)
+        user.set_password(request.data.get('password',None))
         user.save()
 
-        acc = Account.objects.get(owner=user)
-        acc.school = data['school']
-        acc.major = data['major']
-        acc.save()
+        account = Account.objects.get(owner=user)
+        sch = request.data.get('school',None)
+        school = School.objects.get(id=sch)
+        account.school = school
+        account.major = request.data.get('major',None)
+        account.save()
 
-        acc = Account.objects.get(owner=user)
-        ser = AccountSerializer(acc)
-        ret = ser.data
+        qs =  Account.objects.get(owner=self.request.user)
+        ser = AccountSerializer(qs)
+        return Response(data=ser.data,status=status.HTTP_200_OK)
 
-        return Response(data=ret, status=status.HTTP_200_OK, content_type='application/json')
+        
+        # self.update(request,*args,**kwargs)
+
 
 class SchoolViewSet(NestedViewSetMixin, viewsets.ReadOnlyModelViewSet):
     queryset = School.objects.all()
