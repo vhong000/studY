@@ -48,7 +48,7 @@ class EventHomePage extends Component {
                         <Card className={classes.card}>
                             <CardActionArea
                                 component={Link}
-                                to={`/profile/${student.owner.first_name}-${student.owner.id}${Math.random()}`}>
+                                to={`/profile/${student.owner.first_name}-${student.owner.id}`}>
 
                                 <CardMedia className={classes.media} image={studyIcon} />
                                 <CardContent>

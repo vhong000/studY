@@ -13,6 +13,11 @@ class UserProfile extends Component {
 
     componentDidMount() {
         //this.getSchoolDetails();
+        const { params } = this.props.match;
+        if(params){
+            const userInfo =  params.eventUserProfile.split("-")          
+            console.log("[0] ",userInfo)
+        }
     }
 
     componentDidUpdate() {
@@ -35,6 +40,7 @@ class UserProfile extends Component {
     render() {
         const { user = null } = this.props;
         const { dataLoaded, school } = this.state;
+        console.log("eventUser ",this.props)
         return (
             <div>
                 <h4>user event container </h4>
