@@ -77,7 +77,7 @@ class ProfileView(generics.RetrieveAPIView):
     def get_object(self):
         qs = self.get_queryset()
         if self.request.GET.get('id', None):
-            return qs.get(id=self.request.GET['id'])
+            return qs.get(owner__id=self.request.GET['id'])
 
         if not self.request.user.is_anonymous:
             return qs.get(owner=self.request.user)
