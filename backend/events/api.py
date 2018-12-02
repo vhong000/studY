@@ -10,7 +10,8 @@ from django.shortcuts import get_object_or_404
 from events.serializers import SchoolSerializer, TopicSerializer, EventSerializer, CourseSerializer, CategorySerializer,CommentSerializer
 from events.models import Event, Course, Topic, School, Category, Comment
 from accounts.models import Account
-from accounts.serializers import AccountSerializer
+from django.contrib.auth.models import User
+from accounts.serializers import AccountSerializer,UserSerializer
 
 
 class EventViewSet(NestedViewSetMixin, viewsets.ModelViewSet):
@@ -22,6 +23,7 @@ class EventViewSet(NestedViewSetMixin, viewsets.ModelViewSet):
     # search_fields = ('description', 'topic', 'campus', 'name')
     # ordering_fields = '__all__'
     # ordering = ('created',)
+
 
     def perform_create(self, serializer):
         serializer.save(organizer=self.request.user.account)
@@ -66,22 +68,47 @@ class EventGuestsViewSet(NestedViewSetMixin, viewsets.ModelViewSet):
             return Response(data=str(e), status=status.HTTP_404_NOT_FOUND)
 
 
-class ProfileView(generics.RetrieveAPIView):
+# check back later
+class ProfileView(UpdateModelMixin,generics.RetrieveAPIView):
     queryset = Account.objects.all()
     serializer_class = AccountSerializer
-    http_method_names = ('get',)
+    lookup_field = 'school'
     # authentication_classes = (BasicAuthentication, TokenAuthentication)
 
     def get_object(self):
-        qs = self.get_queryset()
-        if self.request.GET.get('id', None):
-            return qs.get(id=self.request.GET['id'])
-
-        if not self.request.user.is_anonymous:
-            return qs.get(owner=self.request.user)
+        qs = Account.objects.all()
+        user_id = self.request.GET.get('id', None)
+        if user_id is not None:
+            qs = Account.objects.get(owner__id=user_id)
+        else:
+            qs = Account.objects.get(owner=self.request.user)
+        return qs
 
         raise NotFound()
+        
+    def put(self,request):
+        id = request.data.get('id',None)
+        user = User.objects.get(id=id)
+        user.first_name = request.data.get('first_name',None)
+        user.last_name = request.data.get('last_name',None)
+        user.email = request.data.get('email',None)
+        user.set_password(request.data.get('password',None))
+        user.save()
 
+        account = Account.objects.get(owner=user)
+        sch = request.data.get('school',None)
+        school = School.objects.get(id=sch)
+        account.school = school
+        account.major = request.data.get('major',None)
+        account.save()
+
+        qs =  Account.objects.get(owner=self.request.user)
+        ser = AccountSerializer(qs)
+        return Response(data=ser.data,status=status.HTTP_200_OK)
+
+        
+        # self.update(request,*args,**kwargs)
+        
 class CommentViewSet(NestedViewSetMixin, viewsets.ModelViewSet):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
@@ -107,7 +134,6 @@ class CommentViewSet(NestedViewSetMixin, viewsets.ModelViewSet):
 
     def put(self,request,*args,**kwargs):
         self.update(request,*args,**kwargs)
-
 
 
 class SchoolViewSet(NestedViewSetMixin, viewsets.ReadOnlyModelViewSet):
