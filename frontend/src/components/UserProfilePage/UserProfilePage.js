@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Typography, Grid, withStyles, Button, Modal } from '@material-ui/core';
-import EditForm from '../EditForm/EditForm'
+import EditFormPage from '../EditFormPage/EditFormPage'
 import icon from '../../images/icon.jpg';
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
@@ -89,12 +89,12 @@ export class UserProfilePage extends Component {
     </Grid>  
     <Modal open={editModalOpened} onClose={() => handleClose()} >
         <div className={classes.editForm}>
-            <EditForm />
+            <EditFormPage />
         </div>
     </Modal>
-      </>
-    );
-  }
+            </>
+        )
+    }
 }
 
 UserProfilePage.propTypes = {

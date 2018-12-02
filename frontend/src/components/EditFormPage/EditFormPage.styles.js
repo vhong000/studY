@@ -2,16 +2,12 @@ const styles = {
     main_form: {
         textAlign: 'center',
         padding: '30px',
-        paddingBottom: '0'
+        paddingBottom: '0',
+        boxSizing: 'border-box'
     },
     textField: {
-        width: '88%',
-        //height: '50px'
+        width: '95%',
     },
-    gridStyle: {
-        padding: 0,
-        color: "red"
-    }
 }
    
 export default styles;
