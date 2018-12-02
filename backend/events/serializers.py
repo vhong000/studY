@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Event, School, Topic, Course, Category
+from .models import Event, School, Topic, Course, Category, Comment
 from accounts.serializers import AccountSerializer
 from accounts.models import Account
 
@@ -36,4 +36,11 @@ class EventSerializer(serializers.ModelSerializer):
 class CourseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Course
+        fields = ('__all__')
+
+class CommentSerializer(serializers.ModelSerializer):
+    user = AccountSerializer(read_only=True)
+
+    class Meta:
+        model = Comment
         fields = ('__all__')

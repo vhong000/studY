@@ -71,3 +71,16 @@ class Event(models.Model):
 
     def __str__(self):
         return self.name
+
+class Comment(models.Model):
+    user = models.ForeignKey(Account, on_delete=models.CASCADE, null=False)
+    event = models.ForeignKey(Event, on_delete=models.CASCADE)
+    message = models.CharField(max_length=500)
+    created_at = models.DateTimeField(auto_now_add=True)
+    upvote = models.IntegerField(default=0)
+
+    class Meta:
+        db_table = 'comments'
+
+    def __str__(self):
+        return self.message

@@ -2,12 +2,13 @@ from rest_framework.authentication import (BasicAuthentication,
                                            TokenAuthentication)
 from rest_framework import generics, viewsets, permissions, status
 from rest_framework_extensions.mixins import NestedViewSetMixin
+from rest_framework.mixins import UpdateModelMixin
 from rest_framework.response import Response
 from rest_framework.exceptions import NotFound, PermissionDenied
 from django.shortcuts import get_object_or_404
 
-from events.serializers import SchoolSerializer, TopicSerializer, EventSerializer, CourseSerializer, CategorySerializer
-from events.models import Event, Course, Topic, School, Category
+from events.serializers import SchoolSerializer, TopicSerializer, EventSerializer, CourseSerializer, CategorySerializer,CommentSerializer
+from events.models import Event, Course, Topic, School, Category, Comment
 from accounts.models import Account
 from accounts.serializers import AccountSerializer
 
@@ -81,6 +82,33 @@ class ProfileView(generics.RetrieveAPIView):
 
         raise NotFound()
 
+class CommentViewSet(NestedViewSetMixin, viewsets.ModelViewSet):
+    queryset = Comment.objects.all()
+    serializer_class = CommentSerializer
+    authentication_classes = (BasicAuthentication, TokenAuthentication)
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)  # IsOwnerOrReadOnly
+    lookup_field = 'event'
+
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user.account)
+
+    def perform_destroy(self, instance):
+        if instance.user== self.request.user.account:
+            instance.delete()
+        else:
+            raise PermissionDenied()
+
+    def get_queryset(self):
+        qs = Comment.objects.all()
+        event_id= self.request.GET.get('event', None)
+        if event_id is not None:
+            qs = Comment.objects.filter(event=event_id).order_by('-upvote')
+        return qs
+
+    def put(self,request,*args,**kwargs):
+        self.update(request,*args,**kwargs)
+
+
 
 class SchoolViewSet(NestedViewSetMixin, viewsets.ReadOnlyModelViewSet):
     queryset = School.objects.all()
@@ -103,3 +131,4 @@ class CategoryView(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     http_method_names = ['get']
     serializer_class = CategorySerializer
+
