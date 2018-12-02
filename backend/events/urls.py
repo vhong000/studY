@@ -3,7 +3,7 @@ from django.urls import path, include
 from events.api import (EventViewSet, SchoolViewSet,
                         CourseViewSet, CategoryView,
                         TopicView, ProfileView,
-                        EventGuestsViewSet,CommentViewSet)
+                        EventGuestsViewSet, CommentViewSet)
 
 
 router = ExtendedSimpleRouter(trailing_slash=False)

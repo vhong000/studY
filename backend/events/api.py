@@ -2,16 +2,14 @@ from rest_framework.authentication import (BasicAuthentication,
                                            TokenAuthentication)
 from rest_framework import generics, viewsets, permissions, status
 from rest_framework_extensions.mixins import NestedViewSetMixin
-from rest_framework.mixins import UpdateModelMixin
 from rest_framework.response import Response
 from rest_framework.exceptions import NotFound, PermissionDenied
 from django.shortcuts import get_object_or_404
 
-from events.serializers import SchoolSerializer, TopicSerializer, EventSerializer, CourseSerializer, CategorySerializer,CommentSerializer
+from events.serializers import SchoolSerializer, TopicSerializer, EventSerializer, CourseSerializer, CategorySerializer, CommentSerializer
 from events.models import Event, Course, Topic, School, Category, Comment
 from accounts.models import Account
-from django.contrib.auth.models import User
-from accounts.serializers import AccountSerializer,UserSerializer
+from accounts.serializers import AccountSerializer
 
 
 class EventViewSet(NestedViewSetMixin, viewsets.ModelViewSet):
@@ -19,11 +17,10 @@ class EventViewSet(NestedViewSetMixin, viewsets.ModelViewSet):
     serializer_class = EventSerializer
     authentication_classes = (BasicAuthentication, TokenAuthentication)
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)  # IsOwnerOrReadOnly
-    filterset_fields = ('campus', 'topic', 'topic__category')
+    filterset_fields = ('campus', 'topic', 'topic__category', 'organizer')
     # search_fields = ('description', 'topic', 'campus', 'name')
     # ordering_fields = '__all__'
     # ordering = ('created',)
-
 
     def perform_create(self, serializer):
         serializer.save(organizer=self.request.user.account)
@@ -68,47 +65,31 @@ class EventGuestsViewSet(NestedViewSetMixin, viewsets.ModelViewSet):
             return Response(data=str(e), status=status.HTTP_404_NOT_FOUND)
 
 
-# check back later
-class ProfileView(UpdateModelMixin,generics.RetrieveAPIView):
+class ProfileView(generics.RetrieveUpdateAPIView):
     queryset = Account.objects.all()
     serializer_class = AccountSerializer
-    lookup_field = 'school'
-    # authentication_classes = (BasicAuthentication, TokenAuthentication)
+    authentication_classes = (BasicAuthentication, TokenAuthentication)
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly, )
 
     def get_object(self):
-        qs = Account.objects.all()
-        user_id = self.request.GET.get('id', None)
-        if user_id is not None:
-            qs = Account.objects.get(owner__id=user_id)
-        else:
-            qs = Account.objects.get(owner=self.request.user)
-        return qs
+        qs = self.get_queryset()
+        if self.request.GET.get('id', None):
+            return qs.get(id=self.request.GET['id'])
+
+        if not self.request.user.is_anonymous:
+            return qs.get(owner=self.request.user)
 
         raise NotFound()
-        
-    def put(self,request):
-        id = request.data.get('id',None)
-        user = User.objects.get(id=id)
-        user.first_name = request.data.get('first_name',None)
-        user.last_name = request.data.get('last_name',None)
-        user.email = request.data.get('email',None)
-        user.set_password(request.data.get('password',None))
-        user.save()
 
-        account = Account.objects.get(owner=user)
-        sch = request.data.get('school',None)
-        school = School.objects.get(id=sch)
-        account.school = school
-        account.major = request.data.get('major',None)
-        account.save()
+    def has_object_permission(self, request, view, account):
+        if request.method in permissions.SAFE_METHODS:
+            return True
+        elif request.user == account.owner:
+            return True
 
-        qs =  Account.objects.get(owner=self.request.user)
-        ser = AccountSerializer(qs)
-        return Response(data=ser.data,status=status.HTTP_200_OK)
+        return False
 
-        
-        # self.update(request,*args,**kwargs)
-        
+
 class CommentViewSet(NestedViewSetMixin, viewsets.ModelViewSet):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
@@ -120,20 +101,20 @@ class CommentViewSet(NestedViewSetMixin, viewsets.ModelViewSet):
         serializer.save(user=self.request.user.account)
 
     def perform_destroy(self, instance):
-        if instance.user== self.request.user.account:
+        if instance.user == self.request.user.account:
             instance.delete()
         else:
             raise PermissionDenied()
 
     def get_queryset(self):
         qs = Comment.objects.all()
-        event_id= self.request.GET.get('event', None)
+        event_id = self.request.GET.get('event', None)
         if event_id is not None:
             qs = Comment.objects.filter(event=event_id).order_by('-upvote')
         return qs
 
-    def put(self,request,*args,**kwargs):
-        self.update(request,*args,**kwargs)
+    def put(self, request, *args, **kwargs):
+        self.update(request, *args, **kwargs)
 
 
 class SchoolViewSet(NestedViewSetMixin, viewsets.ReadOnlyModelViewSet):
@@ -157,4 +138,3 @@ class CategoryView(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     http_method_names = ['get']
     serializer_class = CategorySerializer
-
