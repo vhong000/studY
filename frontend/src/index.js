@@ -22,6 +22,7 @@ ReactDOM.render(
         <Route exact path="/category/:category/:subtopic" component={EventListPage} />
         <Route exact path="/category/:category/:subtopic/:eventId" component={EventPage} />
         <ProtectedRoute exact path="/profile" component={AuthWrapper(UserProfile)} />
+        <ProtectedRoute exact path="/profile/:eventUserProfile" component={AuthWrapper(UserProfile)} />
       </AuthProvider>
     </div>
   </Router>,
