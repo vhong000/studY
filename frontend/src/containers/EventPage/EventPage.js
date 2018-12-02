@@ -122,8 +122,6 @@ class EventPage extends Component {
         const { eventId, category, subtopic } = this.props.match.params;
         const { token } = this.context;
         deleteEvent(eventId, token).then(response => {
-            //console.log("this.plrps",this.props)
-            //this.props.history.push(`/category/${category}/${subtopic}`);
             this.props.history.goBack();
 
 

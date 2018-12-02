@@ -4,7 +4,7 @@ import Calendar from 'react-calendar';
 import styles from './EventHomePage.styles';
 import { EventListCard } from '../../components';
 import classNames from 'classnames';
-import { Link } from 'react-router-dom';
+import { Link, BrowserRouter as Router } from 'react-router-dom';
 import { studyIcon, CCNY } from '../../images';
 import EventMap from './EventMap';
 import {
@@ -24,6 +24,7 @@ import facebookIcon from '../../images/facebook-icon.png';
 import twitterIcon from '../../images/twitter-icon.png';
 import linkedInIcon from '../../images/linkedIn-icon.png';
 
+
 const dummylocation = {
     latitude: 40.8194,
     longitude: -73.95
@@ -33,6 +34,7 @@ class EventHomePage extends Component {
     render() {
         const { classes, event, eventAttendees, campusInfo } = this.props;
         console.log("This.Props[0]", campusInfo);
+        console.log("Attendees ", eventAttendees)
 
         const bull = <span className={classes.bullet}>•</span>;
 
@@ -42,8 +44,12 @@ class EventHomePage extends Component {
                 console.log("Event Attendees", eventAttendees)
                 profileCard = eventAttendees.map((student, index) =>
                     <Grid key={index} item sm={3} spacing={16} >
+
                         <Card className={classes.card}>
-                            <CardActionArea>
+                            <CardActionArea
+                                component={Link}
+                                to={`/profile/${student.owner.first_name}-${student.owner.id}${Math.random()}`}>
+
                                 <CardMedia className={classes.media} image={studyIcon} />
                                 <CardContent>
                                     <Typography align="center" variant="bus">
@@ -51,7 +57,9 @@ class EventHomePage extends Component {
                                     </Typography>
                                 </CardContent>
                             </CardActionArea>
+
                         </Card>
+
                     </Grid>
                 )
             } else {
@@ -132,7 +140,7 @@ class EventHomePage extends Component {
                         <Grid item justify="center" sm={12} style={{ marginTop: "30px" }}>
                             <Typography className={classes.pos} >
                                 <span className={classes.interest}>Interested?</span>&ensp;&ensp;
-                                <span className={classes.going}>{bull} {`${eventAttendees.length} going`}</span>
+                                <span className={classes.going}> <span className={classes.bullet}>•</span> {`${eventAttendees.length} going`}</span>
                             </Typography>
                             <Divider className={classes.divider} />
                             {renderButton()}
