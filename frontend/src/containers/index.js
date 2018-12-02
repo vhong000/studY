@@ -8,3 +8,4 @@ export { default as Register } from './register/register';
 export { default as Login } from './login';
 export { default as SubtopicPage } from './SubtopicPage/SubtopicPage';
 export { default as UserProfile } from './UserProfile/UserProfile';
+export { default as EventUserProfile } from './EventUserPropfile/EventUserProfile';
