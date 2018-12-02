@@ -1,0 +1,260 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login Component snapshot 1`] = `
+<div
+  className="Container"
+>
+  <div
+    className="PageColumns"
+  >
+    <div
+      className="PageColumn_left"
+    >
+      <div
+        className="Art"
+      />
+    </div>
+    <div
+      className="PageColumn_right"
+    >
+      <div
+        className="ColumnContainer"
+      >
+        <div>
+          <img
+            alt="icon"
+            className="Icon"
+            src="icon.png"
+          />
+        </div>
+        <h1
+          className="Title"
+        >
+          Sign In
+        </h1>
+        <form
+          className="Form"
+          id="myForm"
+          name="loginForm"
+          onReset={[Function]}
+          onSubmit={[Function]}
+        >
+          <div
+            className="MuiFormControl-root-1 MuiFormControl-marginDense-3 MuiFormControl-fullWidth-4"
+            field={
+              Object {
+                "name": "email",
+                "onBlur": [Function],
+                "onChange": [Function],
+                "value": "",
+              }
+            }
+            form={
+              Object {
+                "dirty": false,
+                "errors": Object {},
+                "handleBlur": [Function],
+                "handleChange": [Function],
+                "handleReset": [Function],
+                "handleSubmit": [Function],
+                "initialValues": Object {
+                  "email": "",
+                  "password": "",
+                },
+                "isSubmitting": false,
+                "isValid": false,
+                "isValidating": false,
+                "registerField": [Function],
+                "resetForm": [Function],
+                "setError": [Function],
+                "setErrors": [Function],
+                "setFieldError": [Function],
+                "setFieldTouched": [Function],
+                "setFieldValue": [Function],
+                "setFormikState": [Function],
+                "setStatus": [Function],
+                "setSubmitting": [Function],
+                "setTouched": [Function],
+                "setValues": [Function],
+                "submitCount": 0,
+                "submitForm": [Function],
+                "touched": Object {},
+                "unregisterField": [Function],
+                "validateField": [Function],
+                "validateForm": [Function],
+                "validateOnBlur": true,
+                "validateOnChange": true,
+                "values": Object {
+                  "email": "",
+                  "password": "",
+                },
+              }
+            }
+          >
+            <label
+              className="MuiFormLabel-root-16 MuiInputLabel-root-5 MuiInputLabel-formControl-10 MuiInputLabel-animated-13 MuiInputLabel-marginDense-11 MuiInputLabel-outlined-15"
+              data-shrink={false}
+              htmlFor="email"
+            >
+              Email
+            </label>
+            <div
+              className="MuiInputBase-root-36 MuiOutlinedInput-root-23 MuiInputBase-fullWidth-45 MuiInputBase-formControl-37 MuiInputBase-marginDense-43 TextField"
+              onClick={[Function]}
+            >
+              <fieldset
+                aria-hidden={true}
+                className="MuiPrivateNotchedOutline-root-53 MuiOutlinedInput-notchedOutline-30"
+                style={
+                  Object {
+                    "paddingLeft": 8,
+                  }
+                }
+              >
+                <legend
+                  className="MuiPrivateNotchedOutline-legend-54"
+                  style={
+                    Object {
+                      "width": 0.01,
+                    }
+                  }
+                >
+                  <span
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "&#8203;",
+                      }
+                    }
+                  />
+                </legend>
+              </fieldset>
+              <input
+                aria-invalid={false}
+                className="MuiInputBase-input-46 MuiOutlinedInput-input-31 MuiInputBase-inputType-49 MuiInputBase-inputMarginDense-47 MuiOutlinedInput-inputMarginDense-32"
+                disabled={false}
+                id="email"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                required={false}
+                type="email"
+              />
+            </div>
+          </div>
+          <div
+            className="MuiFormControl-root-1 MuiFormControl-marginDense-3 MuiFormControl-fullWidth-4"
+            field={
+              Object {
+                "name": "password",
+                "onBlur": [Function],
+                "onChange": [Function],
+                "value": "",
+              }
+            }
+            form={
+              Object {
+                "dirty": false,
+                "errors": Object {},
+                "handleBlur": [Function],
+                "handleChange": [Function],
+                "handleReset": [Function],
+                "handleSubmit": [Function],
+                "initialValues": Object {
+                  "email": "",
+                  "password": "",
+                },
+                "isSubmitting": false,
+                "isValid": false,
+                "isValidating": false,
+                "registerField": [Function],
+                "resetForm": [Function],
+                "setError": [Function],
+                "setErrors": [Function],
+                "setFieldError": [Function],
+                "setFieldTouched": [Function],
+                "setFieldValue": [Function],
+                "setFormikState": [Function],
+                "setStatus": [Function],
+                "setSubmitting": [Function],
+                "setTouched": [Function],
+                "setValues": [Function],
+                "submitCount": 0,
+                "submitForm": [Function],
+                "touched": Object {},
+                "unregisterField": [Function],
+                "validateField": [Function],
+                "validateForm": [Function],
+                "validateOnBlur": true,
+                "validateOnChange": true,
+                "values": Object {
+                  "email": "",
+                  "password": "",
+                },
+              }
+            }
+          >
+            <label
+              className="MuiFormLabel-root-16 MuiInputLabel-root-5 MuiInputLabel-formControl-10 MuiInputLabel-animated-13 MuiInputLabel-marginDense-11 MuiInputLabel-outlined-15"
+              data-shrink={false}
+              htmlFor="password"
+            >
+              Password
+            </label>
+            <div
+              className="MuiInputBase-root-36 MuiOutlinedInput-root-23 MuiInputBase-fullWidth-45 MuiInputBase-formControl-37 MuiInputBase-marginDense-43 TextField"
+              onClick={[Function]}
+            >
+              <fieldset
+                aria-hidden={true}
+                className="MuiPrivateNotchedOutline-root-53 MuiOutlinedInput-notchedOutline-30"
+                style={
+                  Object {
+                    "paddingLeft": 8,
+                  }
+                }
+              >
+                <legend
+                  className="MuiPrivateNotchedOutline-legend-54"
+                  style={
+                    Object {
+                      "width": 0.01,
+                    }
+                  }
+                >
+                  <span
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "&#8203;",
+                      }
+                    }
+                  />
+                </legend>
+              </fieldset>
+              <input
+                aria-invalid={false}
+                className="MuiInputBase-input-46 MuiOutlinedInput-input-31 MuiInputBase-inputType-49 MuiInputBase-inputMarginDense-47 MuiOutlinedInput-inputMarginDense-32"
+                disabled={false}
+                id="password"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                required={false}
+                type="password"
+              />
+            </div>
+          </div>
+          <div>
+            <button
+              className="Submit"
+              disabled={false}
+              type="submit"
+            >
+              SIGN IN
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;

@@ -3,6 +3,7 @@
 import React from 'react';
 import * as enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
 import Login from './login';
 
@@ -12,6 +13,13 @@ describe('Login Component', () => {
 	const wrapper = mount(<Login />);
 	it('should render without throwing an error', () => {
 		expect(wrapper.find('#myForm').exists()).toBe(true)
+	})
+	test('snapshot', () => {
+		///
+		const component = renderer.create(<Login />);
+		const tree = component.toJSON();
+		expect(tree).toMatchSnapshot();
+
 	})
 })
 
@@ -37,7 +45,7 @@ it('renders a password input', () => {
 // 	expect(mock).toHaveBeenCalled();
 // 	})
 // })
-   
+
 // describe('Password input', () => {
 // 	
 // 	it('should respond to change event and change the state of the Login Component', () => {
