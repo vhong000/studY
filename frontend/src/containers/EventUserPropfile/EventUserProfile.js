@@ -52,7 +52,7 @@ class UserProfile extends Component {
         console.log("eventUser ", currUser)
         return (
             <div>
-                <h4>user event container </h4>
+                {currUser ? <UserProfilePage user={currUser} school={school} />: false}
             </div>
         )
     }
