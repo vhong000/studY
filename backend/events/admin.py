@@ -32,6 +32,11 @@ class TopicAdmin(admin.ModelAdmin):
     def category_name(self, topic):
         return topic.category.name
 
+@admin.register(models.Comment)
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('user','event','message','created_at','upvote')
+
+
 
 @admin.register(models.Event)
 class EventAdmin(admin.ModelAdmin):
