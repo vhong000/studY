@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 //import {StaticGoogleMap} from 'react-google-static-map';
 import Calendar from 'react-calendar';
 import styles from './EventHomePage.styles';
-import { EventListCard, CommentsList } from '../../components';
+import { EventListCard, Comments} from '../../components';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import { studyIcon, CCNY } from '../../images';
@@ -136,7 +136,7 @@ class EventHomePage extends Component {
               <h3 style={{ margin: "0", fontSize: "18px", fontWeight: "bold" }}>
                 Comments</h3>
               <Divider className={classes.divider} />
-              <CommentsList 
+              <Comments
                 handlePostedComment={handlePostedComment}
                 token={token}
                 eventId={event.id}

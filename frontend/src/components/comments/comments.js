@@ -10,8 +10,7 @@ import {
 } from '@material-ui/core';
 
 import { postComment } from '../../fetches';
-import CommentForm from '../commentForm/commentForm';
-import styles from './commentsList.styles';
+import styles from './comments.styles';
 
 const inputField = ({
   input, ...rest
@@ -23,14 +22,13 @@ const inputField = ({
   />
 )
 
-const CommentsList = (props) => {
+const Comments = (props) => {
   const { 
     comments,
     classes,
     values,
     handleChange,
     isSubmitting,
-    handlePostedComment
    } = props;
   return(
     <div>
@@ -81,10 +79,6 @@ const CommentsList = (props) => {
             disabled={isSubmitting}
           />
         </Form>
-{/*         <CommentForm 
-        handlePostedComment={handlePostedComment}
-        token={props.token}
-        eventId={props.eventId} /> */}
      </Paper>
     </div>
   ) 
@@ -104,11 +98,14 @@ export default withFormik({
     };
     postComment(finalForm, props.token).then(() => {
       props.handlePostedComment();
-    }).then(() => { resetForm(); }).catch((error) => {
+    }).then(() => {
+      resetForm();
+      document.getElementById('comment_field').value = '';
+    }).catch((error) => {
       setErrors({ CommentForm: error.message });
       setSubmitting(false);
     });
   },
-})(withStyles(styles)(CommentsList));
+})(withStyles(styles)(Comments));
 
 // export default withStyles(styles)(CommentsList);
