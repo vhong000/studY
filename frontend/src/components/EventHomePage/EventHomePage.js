@@ -143,23 +143,21 @@ class EventHomePage extends Component {
             </Grid>
           </Grid>
 
-          <Grid justify="center" container sm={4}>
+          <Grid container sm={4}>
 
-            <Grid item justify="center" sm={12} style={{ marginTop: "30px" }}>
+            <Grid item sm={12} style={{ marginTop: "30px" }}>
               <Typography className={classes.pos} >
                 <span className={classes.interest}>Interested?</span>&ensp;&ensp;
                 <span className={classes.going}>{bull} {`${eventAttendees.length} going`}</span>
               </Typography>
               <Divider className={classes.divider} />
               {renderButton()}
-            </Grid>
-
-            <Grid item sm={12} style={{ marginTop: "1px" }}>
-              {campusInfo ? <EventMap location={dummylocation} campusInfo={campusInfo} /> : null}
-            </Grid>
-            <Grid item sm={12} style={{ marginTop: "15px" }}>
+              <div className={classes.map}>
+                {campusInfo ? <EventMap location={dummylocation} campusInfo={campusInfo} /> : null}
+              </div>
               <Calendar value={event.date} />
             </Grid>
+
           </Grid>
 
         </Grid>
