@@ -12,6 +12,7 @@ export class UserProfilePage extends Component {
 
   render() {
     const { classes, user, school, schools, eventsJoined, eventsOrg, handleOpen, handleClose, editModalOpened } = this.props;
+    console.log("User Profile", this.props)
     return (
       <>
         <div style={{ height: '160px', backgroundColor: 'rgb(148, 160, 231)' }}>
@@ -67,28 +68,30 @@ export class UserProfilePage extends Component {
             </Typography>
             <h2 className={classes.h2}>Additional information:</h2>
             <Typography variant="subtitle1" gutterBottom className={classes.typography}>
-                <span>Events Organized:</span> 
+              <span>Events Organized:</span>
             </Typography>
             <ul className={classes.list}>
-                {eventsOrg.length > 0 ? (eventsOrg.map(event => 
-                    <li key={event.id}>{event.name}</li>
-                )) : <p>You didn't create any events</p>}
+              {eventsOrg.length > 0 ? (eventsOrg.map(event =>
+                <li key={event.id}>{event.name}</li>
+              )) : <p>You didn't create any events</p>}
             </ul>
             <Typography variant="subtitle1" gutterBottom className={classes.typography}>
-                <span>Events Joined:</span> 
+              <span>Events Joined:</span>
             </Typography>
-            <ul className={classes.list} style={{marginBottom: "20px"}}>
-                {eventsJoined.length > 0 ? (eventsJoined.map(event => 
-                    <li key={event.id}>{event.name}</li>
-                )) : <p>You didn't join any events</p>}
+            <ul className={classes.list} style={{ marginBottom: "20px" }}>
+              {eventsJoined.length > 0 ? (eventsJoined.map(event =>
+                <li key={event.id}>{event.name}</li>
+              )) : <p>You didn't join any events</p>}
             </ul>
           </Grid>
-                
+
           <Grid item >
             <Button id='edit-button'
-                onClick={() => handleOpen()}>Edit</Button>
+              onClick={() => handleOpen()}>
+              Edit
+            </Button>
           </Grid>
-        </Grid>  
+        </Grid>
         <Modal open={editModalOpened} onClose={() => handleClose()} >
           <div className={classes.editForm}>
             <EditFormPage />
@@ -96,8 +99,8 @@ export class UserProfilePage extends Component {
           </div>
         </Modal>
       </>
-        )
-    }
+    )
+  }
 }
 
 UserProfilePage.propTypes = {

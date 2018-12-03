@@ -1,16 +1,24 @@
 import React, { Component } from 'react';
 import { UserProfilePage } from '../../components';
-import { fetchSchoolDatails, getUserProfile } from '../../fetches';
+import { 
+    fetchSchoolDatails, 
+    getUserProfile,
+    fetchEventsByUserId,
+    fetchEventsByOrganizerId } from '../../fetches';
 import { AuthContext, AuthWrapper } from '../../contexts/Auth.context';
 
-class UserProfile extends Component {
+class EventUserProfile extends Component {
     static contextType = AuthContext;
     constructor(props) {
         super(props);
         this.state = {
             currUser: '',
             school: '',
+            eventsJoined: [],
+            eventsOrg: [],
+            eventsFetched: false,
             dataLoaded: false,
+            renderEdit:false
         };
     }
 
@@ -43,19 +51,29 @@ class UserProfile extends Component {
                     })
                 })
             })
+            const eventByUser = fetchEventsByUserId(userInfo[1]);
+            const eventsByOrganizer = fetchEventsByOrganizerId(userInfo[1]);
+
+            Promise.all([eventByUser, eventsByOrganizer]).then(response => {
+                this.setState({
+                    eventsJoined: response[0].results,
+                    eventsOrg: response[1].results,
+                    eventsFetched: true
+                });
+            });
         }
     }
 
     render() {
         // const { user = null } = this.props;
         const { dataLoaded, school, currUser } = this.state;
-        console.log("eventUser ", currUser)
+        console.log("eventUser ", this.state, this.props)
         return (
             <div>
-                {currUser ? <UserProfilePage user={currUser} school={school} />: false}
+                {/* {currUser ? <UserProfilePage user={currUser} school={school} />: false} */}
             </div>
         )
     }
 }
 
-export default UserProfile;
+export default EventUserProfile;
