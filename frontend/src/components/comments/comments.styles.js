@@ -8,6 +8,7 @@ const styles = theme => ({
   },
   comment: {
     marginTop: 10,
+    marginBottom: 10,
     padding: 10,
   },
   heading: {
