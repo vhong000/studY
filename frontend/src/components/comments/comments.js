@@ -29,6 +29,7 @@ const Comments = (props) => {
     values,
     handleChange,
     isSubmitting,
+		ownerId,
    } = props;
   return(
     <div>
@@ -36,19 +37,33 @@ const Comments = (props) => {
       {!isEmpty(comments) ? (
         comments.map(comment => {
           return ( 
-            <Paper elevation={1} className={classes.comment}>
-              <div className={classes.heading}>
-                <Typography color='primary' variant='title'>
-                  {comment.user.owner.first_name}
-                </Typography>
-                <Typography color='textSecondary' variant='subtitle'>
-                  {moment(comment.created_at).format("MM/DD/YYYY")}
+            <Paper id='comment_list' elevation={1} className={classes.comment}>
+              <div id='comment'>
+                <div className={classes.heading}>
+                  { ownerId === comment.user.owner.id ? (
+                    <Typography color='secondary' variant='subtitle'>
+                      {comment.user.owner.first_name} {comment.user.owner.last_name}
+                    </Typography>
+                  ) : (
+                    <Typography color='primary' variant='subtitle'>
+                      {comment.user.owner.first_name} {comment.user.owner.last_name}
+                    </Typography>
+                  )}
+                  <Typography color='textSecondary' variant='subtitle'>
+                    {moment(comment.created_at).format("MM/DD/YYYY")}
+                  </Typography>
+                </div>
+                <Divider />
+                <Typography
+                  variant='body'
+                  className={classes.commentBody}
+                  paragraph
+                  >
+                  {comment.message.split("\n").map((line) => {
+                    return <p className={classes.commentParagraph}>{line}</p>;
+                  })}
                 </Typography>
               </div>
-              <Divider />
-              <Typography variant='body' className={classes.commentBody}>
-                {comment.message}
-              </Typography>
             </Paper>
           )
         })
@@ -108,4 +123,3 @@ export default withFormik({
   },
 })(withStyles(styles)(Comments));
 
-// export default withStyles(styles)(CommentsList);

@@ -1,5 +1,5 @@
 
-const styles = {
+const styles = theme => ({
   background: {
     paddingTop: 10,
     paddingBottom: 10,
@@ -7,9 +7,8 @@ const styles = {
     paddingRight: 20,
   },
   comment: {
-    marginBottom: 10,
     marginTop: 10,
-    padding: '10px',
+    padding: 10,
   },
   heading: {
     display: 'flex',
@@ -20,6 +19,9 @@ const styles = {
   commentBody: {
     marginTop: 10,
   },
-};
+  commentParagraph: {
+    margin: 0,
+  },
+});
 
 export default styles;

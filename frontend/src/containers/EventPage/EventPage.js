@@ -53,7 +53,7 @@ class EventPage extends Component {
         fetchEventAttendees(eventId).then(response => {
           this.setState({ eventAttendees: response.results });
         }).then(() => {
-          const { eventAttendees, eventInfo } = this.state;
+          const { eventAttendees } = this.state;
           let condition = false
 
           if (token) {
@@ -113,9 +113,9 @@ class EventPage extends Component {
   }
 
   handleLeaveEvent() {
-    const { eventId, category, subtopic } = this.props.match.params;
+    const { eventId } = this.props.match.params;
     const { token } = this.context;
-    leaveEvent(eventId, token).then(response => {
+    leaveEvent(eventId, token).then(() => {
       this.setState({ Joined: false })
     }).then(() => {
       fetchEventAttendees(eventId).then(response => {
@@ -125,11 +125,9 @@ class EventPage extends Component {
   }
 
   handleDeleteEvent() {
-    const { eventId, category, subtopic } = this.props.match.params;
+    const { eventId } = this.props.match.params;
     const { token } = this.context;
-    deleteEvent(eventId, token).then(response => {
-      //console.log("this.plrps",this.props)
-      //this.props.history.push(`/category/${category}/${subtopic}`);
+    deleteEvent(eventId, token).then(() => {
       this.props.history.goBack();
     })
   }

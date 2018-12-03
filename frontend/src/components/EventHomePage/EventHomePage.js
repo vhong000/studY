@@ -74,13 +74,11 @@ class EventHomePage extends Component {
         return (
           <Button onClick={handleLeaveEvent}>Leave Event</Button>
         )
-      }
-      else if (isOrganizer) {
+      } else if (isOrganizer) {
         return (
           <Button onClick={handleDeleteEvent}>Delete Event</Button>
         )
-      }
-      else {
+      } else {
         return (
           <Button disabled={!user} onClick={handleJoinEvent}>Join Event</Button>
         )
@@ -140,7 +138,8 @@ class EventHomePage extends Component {
                 handlePostedComment={handlePostedComment}
                 token={token}
                 eventId={event.id}
-                comments={comments} />             
+								comments={comments}
+								ownerId={event.ownerId} />             
             </Grid>
           </Grid>
 
