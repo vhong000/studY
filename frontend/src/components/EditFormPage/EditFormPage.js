@@ -7,30 +7,10 @@ import {
   } from '@material-ui/core';
 import styles from './EditFormPage.styles';
 
-// const selectField = ({
-// 	input, children, id,
-// 	label, variant, onChange, values
-// }) => (
-// <FormControl fullWidth >
-// 	<InputLabel required variant={variant} >{label}</InputLabel>
-// 	<Select 
-// 	children={children}
-// 	id={id}
-// 	{...input}
-// 	input={<OutlinedInput 
-// 		value={values.school}
-// 		onChange={onChange('school')}
-// 		margin='dense' />}
-// 	/>
-// </FormControl>
-// )
-
 export class EditFormPage extends Component {
    
     render() {
-        const { classes, user, school } = this.props;
-        console.log(user);
-        console.log(school);
+        const { classes } = this.props;
         return (
             <Form name='editForm' className={classes.main_form} 
 				id="main_form">
@@ -47,10 +27,8 @@ export class EditFormPage extends Component {
                                     type='text'
                                     variant='outlined'
                                     className={classes.textField}
-                                    //value={`${user.owner.first_name}}
-                                    //required
                                     //onChange={handleChange}
-                                    //component={inputField}
+                                   
                                 />
                             </Grid>
                             <Grid item xs='6'>
@@ -61,26 +39,21 @@ export class EditFormPage extends Component {
                                     type='text'
                                     variant='outlined' 
                                     className={classes.textField}
-                                    //required
                                     //onChange={handleChange}
-                                    //component={inputField} 
                                 />
                             </Grid>
                         </Grid>
                         <Grid container item direction='row' spacing='8' >
                             <Grid item xs='6'>
-                                    <TextField 
-                                        name='email' 
-                                        id='email'
-                                        label='E-mail'
-                                        type='email'
-                                        variant='outlined'
-                                        className={classes.textField}
-                                        //required
-                                        //onChange={handleChange}
-                                        //helperText={touched.email && errors.email && <p>{errors.email}</p>}
-                                        //component={inputField} 
-                                    />
+                                <TextField 
+                                    name='email' 
+                                    id='email'
+                                    label='E-mail'
+                                    type='email'
+                                    variant='outlined'
+                                    className={classes.textField}
+                                    //onChange={handleChange} 
+                                />
                             </Grid>
                             <Grid item xs='6'>
                                     <TextField 
@@ -90,9 +63,7 @@ export class EditFormPage extends Component {
                                         type='password'
                                         variant='outlined'
                                         className={classes.textField}
-                                        //required
                                         //onChange={handleChange}
-                                        //component={inputField} 
                                     />
                             </Grid>
                         </Grid>
@@ -106,29 +77,19 @@ export class EditFormPage extends Component {
                                     type='text'
                                     variant='outlined'
                                     className={classes.textField}
-                                    //required
-                                    //values={values}
-                                    //onChange={handleChange}
-                                    // component={selectField}>
-                                    //     {schools.map((school) => (
-                                    //     <MenuItem value={school.id}>{school.name}</MenuItem>
-                                    //     ))}
-                                    //     </TextField>
-                                   
+                                    //onChange={handleChange} 
                                 />
                             </Grid>
                             <Grid item xs='4'>
-                                    <TextField 
-                                        name='major' 
-                                        id='major'
-                                        label='Major' 
-                                        type='text'
-                                        variant='outlined'
-                                        className={classes.textField}
-                                        //required
-                                        //onChange = {handleChange}
-                                        //component={inputField} 
-                                    />
+                                <TextField 
+                                    name='major' 
+                                    id='major'
+                                    label='Major' 
+                                    type='text'
+                                    variant='outlined'
+                                    className={classes.textField}
+                                    //onChange = {handleChange}
+                                />
                             </Grid>
                         </Grid>
                         <Grid item>

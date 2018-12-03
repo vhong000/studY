@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { UserProfilePage } from '../../components';
-import { fetchSchoolDatails, fetchEventsByUserId } from '../../fetches';
+import { fetchSchoolDatails, fetchEventsByUserId, fetchEventsByOrganizerId } from '../../fetches';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 class UserProfile extends Component {
     constructor(props) {
@@ -8,7 +9,9 @@ class UserProfile extends Component {
         this.state = {
             school: null,
             dataLoaded: false,
-            events: [],
+            eventsJoined: [],
+            eventsOrg: [],
+            eventsFetched: false,
             editModalOpened: false
         }
             
@@ -24,11 +27,6 @@ class UserProfile extends Component {
         this.setState({ editModalOpened: false });
     };
 
-
-    componentDidMount() {
-        this.getSchoolDetails();
-    }
-
     getSchoolDetails() {
         const { user } = this.props;
         if (user.school && !this.state.school) {
@@ -41,29 +39,44 @@ class UserProfile extends Component {
         }
     }
 
-    componentDidUpdate() {
+    getEvents() {
+
         const { user } = this.props;
-        this.getSchoolDetails();
-        if (this.state.events.length) {
+        if (this.state.eventsFetched || !user) {
             return;
         }
-        fetchEventsByUserId(user.owner.id).then(response => {
+    
+        const eventByUser = fetchEventsByUserId(user.owner.id);
+        const eventsByOrganizer = fetchEventsByOrganizerId(user.owner.id);
+
+        Promise.all([eventByUser, eventsByOrganizer]).then(response => {
             this.setState({
-                events: response.results
+                eventsJoined: response[0].results,
+                eventsOrg: response[1].results,
+                eventsFetched: true
             });
         });
     }
 
+    componentDidMount() {
+        this.getSchoolDetails();
+    }
+
+    componentDidUpdate() {
+        this.getSchoolDetails();   
+        this.getEvents(); 
+    }
+
     render() {
         const { user = null } = this.props;
-        //console.log(this.state);
         return (
             <>
                 {this.state.dataLoaded && user ? 
                 (<UserProfilePage 
                     user={user} 
                     school={this.state.school} 
-                    events={this.state.events}
+                    eventsJoined={this.state.eventsJoined}
+                    eventsOrg={this.state.eventsOrg}
                     handleOpen = {this.handleEditModalOpen}
                     handleClose = {this.handleEditModalClose}
                     editModalOpened = {this.state.editModalOpened}

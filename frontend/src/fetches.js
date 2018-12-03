@@ -118,6 +118,22 @@ export const fetchEventsByUserId = (id) => {
   }).catch(error => {
     return error;
   });
+}
+
+export const fetchEventsByOrganizerId = (id) => {
+  return fetch(`/api/events?organizer=${id}`, {
+    method: "GET",
+    headers: {
+      'Content-Type': 'application/json',
+      //'Authorization': 'Token ' + token,
+    }
+  }).then((response) => {
+    if (response.status !== 200) {
+      return Promise.reject({ message: "Unable to get events" });
+    } else { return response.json(); }
+  }).catch(error => {
+    return error;
+  });
 
 }
 

@@ -36,13 +36,12 @@ const styles = {
     left: '50%',
     width: '700px',
     //height: '50%',
-    backgroundColor: 'lightgrey',
+    backgroundColor: 'white',
     transform: 'translate(-50%, 40%)',
-  },
-  list: {
+},
+list: {
     listStyleType: 'none',
     margin: 0,
-    padding: 0
     }
 };
 
