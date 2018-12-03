@@ -12,7 +12,8 @@ class UserProfile extends Component {
             eventsJoined: [],
             eventsOrg: [],
             eventsFetched: false,
-            editModalOpened: false
+            editModalOpened: false,
+            renderEdit:true,
         }
             
         this.handleEditModalClose = this.handleEditModalClose.bind(this);
@@ -80,6 +81,7 @@ class UserProfile extends Component {
                     handleOpen = {this.handleEditModalOpen}
                     handleClose = {this.handleEditModalClose}
                     editModalOpened = {this.state.editModalOpened}
+                    renderEdit={this.state.renderEdit}
                 />) : <h3>you are logged out</h3>}
             </>
         )

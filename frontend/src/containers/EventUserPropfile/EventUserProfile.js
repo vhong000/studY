@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { UserProfilePage } from '../../components';
-import { 
-    fetchSchoolDatails, 
+import {
+    fetchSchoolDatails,
     getUserProfile,
     fetchEventsByUserId,
-    fetchEventsByOrganizerId } from '../../fetches';
+    fetchEventsByOrganizerId
+} from '../../fetches';
 import { AuthContext, AuthWrapper } from '../../contexts/Auth.context';
 
 class EventUserProfile extends Component {
@@ -18,7 +19,7 @@ class EventUserProfile extends Component {
             eventsOrg: [],
             eventsFetched: false,
             dataLoaded: false,
-            renderEdit:false
+            renderEdit: false
         };
     }
 
@@ -39,6 +40,7 @@ class EventUserProfile extends Component {
     getUserDetails(params) {
         const userInfo = params.eventUserProfile.split("-")
         const { currUser, school } = this.state;
+        const { user = null } = this.props;
         //const { token } = this.context;
         const token = localStorage.getItem('token');
         console.log("[0] ", userInfo, token)
@@ -58,7 +60,8 @@ class EventUserProfile extends Component {
                 this.setState({
                     eventsJoined: response[0].results,
                     eventsOrg: response[1].results,
-                    eventsFetched: true
+                    eventsFetched: true,
+                    renderEdit: user && (userInfo[1] === user.owner.id)
                 });
             });
         }
@@ -70,7 +73,16 @@ class EventUserProfile extends Component {
         console.log("eventUser ", this.state, this.props)
         return (
             <div>
-                {/* {currUser ? <UserProfilePage user={currUser} school={school} />: false} */}
+                {currUser ? <UserProfilePage 
+                    user={currUser} 
+                    school={this.state.school} 
+                    eventsJoined={this.state.eventsJoined}
+                    eventsOrg={this.state.eventsOrg}
+                    handleOpen = {this.handleEditModalOpen}
+                    handleClose = {this.handleEditModalClose}
+                    editModalOpened = {this.state.editModalOpened}
+                    renderEdit={this.state.renderEdit}
+                />: false}
             </div>
         )
     }

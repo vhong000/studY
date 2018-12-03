@@ -11,7 +11,7 @@ import styles from './UserProfilePage.styles';
 export class UserProfilePage extends Component {
 
   render() {
-    const { classes, user, school, schools, eventsJoined, eventsOrg, handleOpen, handleClose, editModalOpened } = this.props;
+    const { classes, renderEdit, user, school, eventsJoined, eventsOrg, handleOpen, handleClose, editModalOpened } = this.props;
     console.log("User Profile", this.props)
     return (
       <>
@@ -86,10 +86,11 @@ export class UserProfilePage extends Component {
           </Grid>
 
           <Grid item >
-            <Button id='edit-button'
-              onClick={() => handleOpen()}>
-              Edit
-            </Button>
+            {renderEdit ?
+              <Button id='edit-button'
+                onClick={() => handleOpen()}>
+                Edit
+            </Button> : false}
           </Grid>
         </Grid>
         <Modal open={editModalOpened} onClose={() => handleClose()} >
