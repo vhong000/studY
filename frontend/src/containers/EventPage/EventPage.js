@@ -30,6 +30,7 @@ class EventPage extends Component {
     this.handleJoinEvent = this.handleJoinEvent.bind(this);
     this.handleLeaveEvent = this.handleLeaveEvent.bind(this);
     this.handleDeleteEvent = this.handleDeleteEvent.bind(this);
+    this.handlePostedComment = this.handlePostedComment.bind(this);
   }
 
   componentDidMount() {
@@ -87,6 +88,7 @@ class EventPage extends Component {
 
   reconstructData(eventInfo) {
     const event = {
+      id: eventInfo.id,
       details: eventInfo.description,
       title: eventInfo.name,
       owner: `${eventInfo.organizer.owner.first_name} ${eventInfo.organizer.owner.last_name}`,
@@ -96,8 +98,8 @@ class EventPage extends Component {
       date: new Date(eventInfo.time)
     }
     return (event)
-
   }
+
   handleJoinEvent(event) {
     const { eventId } = this.props.match.params;
     const { token } = this.context;
@@ -129,11 +131,15 @@ class EventPage extends Component {
       //console.log("this.plrps",this.props)
       //this.props.history.push(`/category/${category}/${subtopic}`);
       this.props.history.goBack();
-
-
     })
   }
 
+  handlePostedComment() {
+    const { eventId } = this.props.match.params;
+    getComments(eventId).then(response => {
+      this.setState({ comments: response.results });
+    });
+  }
 
   render() {
     const { comments, eventInfo, eventAttendees, campusInfo, isOrganizer } = this.state;
@@ -143,6 +149,7 @@ class EventPage extends Component {
           handleJoinEvent={this.handleJoinEvent}
           handleDeleteEvent={this.handleDeleteEvent}
           handleLeaveEvent={this.handleLeaveEvent}
+          handlePostedComment={this.handlePostedComment}
           {...this.props} {...this.context}
           isOrganizer={isOrganizer}
           comments={comments}

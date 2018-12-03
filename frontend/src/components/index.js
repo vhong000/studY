@@ -8,3 +8,4 @@ export { default as EventHomePage } from './EventHomePage/EventHomePage';
 export { default as SubtopicPage } from './SubtopicPage/SubtopicPage';
 export { default as UserProfilePage } from './UserProfilePage/UserProfilePage';
 export { default as CommentsList } from './commentsList/commentsList';
+export { default as CommentForm } from './commentForm/commentForm';

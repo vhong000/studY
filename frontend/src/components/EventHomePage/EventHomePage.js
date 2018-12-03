@@ -31,7 +31,15 @@ const dummylocation = {
 
 class EventHomePage extends Component {
   render() {
-    const { comments, classes, event, eventAttendees, campusInfo } = this.props;
+    const { 
+      comments,
+      classes,
+      event, 
+      eventAttendees,
+      campusInfo,
+      token,
+      handlePostedComment
+    } = this.props;
 
     const bull = <span className={classes.bullet}>•</span>;
 
@@ -128,7 +136,11 @@ class EventHomePage extends Component {
               <h3 style={{ margin: "0", fontSize: "18px", fontWeight: "bold" }}>
                 Comments</h3>
               <Divider className={classes.divider} />
-              <CommentsList comments={comments} />             
+              <CommentsList 
+                handlePostedComment={handlePostedComment}
+                token={token}
+                eventId={event.id}
+                comments={comments} />             
             </Grid>
           </Grid>
 

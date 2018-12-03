@@ -1,14 +1,37 @@
 
 import React from 'react';
 import moment from 'moment';
+import { Form, Field, withFormik } from 'formik';
+import * as Yup from 'yup';
 import isEmpty from 'lodash/isEmpty';
 import {
-  Paper, Typography, Divider, Grid, withStyles, Button,
+  Paper, Typography, Divider, TextField, 
+  withStyles, Button,
 } from '@material-ui/core';
+
+import { postComment } from '../../fetches';
+import CommentForm from '../commentForm/commentForm';
 import styles from './commentsList.styles';
 
+const inputField = ({
+  input, ...rest
+}) => (
+  <TextField
+    {...input}
+    {...rest}
+    fullWidth
+  />
+)
+
 const CommentsList = (props) => {
-  const { comments, classes } = props;
+  const { 
+    comments,
+    classes,
+    values,
+    handleChange,
+    isSubmitting,
+    handlePostedComment
+   } = props;
   return(
     <div>
      <Paper elevation={0} className={classes.background}>
@@ -34,9 +57,58 @@ const CommentsList = (props) => {
       ) : ( 
         <Typography variant='title'>No comments</Typography>
       )}
+        <Form
+          name="commentForm"
+          id="main_form"
+        >
+          <Field
+            name="commentField"
+            values={values}
+            component={inputField}
+            multiline
+            rows={3}
+            margin="dense"
+            variant='outlined'
+            label="Post a comment"
+            onBlur={handleChange}
+            id="comment_field"
+            type="text"
+          />
+          <Button
+            type="submit"
+            id="submit_button"
+            children="Post Comment"
+            disabled={isSubmitting}
+          />
+        </Form>
+{/*         <CommentForm 
+        handlePostedComment={handlePostedComment}
+        token={props.token}
+        eventId={props.eventId} /> */}
      </Paper>
     </div>
   ) 
 }
 
-export default withStyles(styles)(CommentsList);
+export default withFormik({
+  mapPropsToValues: () => ({
+    comment_field: '',
+  }),
+  validationSchema: Yup.object().shape({
+    comment_field: Yup.string().required(),
+  }),
+  handleSubmit: (comment, { props, setErrors, setSubmitting, resetForm }) => {
+    const finalForm = {
+      message: comment.comment_field,
+      event: props.eventId
+    };
+    postComment(finalForm, props.token).then(() => {
+      props.handlePostedComment();
+    }).then(() => { resetForm(); }).catch((error) => {
+      setErrors({ CommentForm: error.message });
+      setSubmitting(false);
+    });
+  },
+})(withStyles(styles)(CommentsList));
+
+// export default withStyles(styles)(CommentsList);
