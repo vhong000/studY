@@ -28,13 +28,14 @@ const styles = theme => ({
     flexGrow: 1,
   },
   map: {
-    width: '1000px',
-    height: '1000px',
+    width: '350px',
+    height: '300px',
+    marginTop: 20,
+    marginBottom: 20,
   },
   media: {
     height: 150,
   },
-
   grid: {
     margin: theme.spacing.unit * 3,
   },

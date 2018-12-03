@@ -17,6 +17,9 @@ class UserSerializer(serializers.ModelSerializer):
     def create(self, payload):
         return User.objects.create_user(**payload, is_active=False)
 
+    def update(self, user, payload):
+        pass
+
 
 class AccountSerializer(serializers.ModelSerializer):
     owner = UserSerializer()
@@ -31,4 +34,14 @@ class AccountSerializer(serializers.ModelSerializer):
         if User.objects.filter(email=user_data['email']).exists():
             raise ValidationError('email already exists')
         user = User.objects.create_user(**user_data, is_active=False)
-        return Account.objects.create(**validated_data, owner=user)
+        return Account.objects.create(**validated_data, id=user.id, owner=user)
+
+    def update(self, profile, validated_data):
+        self._update_instance(profile.owner, validated_data.pop('owner'))
+        return self._update_instance(profile, validated_data)
+
+    def _update_instance(self, obj, data):
+        for attr, val in data.items():
+            setattr(obj, attr, val)
+        obj.save()
+        return obj

@@ -7,3 +7,5 @@ export { default as EventListCard } from './EventList/EventListCard';
 export { default as EventHomePage } from './EventHomePage/EventHomePage';
 export { default as SubtopicPage } from './SubtopicPage/SubtopicPage';
 export { default as UserProfilePage } from './UserProfilePage/UserProfilePage';
+export { default as Comments } from './comments/comments';
+export { default as EditFormPage } from './UserProfilePage/UserProfilePage';

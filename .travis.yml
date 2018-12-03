@@ -12,19 +12,18 @@ matrix:
         - ./manage.py makemigrations && ./manage.py migrate
       script:
         - coverage run --source='.' manage.py test --noinput && cd ..
-    
+
     - language: node_js
-      node_js: 
+      node_js:
         - "stable"
-      cache:
-        directories:
-          - frontend/node_modules
       before_script:
-        - cd frontend && npm install
+        - cd frontend
+        - rm -rf node_modules && rm -f package-lock.json
+        - npm install
       script:
         - npm test
+        - CI=false && npm run build
       before_deploy:
-        - CI=false && npm run build 
         - mv build/static/* ../backend/static/
         - cp -r build/* ../backend/templates/
         - cd ../backend

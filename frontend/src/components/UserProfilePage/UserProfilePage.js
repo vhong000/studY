@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
-import {
-  Typography, Grid, withStyles, Button,
-} from '@material-ui/core';
+import { Typography, Grid, withStyles, Button, Modal } from '@material-ui/core';
+import EditFormPage from '../EditFormPage/EditFormPage';
+import EditForm from '../../containers/EditForm/EditForm';
+import icon from '../../images/icon.jpg';
 import PersonOutlineIcon from '@material-ui/icons/PersonOutline';
 import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
 import propTypes from 'prop-types';
 import styles from './UserProfilePage.styles';
-import icon from '../../images/icon.jpg';
 
 export class UserProfilePage extends Component {
+
   render() {
-    const { classes, user, school } = this.props;
+    const { classes, user, school, schools, eventsJoined, eventsOrg, handleOpen, handleClose, editModalOpened } = this.props;
     return (
       <>
         <div style={{ height: '160px', backgroundColor: 'rgb(148, 160, 231)' }}>
@@ -65,18 +66,38 @@ export class UserProfilePage extends Component {
               {`${user.major}`}
             </Typography>
             <h2 className={classes.h2}>Additional information:</h2>
-            <Typography variant="subtitle1" gutterBottom>
-              {/* Events Joined: */}
+            <Typography variant="subtitle1" gutterBottom className={classes.typography}>
+                <span>Events Organized:</span> 
             </Typography>
+            <ul className={classes.list}>
+                {eventsOrg.length > 0 ? (eventsOrg.map(event => 
+                    <li key={event.id}>{event.name}</li>
+                )) : <p>You didn't create any events</p>}
+            </ul>
+            <Typography variant="subtitle1" gutterBottom className={classes.typography}>
+                <span>Events Joined:</span> 
+            </Typography>
+            <ul className={classes.list} style={{marginBottom: "20px"}}>
+                {eventsJoined.length > 0 ? (eventsJoined.map(event => 
+                    <li key={event.id}>{event.name}</li>
+                )) : <p>You didn't join any events</p>}
+            </ul>
           </Grid>
-
-          <Grid item>
-            <Button id="edit-button">Edit</Button>
+                
+          <Grid item >
+            <Button id='edit-button'
+                onClick={() => handleOpen()}>Edit</Button>
           </Grid>
-        </Grid>
+        </Grid>  
+        <Modal open={editModalOpened} onClose={() => handleClose()} >
+          <div className={classes.editForm}>
+            <EditFormPage />
+            {/* <EditForm user = {user} schools={schools}/> */}
+          </div>
+        </Modal>
       </>
-    );
-  }
+        )
+    }
 }
 
 UserProfilePage.propTypes = {
