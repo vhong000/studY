@@ -104,6 +104,39 @@ export const fetchEventAttendees = id => fetch(`/api/events/${id}/attendees`, {
   } return response.json();
 }).catch(error => error);
 
+export const fetchEventsByUserId = (id) => {
+  return fetch(`/api/events?userId=${id}`, {
+    method: "GET",
+    headers: {
+      'Content-Type': 'application/json',
+      //'Authorization': 'Token ' + token,
+    }
+  }).then((response) => {
+    if (response.status !== 200) {
+      return Promise.reject({ message: "Unable to get events" });
+    } else { return response.json(); }
+  }).catch(error => {
+    return error;
+  });
+}
+
+export const fetchEventsByOrganizerId = (id) => {
+  return fetch(`/api/events?organizer=${id}`, {
+    method: "GET",
+    headers: {
+      'Content-Type': 'application/json',
+      //'Authorization': 'Token ' + token,
+    }
+  }).then((response) => {
+    if (response.status !== 200) {
+      return Promise.reject({ message: "Unable to get events" });
+    } else { return response.json(); }
+  }).catch(error => {
+    return error;
+  });
+
+}
+
 // FETCH SCHOOL DETAILS
 export const fetchSchoolDatails = id => fetch(`/api/schools/${id}`, {
   method: 'GET',
