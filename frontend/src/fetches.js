@@ -1,6 +1,15 @@
 
 /* eslint-disable */
 
+// FETCH
+function apiCall(url, options) {
+	var options = options || { headers: {}};
+  options.headers['Content-Type'] = 'application/json';
+	return fetch(url, options).then(response => {
+    return response;
+  });
+}
+
 // LOGIN USER
 export const loginUser = user => fetch('/api/auth/login', {
   method: 'POST',
@@ -45,6 +54,7 @@ export const registerUser = newUser => fetch('/api/auth/signup', {
   } if (response.status === 201) { return response.json(); }
   Promise.reject({ message: 'Unable to Register' });
 });
+
 // FETCH SCHOOLS
 export const fetchSchools = () => fetch('/api/schools', {
   method: 'GET',
@@ -53,6 +63,7 @@ export const fetchSchools = () => fetch('/api/schools', {
     return Promise.reject({ message: 'Unable to fetch schools' });
   } return response.json();
 }).catch(error => error);
+
 // FETCH ALL THE EVENTS
 // http://localhost:8000/api/events?topic
 export const fetchAllEvents = () => fetch('/api/events', {
@@ -199,6 +210,7 @@ export const JoinEvent = (eventId, token) => fetch(`/api/events/${eventId}/atten
   } return response.json();
 }).catch(error => error);
 
+// leave event
 export const leaveEvent = (eventId, token) => fetch(`/api/events/${eventId}/attendees`, {
   method: 'DELETE',
   headers: {
@@ -211,7 +223,7 @@ export const leaveEvent = (eventId, token) => fetch(`/api/events/${eventId}/atte
   } return response.json();
 }).catch(error => error);
 
-
+// delete event
 export const deleteEvent = (eventId, token) => fetch(`/api/events/${eventId}`, {
   method: 'DELETE',
   headers: {
@@ -235,5 +247,33 @@ export const createEvent = (event, token) => fetch('/api/events', {
 }).then((response) => {
   if (response.status !== 200) {
     return Promise.reject({ message: 'Unable to create event' });
+  } return response.json();
+}).catch(error => error);
+
+// post comment
+const postCommentURL = '/api/comment';
+export const postComment = (commentBody, token) => fetch(postCommentURL, {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    Authorization: `Token ${token}`,
+  },
+  body: JSON.stringify(commentBody),
+}).then((response) => {
+  if (response.status !== 200) {
+    return Promise.reject({ message: 'Unable to post comment' });
+  } return response.json();
+}).catch(error => error);
+
+// fetch comments
+const getCommentsURL = '/api/comment?event=';
+export const getComments = (eventId) => fetch(getCommentsURL + eventId, {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+}).then((response) => {
+  if (response.status !== 200) {
+    return Promise.reject({ message: 'Unable to get comments' });
   } return response.json();
 }).catch(error => error);

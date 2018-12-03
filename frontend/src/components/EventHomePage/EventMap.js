@@ -23,7 +23,6 @@ const styles = theme => ({
   };
 
   render() { 
-    console.log(this.latitude, this.longitude)
     const { classes } = this.props;
 
     return (
