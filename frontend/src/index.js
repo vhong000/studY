@@ -6,6 +6,7 @@ import './index.css';
 import {
   EventListPage, Header,
   EventPage, SubtopicPage, App, UserProfile,
+  EventUserProfile
 } from './containers';
 import ProtectedRoute from './ProtectedRoute/ProtectedRoute';
 import * as serviceWorker from './serviceWorker';
@@ -22,6 +23,7 @@ ReactDOM.render(
         <Route exact path="/category/:category/:subtopic" component={EventListPage} />
         <Route exact path="/category/:category/:subtopic/:eventId" component={EventPage} />
         <ProtectedRoute exact path="/profile" component={AuthWrapper(UserProfile)} />
+        <Route exact path="/profile/:eventUserProfile" component={AuthWrapper(EventUserProfile)} />
       </AuthProvider>
     </div>
   </Router>,

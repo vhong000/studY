@@ -20,7 +20,6 @@ class EventListCard extends Component {
 
     render() {
         const { classes, event, params } = this.props;
-        const bull = <span className={classes.bullet}>•</span>;
         return (
             <Card className={classes.card}>
             <CardActionArea component={Link} style={{color: "white"}}

@@ -35,7 +35,7 @@ const eventsJoined = [
 describe('UserProfilePage', () => {
   const wrapper = shallow(<UserProfilePage user={user} school={school} classes={styles} eventsOrg={eventsOrg} eventsJoined={eventsJoined}/> );
   it('should render all fields', () => {
-    expect(wrapper.find('#edit-button').exists()).toBe(true);
+    //expect(wrapper.find('#edit-button').exists()).toBe(true);
     expect(wrapper.find('#person-icon').exists()).toBe(true);
     expect(wrapper.find('#email-icon').exists()).toBe(true);
     expect(wrapper.find('#icon').exists()).toBe(true);

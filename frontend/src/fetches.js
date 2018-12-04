@@ -40,6 +40,19 @@ export const getUserData = token => fetch('/api/profile', {
   } return response.json();
 }).catch(error => error);
 
+//Get User Profile 
+export const getUserProfile = (token,userId) => fetch(`/api/profile?id=${userId}`, {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+    Authorization: `Token ${token}`,
+  },
+}).then((response) => {
+  if (response.status !== 200) {
+    return Promise.reject({ message: 'Unable to get user data' });
+  } return response.json();
+}).catch(error => error);
+
 // REGISTER USER
 export const registerUser = newUser => fetch('/api/auth/signup', {
   method: 'POST',

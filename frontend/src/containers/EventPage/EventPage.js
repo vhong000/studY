@@ -11,6 +11,8 @@ import {
   getComments,
 } from '../../fetches';
 import { AuthContext, AuthWrapper } from '../../contexts/Auth.context';
+import CircularProgress from '@material-ui/core/CircularProgress';
+
 
 class EventPage extends Component {
   static contextType = AuthContext;

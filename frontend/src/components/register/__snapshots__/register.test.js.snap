@@ -1,0 +1,768 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Register component snapshot 1`] = `
+<div
+  className="Container"
+>
+  <div
+    className="PageColumns"
+  >
+    <div
+      className="PageColumn_left"
+    >
+      <div
+        className="Art"
+      />
+    </div>
+    <div
+      className="PageColumn_right"
+    >
+      <div
+        className="ColumnContainer"
+      >
+        <div>
+          <img
+            alt="icon"
+            className="Icon"
+            src="icon.png"
+          />
+        </div>
+        <h1
+          className="Title"
+        >
+          Join the New York City student community.
+        </h1>
+        <p
+          className="Text1"
+        >
+          By having a StudY account, you can create, find, and join groups on all of your favourite topics.
+        </p>
+        <p
+          className="Text2"
+        >
+          Sign up in just seconds.
+        </p>
+        <form
+          className="Form"
+          id="main_form"
+          name="registerForm"
+          onReset={[Function]}
+          onSubmit={[Function]}
+        >
+          <div
+            className="MuiGrid-container-1"
+          >
+            <div
+              className="MuiGrid-container-1 MuiGrid-spacing-xs-8-23 MuiGrid-direction-xs-column-4 MuiGrid-grid-xs-12-41"
+            >
+              <div
+                className="MuiGrid-container-1 MuiGrid-item-2 MuiGrid-spacing-xs-16-24"
+              >
+                <div
+                  className="MuiGrid-item-2 MuiGrid-grid-xs-6-35"
+                >
+                  <div
+                    className="MuiFormControl-root-98 MuiFormControl-fullWidth-101"
+                    field={
+                      Object {
+                        "name": "firstName",
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "value": undefined,
+                      }
+                    }
+                    form={
+                      Object {
+                        "dirty": false,
+                        "errors": Object {},
+                        "handleBlur": [Function],
+                        "handleChange": [Function],
+                        "handleReset": [Function],
+                        "handleSubmit": [Function],
+                        "initialValues": Object {
+                          "email": "",
+                          "first_name": "",
+                          "last_name": "",
+                          "major": "",
+                          "password": "",
+                          "school": "",
+                        },
+                        "isSubmitting": false,
+                        "isValid": false,
+                        "isValidating": false,
+                        "registerField": [Function],
+                        "resetForm": [Function],
+                        "setError": [Function],
+                        "setErrors": [Function],
+                        "setFieldError": [Function],
+                        "setFieldTouched": [Function],
+                        "setFieldValue": [Function],
+                        "setFormikState": [Function],
+                        "setStatus": [Function],
+                        "setSubmitting": [Function],
+                        "setTouched": [Function],
+                        "setValues": [Function],
+                        "submitCount": 0,
+                        "submitForm": [Function],
+                        "touched": Object {},
+                        "unregisterField": [Function],
+                        "validateField": [Function],
+                        "validateForm": [Function],
+                        "validateOnBlur": true,
+                        "validateOnChange": true,
+                        "values": Object {
+                          "email": "",
+                          "first_name": "",
+                          "last_name": "",
+                          "major": "",
+                          "password": "",
+                          "school": "",
+                        },
+                      }
+                    }
+                  >
+                    <label
+                      className="MuiFormLabel-root-113 MuiFormLabel-required-118 MuiInputLabel-required-106 MuiInputLabel-root-102 MuiInputLabel-formControl-107 MuiInputLabel-animated-110 MuiInputLabel-outlined-112"
+                      data-shrink={false}
+                      htmlFor="first_name"
+                    >
+                      First
+                      <span
+                        className="MuiFormLabel-asterisk-119"
+                      >
+                         *
+                      </span>
+                    </label>
+                    <div
+                      className="MuiInputBase-root-133 MuiOutlinedInput-root-120 MuiInputBase-fullWidth-142 MuiInputBase-formControl-134 TextField"
+                      onClick={[Function]}
+                    >
+                      <fieldset
+                        aria-hidden={true}
+                        className="MuiPrivateNotchedOutline-root-150 MuiOutlinedInput-notchedOutline-127"
+                        style={
+                          Object {
+                            "paddingLeft": 8,
+                          }
+                        }
+                      >
+                        <legend
+                          className="MuiPrivateNotchedOutline-legend-151"
+                          style={
+                            Object {
+                              "width": 0.01,
+                            }
+                          }
+                        >
+                          <span
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "&#8203;",
+                              }
+                            }
+                          />
+                        </legend>
+                      </fieldset>
+                      <input
+                        aria-invalid={false}
+                        className="MuiInputBase-input-143 MuiOutlinedInput-input-128"
+                        disabled={false}
+                        id="first_name"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        required={true}
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="MuiGrid-item-2 MuiGrid-grid-xs-6-35"
+                >
+                  <div
+                    className="MuiFormControl-root-98 MuiFormControl-fullWidth-101"
+                    field={
+                      Object {
+                        "name": "lastName",
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "value": undefined,
+                      }
+                    }
+                    form={
+                      Object {
+                        "dirty": false,
+                        "errors": Object {},
+                        "handleBlur": [Function],
+                        "handleChange": [Function],
+                        "handleReset": [Function],
+                        "handleSubmit": [Function],
+                        "initialValues": Object {
+                          "email": "",
+                          "first_name": "",
+                          "last_name": "",
+                          "major": "",
+                          "password": "",
+                          "school": "",
+                        },
+                        "isSubmitting": false,
+                        "isValid": false,
+                        "isValidating": false,
+                        "registerField": [Function],
+                        "resetForm": [Function],
+                        "setError": [Function],
+                        "setErrors": [Function],
+                        "setFieldError": [Function],
+                        "setFieldTouched": [Function],
+                        "setFieldValue": [Function],
+                        "setFormikState": [Function],
+                        "setStatus": [Function],
+                        "setSubmitting": [Function],
+                        "setTouched": [Function],
+                        "setValues": [Function],
+                        "submitCount": 0,
+                        "submitForm": [Function],
+                        "touched": Object {},
+                        "unregisterField": [Function],
+                        "validateField": [Function],
+                        "validateForm": [Function],
+                        "validateOnBlur": true,
+                        "validateOnChange": true,
+                        "values": Object {
+                          "email": "",
+                          "first_name": "",
+                          "last_name": "",
+                          "major": "",
+                          "password": "",
+                          "school": "",
+                        },
+                      }
+                    }
+                  >
+                    <label
+                      className="MuiFormLabel-root-113 MuiFormLabel-required-118 MuiInputLabel-required-106 MuiInputLabel-root-102 MuiInputLabel-formControl-107 MuiInputLabel-animated-110 MuiInputLabel-outlined-112"
+                      data-shrink={false}
+                      htmlFor="last_name"
+                    >
+                      Last
+                      <span
+                        className="MuiFormLabel-asterisk-119"
+                      >
+                         *
+                      </span>
+                    </label>
+                    <div
+                      className="MuiInputBase-root-133 MuiOutlinedInput-root-120 MuiInputBase-fullWidth-142 MuiInputBase-formControl-134 TextField"
+                      onClick={[Function]}
+                    >
+                      <fieldset
+                        aria-hidden={true}
+                        className="MuiPrivateNotchedOutline-root-150 MuiOutlinedInput-notchedOutline-127"
+                        style={
+                          Object {
+                            "paddingLeft": 8,
+                          }
+                        }
+                      >
+                        <legend
+                          className="MuiPrivateNotchedOutline-legend-151"
+                          style={
+                            Object {
+                              "width": 0.01,
+                            }
+                          }
+                        >
+                          <span
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "&#8203;",
+                              }
+                            }
+                          />
+                        </legend>
+                      </fieldset>
+                      <input
+                        aria-invalid={false}
+                        className="MuiInputBase-input-143 MuiOutlinedInput-input-128"
+                        disabled={false}
+                        id="last_name"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        required={true}
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="MuiGrid-item-2"
+              >
+                <div
+                  className="MuiFormControl-root-98 MuiFormControl-fullWidth-101"
+                  field={
+                    Object {
+                      "name": "email",
+                      "onBlur": [Function],
+                      "onChange": [Function],
+                      "value": "",
+                    }
+                  }
+                  form={
+                    Object {
+                      "dirty": false,
+                      "errors": Object {},
+                      "handleBlur": [Function],
+                      "handleChange": [Function],
+                      "handleReset": [Function],
+                      "handleSubmit": [Function],
+                      "initialValues": Object {
+                        "email": "",
+                        "first_name": "",
+                        "last_name": "",
+                        "major": "",
+                        "password": "",
+                        "school": "",
+                      },
+                      "isSubmitting": false,
+                      "isValid": false,
+                      "isValidating": false,
+                      "registerField": [Function],
+                      "resetForm": [Function],
+                      "setError": [Function],
+                      "setErrors": [Function],
+                      "setFieldError": [Function],
+                      "setFieldTouched": [Function],
+                      "setFieldValue": [Function],
+                      "setFormikState": [Function],
+                      "setStatus": [Function],
+                      "setSubmitting": [Function],
+                      "setTouched": [Function],
+                      "setValues": [Function],
+                      "submitCount": 0,
+                      "submitForm": [Function],
+                      "touched": Object {},
+                      "unregisterField": [Function],
+                      "validateField": [Function],
+                      "validateForm": [Function],
+                      "validateOnBlur": true,
+                      "validateOnChange": true,
+                      "values": Object {
+                        "email": "",
+                        "first_name": "",
+                        "last_name": "",
+                        "major": "",
+                        "password": "",
+                        "school": "",
+                      },
+                    }
+                  }
+                >
+                  <label
+                    className="MuiFormLabel-root-113 MuiFormLabel-required-118 MuiInputLabel-required-106 MuiInputLabel-root-102 MuiInputLabel-formControl-107 MuiInputLabel-animated-110 MuiInputLabel-outlined-112"
+                    data-shrink={false}
+                    htmlFor="email"
+                  >
+                    E-mail
+                    <span
+                      className="MuiFormLabel-asterisk-119"
+                    >
+                       *
+                    </span>
+                  </label>
+                  <div
+                    className="MuiInputBase-root-133 MuiOutlinedInput-root-120 MuiInputBase-fullWidth-142 MuiInputBase-formControl-134 TextField"
+                    onClick={[Function]}
+                  >
+                    <fieldset
+                      aria-hidden={true}
+                      className="MuiPrivateNotchedOutline-root-150 MuiOutlinedInput-notchedOutline-127"
+                      style={
+                        Object {
+                          "paddingLeft": 8,
+                        }
+                      }
+                    >
+                      <legend
+                        className="MuiPrivateNotchedOutline-legend-151"
+                        style={
+                          Object {
+                            "width": 0.01,
+                          }
+                        }
+                      >
+                        <span
+                          dangerouslySetInnerHTML={
+                            Object {
+                              "__html": "&#8203;",
+                            }
+                          }
+                        />
+                      </legend>
+                    </fieldset>
+                    <input
+                      aria-invalid={false}
+                      className="MuiInputBase-input-143 MuiOutlinedInput-input-128 MuiInputBase-inputType-146"
+                      disabled={false}
+                      id="email"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      required={true}
+                      type="email"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                className="MuiGrid-item-2"
+              >
+                <div
+                  className="MuiFormControl-root-98 MuiFormControl-fullWidth-101"
+                  field={
+                    Object {
+                      "name": "password",
+                      "onBlur": [Function],
+                      "onChange": [Function],
+                      "value": "",
+                    }
+                  }
+                  form={
+                    Object {
+                      "dirty": false,
+                      "errors": Object {},
+                      "handleBlur": [Function],
+                      "handleChange": [Function],
+                      "handleReset": [Function],
+                      "handleSubmit": [Function],
+                      "initialValues": Object {
+                        "email": "",
+                        "first_name": "",
+                        "last_name": "",
+                        "major": "",
+                        "password": "",
+                        "school": "",
+                      },
+                      "isSubmitting": false,
+                      "isValid": false,
+                      "isValidating": false,
+                      "registerField": [Function],
+                      "resetForm": [Function],
+                      "setError": [Function],
+                      "setErrors": [Function],
+                      "setFieldError": [Function],
+                      "setFieldTouched": [Function],
+                      "setFieldValue": [Function],
+                      "setFormikState": [Function],
+                      "setStatus": [Function],
+                      "setSubmitting": [Function],
+                      "setTouched": [Function],
+                      "setValues": [Function],
+                      "submitCount": 0,
+                      "submitForm": [Function],
+                      "touched": Object {},
+                      "unregisterField": [Function],
+                      "validateField": [Function],
+                      "validateForm": [Function],
+                      "validateOnBlur": true,
+                      "validateOnChange": true,
+                      "values": Object {
+                        "email": "",
+                        "first_name": "",
+                        "last_name": "",
+                        "major": "",
+                        "password": "",
+                        "school": "",
+                      },
+                    }
+                  }
+                >
+                  <label
+                    className="MuiFormLabel-root-113 MuiFormLabel-required-118 MuiInputLabel-required-106 MuiInputLabel-root-102 MuiInputLabel-formControl-107 MuiInputLabel-animated-110 MuiInputLabel-outlined-112"
+                    data-shrink={false}
+                    htmlFor="password"
+                  >
+                    Password
+                    <span
+                      className="MuiFormLabel-asterisk-119"
+                    >
+                       *
+                    </span>
+                  </label>
+                  <div
+                    className="MuiInputBase-root-133 MuiOutlinedInput-root-120 MuiInputBase-fullWidth-142 MuiInputBase-formControl-134 TextField"
+                    onClick={[Function]}
+                  >
+                    <fieldset
+                      aria-hidden={true}
+                      className="MuiPrivateNotchedOutline-root-150 MuiOutlinedInput-notchedOutline-127"
+                      style={
+                        Object {
+                          "paddingLeft": 8,
+                        }
+                      }
+                    >
+                      <legend
+                        className="MuiPrivateNotchedOutline-legend-151"
+                        style={
+                          Object {
+                            "width": 0.01,
+                          }
+                        }
+                      >
+                        <span
+                          dangerouslySetInnerHTML={
+                            Object {
+                              "__html": "&#8203;",
+                            }
+                          }
+                        />
+                      </legend>
+                    </fieldset>
+                    <input
+                      aria-invalid={false}
+                      className="MuiInputBase-input-143 MuiOutlinedInput-input-128 MuiInputBase-inputType-146"
+                      disabled={false}
+                      id="password"
+                      onBlur={[Function]}
+                      onChange={[Function]}
+                      onFocus={[Function]}
+                      required={true}
+                      type="password"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                className="MuiGrid-container-1 MuiGrid-item-2 MuiGrid-spacing-xs-16-24"
+              >
+                <div
+                  className="MuiGrid-item-2 MuiGrid-grid-xs-8-37"
+                >
+                  <div
+                    className="MuiFormControl-root-98 MuiFormControl-fullWidth-101"
+                  >
+                    <label
+                      className="MuiFormLabel-root-113 MuiFormLabel-required-118 MuiInputLabel-required-106 MuiInputLabel-root-102 MuiInputLabel-formControl-107 MuiInputLabel-animated-110 MuiInputLabel-outlined-112"
+                      data-shrink={false}
+                    >
+                      School
+                      <span
+                        className="MuiFormLabel-asterisk-119"
+                      >
+                         *
+                      </span>
+                    </label>
+                    <div
+                      className="MuiInputBase-root-133 MuiOutlinedInput-root-120 MuiInputBase-formControl-134 MuiInputBase-marginDense-140"
+                      onClick={[Function]}
+                    >
+                      <fieldset
+                        aria-hidden={true}
+                        className="MuiPrivateNotchedOutline-root-150 MuiOutlinedInput-notchedOutline-127"
+                        style={
+                          Object {
+                            "paddingLeft": 8,
+                          }
+                        }
+                      >
+                        <legend
+                          className="MuiPrivateNotchedOutline-legend-151"
+                          style={
+                            Object {
+                              "width": 0.01,
+                            }
+                          }
+                        >
+                          <span
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "&#8203;",
+                              }
+                            }
+                          />
+                        </legend>
+                      </fieldset>
+                      <div
+                        className="MuiSelect-root-152"
+                      >
+                        <div
+                          aria-haspopup="true"
+                          aria-pressed="false"
+                          className="MuiSelect-select-153 MuiSelect-selectMenu-156 MuiInputBase-input-143 MuiOutlinedInput-input-128 MuiInputBase-inputMarginDense-144 MuiOutlinedInput-inputMarginDense-129"
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onFocus={[Function]}
+                          onKeyDown={[Function]}
+                          role="button"
+                          tabIndex={0}
+                        >
+                          <span
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "&#8203;",
+                              }
+                            }
+                          />
+                        </div>
+                        <input
+                          id="school"
+                          type="hidden"
+                          value=""
+                        />
+                        <svg
+                          aria-hidden="true"
+                          className="MuiSvgIcon-root-159 MuiSelect-icon-158"
+                          focusable="false"
+                          role="presentation"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="M7 10l5 5 5-5z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="MuiGrid-item-2 MuiGrid-grid-xs-4-33"
+                >
+                  <div
+                    className="MuiFormControl-root-98 MuiFormControl-fullWidth-101"
+                    field={
+                      Object {
+                        "name": "major",
+                        "onBlur": [Function],
+                        "onChange": [Function],
+                        "value": "",
+                      }
+                    }
+                    form={
+                      Object {
+                        "dirty": false,
+                        "errors": Object {},
+                        "handleBlur": [Function],
+                        "handleChange": [Function],
+                        "handleReset": [Function],
+                        "handleSubmit": [Function],
+                        "initialValues": Object {
+                          "email": "",
+                          "first_name": "",
+                          "last_name": "",
+                          "major": "",
+                          "password": "",
+                          "school": "",
+                        },
+                        "isSubmitting": false,
+                        "isValid": false,
+                        "isValidating": false,
+                        "registerField": [Function],
+                        "resetForm": [Function],
+                        "setError": [Function],
+                        "setErrors": [Function],
+                        "setFieldError": [Function],
+                        "setFieldTouched": [Function],
+                        "setFieldValue": [Function],
+                        "setFormikState": [Function],
+                        "setStatus": [Function],
+                        "setSubmitting": [Function],
+                        "setTouched": [Function],
+                        "setValues": [Function],
+                        "submitCount": 0,
+                        "submitForm": [Function],
+                        "touched": Object {},
+                        "unregisterField": [Function],
+                        "validateField": [Function],
+                        "validateForm": [Function],
+                        "validateOnBlur": true,
+                        "validateOnChange": true,
+                        "values": Object {
+                          "email": "",
+                          "first_name": "",
+                          "last_name": "",
+                          "major": "",
+                          "password": "",
+                          "school": "",
+                        },
+                      }
+                    }
+                  >
+                    <label
+                      className="MuiFormLabel-root-113 MuiFormLabel-required-118 MuiInputLabel-required-106 MuiInputLabel-root-102 MuiInputLabel-formControl-107 MuiInputLabel-animated-110 MuiInputLabel-outlined-112"
+                      data-shrink={false}
+                      htmlFor="major"
+                    >
+                      Major
+                      <span
+                        className="MuiFormLabel-asterisk-119"
+                      >
+                         *
+                      </span>
+                    </label>
+                    <div
+                      className="MuiInputBase-root-133 MuiOutlinedInput-root-120 MuiInputBase-fullWidth-142 MuiInputBase-formControl-134 TextField"
+                      onClick={[Function]}
+                    >
+                      <fieldset
+                        aria-hidden={true}
+                        className="MuiPrivateNotchedOutline-root-150 MuiOutlinedInput-notchedOutline-127"
+                        style={
+                          Object {
+                            "paddingLeft": 8,
+                          }
+                        }
+                      >
+                        <legend
+                          className="MuiPrivateNotchedOutline-legend-151"
+                          style={
+                            Object {
+                              "width": 0.01,
+                            }
+                          }
+                        >
+                          <span
+                            dangerouslySetInnerHTML={
+                              Object {
+                                "__html": "&#8203;",
+                              }
+                            }
+                          />
+                        </legend>
+                      </fieldset>
+                      <input
+                        aria-invalid={false}
+                        className="MuiInputBase-input-143 MuiOutlinedInput-input-128"
+                        disabled={false}
+                        id="major"
+                        onBlur={[Function]}
+                        onChange={[Function]}
+                        onFocus={[Function]}
+                        required={true}
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                className="MuiGrid-item-2"
+              >
+                <button
+                  className="Submit"
+                  disabled={false}
+                  type="submit"
+                >
+                  SIGN UP
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+`;

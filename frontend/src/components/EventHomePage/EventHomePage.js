@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 //import {StaticGoogleMap} from 'react-google-static-map';
 import Calendar from 'react-calendar';
 import styles from './EventHomePage.styles';
-import { EventListCard, Comments} from '../../components';
+import { EventListCard, Comments } from '../../components';
 import classNames from 'classnames';
-import { Link } from 'react-router-dom';
+import { Link, BrowserRouter as Router } from 'react-router-dom';
 import { studyIcon, CCNY } from '../../images';
 import EventMap from './EventMap';
 import {
@@ -24,6 +24,7 @@ import facebookIcon from '../../images/facebook-icon.png';
 import twitterIcon from '../../images/twitter-icon.png';
 import linkedInIcon from '../../images/linkedIn-icon.png';
 
+
 const dummylocation = {
   latitude: 40.8194,
   longitude: -73.95
@@ -31,10 +32,10 @@ const dummylocation = {
 
 class EventHomePage extends Component {
   render() {
-    const { 
+    const {
       comments,
       classes,
-      event, 
+      event,
       eventAttendees,
       campusInfo,
       token,
@@ -49,7 +50,9 @@ class EventHomePage extends Component {
         profileCard = eventAttendees.map((student, index) =>
           <Grid key={index} item sm={3} spacing={16} >
             <Card className={classes.card}>
-              <CardActionArea>
+              <CardActionArea
+                component={Link}
+                to={`/profile/${student.owner.first_name}-${student.owner.id}`}>
                 <CardMedia className={classes.media} image={studyIcon} />
                 <CardContent>
                   <Typography align="center" variant="bus">
@@ -138,8 +141,8 @@ class EventHomePage extends Component {
                 handlePostedComment={handlePostedComment}
                 token={token}
                 eventId={event.id}
-								comments={comments}
-								ownerId={event.ownerId} />             
+                comments={comments}
+                ownerId={event.ownerId} />
             </Grid>
           </Grid>
 
