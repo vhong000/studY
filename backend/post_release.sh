@@ -6,6 +6,6 @@ cnt=$(sh -c "$EXEC shell -c 'from events.models import School; print(School.obje
 if [ $cnt -lt 10 ]
 then
     $EXEC populatedb --dirpath events/data/
+    $EXEC topicsdb --dirpath events/data/topics/topics.json
 fi
 $EXEC setupadmin
-$EXEC topicsdb --dirpath events/data/topics/topics.json
