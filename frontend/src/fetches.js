@@ -290,3 +290,18 @@ export const getComments = (eventId) => fetch(getCommentsURL + eventId, {
     return Promise.reject({ message: 'Unable to get comments' });
   } return response.json();
 }).catch(error => error);
+
+// update user info
+const updateUserURL = '/api/profile';
+export const updateUser = (newInfo, token) => fetch(updateUserURL, {
+  method: 'PATCH',
+  headers: {
+    'Content-Type': 'application/json',
+    Authorization: `Token ${token}`
+  },
+  body: JSON.stringify(newInfo),
+}).then((response) => {
+  if (response.status !== 200) {
+    return Promise.reject({ message: 'Unable to update user' });
+  } return response.json();
+}).catch(error => error);

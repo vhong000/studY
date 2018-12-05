@@ -12,6 +12,7 @@ export class UserProfilePage extends Component {
 
   render() {
     const { classes, renderEdit, user, school, eventsJoined, eventsOrg, handleOpen, handleClose, editModalOpened } = this.props;
+    const token = localStorage.getItem('token');
     console.log("User Profile", this.props)
     return (
       <>
@@ -23,14 +24,14 @@ export class UserProfilePage extends Component {
                 <Typography variant="subtitle1" gutterBottom className={classes.header_typography}>
                   <PersonOutlineIcon id="person-icon" className={classes.iconUi} />
                   &ensp;
-                  {`${user.owner.first_name} ${user.owner.last_name}`}
+                  {user ? `${user.owner.first_name} ${user.owner.last_name}` : null}
                 </Typography>
               </Grid>
               <Grid>
                 <Typography variant="subtitle1" gutterBottom className={classes.header_typography}>
                   <AlternateEmailIcon id="email-icon" className={classes.iconUi} />
                   &ensp;
-                  {`${user.owner.email}`}
+                  {user ? `${user.owner.email}` : null}
                 </Typography>
               </Grid>
             </Grid>
@@ -43,35 +44,35 @@ export class UserProfilePage extends Component {
             <Typography variant="subtitle1" gutterBottom style={{ marginBottom: '40px' }}>
               <span>Email:</span>
               {' '}
-              {`${user.owner.email}`}
+              {user ? `${user.owner.email}`: null}
             </Typography>
             <h2 className={classes.h2}>General Information:</h2>
             <Typography variant="subtitle1" gutterBottom className={classes.typography}>
               <span>First Name:</span>
               {' '}
-              {`${user.owner.first_name}`}
+              {user ? `${user.owner.first_name}`: null}
             </Typography>
             <Typography variant="subtitle1" gutterBottom className={classes.typography}>
               <span>Last Name:</span>
               {' '}
-              {`${user.owner.last_name}`}
+              {user ? `${user.owner.last_name}`: null}
             </Typography>
             <Typography variant="subtitle1" gutterBottom className={classes.typography}>
               <span>School:</span>
               {' '}
-              {`${school.name}`}
+              {user ? `${school.name}`: null}
             </Typography>
             <Typography variant="subtitle1" gutterBottom style={{ marginBottom: '40px' }}>
               <span>Major:</span>
               {' '}
-              {`${user.major}`}
+              {user ? `${user.major}`: null}
             </Typography>
             <h2 className={classes.h2}>Additional information:</h2>
             <Typography variant="subtitle1" gutterBottom className={classes.typography}>
               <span>Events Organized:</span>
             </Typography>
             <ul className={classes.list}>
-              {eventsOrg.length > 0 ? (eventsOrg.map(event =>
+              {eventsOrg && eventsOrg.length > 0 ? (eventsOrg.map(event =>
                 <li key={event.id}>{event.name}</li>
               )) : <p>You didn't create any events</p>}
             </ul>
@@ -79,7 +80,7 @@ export class UserProfilePage extends Component {
               <span>Events Joined:</span>
             </Typography>
             <ul className={classes.list} style={{ marginBottom: "20px" }}>
-              {eventsJoined.length > 0 ? (eventsJoined.map(event =>
+              {eventsJoined && eventsJoined.length > 0 ? (eventsJoined.map(event =>
                 <li key={event.id}>{event.name}</li>
               )) : <p>You didn't join any events</p>}
             </ul>
@@ -95,7 +96,7 @@ export class UserProfilePage extends Component {
         </Grid>
         <Modal open={editModalOpened} onClose={() => handleClose()} >
           <div className={classes.editForm}>
-            <EditFormPage />
+            <EditFormPage user={user} token={token} onClose={handleClose} />
             {/* <EditForm user = {user} schools={schools}/> */}
           </div>
         </Modal>
